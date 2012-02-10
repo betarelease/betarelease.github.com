@@ -1,0 +1,9 @@
+---
+layout: default
+title: "Tag archive: blog"
+---
+<h2 class="tag_result">Posts tagged with "blog"</h2>
+
+{% for post in site.tags.blog %}
+  {% include show_post.html %}
+{% endfor %}
