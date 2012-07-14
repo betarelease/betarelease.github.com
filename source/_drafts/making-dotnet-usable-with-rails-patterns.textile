@@ -1,0 +1,26 @@
+---
+layout: post
+title: Making .NET usable with Rails patterns
+tags: [.NET, Ruby, Rails, RoR, programming, language, windows, design, patterns]
+---
+
+On a recent .NET project we had a recurring annoyance with native Microsoft .NET framework. Issues around using 'Microsoft recommended' strategies included using configuration over convention and added complexity for simplicity. 
+
+We took it upon ourselves to make it right and make our lives less miserable when working with a .NET environment.
+
+Some tools that helped us reduce the pain are 
+
+"Restful Routes for ASP.NET MVC":http://stevehodgkiss.com/posts/restful-routes-for-asp-net-mvc
+ RESTful routes gave us the freedom to build our UI in javascript. We built RESTful apis in .NET and consumed them via our javascript framework. (We used ext.js at that time)
+
+"FluentNHibernate":http://fluentnhibernate.org/ - If you are using hibernate this puts the icing on the cake of ORM. Why we chose NHibernate over Entity Framework(EF) - composite keys in our database.
+
+"FluentMigrator":https://github.com/schambers/fluentmigrator - When you are using FluentNHibernate you cannot but use FluentMigrator for your migrations. Just meant for each other.
+
+"Pester":https://github.com/scottmuc/Pester - We used this to test our powershell scripts used for deployment.
+
+"MvcMailer":https://github.com/smsohan/MvcMailer/wiki/MvcMailer-Step-by-Step-Guide - Cool and simple mailer tool that replicates ActionMailer behaviour over .NET. A few lines of code and we can email stuff to our customers.
+
+"git tfs":https://github.com/spraints/git-tfs - Makes itself immensely valuable when you want to use eclipse, vim, or textmate for coding and want to stay away from Visual Studio. Also VS has git integration now.
+
+"Jasmine":js testing - Since .NET does not have anything that helps support javascript testing.

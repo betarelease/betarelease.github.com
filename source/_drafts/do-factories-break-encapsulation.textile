@@ -1,0 +1,87 @@
+---
+layout: post
+title: Do Factories break Encapsulation
+---
+
+
+
+Remember the Factory pattern (from the GoF book about Design Patterns) - and remember how it knows how to build domain objects, put them together and build sensible domain intermediaries. Does this pattern break encapsulation? 
+
+
+Another prevalent practice that comes to mind is use of Factory objects or factories to create business objects for testing. Some examples are the Builder, FactoryGirl, ObjectMother and such. Repeating the question of encapsulation - do these types of factories break encapsulation? Before thinking too much about it, consider that they are only used while testing. Would that consideration change your answer?
+
+In any business domain there is one and only one object that knows about a domain object's creation and its dependencies - it is that object itself. Any other object trying to build such an object is actually exposing the internals of the object and disclosing how its built - especially when it comes to building the required dependencies. Latter is more so the case when it comes to testing. Such objects are created very frequently. When testing what is most important is capturing the domain behaviour really well - any shortcuts here would mean a maintenance debt sooner or later.
+
+How does one resolve this situation of creating objects but also maintaining encapsulation boundaries?
+When asked with such questions it becomes necessary to ask more fundamental questions about objects and domains. In this case an appropriate question that comes to mind is - does this break encapsulation in some way, is there a way to build objects without disclosing the internal relations between dependencies? Essentially - In the domain which class knows the most about creating that type of an object - obviously the class in question itself. Developing factory solutions that pull that knowledge out are never going to be able to do what the class can do without scattering the information and pulling it out. So why not allow the class itself to build its dependencies as well as its instance.
+
+I describe the above pattern here. Consider a class User with a relation to an address. 
+
+class User
+  
+  has_one :address
+  attr_reader :name
+  def initialize(first_name, last_name, age = 20)
+    @name = first_name + " " + last_name
+    @age = age
+  end
+
+  def drink?
+    return @age >= 21
+  end
+  
+  def valid?
+    return not address.blank?
+  end
+end
+
+class Address
+  
+  def initialize(street, apartment, city, state, zip)
+    @street    = street
+    @apartment = apartment
+    @city      = city
+    @state     = state
+    @zip       = zip
+  end
+  
+  def valid?
+    (not @street.blank? && not @city.blank? && not @state.blank?) || not @zip.blank?
+  end
+end
+
+So whenever you need to create a typical user in a test it would be expected that the user has some address. We achieve that in the following way
+
+class User
+  def defaults_hash
+    {"first_name" => "Sudhindra", 
+     "last_name"  => "Rao"}
+  end
+  
+  def build( defaults = defaults_hash )
+    user = User.new(defaults["first_name"], defaults["last_name"])
+    address = Address.build(defaults)
+    user.address = address
+    user.save!
+  end
+end
+
+class Address
+  def defaults_hash
+    {"street"    => "Bombay Poona Road", 
+     "apartment" => "100",
+     "city"      => "Pune",
+     "state"     => "Maharashtra",
+     "zip"       => "411033"}
+  end
+
+  def build( defaults = defaults_hash )
+    Address.new( defaults["street"], 
+                 defaults["apartment"], 
+                 defaults["city"], 
+                 defaults["state"], 
+                 defaults["zip"] )
+  end
+end
+
+We open these classes as above, and add the build methods to them. This way we can have the cake and eat it too. We have preserved encapsulation - only the classes know about the intricacies of creating objects and models with their dependencies. We have been successful in removing the word Factory(so no unions, no labour problems, no strikes, no heavy machinery). If we are in a test querying a class for what it can do also reveals this additional feature of building. In our core domain model we go about working with the classes in the normal fashion.

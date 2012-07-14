@@ -1,0 +1,96 @@
+---
+layout: post
+title: Middleware Architectures
+---
+
+
+
+What would you use for the following:
+
+* RESTful service
+* Small data packet for each service request
+* Thousands of handhelds requesting data 
+* Data is read more frequently than it is updated
+* Every request has a response guarantee of < 300ms
+* Fast searchability for a large database > 3-400 mil records
+* interruption free updates
+* sensitive delivery schedule
+
+
+Would you be surprised if I say we used Ruby to extract the maximum performance? That to for an application which cannot afford to lose any user based due to poor experience. But we did and it was a job well done. Just in case you misread "We delivered best performance with RUBY".
+
+Here are some of the details on how we achieved this. 
+
+Our data access patterns indicated that our database was mostly being read and not written through our application. Also the updates to this data when they happened would be through a different interface and would not necessarily need to be synchronous. Given these requirements we had settled on using a NoSQL database. The choice of NoSQL databases was reduced to one of CouchDB or MongoDB. 
+We chose MongoDB.... because(ask toby)
+
+Once we had the database spiked out we set out to choosing a development platform.
+Ruby was a natural choice for its speed of development and our rapid delivery experience with it. Given that we were using ruby we wanted to pick a lightweight skeleton to build services on top of. 
+
+We went with "Rack":http://rack.rubyforge.org/ - Rack provides a minimal interface between webservers supporting Ruby and Ruby frameworks - because that's all we needed. Rack was minimal and extensible and could get out the way by still helping us process http requests.
+
+Another aspect of using Rack that helped us was its design. It was the middleware architecture proposed in the "Rack Specification":http://rack.rubyforge.org/doc/SPEC.html
+
+(Another useful resource is "Rack as explained by the creator":http://chneukirchen.org/blog/archive/2007/02/introducing-rack.html)
+
+Using middleware design in our application was straightforward. 
+
+Here is an example of how you would add Rack::Lint to validate requests before they are processed :
+
+In config.ru(stands for config.rackup and can be thought of as similar to config.rb in rails)
+
+{% highlight ruby linenos%}
+use Rack::Lint
+use Rack::CommonLogger, Logger.new
+...
+{% endhighlight %}
+
+In our application we had to process queries in succession based on an algorithm hierarchy. Middleware Architecture facilitated that kind of processing with very simple configuration. We built each of the queries as a middleware and churned through them in a predefined order, terminating as soon as we had a result.
+
+Our query chains looked as follows
+
+Queries = [Queries::FindMovieByMovieAndCast, Queries::FindMoviebyMovie, Queries::FindMoviebySimilarity....]
+
+We built a query processor similar to the middleware that processed queries in the order they are listed in the array above.
+
+Queries looked as follows: 
+
+{% highlight ruby linenos%}
+
+module Queries
+  class FindMovieByMovieAndCast
+  
+    def call
+      process with movie and cast
+    end
+  end
+end
+
+module Queries
+  class FindMoviebyMovie
+  
+    def call
+      process with movie
+    end
+  end
+end
+
+module Queries
+  class FindMoviebySimilarity
+  
+    def call
+      process with movie by similarity
+    end
+  end
+end
+
+{% endhighlight %}
+
+All we needed to do is add them in the order of specificity into the call chain and we were done. If this order changed we just changed the order in the array above and processed it accordingly.
+
+The ease and simplicity of building functionality greatly reduced our development effort while keeping our application maintainable. 
+
+I found the information on the following blogs useful
+"Ruby Reflector":http://rubyreflector.com/config-ru
+
+"Ruby Rack Middleware Tutorial":http://vision-media.ca/resources/ruby/ruby-rack-middleware-tutorial

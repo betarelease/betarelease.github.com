@@ -1,0 +1,41 @@
+---
+layout: post
+title: why blog?
+tags: [blog, reasons, blogger, octopress, github, creative, creativecommons]
+---
+
+I have come across too many people who are either not willing to blog, or do not see the point. This blog post is for them.
+
+(Recently, "Elena Yatzeck":http://pagilista.blogspot.com/2012/05/how-to-become-blogger-in-5-steps.html posted on this subject as well.)
+
+I recently read a one-liner "I see I scorn, I do I regret, I blog to not forget". (Usually I am turned off by one liners intending to pack everything including the reason for life in minimum words, but this one I like because it is funny enough.)
+
+This above quote is enough motivation to keep me going on my blogging. In the day and age of #fb and #RT it is difficult to get people excited about the value of details and being able to express in elaboration. Blogs come to the rescue. 
+
+
+I experience this loss of details quite a bit. Recently on my "M$ platform based assignment":http://charlespetzold.com/etc/DoesVisualStudioRotTheMind.html I forgot to blog what we did to make our .NET application development painless. Now when I try to recollect some lessons I learnt I have to depend on my memory which is sloppy about details. I blog to ensure that I have less of these situations and that I can use my experience to my advantage - also maybe readers of my blog will benefit as well.
+
+I would like to encourage more blogging so that I can benefit from your knowledge and learnings.
+
+Here are a few reasons you should consider blogging:
+
+# Twitter is too short to explain anything in detail.
+# Facebook will not understand when you say a lot without being emotional about it.
+# Your long term memory is not that good - also it is not google searchable.
+# All the short messages are easily lost in your tweetdeck. Google search will yield the desired message but will not provide you the context it appeared in.
+# Blogs are on the web and searchable via google.
+# Blogs can be as elaborate as you like - can be tagged, followed, copied and pasted from, tweeted about, and can turn into articles for publication.
+# Blogs can also be collected and turned into books - for free.
+# Self promotion - "A good post by Jay Fields":http://blog.jayfields.com/2008/08/be-your-start-up.html
+# Blogs are permanent records(mostly) and they can be used to jog your own memory - or reminisce.
+
+
+How and where to blog?
+
+# Wordpress
+# "Tumblr":https://xkcd.com/1043/
+# blogger - beware of their weird copyright requirements.
+# github - octopress
+# build your own blog engine and push it to heroku
+
+What are you waiting for? Go write something.

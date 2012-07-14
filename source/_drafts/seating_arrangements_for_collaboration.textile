@@ -1,0 +1,34 @@
+---
+layout: post
+title: Seating Arrangements - Collaboration and Flow
+tags: [seating, training, agile, flow, information, distance, overhear, chaos, eavesdrop]
+---
+
+We work in a highly collaborative environment. The space is configured as an open space without barriers or partitions. In fact in most places that we coach eventually the workspace configuration is transformed into an open space. We will discuss the why and how of it here.
+
+Why no barriers ? 
+
+Agile relies on open communication. Many of the failures to adopting agile can be attributed to the resistance to this openness. In fact most of the antipatterns in agile can be attributed lack of or obstructed channels of communication. To mitigate this situation many agilists practice and preach open spaces. Here are some examples of how each of the space configurations affects communication.
+
+
+1) Lecture
+
+2) AmphiTheater
+
+3) Meeting Room - U
+
+4) Meeting Room - Sharp U
+
+5) Meeting room - seating across the table
+
+6) Meeting room - round table
+
+
+
+Open collaborative spaces - The How?
+
+ThoughtWorks has experimented with these open spaces for quite a while now. Infact all of our offices are open spaces. Only the most sensitive issues are discussed in a closed room - payroll, hiring decisions, personal issues, issues mandated by law. Everything else is discussed and shared with everyone in the room. 
+
+People on the team are sitting around the same table and can hear anything and everything that is being discussed at the table. They are free to ask questions, make comments and extend opinion - all with the intent to save the rework that can be caused by simple comunication failures. 
+
+Our configurations looks something as follows - A large dining table that can seat about 8-10 people, with their laptops and pairing machines. Everyone in that team sits around the table facing each other. This table as you can imagine can get noisy. 

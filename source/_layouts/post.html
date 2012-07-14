@@ -6,6 +6,7 @@ single: true
 <div>
 <article class="hentry" role="article">
   {% include article.html %}
+  <div class="tags">Tags : {{ post.tags | join: ", "}}</div>
   <footer>
     <p class="meta">
       {% include post/author.html %}

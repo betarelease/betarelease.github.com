@@ -32,6 +32,7 @@ article {
     padding-top: 0.8em;
     background: $img-border top left repeat-x;
   }
+  div.tags { padding-left: 20px; }
   .entry-content & h2:first-child, header + h2 { padding-top: 0; }
   h2:first-child, header + h2 { background: none; }
   .feature {

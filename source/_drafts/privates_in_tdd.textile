@@ -1,0 +1,15 @@
+---
+layout: post
+title: Ruby - Does it make sense to have private methods when doing TDD?
+tags: [Ruby, Rails, RoR, programming, language, TDD, testing, design, patterns]
+---
+(This post will largely be based on ruby since most of what I say here will make immediate sense with ruby - but pondering may suggest that these ideas could be applied more generally).
+
+Ruby as a language allows certain freedoms in design of your code - for example no declared interfaces, public/private/protected annotations for syntactic sugar, open classes, object.send(:method) - and allows you to focus on the domain more than the intricacies of writing code.
+
+Specifically in Ruby you can always get access to the private method and send a message as Object.send[:message]. Thus even further marginalising the use and purpose of private methods. Although, it can be understood that the reason for having such declarations in a class in the first place - the code being for the reader and as much as it for the computer to process - it becomes a mere decoration rather than a security aspect.
+
+Having said the above about private methods, lets talk a little about testability and TDD. When you design using tests, or TDD as we call it, you write the tests first without the code. Everything that you test starts with 100% unit test coverage, since for every line of code that is written there should already be a test that is failing in some way. Using TDD thus makes writing private methods improbable if not at all impossible. That is true about most unit tests that are fine grained to test the minute aspects of a feature. 
+
+What about functional tests - it is reasonable to argue that some functional tests might need a certain calculation that needs to happen but need not be exposed as an API and thus should be kept private. So removing the possibility of not having private methods. This argument is legitimate to some extent. It would be appropriate to raise the issue of Class Design here.
+

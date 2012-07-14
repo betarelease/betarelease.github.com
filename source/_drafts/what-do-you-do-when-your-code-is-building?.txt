@@ -1,0 +1,49 @@
+---
+layout: post
+title: What do you do when your code is building?
+---
+
+
+How to know if your build is longer than it should be
+
+
+> 2 hours - you go out for a team lunch after you checkin and when you come back the build is still running -
+          - your tools are taking too long to integrate code,
+          - too many pieces to integrate
+          - too much interaction between modules
+          
+          - Use tools like code complexity, coverage
+          - Find the ratio between functional tests and unit tests - If the ratio is too high you need more unit testing
+          - Separate functional build into an independent build
+          - Use smoke tests as part of your checkin build
+          - if the build is slow even after trying the above - you may want to rethink the design and technology being used
+
+> 1 hour  - you go to a meeting after you checkin and the build is running when you come back
+          - your tools are doing their best but they are at their limits
+          - very large code base - hence lot of files to churn, lot of tests to run
+          - Use tools to parallelize running your build
+          - Separate slower third-party integration tests from the main build
+          - Use tools like Sonar to analyze your code and separate concerns
+          
+~ 20 mins - barely enough time for a debate on textmate or emacs
+          - your tools and tests are doing their job
+          - you may have implemented recommendations in fast and speedy tests
+
+          - think about how to reduce this time to under 2 mins (and not have that textmate discussion - textmate is better anyway)
+          - parallelize tests using tools similar to deep tests
+          - analyse test suite to identify test complexity and setups
+          - build on faster hardware
+          - decouple code further to enable writing more unit tests
+          - use in memory databases
+          - use multiple instances of installed databases
+          - isolate tests that hit the database
+          
+~2 mins   - you have just enough time review your current checkin and refactor it further or think about the next checkin
+          - stretch and relax
+          - watch the tests go green 
+          - you might also want to check cricket scores while you wait.
+          
+
+          
+          
+          

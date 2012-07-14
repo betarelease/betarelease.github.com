@@ -20,10 +20,11 @@
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
   {% if excerpted == 'true' %}
     <footer>
-      <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
+    <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
+    <div class="tags" style="padding-left: 20px">Tags : {{ post.tags | join: ", "}}</div>
     </footer>
   {% endif %}
   {% else %}
-  <div class="tags">Tags : {{ post.tags | join: ", "}}</div>
+
 <div class="entry-content">{{ content }}</div>
 {% endif %}
