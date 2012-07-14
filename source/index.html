@@ -9,7 +9,6 @@ layout: default
     <article>
       {% include article.html %}
     </article>
-    <div class="tags">Tags : {{ post.tags | join: ", "}}</div>
   {% endfor %}
   <div class="pagination">
     {% if paginator.next_page %}
