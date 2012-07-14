@@ -8,16 +8,16 @@ comments: true
 octopress:"http://github.com/octopress.git". You will see that some of
 things work like:
 
-### Posts show up clearer and nicer - because of octopress font selection
-### you will see my addition of tag cloud to octopress - so tags will show
-### archives - a list of archives arranged as an index page
+* Posts show up clearer and nicer - because of octopress /ont selection
+* you will see my addition of tag cloud to octopress - so tags will show
+* archives - a list of archives arranged as an index page
 
 What does not yet work :
 
-### Tags are not aligned on the page
-### Discuss comments are missing - thanks to discuss your comments are safe. They just need to be linked correctly
-### RSS feed is missing
-### My color scheme is missing - so does not reflect the author's personality ;)
+* Tags are not aligned on the page
+* Discuss comments are missing - thanks to discuss your comments are safe. They just need to be linked correctly
+* RSS feed is missing
+* My color scheme is missing - so does not reflect the author's personality ;)
 
 
 Hope you will bear with me while I make things easier for me to post and
