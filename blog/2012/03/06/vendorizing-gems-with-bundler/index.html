@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Bundler with vendorized gems - &beta;-release</title>
+  <title>Bundler with vendorized gems - betarelease</title>
   <meta name="author" content="Sudhindra Rao">
 
   
@@ -18,13 +18,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/2012/03/06/vendorizing-gems-with-bundler">
+  <link rel="canonical" href="http://betarelease.github.com/blog/2012/03/06/vendorizing-gems-with-bundler/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="&beta;-release" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="betarelease" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -35,9 +35,9 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">&beta;-release</a></h1>
+  <h1><a href="/">betarelease</a></h1>
   
-    <h2>version x.1 - always &beta; always released</h2>
+    <h2>version x.1 - always beta always released</h2>
   
 </hgroup>
 
@@ -57,7 +57,6 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/profile.html">About</a></li>
 </ul>
 
 </nav>
@@ -91,7 +90,6 @@
   </header>
 
 
-
 <div class="entry-content"><p>Bundler is a tool for managing installed libraries on a ruby project. It comes bundled with rails 3 but can be used standalone without rails. <br />
 Bundler tries to fix issues with having to manage your gems(and their related dependencies and versions) in a clean way. In doing so it allows you to work on your application and not have to worry about dependencies sucking the life out of your releases.</p>
 <p>Off late I have been working on an application that vendorizes its gems and packages them while shipping the application. Since this application is also been built in the traditional way(rails 2) I was looking to use bundler with it to do the vendorization. Turns out bundler supports such a use case.</p>
@@ -99,9 +97,7 @@ Bundler tries to fix issues with having to manage your gems(and their related de
 location of your choosing. This path can then be added to your application to load all the <br />
 frozen gems. The following command with the path set to the location you would like to unpack your gems allows you to use bundler to vendorize gems.</p>
 <div>
-<pre>
-<code class='ruby'>bundle install --path vendor/bundle</code>
-</pre>
+<pre><code class='ruby'>bundle install --path vendor/bundle</code></pre>
 </div>
 <p>You can then add these gems to your application as you would for vendorized gems.</p>
 <h3>Bundler with rvm and gemsets</h3>
@@ -111,21 +107,16 @@ frozen gems. The following command with the path set to the location you would l
 <p>Bundler allows you to install and update a set of gems based on the Gemfile. But it is not obvious how you would set up an application that has local gems installed to start using bundler. To start you need to delete all gems from the current gems. Having a clean workspace allows bundler to install gems from Gemfile without conflicts and can prevent a lot of confusion when multiple versions of a gem being installed side by side.</p>
 <p>Here is a snippet that will allow you to clean your gemset.</p>
 <div>
-<pre>
-<code class='ruby'>Delete all gems from gemset
-gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code>
-</pre>
+<pre><code class='ruby'>Delete all gems from gemset
+gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code></pre>
 </div>
 <p>In most cases this will work. But rake seems to be installed as part of the global gemset. So the above command will delete all gems till rake and then abort. To skip deleting rake change the above script as follows</p>
 <div>
-<pre>
-<code class='ruby'>gem list | cut -d ' ' -f1 | ack -v 'rake' | xargs gem uninstall -aIx</code>
-</pre>
+<pre><code class='ruby'>gem list | cut -d ' ' -f1 | ack -v 'rake' | xargs gem uninstall -aIx</code></pre>
 </div>
 <p>(ack is further reading if you don&#8217;t already know what it does.)</p></div>
 
 
-  <div class="tags">Tags : </div>
   <footer>
     <p class="meta">
       
@@ -165,7 +156,7 @@ gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code>
         <a class="basic-alignment left" href="/blog/2012/01/19/grok-grack/" title="Previous Post: grok grack">&laquo; grok grack</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/03/13/agile-and-beyond/" title="next Post: Agile and Beyond 2012">Agile and Beyond 2012 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/03/13/agile-and-beyond/" title="Next Post: Agile and Beyond 2012">Agile and Beyond 2012 &raquo;</a>
       
     </p>
   </footer>

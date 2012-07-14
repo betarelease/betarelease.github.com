@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[&beta;-release]]></title>
+  <title><![CDATA[betarelease]]></title>
   <link href="http://betarelease.github.com/atom.xml" rel="self"/>
   <link href="http://betarelease.github.com/"/>
-  <updated>2012-07-13T22:27:48-07:00</updated>
+  <updated>2012-07-13T22:48:29-07:00</updated>
   <id>http://betarelease.github.com/</id>
   <author>
     <name><![CDATA[Sudhindra Rao]]></name>
@@ -22,21 +22,22 @@
 octopress:&#8221;http://github.com/octopress.git&#8221;. You will see that some of
 things work like:</p>
 
-<h3>Posts show up clearer and nicer - because of octopress font selection</h3>
+<ul>
+<li>Posts show up clearer and nicer - because of octopress /ont selection</li>
+<li>you will see my addition of tag cloud to octopress - so tags will show</li>
+<li>archives - a list of archives arranged as an index page</li>
+</ul>
 
-<h3>you will see my addition of tag cloud to octopress - so tags will show</h3>
-
-<h3>archives - a list of archives arranged as an index page</h3>
 
 <p>What does not yet work :</p>
 
-<h3>Tags are not aligned on the page</h3>
+<ul>
+<li>Tags are not aligned on the page</li>
+<li>Discuss comments are missing - thanks to discuss your comments are safe. They just need to be linked correctly</li>
+<li>RSS feed is missing</li>
+<li>My color scheme is missing - so does not reflect the author&#8217;s personality ;)</li>
+</ul>
 
-<h3>Discuss comments are missing - thanks to discuss your comments are safe. They just need to be linked correctly</h3>
-
-<h3>RSS feed is missing</h3>
-
-<h3>My color scheme is missing - so does not reflect the author&#8217;s personality ;)</h3>
 
 <p>Hope you will bear with me while I make things easier for me to post and
 bring a more pleasant reading experience for  you.</p>
@@ -128,9 +129,7 @@ Bundler tries to fix issues with having to manage your gems(and their related de
 location of your choosing. This path can then be added to your application to load all the <br />
 frozen gems. The following command with the path set to the location you would like to unpack your gems allows you to use bundler to vendorize gems.</p>
 <div>
-<pre>
-<code class='ruby'>bundle install --path vendor/bundle</code>
-</pre>
+<pre><code class='ruby'>bundle install --path vendor/bundle</code></pre>
 </div>
 <p>You can then add these gems to your application as you would for vendorized gems.</p>
 <h3>Bundler with rvm and gemsets</h3>
@@ -140,16 +139,12 @@ frozen gems. The following command with the path set to the location you would l
 <p>Bundler allows you to install and update a set of gems based on the Gemfile. But it is not obvious how you would set up an application that has local gems installed to start using bundler. To start you need to delete all gems from the current gems. Having a clean workspace allows bundler to install gems from Gemfile without conflicts and can prevent a lot of confusion when multiple versions of a gem being installed side by side.</p>
 <p>Here is a snippet that will allow you to clean your gemset.</p>
 <div>
-<pre>
-<code class='ruby'>Delete all gems from gemset
-gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code>
-</pre>
+<pre><code class='ruby'>Delete all gems from gemset
+gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code></pre>
 </div>
 <p>In most cases this will work. But rake seems to be installed as part of the global gemset. So the above command will delete all gems till rake and then abort. To skip deleting rake change the above script as follows</p>
 <div>
-<pre>
-<code class='ruby'>gem list | cut -d ' ' -f1 | ack -v 'rake' | xargs gem uninstall -aIx</code>
-</pre>
+<pre><code class='ruby'>gem list | cut -d ' ' -f1 | ack -v 'rake' | xargs gem uninstall -aIx</code></pre>
 </div>
 <p>(ack is further reading if you don&#8217;t already know what it does.)</p>]]></content>
   </entry>
@@ -250,11 +245,9 @@ client</a>.</p>
 <p>To allow your linux machine to connect and airplay to the airport express you need install pulseaudio’s drivers and support for remote audio protocol by running <a href="http://www.makeuseof.com/tag/apples-airtunes-ubuntulinux/">airtunes with Linux</a></p>
 
 <div>
-  <pre>
-    <code class='ruby'>sudo apt-get install pulseaudio-module-raop paprefs
+  <pre><code class='ruby'>sudo apt-get install pulseaudio-module-raop paprefs
 
-(I am not making this up- The protocol is Remote Audio Output Protocol - raop)</code>
-  </pre>
+(I am not making this up- The protocol is Remote Audio Output Protocol - raop)</code></pre>
 </div>
 
 
