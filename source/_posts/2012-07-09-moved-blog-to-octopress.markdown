@@ -6,7 +6,7 @@ comments: true
 ---
  I am in the process of moving the blog from my jekyll based site to [octopress][http://github.com/octopress.git]. You will see that some of things work like:
 
-* Posts show up clearer and nicer - because of octopress /ont selection
+* Posts show up clearer and nicer - because of octopress font selection
 * you will see my addition of tag cloud to octopress - so tags will show
 * archives - a list of archives arranged as an index page
 
