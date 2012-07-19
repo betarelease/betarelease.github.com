@@ -6,4 +6,4 @@ tags: [github, pages, blog, blogspot, blogger, jekyll, ruby]
 
 My old blog on blogger will still be available with all the posts and
 comments.\
-<a href="http://betarelease.blogspot.com">[http://betarelease.blogspot.com](http://betarelease.blogspot.com)</a>
+[(http://betarelease.blogspot.com)][http://betarelease.blogspot.com]
