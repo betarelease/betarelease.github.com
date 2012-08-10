@@ -5,14 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>CruiseControl Monitors - Gotchas and repost - &beta;release</title>
+  <title>CruiseControl Monitors - Gotchas and repost - &beta;-release</title>
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="When trying to use
-ccmonitor on my
-current project I hit the known snag of making it work with
-cruisecontrol.rb. For the umpteenth time I was not &hellip;">
+  <meta name="description" content="When trying to use cc_monitor on my current project I hit the known snag of making it work with cruisecontrol.rb. For the umpteenth time I was not &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -27,7 +24,7 @@ cruisecontrol.rb. For the umpteenth time I was not &hellip;">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="&beta;release" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="&beta;-release" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -38,7 +35,7 @@ cruisecontrol.rb. For the umpteenth time I was not &hellip;">
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">&beta;release</a></h1>
+  <h1><a href="/">&beta;-release</a></h1>
   
     <h2>version x.1 - always &beta; always released</h2>
   
@@ -96,30 +93,15 @@ cruisecontrol.rb. For the umpteenth time I was not &hellip;">
   </header>
 
 
-<div class="entry-content"><p>When trying to use
-<a href="http://github.com/betarelease/cc_monitor">cc<em>monitor</a> on my
-current project I hit the known snag of making it work with
-cruisecontrol.rb. For the umpteenth time I was not able to find any
-documentation on making it publish cc</em>tray compatible xml, which would
-make cc_monitor work with cc.rb.</p>
+<div class="entry-content"><p>When trying to use <a href="http://github.com/betarelease/cc_monitor">cc_monitor</a> on my current project I hit the known snag of making it work with cruisecontrol.rb. For the umpteenth time I was not able to find any documentation on making it publish cc_tray compatible xml, which would make cc_monitor work with cc.rb.</p>
 
-<p>After some googling and mucking around I downloaded latest
-cruisecontrol.rb and looked at its routes. I found a route
-“XmlServerReport.aspx” which does publish in ‘cctray’ format. I plugged
-it in to cc_monitor and it works like a charm.</p>
+<p>After some googling and mucking around I downloaded latest cruisecontrol.rb and looked at its routes. I found a route “XmlServerReport.aspx” which does publish in ‘cctray’ format. I plugged it in to cc_monitor and it works like a charm.</p>
 
-<p>So now I can announce that cc<em>monitor works with any java/ruby versions
-of cruisecontrol. If you would like to use cc</em>monitor with a continuous
-integration tool make sure it publishes a cc_tray compatible xml and
-you are all set.</p>
+<p>So now I can announce that cc<em>monitor works with any java/ruby versions of cruisecontrol. If you would like to use cc</em>monitor with a continuous integration tool make sure it publishes a cc_tray compatible xml and you are all set.</p>
 
-<p>Recently I successfully added ‘bacon’ to test my ramaze code for
-cc_monitor. The repository has been updated so check it out.</p>
+<p>Recently I successfully added ‘bacon’ to test my ramaze code for cc_monitor. The repository has been updated so check it out.</p>
 
-<p>I was also suggested to check out
-<a href="http://github.com/betarelease/cc_board">cc_board</a> which is
-a build monitor written in sinatra by David Vollbracht. Another app to
-make big visible charts for your team!</p>
+<p>I was also suggested to check out <a href="http://github.com/betarelease/cc_board">cc_board</a> which is a build monitor written in sinatra by David Vollbracht. Another app to make big visible charts for your team!</p>
 </div>
 
 

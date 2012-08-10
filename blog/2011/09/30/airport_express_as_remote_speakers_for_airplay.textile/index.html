@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Airport Express as Remote Speakers for Airplay - Also with Linux - &beta;release</title>
+  <title>Airport Express as Remote Speakers for Airplay - Also with Linux - &beta;-release</title>
   <meta name="author" content="Sudhindra Rao">
 
   
@@ -24,7 +24,7 @@
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="&beta;release" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="&beta;-release" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -35,7 +35,7 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">&beta;release</a></h1>
+  <h1><a href="/">&beta;-release</a></h1>
   
     <h2>version x.1 - always &beta; always released</h2>
   
@@ -100,33 +100,28 @@
 <p>Here is a list of quirks you need to remember when you try to set it up as a <a href="http://support.apple.com/kb/HT2272?viewlocale=en_US">wireless
 client</a>.</p>
 
-<p># Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1~~11.</p>
+<ol>
+<li><p>Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1~~11.</p></li>
+<li><p>Plug in the airport express and connect it to your mac using the ethernet cable.</p></li>
+<li><p>Start airport utility~~ which will try to detect any airport devices but will not find any.</p></li>
+<li><p>Hard reset by pressing the reset button with a paper clip for atleast 10 seconds. The light blinks rapidly when you are holding the pin and then in 30 seconds becomes steady - this means that airport express is restarting.</p></li>
+<li><p>Now rescan on the airport utility - it should find one device with name ‘Base station xxxxxx’ - with last 6 digits from the mac address. It should have a yellow icon next to it - indicating that it has not connected to the internet.</p></li>
+<li><p>Perform a Manual Setup - DO NOT hit continue.</p></li>
+<li><p>Change the channel number that is automatically set on the airport express to the one from your wireless router.</p></li>
+<li><p>In ‘Wireless’ connect the airport express as a client - select ‘Join an existing wireless network’ - select appropriate SSID of the wireless router.</p></li>
+<li><p>Browse through other tabs if you are interested in the details - else click ‘Update’.</p></li>
+<li><p>The airport express should restart and reappear on the Airport Utility. This usually takes over a minute. When it reappears it should appear with the new name you chose and with a green light next to it - indicating it was able to connect to your wireless router.</p></li>
+<li><p>If everything was successful and airport express liked the ‘Enable for Airplay’ selection you made - you will see a red light in the stereo socket light up. Connect your speakers to airport express and you should be able to airplay your music using iTunes.</p></li>
+</ol>
 
-<p># Plug in the airport express and connect it to your mac using the ethernet cable.</p>
-
-<p># Start airport utility~~ which will try to detect any airport devices but will not find any.</p>
-
-<p># Hard reset by pressing the reset button with a paper clip for atleast 10 seconds. The light blinks rapidly when you are holding the pin and then in 30 seconds becomes steady - this means that airport express is restarting.</p>
-
-<p># Now rescan on the airport utility - it should find one device with name ‘Base station xxxxxx’ - with last 6 digits from the mac address. It should have a yellow icon next to it - indicating that it has not connected to the internet.</p>
-
-<p># Perform a Manual Setup - DO NOT hit continue.</p>
-
-<p># Change the channel number that is automatically set on the airport express to the one from your wireless router.</p>
-
-<p># In ‘Wireless’ connect the airport express as a client - select ‘Join an existing wireless network’ - select appropriate SSID of the wireless router.</p>
-
-<p># Browse through other tabs if you are interested in the details - else click ‘Update’.</p>
-
-<p># The airport express should restart and reappear on the Airport Utility. This usually takes over a minute. When it reappears it should appear with the new name you chose and with a green light next to it - indicating it was able to connect to your wireless router.</p>
-
-<p># If everything was successful and airport express liked the ‘Enable for Airplay’ selection you made - you will see a red light in the stereo socket light up. Connect your speakers to airport express and you should be able to airplay your music using iTunes.</p>
 
 <p>Notes:</p>
 
-<p># You may encounter “AirPort Utility was unable to find your AirPort wireless device after restarting.” One of the reasons for this is that Airport express cannot connect to your router with WPA2 or any other security.(Look at <a href="http://www.mac-forums.com/forums/internet-networking-wireless/103890-airport-express-existing-wireless-network-help.html">Airport Express Amber Light</a> for more details.)</p>
+<ul>
+<li><p>You may encounter “AirPort Utility was unable to find your AirPort wireless device after restarting.” One of the reasons for this is that Airport express cannot connect to your router with WPA2 or any other security.(Look at <a href="http://www.mac-forums.com/forums/internet-networking-wireless/103890-airport-express-existing-wireless-network-help.html">Airport Express Amber Light</a> for more details.)</p></li>
+<li><p>To ensure security I disabled ‘SSID broadcast’ and enabled MAC filtering on my router. I added the MAC addresses of my Airport Express (Airport Admin Utility will show those addresses when it detects Airport Express.)</p></li>
+</ul>
 
-<p># To ensure security I disabled ‘SSID broadcast’ and enabled MAC filtering on my router. I added the MAC addresses of my Airport Express (Airport Admin Utility will show those addresses when it detects Airport Express.)</p>
 
 <p>To allow your linux machine to connect and airplay to the airport express you need install pulseaudio’s drivers and support for remote audio protocol by running <a href="http://www.makeuseof.com/tag/apples-airtunes-ubuntulinux/">airtunes with Linux</a></p>
 
