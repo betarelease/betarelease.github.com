@@ -32,10 +32,10 @@ Here are a few reasons you should consider blogging:
 
 How and where to blog?
 
-# Wordpress
+# "Wordpress":http://www.wordpress.com
 # "Tumblr":https://xkcd.com/1043/
-# blogger - beware of their weird copyright requirements.
-# github - octopress
-# build your own blog engine and push it to heroku
+# "blogger":http://www.blogger.com - beware of their weird copyright requirements.
+# "github":http://www.github.com - "octopress":http://github.com/octopress.git
+# build your own blog engine and push it to "heroku":http://www.heroku.com
 
 What are you waiting for? Go write something.

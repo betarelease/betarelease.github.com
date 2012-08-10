@@ -5,17 +5,11 @@ tags: [speaker, agile, conference, chicago, mock objects, paulo caroli,
 sumeet moghe, thoughtworks, 2009]
 ---
 
-I will be speaking at Agile Conference 2009 in Chicago between August
-24–28. You will find all the other speakers from ThoughtWorks on
-<a href="http://connect.thoughtworks.com/agile2009/">ThoughtWorks
-website</a>.
+I will be speaking at Agile Conference 2009 in Chicago between August 24–28. You will find all the other speakers from ThoughtWorks on <a href="http://connect.thoughtworks.com/agile2009/">ThoughtWorks website</a>.
 
-My colleague and compadre from my TWU trainer stint Paulo Caroli and
-Sumeet Moghe will be there too.
+My colleague and compadre from my TWU trainer stint Paulo Caroli and Sumeet Moghe will be there too.
 
 See you there.
 
-After Print: Want to attend my session … there is an app for that
-(<a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=325405256&mt=8">Agile
-2009 Conference Connection at the AppStore</a> - written by
-ThoughtWorks)
+After Print: Want to attend my session … there is an app for that (<a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=325405256&mt=8">Agile
+2009 Conference Connection at the AppStore</a> - written by ThoughtWorks)
