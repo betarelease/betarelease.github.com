@@ -9,7 +9,9 @@
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="While working on my mac and trying to use giternal I ran into ‘no such file to load —rubygems’. While I had been using ruby apps on the machine for a &hellip;">
+  <meta name="description" content="While working on my mac and trying to use giternal I ran into ‘no such
+file to load —rubygems’. While I had been using ruby apps on the machine
+for a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/2010/03/12/no-such-file-to-load-rubygems.textile/">
+  <link rel="canonical" href="http://betarelease.github.com/blog/2010/03/12/no-such-file-to-load-rubygems.textile">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -57,10 +59,8 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-
   <li><a href="/profile.html">About</a></li>
 </ul>
-
 
 </nav>
   <div id="main">
@@ -93,27 +93,37 @@
   </header>
 
 
-<div class="entry-content"><p>While working on my mac and trying to use giternal I ran into ‘no such file to load —rubygems’. While I had been using ruby apps on the machine for a while, without any issues and with all the installed gems, this seemed weird.</p>
+
+<div class="entry-content"><p>While working on my mac and trying to use giternal I ran into ‘no such
+file to load —rubygems’. While I had been using ruby apps on the machine
+for a while, without any issues and with all the installed gems, this
+seemed weird.</p>
 
 <p>I tried using the irb and check if</p>
 
-<div>
-  <pre><code class='mysql'>irb\&gt; require ‘rubygems’</code></pre>
+<p>irb> require ‘rubygems’</p>
+
+<p>would work. But I got the same error. I was using the default mac
+version of the ruby installation that is installed at
+‘/System/Library/Frameworks/Ruby.framework…..’ and did verify that
+rubygems was installed and that rubygems.rb was also present.</p>
+
+<p>On further investigation I found that the default ruby that was run on
+the command line was 1.8.7 when I expected 1.8.6. \
+It appears that my path contained ‘/opt/local/bin’ before ‘/usr/bin’
+which made the 1.8.7 version of ruby default and thus clobbered all by
+1.8.6 settings and lost rubygems.</p>
+
+<p>To fix this I moved ‘opt/local/bin’ to be after ‘/usr/bin’ in my $PATH
+and voila everything works again.</p>
+
+<p>I have also been meaning to try RVM - maybe its time to give it a shot
+since my personal projects are on 1.8.7 and I have jruby as well as
+1.8.6 installed on my mac.</p>
 </div>
 
 
-<p>would work. But I got the same error. I was using the default mac version of the ruby installation that is installed at ‘/System/Library/Frameworks/Ruby.framework…..’ and did verify that rubygems was installed and that rubygems.rb was also present.</p>
-
-<p>On further investigation I found that the default ruby that was run on the command line was 1.8.7 when I expected 1.8.6.</p>
-
-<p>It appears that my path contained ‘/opt/local/bin’ before ‘/usr/bin’ which made the 1.8.7 version of ruby default and thus clobbered all by 1.8.6 settings and lost rubygems.</p>
-
-<p>To fix this I moved ‘opt/local/bin’ to be after ‘/usr/bin’ in my $PATH and voila everything works again.</p>
-
-<p>I have also been meaning to try RVM - maybe its time to give it a shot since my personal projects are on 1.8.7 and I have jruby as well as 1.8.6 installed on my mac.</p>
-</div>
-
-
+  <div class="tags">Tags : </div>
   <footer>
     <p class="meta">
       
@@ -153,7 +163,7 @@
         <a class="basic-alignment left" href="/blog/2010/03/11/want-to-be-a-trainer.textile/" title="Previous Post: Why should you be a trainer?">&laquo; Why should you be a trainer?</a>
       
       
-        <a class="basic-alignment right" href="/blog/2010/03/12/prepare-to-be-a-trainer.textile/" title="Next Post: Preparing to be a trainer">Preparing to be a trainer &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2010/03/12/prepare-to-be-a-trainer.textile/" title="next Post: Preparing to be a trainer">Preparing to be a trainer &raquo;</a>
       
     </p>
   </footer>

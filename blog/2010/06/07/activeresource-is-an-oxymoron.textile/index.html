@@ -9,7 +9,9 @@
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="One of the projects I worked on recently consisted of a number of applications interacting with each other over REST. These applications were written &hellip;">
+  <meta name="description" content="One of the projects I worked on recently consisted of a number of
+applications interacting with each other over REST. These applications
+were written &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/2010/06/07/activeresource-is-an-oxymoron.textile/">
+  <link rel="canonical" href="http://betarelease.github.com/blog/2010/06/07/activeresource-is-an-oxymoron.textile">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -57,10 +59,8 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-
   <li><a href="/profile.html">About</a></li>
 </ul>
-
 
 </nav>
   <div id="main">
@@ -93,16 +93,35 @@
   </header>
 
 
-<div class="entry-content"><p>One of the projects I worked on recently consisted of a number of applications interacting with each other over REST. These applications were written with an intention to obtain loose-coupling between them.</p>
 
-<p>While writing more controller actions I noticed something that we were doing repeatedly - anytime one particular model changed in the domain it caused a ripple effect of making us change all the consumers in the application suite. These models were all exposed across applications by using ActiveResource. ActiveResource forced us to change every one of the model/model manifestations in the application.</p>
+<div class="entry-content"><p>One of the projects I worked on recently consisted of a number of
+applications interacting with each other over REST. These applications
+were written with an intention to obtain loose-coupling between them.</p>
 
-<p>The main intent of the decoupling effort was to help us change these applications almost independently of each other. These applications were supposed to only depend on the exposed interfaces. What ActiveResource did was forced us to tightly-couple them and a single change caused a ripple effect.</p>
+<p>While writing more controller actions I noticed something that we were
+doing repeatedly - anytime one particular model changed in the domain it
+caused a ripple effect of making us change all the consumers in the
+application suite. These models were all exposed across applications by
+using ActiveResource. ActiveResource forced us to change every one of
+the model/model manifestations in the application.</p>
 
-<p>So my question is ‘Is ActiveResource an oxymoron?’ - Especially considering the fact that Active means really simple but strong coupling. Active does apply nicely to a database record and eases development by getting out of the way. But in case of lightly or ideally decoupled applications does the Active make sense? - Probably not. So if you want to expose objects and their behaviours over the wire maybe ActiveResource is not such a good idea.</p>
+<p>The main intent of the decoupling effort was to help us change these
+applications almost independently of each other. These applications were
+supposed to only depend on the exposed interfaces. What ActiveResource
+did was forced us to tightly-couple them and a single change caused a
+ripple effect.</p>
+
+<p>So my question is ‘Is ActiveResource an oxymoron?’ - Especially
+considering the fact that Active means really simple but strong
+coupling. Active does apply nicely to a database record and eases
+development by getting out of the way. But in case of lightly or ideally
+decoupled applications does the Active make sense? - Probably not. So if
+you want to expose objects and their behaviours over the wire maybe
+ActiveResource is not such a good idea.</p>
 </div>
 
 
+  <div class="tags">Tags : </div>
   <footer>
     <p class="meta">
       
@@ -142,7 +161,7 @@
         <a class="basic-alignment left" href="/blog/2010/03/15/prepare-training-venue.textile/" title="Previous Post: Preparing the Training Venue">&laquo; Preparing the Training Venue</a>
       
       
-        <a class="basic-alignment right" href="/blog/2010/06/25/setup-wireless-on-ubuntu.textile/" title="Next Post: Setting up wireless usb card on Ubuntu - Lucid Lynx">Setting up wireless usb card on Ubuntu - Lucid Lynx &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2010/06/25/setup-wireless-on-ubuntu.textile/" title="next Post: Setting up wireless usb card on Ubuntu - Lucid Lynx">Setting up wireless usb card on Ubuntu - Lucid Lynx &raquo;</a>
       
     </p>
   </footer>

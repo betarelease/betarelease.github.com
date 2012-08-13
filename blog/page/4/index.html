@@ -9,7 +9,9 @@
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="Seacucumber was a project that was a tool we used on a previous rails project. My friends Mike Ward and Peter Ryan opensourced it some time back. It &hellip;">
+  <meta name="description" content="If you are using iTunes to play your music be careful when adding music
+to the library. iTunes tries to be smart and by default it makes a copy
+of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/page/4/">
+  <link rel="canonical" href="http://betarelease.github.com/blog/page/4">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -57,16 +59,64 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-
   <li><a href="/profile.html">About</a></li>
 </ul>
-
 
 </nav>
   <div id="main">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/28/itunes-settings.textile/">iTunes Settings</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-28T00:00:00-07:00" pubdate data-updated="true">May 28<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you are using iTunes to play your music be careful when adding music
+to the library. iTunes tries to be smart and by default it makes a copy
+of the music you have as well as tries to organise it the way it likes.
+So if you do not like your music organised by artist/album and so on it
+will render your music unsearchable. (This is true for me since I do not
+organise my music by the artist album and such.)</p>
+
+<p>To save the whole lot of mess it creates set the following in your
+iTunes preferences\
+<img src="/images/itunes_settings.png"/>.</p>
+
+<p>This way iTunes will make a list of songs but not process them the way
+it likes. You can have your own organisation of music and save a lot of
+trouble for yourself.</p>
+</div>
+  
+  
+  
+
+    </article>
+    <div class="tags">Tags : </div>
   
   
     <article>
@@ -96,17 +146,31 @@
   </header>
 
 
-  <div class="entry-content"><p><a href="http://seacucumber.rubyforge.org/">Seacucumber</a> was a project that was a tool we used on a previous rails project. My friends <a href="http://m2ward.blogspot.com/">Mike Ward</a> and <a href= "http://www.peterryan.net/">Peter Ryan</a> opensourced it some time back. It was dormant for awhile since it worked great with prototype. Another thing was that it looked and behaved very similar to <a href="http://drnicwilliams.com/2008/01/04/autotesting-javascript-in-rails/">Dr. Nic’s javascript testing</a> that you can download for rails. Recently I was on a project where we used jquery and we did not have anything to run javascript tests and break the build on failure.</p>
+  <div class="entry-content"><p><a href="http://seacucumber.rubyforge.org/">Seacucumber</a> was a
+project that was a tool we used on a previous rails project. My friends
+<a href="http://m2ward.blogspot.com/">Mike Ward</a> and
+<a href= "http://www.peterryan.net/">Peter Ryan</a> opensourced it some
+time back. It was dormant for awhile since it worked great with
+prototype. Another thing was that it looked and behaved very similar to
+<a href="http://drnicwilliams.com/2008/01/04/autotesting-javascript-in-rails/">Dr.
+Nic’s javascript testing</a> that you can download for rails. Recently I
+was on a project where we used jquery and we did not have anything to
+run javascript tests and break the build on failure.</p>
 
-<p>So I revived seacucumber development and added jquery support to it. I had to modify jquery test runner to postback results as prototype does. So if you need a tool to automate your javascript testing you should use seacucumber. It has been moved to <a href="https://github.com/betarelease/seacucumber/tree">github</a>.</p>
-
-<p>Feel free to download it, fork it and use it. Let me know what you would like added to this tool.</p>
+<p>So I revived seacucumber development and added jquery support to it. I
+had to modify jquery test runner to postback results as prototype does.
+So if you need a tool to automate your javascript testing you should use
+seacucumber. It has been moved to
+<a href="https://github.com/betarelease/seacucumber/tree">github</a>.
+Feel free to download it, fork it and use it. Let me know what you would
+like added to this tool.</p>
 </div>
   
   
-
+  
 
     </article>
+    <div class="tags">Tags : javascript, testing, seacucumber, jquery, prototype, rails, ruby</div>
   
   
     <article>
@@ -136,9 +200,18 @@
   </header>
 
 
-  <div class="entry-content"><p>MySQL added triggers to its portfolio in version 5.0. I am thinking this was a lot of database gurus have been wanting for so long. A little primer on how to use MySQL trigger follows : Trigger 101 follows - so detune if you are a guru already.</p>
+  <div class="entry-content"><p>MySQL added triggers to its portfolio in version 5.0. I am thinking this
+was a lot of database gurus have been wanting for so long. A little
+primer on how to use MySQL trigger follows : Trigger 101 follows - so
+detune if you are a guru already.</p>
 
-<p>Your database can perform a decent number of arithmetic and logical operations on your data. All this can be done by using the features of your database engine and without writing any code. One of the features I used in a recent write up is triggers. I have some tables - models with relationships. When these models change I want to effect some calculations and update relevant tables.This can all be done through triggers.</p>
+<p>Your database can perform a decent number of arithmetic and logical
+operations on your data. All this can be done by using the features of
+your database engine and without writing any code. One of the features I
+used in a recent write up is triggers. \
+I have some tables - models with relationships. When these models change
+I want to effect some calculations and update relevant tables.This can
+all be done through triggers.</p>
 
 <p>Lets take it up with an example</p>
 
@@ -162,13 +235,20 @@ delimiter ;</code></pre>
 </div>
 
 
-<p>This will add a trigger to your voters table and update the voter_ward table with the genderwise count. As you can imagine you can add a lot of simple logic into these triggers to build simple and efficient update based on such events. Another thing that should be apparent is being cautious about using these triggers every chance you get to use it - They will bring the database performance down with these frequent queries.</p>
+<p>This will add a trigger to your voters table and update the voter_ward
+table with the genderwise count. As you can imagine you can add a lot of
+simple logic into these triggers to build simple and efficient update
+based on such events. Another thing that should be apparent is being
+cautious about using these triggers every chance you get to use it -
+They will bring the database performance down with these frequent
+queries.</p>
 </div>
   
   
-
+  
 
     </article>
+    <div class="tags">Tags : mysql, triggers, databases, SQL</div>
   
   
     <article>
@@ -200,15 +280,19 @@ delimiter ;</code></pre>
 
   <div class="entry-content"><p>Released
 <a href="http://github.com/betarelease/accordion.js/tree/master">accordion.js</a>
-on github. We were quite frustrated with the way <a href="http://www.stickmanlabs.com/accordion/">accordion v2.0</a> behaved with prototype1.6. Upgrading that from prototype1.5 broke the accordion when using with images. Our simple version does not have anyeffects yet but work beautifully and is completely tested.</p>
-
-<p>Try it out!</p>
+on github. We were quite frustrated with the way
+<a href="http://www.stickmanlabs.com/accordion/">accordion v2.0</a>
+behaved with prototype1.6. Upgrading that from prototype1.5 broke the
+accordion when using with images. Our simple version does not have any
+effects yet but work beautifully and is completely tested. \
+Try it out<img src="" alt="image" /></p>
 </div>
   
   
-
+  
 
     </article>
+    <div class="tags">Tags : javascript, prototype, accordion, opensource</div>
   
   
     <article>
@@ -239,14 +323,18 @@ on github. We were quite frustrated with the way <a href="http://www.stickmanlab
 
 
   <div class="entry-content"><p>I have moved my personal blog from blogspot to
-[github pages][http://github.com/blog/272-github-pages].
-[Dr. Nic][http://drnicwilliams.com/2008/12/21/migrating-project-websites-to-github-pages-with-sake-tasks-new-websites-with-jekyll_generator/&#8221;] and [Mojombo][http://github.com/mojombo/tpw/tree/master] helped me do it with Jekyll.</p>
+<a href="http://github.com/blog/272-github-pages">github pages</a>.
+<a href="http://drnicwilliams.com/2008/12/21/migrating-project-websites-to-github-pages-with-sake-tasks-new-websites-with-jekyll_generator/">Dr.
+Nic</a> and
+<a href="http://github.com/mojombo/tpw/tree/master">Mojombo</a> helped
+me do it with Jekyll.</p>
 </div>
   
   
-
+  
 
     </article>
+    <div class="tags">Tags : github, pages, blog, blogspot, blogger, jekyll, ruby</div>
   
   
     <article>
@@ -277,14 +365,15 @@ on github. We were quite frustrated with the way <a href="http://www.stickmanlab
 
 
   <div class="entry-content"><p>My old blog on blogger will still be available with all the posts and
-comments -
-[(http://betarelease.blogspot.com)][http://betarelease.blogspot.com]</p>
+comments.\
+<a href="http://betarelease.blogspot.com"><a href="http://betarelease.blogspot.com">http://betarelease.blogspot.com</a></a></p>
 </div>
   
   
-
+  
 
     </article>
+    <div class="tags">Tags : github, pages, blog, blogspot, blogger, jekyll, ruby</div>
   
   <div class="pagination">
     

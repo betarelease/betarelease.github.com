@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/2012/03/06/vendorizing-gems-with-bundler/">
+  <link rel="canonical" href="http://betarelease.github.com/blog/2012/03/06/vendorizing-gems-with-bundler">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -57,10 +57,8 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-
   <li><a href="/profile.html">About</a></li>
 </ul>
-
 
 </nav>
   <div id="main">
@@ -93,6 +91,7 @@
   </header>
 
 
+
 <div class="entry-content"><p>Bundler is a tool for managing installed libraries on a ruby project. It comes bundled with rails 3 but can be used standalone without rails. <br />
 Bundler tries to fix issues with having to manage your gems(and their related dependencies and versions) in a clean way. In doing so it allows you to work on your application and not have to worry about dependencies sucking the life out of your releases.</p>
 <p>Off late I have been working on an application that vendorizes its gems and packages them while shipping the application. Since this application is also been built in the traditional way(rails 2) I was looking to use bundler with it to do the vendorization. Turns out bundler supports such a use case.</p>
@@ -120,6 +119,7 @@ gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code></pre>
 <p>(ack is further reading if you don&#8217;t already know what it does.)</p></div>
 
 
+  <div class="tags">Tags : </div>
   <footer>
     <p class="meta">
       
@@ -159,7 +159,7 @@ gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code></pre>
         <a class="basic-alignment left" href="/blog/2012/01/19/grok-grack/" title="Previous Post: grok grack">&laquo; grok grack</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/03/13/agile-and-beyond/" title="Next Post: Agile and Beyond 2012">Agile and Beyond 2012 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/03/13/agile-and-beyond/" title="next Post: Agile and Beyond 2012">Agile and Beyond 2012 &raquo;</a>
       
     </p>
   </footer>
