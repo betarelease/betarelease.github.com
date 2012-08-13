@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[&beta;release]]></title>
+  <title><![CDATA[&beta;-release]]></title>
   <link href="http://betarelease.github.com/atom.xml" rel="self"/>
   <link href="http://betarelease.github.com/"/>
-  <updated>2012-07-13T23:02:07-07:00</updated>
+  <updated>2012-08-09T08:14:48-07:00</updated>
   <id>http://betarelease.github.com/</id>
   <author>
     <name><![CDATA[Sudhindra Rao]]></name>
@@ -18,12 +18,12 @@
     <link href="http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress/"/>
     <updated>2012-07-09T09:16:00-07:00</updated>
     <id>http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress</id>
-    <content type="html"><![CDATA[<p> I am in the process of moving the blog from my jekyll based site to
-octopress:&#8221;http://github.com/octopress.git&#8221;. You will see that some of
-things work like:</p>
+    <content type="html"><![CDATA[<p> I am in the process of moving the blog from my jekyll based site to <a href="http://github.com/octopress.git">octopress</a></p>
+
+<p>You may notice :</p>
 
 <ul>
-<li>Posts show up clearer and nicer - because of octopress /ont selection</li>
+<li>Posts show up clearer and nicer - because of octopress font selection</li>
 <li>you will see my addition of tag cloud to octopress - so tags will show</li>
 <li>archives - a list of archives arranged as an index page</li>
 </ul>
@@ -33,14 +33,13 @@ things work like:</p>
 
 <ul>
 <li>Tags are not aligned on the page</li>
-<li>Discuss comments are missing - thanks to discuss your comments are safe. They just need to be linked correctly</li>
+<li>Disqus comments are missing - thanks to discuss your comments are safe. They just need to be linked correctly</li>
 <li>RSS feed is missing</li>
 <li>My color scheme is missing - so does not reflect the author&#8217;s personality ;)</li>
 </ul>
 
 
-<p>Hope you will bear with me while I make things easier for me to post and
-bring a more pleasant reading experience for  you.</p>
+<p>Hope you will bear with me while I make things easier for me to post and bring a more pleasant reading experience for  you.</p>
 
 <p>Thank you !!!</p>
 ]]></content>
@@ -71,11 +70,11 @@ bring a more pleasant reading experience for  you.</p>
 </ol>
 <p>How and where to blog?</p>
 <ol>
-	<li>Wordpress</li>
+	<li><a href="http://www.wordpress.com">Wordpress</a></li>
 	<li><a href="https://xkcd.com/1043/">Tumblr</a></li>
-	<li>blogger &#8211; beware of their weird copyright requirements.</li>
-	<li>github &#8211; octopress</li>
-	<li>build your own blog engine and push it to heroku</li>
+	<li><a href="http://www.blogger.com">blogger</a> &#8211; beware of their weird copyright requirements.</li>
+	<li><a href="http://www.github.com">github</a> &#8211; <a href="http://github.com/octopress.git">octopress</a></li>
+	<li>build your own blog engine and push it to <a href="http://www.heroku.com">heroku</a></li>
 </ol>
 <p>What are you waiting for? Go write something.</p>]]></content>
   </entry>
@@ -154,21 +153,6 @@ gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code></pre>
     <link href="http://betarelease.github.com/blog/2012/01/19/grok-grack/"/>
     <updated>2012-01-19T00:00:00-08:00</updated>
     <id>http://betarelease.github.com/blog/2012/01/19/grok-grack</id>
-    <content type="html"><![CDATA[<p>Recently I was trying to host git repository from an already existing(non-bare) repository. I <br />
-was looking for a solution that does not force me to create a bare repository and does not <br />
-require me to install apache or some such webserver on my machine.</p>
-<p>I found a wonderful tool written by Scott Chacon called <a href="https://github.com/schacon/grack.git">grack</a>. grack is a git server on top of rack. Its elegance is in its design. It consists of few hundred lines of a rack middleware(awesome!) and a 6-8 line config file that allows you to host any repository over http. Setting it up on a local <br />
-machine was really easy. Even hosting multiple repositories is trivial.</p>
-<p>I discovered one quirk when my server was not accessible, was due to binding it specifically to 127.0.0.1.<br />
-Avoid this and bind to the hostname instead.</p>
-<p>Many thanks to Scott Chacon, Github, Rack and Ruby for keeping it so simple.</p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[grok grack]]></title>
-    <link href="http://betarelease.github.com/blog/2012/01/19/grok-grack/"/>
-    <updated>2012-01-19T00:00:00-08:00</updated>
-    <id>http://betarelease.github.com/blog/2012/01/19/grok-grack</id>
     <content type="html"><![CDATA[<p>Recently I was trying to host git repository from an already existing
 (non-bare) repository. I
 was looking for a solution that does not force me to create a bare
@@ -214,33 +198,28 @@ simple.</p>
 <p>Here is a list of quirks you need to remember when you try to set it up as a <a href="http://support.apple.com/kb/HT2272?viewlocale=en_US">wireless
 client</a>.</p>
 
-<p># Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1~~11.</p>
+<ol>
+<li><p>Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1~~11.</p></li>
+<li><p>Plug in the airport express and connect it to your mac using the ethernet cable.</p></li>
+<li><p>Start airport utility~~ which will try to detect any airport devices but will not find any.</p></li>
+<li><p>Hard reset by pressing the reset button with a paper clip for atleast 10 seconds. The light blinks rapidly when you are holding the pin and then in 30 seconds becomes steady - this means that airport express is restarting.</p></li>
+<li><p>Now rescan on the airport utility - it should find one device with name ‘Base station xxxxxx’ - with last 6 digits from the mac address. It should have a yellow icon next to it - indicating that it has not connected to the internet.</p></li>
+<li><p>Perform a Manual Setup - DO NOT hit continue.</p></li>
+<li><p>Change the channel number that is automatically set on the airport express to the one from your wireless router.</p></li>
+<li><p>In ‘Wireless’ connect the airport express as a client - select ‘Join an existing wireless network’ - select appropriate SSID of the wireless router.</p></li>
+<li><p>Browse through other tabs if you are interested in the details - else click ‘Update’.</p></li>
+<li><p>The airport express should restart and reappear on the Airport Utility. This usually takes over a minute. When it reappears it should appear with the new name you chose and with a green light next to it - indicating it was able to connect to your wireless router.</p></li>
+<li><p>If everything was successful and airport express liked the ‘Enable for Airplay’ selection you made - you will see a red light in the stereo socket light up. Connect your speakers to airport express and you should be able to airplay your music using iTunes.</p></li>
+</ol>
 
-<p># Plug in the airport express and connect it to your mac using the ethernet cable.</p>
-
-<p># Start airport utility~~ which will try to detect any airport devices but will not find any.</p>
-
-<p># Hard reset by pressing the reset button with a paper clip for atleast 10 seconds. The light blinks rapidly when you are holding the pin and then in 30 seconds becomes steady - this means that airport express is restarting.</p>
-
-<p># Now rescan on the airport utility - it should find one device with name ‘Base station xxxxxx’ - with last 6 digits from the mac address. It should have a yellow icon next to it - indicating that it has not connected to the internet.</p>
-
-<p># Perform a Manual Setup - DO NOT hit continue.</p>
-
-<p># Change the channel number that is automatically set on the airport express to the one from your wireless router.</p>
-
-<p># In ‘Wireless’ connect the airport express as a client - select ‘Join an existing wireless network’ - select appropriate SSID of the wireless router.</p>
-
-<p># Browse through other tabs if you are interested in the details - else click ‘Update’.</p>
-
-<p># The airport express should restart and reappear on the Airport Utility. This usually takes over a minute. When it reappears it should appear with the new name you chose and with a green light next to it - indicating it was able to connect to your wireless router.</p>
-
-<p># If everything was successful and airport express liked the ‘Enable for Airplay’ selection you made - you will see a red light in the stereo socket light up. Connect your speakers to airport express and you should be able to airplay your music using iTunes.</p>
 
 <p>Notes:</p>
 
-<p># You may encounter “AirPort Utility was unable to find your AirPort wireless device after restarting.” One of the reasons for this is that Airport express cannot connect to your router with WPA2 or any other security.(Look at <a href="http://www.mac-forums.com/forums/internet-networking-wireless/103890-airport-express-existing-wireless-network-help.html">Airport Express Amber Light</a> for more details.)</p>
+<ul>
+<li><p>You may encounter “AirPort Utility was unable to find your AirPort wireless device after restarting.” One of the reasons for this is that Airport express cannot connect to your router with WPA2 or any other security.(Look at <a href="http://www.mac-forums.com/forums/internet-networking-wireless/103890-airport-express-existing-wireless-network-help.html">Airport Express Amber Light</a> for more details.)</p></li>
+<li><p>To ensure security I disabled ‘SSID broadcast’ and enabled MAC filtering on my router. I added the MAC addresses of my Airport Express (Airport Admin Utility will show those addresses when it detects Airport Express.)</p></li>
+</ul>
 
-<p># To ensure security I disabled ‘SSID broadcast’ and enabled MAC filtering on my router. I added the MAC addresses of my Airport Express (Airport Admin Utility will show those addresses when it detects Airport Express.)</p>
 
 <p>To allow your linux machine to connect and airplay to the airport express you need install pulseaudio’s drivers and support for remote audio protocol by running <a href="http://www.makeuseof.com/tag/apples-airtunes-ubuntulinux/">airtunes with Linux</a></p>
 
@@ -270,22 +249,22 @@ client</a>.</p>
 
 <p>Recently I switched to Chrome as my primary browser since it promised to have all the add-ons to make it comparable to Firefox. On the contrary, in fact it still lacks the power and the flexibility of Firefox for development. Here are a few reasons why Firefox is still better at supporting development:</p>
 
-<p>* <a href="https://addons.mozilla.org/en-US/firefox/addon/748/">greasemonkey</a> for Firefox works with XMLHTTPRequests for different origin -
-<a href="http://greasemetal.31tools.com/">greasemetal</a> (now <a href="http://www.chromium.org/developers/design-documents/user-scripts">userscripts</a>)
-for Google Chrome has still not been able to fix this issue.</p>
+<ul>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/748/">greasemonkey</a> for Firefox works with XMLHTTPRequests for different origin - <a href="http://greasemetal.31tools.com/">greasemetal</a> (now <a href="http://www.chromium.org/developers/design-documents/user-scripts">userscripts</a>) for Google Chrome has still not been able to fix this issue.</li>
+</ul>
+
 
 <p>_“GM<em>xmlhttpRequest is same-origin only.&#8221; - <a href="http://www.chromium.org/developers/design-documents/user-scripts">User Scripts</a>
 .</em></p>
 
-<p>* A number of add-ons on Firefox show useful information on the status bar - I use ”DCurrency“:<a href="https://addons.mozilla.org/en-US/firefox/addon/6462/">https://addons.mozilla.org/en-US/firefox/addon/6462/</a>, ”CruiseControl Monitor“:<a href="https://addons.mozilla.org/en-US/firefox/addon/896/">https://addons.mozilla.org/en-US/firefox/addon/896/</a>.</p>
+<ul>
+<li><p>A number of add-ons on Firefox show useful information on the status bar - I use ”DCurrency“:<a href="https://addons.mozilla.org/en-US/firefox/addon/6462/">https://addons.mozilla.org/en-US/firefox/addon/6462/</a>, ”CruiseControl Monitor“:<a href="https://addons.mozilla.org/en-US/firefox/addon/896/">https://addons.mozilla.org/en-US/firefox/addon/896/</a>.</p></li>
+<li><p>”Selenium IDE&#8221;:<a href="http://seleniumhq.org/projects/ide">http://seleniumhq.org/projects/ide</a>/ is available for Firefox - a big plus when I am trying to record andplay while I am trying to debug some apps.</p></li>
+<li><p>In the minimal view my frequently used bookmarks always show in Firefox ~~Google Chrome shows them when I open a new tab only. Maybe a minor annoyance but I cannot reuse the current tab with a single click access to my bookmarks.</p></li>
+<li><p>Minor annoyance~~ when I maximize the window on OSX Google Chrome expands only vertically. Firefox does not have this problem.</p></li>
+<li><p>Even with proxy switchers Chrome depends/modifies system proxy settings (diabolical). When using on Windows changing the proxy on IE will affect Chrome and vice-versa.</p></li>
+</ul>
 
-<p>*”Selenium IDE&#8221;:<a href="http://seleniumhq.org/projects/ide">http://seleniumhq.org/projects/ide</a>/ is available for Firefox - a big plus when I am trying to record andplay while I am trying to debug some apps.</p>
-
-<p>* In the minimal view my frequently used bookmarks always show in Firefox ~~Google Chrome shows them when I open a new tab only. Maybe a minor annoyance but I cannot reuse the current tab with a single click access to my bookmarks.</p>
-
-<p>* Minor annoyance~~ when I maximize the window on OSX Google Chrome expands only vertically. Firefox does not have this problem.</p>
-
-<p>* Even with proxy switchers Chrome depends/modifies system proxy settings (diabolical). When using on Windows changing the proxy on IE will affect Chrome and vice-versa.</p>
 
 <p><em>“Chrome uses system’s proxy settings (IE proxy settings on Wndows) because it doesn’t have its own proxy settings yet (see <a href="http://crbug.com/266">http://crbug.com/266)</a>).Therefore, changing Chrome’s proxy settings using Switchy will also affect the system proxy settings.” - quote from <a href="https://chrome.google.com/extensions/detail/caehdcpeofiiigpdhbabniblemipncjj">Proxy Switchy!</a> extension.</em></p>
 
@@ -332,43 +311,17 @@ for Google Chrome has still not been able to fix this issue.</p>
     <link href="http://betarelease.github.com/blog/2010/09/12/ruby-kaigi-report.textile/"/>
     <updated>2010-09-12T00:00:00-07:00</updated>
     <id>http://betarelease.github.com/blog/2010/09/12/ruby-kaigi-report.textile</id>
-    <content type="html"><![CDATA[<p>Returned from Ruby Kaigi last weekend. The conference was held in
-Tsukuba International Convention Center and attended much of the
-enthusiastic ruby community (including Matz, Chad Fowler, Charles
-Nutter, Yehuda Katz et al). Had a blast presenting ‘Rocking the
-Enterprise with Ruby’.</p>
+    <content type="html"><![CDATA[<p>Returned from Ruby Kaigi last weekend. The conference was held in Tsukuba International Convention Center and attended much of the enthusiastic ruby community (including Matz, Chad Fowler, Charles Nutter, Yehuda Katz et al). Had a blast presenting ‘Rocking the Enterprise with Ruby’.</p>
 
-<p>Of all the sessions I could attend I liked Matz keynote focusing on the
-direction of Ruby 2.0. Especially the focus on mix-ins, issues with
-module mixins and list of ancestors. Class-boxes also looked a very
-interesting concept. Makes me want to use ruby 2.0 now. Based on the
-timeline discussed it is on track to be released sometime in 2011.
-(<a href="http://rubykaigi.tdiary.net/20100829.html#">Ruby 2.0</a>)</p>
+<p>Of all the sessions I could attend I liked Matz keynote focusing on the direction of Ruby 2.0. Especially the focus on mix-ins, issues with module mixins and list of ancestors. Class-boxes also looked a very interesting concept. Makes me want to use ruby 2.0 now. Based on the timeline discussed it is on track to be released sometime in 2011. (<a href="http://rubykaigi.tdiary.net/20100829.html#">Ruby 2.0</a>)</p>
 
-<p>I also liked the treatment of metaprogramming handed out by
-<a href="http://ducktypo.blogspot.com/">Paolo ‘Nusco’ Perrotta</a>. A
-delightful presenter who can draw great illustrations as well as explain
-the issues in ruby programming very well. His message ‘Look at source
-code from projects to learn what they are doing’. Also, he concluded
-that what works in Ruby works because of its design (metaprogramming,
-mixins) may not work in Java/C#. So when you come to ruby you may have
-to change the way you think.</p>
+<p>I also liked the treatment of metaprogramming handed out by <a href="http://ducktypo.blogspot.com/">Paolo ‘Nusco’ Perrotta</a>. A delightful presenter who can draw great illustrations as well as explain the issues in ruby programming very well. His message ‘Look at source code from projects to learn what they are doing’. Also, he concluded that what works in Ruby works because of its design (metaprogramming, mixins) may not work in Java/C#. So when you come to ruby you may have to change the way you think.</p>
 
-<p>Very enthusiastic response to lightning talks (in fact entries to
-lightning talks were closed even before the start of the conference). \
-Youngest ruby programmer (Shota Fukumori @sora_h) who wants to change
-ruby internals with his gem ‘few’ and
-<a href="http://github.com/benhoskings/babushka">babushka</a> by Ben
-Hoskings were my
-favourites.(<a href="http://rubykaigi.tdiary.net/20100831.html#p01">Lightning
-Talks</a>)</p>
+<p>Very enthusiastic response to lightning talks (in fact entries to lightning talks were closed even before the start of the conference). Youngest ruby programmer (Shota Fukumori @sora_h) who wants to change ruby internals with his gem ‘few’ and <a href="http://github.com/benhoskings/babushka">babushka</a> by Ben Hoskings were my favourites.(<a href="http://rubykaigi.tdiary.net/20100831.html#p01">Lightning Talks</a>)</p>
 
-<p>The conference was organised very well, with an unofficial and official
-party on Friday and Saturday. Thanks to everyone who worked to make this
-a success.</p>
+<p>The conference was organised very well, with an unofficial and official party on Friday and Saturday. Thanks to everyone who worked to make this a success.</p>
 
-<p><img class="image" src="http://betarelease.github.com/images/rubykaigi_staff.jpg">\
-(RubyKaigi 2010 Staff (by Naoto Takai))</p>
+<p><img class="image" src="http://betarelease.github.com/images/rubykaigi_staff.jpg"> (RubyKaigi 2010 Staff (by Naoto Takai))</p>
 ]]></content>
   </entry>
   
@@ -394,8 +347,7 @@ a success.</p>
     <id>http://betarelease.github.com/blog/2010/08/04/streaming-media-from-ubuntu-to-bravia.textile</id>
     <content type="html"><![CDATA[<p>Over this weekend I set out to connect my Ubuntu machine with my Sony Bravia TV.( With inspiration from <a href="http://thoughtworker.in/2010/07/20/dns-323-ps3-and-upnp/">Sachin Dharmapurikar</a> and <a href="http://en.wikipedia.org/wiki/Digital_Living_Network_Alliance">DLNA</a>.)</p>
 
-<p>Googling yielded a number of techniques to stream media from linux over the home network. Some that did suit Bravia and some that did not. The
-easiest one to work with was <a href="http://blog.mycila.com/2010/01/dlna-on-sony-bravia-tvs.html">minidlna server</a>. Snappy install and my Bravia recognised it like any other streaming website. I am running the minidlna server for my music and photos and all the content that is in DVD/mpeg2 format.(<a href="http://wiki.oppodigital.com/index.php?title=DLNA_Linux">How to install on linux</a>)</p>
+<p>Googling yielded a number of techniques to stream media from linux over the home network. Some that did suit Bravia and some that did not. The easiest one to work with was <a href="http://blog.mycila.com/2010/01/dlna-on-sony-bravia-tvs.html">minidlna server</a>. Snappy install and my Bravia recognised it like any other streaming website. I am running the minidlna server for my music and photos and all the content that is in DVD/mpeg2 format.(<a href="http://wiki.oppodigital.com/index.php?title=DLNA_Linux">How to install on linux</a>)</p>
 
 <p>I do have some videos that came to me as avi and minidlna does not support transcoding. (There are some that describe how to do it with Windows but no out of the box solution with linux yet.) Google for <a href="http://ps3mediaserver.blogspot.com/">PS3 Media servers</a> I stumbled upon a <a href="http://code.google.com/p/ps3mediaserver/">PS3 Media Server for Linux</a> - which is a java application that streams and transcodes nicely.</p>
 
@@ -413,21 +365,9 @@ easiest one to work with was <a href="http://blog.mycila.com/2010/01/dlna-on-son
     <updated>2010-06-25T00:00:00-07:00</updated>
     <id>http://betarelease.github.com/blog/2010/06/25/setup-wireless-on-ubuntu.textile</id>
     <content type="html"><![CDATA[<p>I have faced the same problems with Wireless Networking as mentioned by
-many on the web. \
-I tried <a
-href="https://help.ubuntu.com/community/HardwareSupportComponentsWirelessNetworkCardsLink
-sys#USB">Hardware Compatibility List for Linux</a> and many links on
-that list. In an attempt to install custom drivers I would always end up
-with a network card that would detect wireless but never would
-communicate over wireless. After going through a number of cards and
-uninstalling and installing drivers I found one that worked really well
-without resorting to the ndiswrapper solution (dealing with anything
-windows just feels unclean). Finally I found a card that worked and also
-provided native linux drivers.The wireless usb card that worked was -
-<a href="http://sasha.gerrand.id.au/2010/06/03/resolving-driver-problems-for-d-link-dwa-125-
-wireless-150-usb-adapter-in-ubuntu/">D-Link DWA–125 with Ubuntu Lucid
-Lynx</a>.It also helped that D-Link in fact published a linux driver for
-their wireless usb card</p>
+many on the web.</p>
+
+<p>I tried <a href="https://help.ubuntu.com/community/HardwareSupportComponentsWirelessNetworkCardsLinksys#USB">Hardware Compatibility List for Linux</a> and many links on that list. In an attempt to install custom drivers I would always end up with a network card that would detect wireless but never would communicate over wireless. After going through a number of cards and uninstalling and installing drivers I found one that worked really well without resorting to the ndiswrapper solution (dealing with anything windows just feels unclean). Finally I found a card that worked and also provided native linux drivers.The wireless usb card that worked was - <a href="http://sasha.gerrand.id.au/2010/06/03/resolving-driver-problems-for-d-link-dwa-125-wireless-150-usb-adapter-in-ubuntu/">D-Link DWA–125 with Ubuntu Lucid Lynx</a>.It also helped that D-Link in fact published a linux driver for their wireless usb card.</p>
 ]]></content>
   </entry>
   
@@ -436,30 +376,13 @@ their wireless usb card</p>
     <link href="http://betarelease.github.com/blog/2010/06/07/activeresource-is-an-oxymoron.textile/"/>
     <updated>2010-06-07T00:00:00-07:00</updated>
     <id>http://betarelease.github.com/blog/2010/06/07/activeresource-is-an-oxymoron.textile</id>
-    <content type="html"><![CDATA[<p>One of the projects I worked on recently consisted of a number of
-applications interacting with each other over REST. These applications
-were written with an intention to obtain loose-coupling between them.</p>
+    <content type="html"><![CDATA[<p>One of the projects I worked on recently consisted of a number of applications interacting with each other over REST. These applications were written with an intention to obtain loose-coupling between them.</p>
 
-<p>While writing more controller actions I noticed something that we were
-doing repeatedly - anytime one particular model changed in the domain it
-caused a ripple effect of making us change all the consumers in the
-application suite. These models were all exposed across applications by
-using ActiveResource. ActiveResource forced us to change every one of
-the model/model manifestations in the application.</p>
+<p>While writing more controller actions I noticed something that we were doing repeatedly - anytime one particular model changed in the domain it caused a ripple effect of making us change all the consumers in the application suite. These models were all exposed across applications by using ActiveResource. ActiveResource forced us to change every one of the model/model manifestations in the application.</p>
 
-<p>The main intent of the decoupling effort was to help us change these
-applications almost independently of each other. These applications were
-supposed to only depend on the exposed interfaces. What ActiveResource
-did was forced us to tightly-couple them and a single change caused a
-ripple effect.</p>
+<p>The main intent of the decoupling effort was to help us change these applications almost independently of each other. These applications were supposed to only depend on the exposed interfaces. What ActiveResource did was forced us to tightly-couple them and a single change caused a ripple effect.</p>
 
-<p>So my question is ‘Is ActiveResource an oxymoron?’ - Especially
-considering the fact that Active means really simple but strong
-coupling. Active does apply nicely to a database record and eases
-development by getting out of the way. But in case of lightly or ideally
-decoupled applications does the Active make sense? - Probably not. So if
-you want to expose objects and their behaviours over the wire maybe
-ActiveResource is not such a good idea.</p>
+<p>So my question is ‘Is ActiveResource an oxymoron?’ - Especially considering the fact that Active means really simple but strong coupling. Active does apply nicely to a database record and eases development by getting out of the way. But in case of lightly or ideally decoupled applications does the Active make sense? - Probably not. So if you want to expose objects and their behaviours over the wire maybe ActiveResource is not such a good idea.</p>
 ]]></content>
   </entry>
   
@@ -583,6 +506,32 @@ mention activities that require you to be available on a weekend.</p>
 <li>Prepare the venue to suit the training</li>
 </ol>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[no such file to load —rubygems]]></title>
+    <link href="http://betarelease.github.com/blog/2010/03/12/no-such-file-to-load-rubygems.textile/"/>
+    <updated>2010-03-12T00:00:00-08:00</updated>
+    <id>http://betarelease.github.com/blog/2010/03/12/no-such-file-to-load-rubygems.textile</id>
+    <content type="html"><![CDATA[<p>While working on my mac and trying to use giternal I ran into ‘no such file to load —rubygems’. While I had been using ruby apps on the machine for a while, without any issues and with all the installed gems, this seemed weird.</p>
+
+<p>I tried using the irb and check if</p>
+
+<div>
+  <pre><code class='mysql'>irb\&gt; require ‘rubygems’</code></pre>
+</div>
+
+
+<p>would work. But I got the same error. I was using the default mac version of the ruby installation that is installed at ‘/System/Library/Frameworks/Ruby.framework…..’ and did verify that rubygems was installed and that rubygems.rb was also present.</p>
+
+<p>On further investigation I found that the default ruby that was run on the command line was 1.8.7 when I expected 1.8.6.</p>
+
+<p>It appears that my path contained ‘/opt/local/bin’ before ‘/usr/bin’ which made the 1.8.7 version of ruby default and thus clobbered all by 1.8.6 settings and lost rubygems.</p>
+
+<p>To fix this I moved ‘opt/local/bin’ to be after ‘/usr/bin’ in my $PATH and voila everything works again.</p>
+
+<p>I have also been meaning to try RVM - maybe its time to give it a shot since my personal projects are on 1.8.7 and I have jruby as well as 1.8.6 installed on my mac.</p>
 ]]></content>
   </entry>
   
