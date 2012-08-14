@@ -9,7 +9,9 @@
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="MySQL added triggers to its portfolio in version 5.0. I am thinking this was a lot of database gurus have been wanting for so long. A little primer &hellip;">
+  <meta name="description" content="MySQL added triggers to its portfolio in version 5.0. I am thinking this
+was a lot of database gurus have been wanting for so long. A little
+primer &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/2009/04/05/mysql-triggers.textile/">
+  <link rel="canonical" href="http://betarelease.github.com/blog/2009/04/05/mysql-triggers.textile">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -57,10 +59,8 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-
   <li><a href="/profile.html">About</a></li>
 </ul>
-
 
 </nav>
   <div id="main">
@@ -93,9 +93,19 @@
   </header>
 
 
-<div class="entry-content"><p>MySQL added triggers to its portfolio in version 5.0. I am thinking this was a lot of database gurus have been wanting for so long. A little primer on how to use MySQL trigger follows : Trigger 101 follows - so detune if you are a guru already.</p>
 
-<p>Your database can perform a decent number of arithmetic and logical operations on your data. All this can be done by using the features of your database engine and without writing any code. One of the features I used in a recent write up is triggers. I have some tables - models with relationships. When these models change I want to effect some calculations and update relevant tables.This can all be done through triggers.</p>
+<div class="entry-content"><p>MySQL added triggers to its portfolio in version 5.0. I am thinking this
+was a lot of database gurus have been wanting for so long. A little
+primer on how to use MySQL trigger follows : Trigger 101 follows - so
+detune if you are a guru already.</p>
+
+<p>Your database can perform a decent number of arithmetic and logical
+operations on your data. All this can be done by using the features of
+your database engine and without writing any code. One of the features I
+used in a recent write up is triggers. \
+I have some tables - models with relationships. When these models change
+I want to effect some calculations and update relevant tables.This can
+all be done through triggers.</p>
 
 <p>Lets take it up with an example</p>
 
@@ -119,10 +129,17 @@ delimiter ;</code></pre>
 </div>
 
 
-<p>This will add a trigger to your voters table and update the voter_ward table with the genderwise count. As you can imagine you can add a lot of simple logic into these triggers to build simple and efficient update based on such events. Another thing that should be apparent is being cautious about using these triggers every chance you get to use it - They will bring the database performance down with these frequent queries.</p>
+<p>This will add a trigger to your voters table and update the voter_ward
+table with the genderwise count. As you can imagine you can add a lot of
+simple logic into these triggers to build simple and efficient update
+based on such events. Another thing that should be apparent is being
+cautious about using these triggers every chance you get to use it -
+They will bring the database performance down with these frequent
+queries.</p>
 </div>
 
 
+  <div class="tags">Tags : </div>
   <footer>
     <p class="meta">
       
@@ -162,7 +179,7 @@ delimiter ;</code></pre>
         <a class="basic-alignment left" href="/blog/2009/01/16/accordion_in_javascript.textile/" title="Previous Post: accordion.js that is simple and works with prototype1.6">&laquo; accordion.js that is simple and works with prototype1.6</a>
       
       
-        <a class="basic-alignment right" href="/blog/2009/05/21/javascript-testing-with-seacucumber.textile/" title="Next Post: javascript testing with seacucumber">javascript testing with seacucumber &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2009/05/21/javascript-testing-with-seacucumber.textile/" title="next Post: javascript testing with seacucumber">javascript testing with seacucumber &raquo;</a>
       
     </p>
   </footer>
