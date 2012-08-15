@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile">
+  <link rel="canonical" href="http://betarelease.github.com/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -57,8 +57,10 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+
   <li><a href="/profile.html">About</a></li>
 </ul>
+
 
 </nav>
   <div id="main">
@@ -86,10 +88,11 @@
 
 <time datetime="2011-09-30T00:00:00-07:00" pubdate data-updated="true">Sep 30<span>th</span>, 2011</time>
         
+         | <a href="#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
-
 
 
 <div class="entry-content"><p>I have an airport express that I used to use as my wireless router when I travel. Very convenient and useful when hotels do not provide a wireless.(Yes I am looking at you Marriott.) Airport Express thanks to apple technology also supports airplay to play music over the air, and/or printer sharing via a USB connection.</p>
@@ -99,33 +102,28 @@
 <p>Here is a list of quirks you need to remember when you try to set it up as a <a href="http://support.apple.com/kb/HT2272?viewlocale=en_US">wireless
 client</a>.</p>
 
-<p># Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1~~11.</p>
+<ol>
+<li><p>Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1~~11.</p></li>
+<li><p>Plug in the airport express and connect it to your mac using the ethernet cable.</p></li>
+<li><p>Start airport utility~~ which will try to detect any airport devices but will not find any.</p></li>
+<li><p>Hard reset by pressing the reset button with a paper clip for atleast 10 seconds. The light blinks rapidly when you are holding the pin and then in 30 seconds becomes steady - this means that airport express is restarting.</p></li>
+<li><p>Now rescan on the airport utility - it should find one device with name ‘Base station xxxxxx’ - with last 6 digits from the mac address. It should have a yellow icon next to it - indicating that it has not connected to the internet.</p></li>
+<li><p>Perform a Manual Setup - DO NOT hit continue.</p></li>
+<li><p>Change the channel number that is automatically set on the airport express to the one from your wireless router.</p></li>
+<li><p>In ‘Wireless’ connect the airport express as a client - select ‘Join an existing wireless network’ - select appropriate SSID of the wireless router.</p></li>
+<li><p>Browse through other tabs if you are interested in the details - else click ‘Update’.</p></li>
+<li><p>The airport express should restart and reappear on the Airport Utility. This usually takes over a minute. When it reappears it should appear with the new name you chose and with a green light next to it - indicating it was able to connect to your wireless router.</p></li>
+<li><p>If everything was successful and airport express liked the ‘Enable for Airplay’ selection you made - you will see a red light in the stereo socket light up. Connect your speakers to airport express and you should be able to airplay your music using iTunes.</p></li>
+</ol>
 
-<p># Plug in the airport express and connect it to your mac using the ethernet cable.</p>
-
-<p># Start airport utility~~ which will try to detect any airport devices but will not find any.</p>
-
-<p># Hard reset by pressing the reset button with a paper clip for atleast 10 seconds. The light blinks rapidly when you are holding the pin and then in 30 seconds becomes steady - this means that airport express is restarting.</p>
-
-<p># Now rescan on the airport utility - it should find one device with name ‘Base station xxxxxx’ - with last 6 digits from the mac address. It should have a yellow icon next to it - indicating that it has not connected to the internet.</p>
-
-<p># Perform a Manual Setup - DO NOT hit continue.</p>
-
-<p># Change the channel number that is automatically set on the airport express to the one from your wireless router.</p>
-
-<p># In ‘Wireless’ connect the airport express as a client - select ‘Join an existing wireless network’ - select appropriate SSID of the wireless router.</p>
-
-<p># Browse through other tabs if you are interested in the details - else click ‘Update’.</p>
-
-<p># The airport express should restart and reappear on the Airport Utility. This usually takes over a minute. When it reappears it should appear with the new name you chose and with a green light next to it - indicating it was able to connect to your wireless router.</p>
-
-<p># If everything was successful and airport express liked the ‘Enable for Airplay’ selection you made - you will see a red light in the stereo socket light up. Connect your speakers to airport express and you should be able to airplay your music using iTunes.</p>
 
 <p>Notes:</p>
 
-<p># You may encounter “AirPort Utility was unable to find your AirPort wireless device after restarting.” One of the reasons for this is that Airport express cannot connect to your router with WPA2 or any other security.(Look at <a href="http://www.mac-forums.com/forums/internet-networking-wireless/103890-airport-express-existing-wireless-network-help.html">Airport Express Amber Light</a> for more details.)</p>
+<ul>
+<li><p>You may encounter “AirPort Utility was unable to find your AirPort wireless device after restarting.” One of the reasons for this is that Airport express cannot connect to your router with WPA2 or any other security.(Look at <a href="http://www.mac-forums.com/forums/internet-networking-wireless/103890-airport-express-existing-wireless-network-help.html">Airport Express Amber Light</a> for more details.)</p></li>
+<li><p>To ensure security I disabled ‘SSID broadcast’ and enabled MAC filtering on my router. I added the MAC addresses of my Airport Express (Airport Admin Utility will show those addresses when it detects Airport Express.)</p></li>
+</ul>
 
-<p># To ensure security I disabled ‘SSID broadcast’ and enabled MAC filtering on my router. I added the MAC addresses of my Airport Express (Airport Admin Utility will show those addresses when it detects Airport Express.)</p>
 
 <p>To allow your linux machine to connect and airplay to the airport express you need install pulseaudio’s drivers and support for remote audio protocol by running <a href="http://www.makeuseof.com/tag/apples-airtunes-ubuntulinux/">airtunes with Linux</a></p>
 
@@ -146,7 +144,6 @@ client</a>.</p>
 </div>
 
 
-  <div class="tags">Tags : </div>
   <footer>
     <p class="meta">
       
@@ -174,7 +171,7 @@ client</a>.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile/" data-via="" data-counturl="http://betarelease.github.com/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile/" data-via="sudhindraRao" data-counturl="http://betarelease.github.com/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile/" >Tweet</a>
   
   
   
@@ -186,7 +183,7 @@ client</a>.</p>
         <a class="basic-alignment left" href="/blog/2010/12/18/why-firefox.textile/" title="Previous Post: Why I use Firefox over Chrome?">&laquo; Why I use Firefox over Chrome?</a>
       
       
-        <a class="basic-alignment right" href="/blog/2011/12/07/simple-dashboard-with-tab-slideshow.textile/" title="next Post: Simple Dashboard with Tab Slideshow">Simple Dashboard with Tab Slideshow &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2011/12/07/simple-dashboard-with-tab-slideshow.textile/" title="Next Post: Simple Dashboard with Tab Slideshow">Simple Dashboard with Tab Slideshow &raquo;</a>
       
     </p>
   </footer>
@@ -224,7 +221,59 @@ client</a>.</p>
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/betarelease">@betarelease</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
 
+        github.showRepos({
+            user: 'betarelease',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("sudhindraRao", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/sudhindraRao" class="twitter-follow-button" data-show-count="false">Follow @sudhindraRao</a>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/srrao2k?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/srrao2k">My Delicious Bookmarks &raquo;</a></p>
+</section>
 
 
 
@@ -242,6 +291,19 @@ client</a>.</p>
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'betareleasedraftingrandomthoughts';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 

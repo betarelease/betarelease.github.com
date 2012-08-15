@@ -20,7 +20,7 @@ venue &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/2010/03/15/prepare-training-venue.textile">
+  <link rel="canonical" href="http://betarelease.github.com/blog/2010/03/15/prepare-training-venue.textile/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -59,8 +59,10 @@ venue &hellip;">
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+
   <li><a href="/profile.html">About</a></li>
 </ul>
+
 
 </nav>
   <div id="main">
@@ -88,10 +90,11 @@ venue &hellip;">
 
 <time datetime="2010-03-15T00:00:00-07:00" pubdate data-updated="true">Mar 15<span>th</span>, 2010</time>
         
+         | <a href="#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
-
 
 
 <div class="entry-content"><p>The venue and the setting in which the training is conducted forms a
@@ -144,7 +147,6 @@ you need to project multiple things at the same time.</p></li>
 </div>
 
 
-  <div class="tags">Tags : </div>
   <footer>
     <p class="meta">
       
@@ -172,7 +174,7 @@ you need to project multiple things at the same time.</p></li>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2010/03/15/prepare-training-venue.textile/" data-via="" data-counturl="http://betarelease.github.com/blog/2010/03/15/prepare-training-venue.textile/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2010/03/15/prepare-training-venue.textile/" data-via="sudhindraRao" data-counturl="http://betarelease.github.com/blog/2010/03/15/prepare-training-venue.textile/" >Tweet</a>
   
   
   
@@ -184,7 +186,7 @@ you need to project multiple things at the same time.</p></li>
         <a class="basic-alignment left" href="/blog/2010/03/12/prepare-to-be-a-trainer.textile/" title="Previous Post: Preparing to be a trainer">&laquo; Preparing to be a trainer</a>
       
       
-        <a class="basic-alignment right" href="/blog/2010/06/07/activeresource-is-an-oxymoron.textile/" title="next Post: ActiveResource is an oxymoron?">ActiveResource is an oxymoron? &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2010/06/07/activeresource-is-an-oxymoron.textile/" title="Next Post: ActiveResource is an oxymoron?">ActiveResource is an oxymoron? &raquo;</a>
       
     </p>
   </footer>
@@ -222,7 +224,59 @@ you need to project multiple things at the same time.</p></li>
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/betarelease">@betarelease</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
 
+        github.showRepos({
+            user: 'betarelease',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("sudhindraRao", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/sudhindraRao" class="twitter-follow-button" data-show-count="false">Follow @sudhindraRao</a>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/srrao2k?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/srrao2k">My Delicious Bookmarks &raquo;</a></p>
+</section>
 
 
 
@@ -240,6 +294,19 @@ you need to project multiple things at the same time.</p></li>
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'betareleasedraftingrandomthoughts';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 

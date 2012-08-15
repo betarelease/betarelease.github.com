@@ -9,10 +9,7 @@
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="When trying to use
-ccmonitor on my
-current project I hit the known snag of making it work with
-cruisecontrol.rb. For the umpteenth time I was not &hellip;">
+  <meta name="description" content="When trying to use cc_monitor on my current project I hit the known snag of making it work with cruisecontrol.rb. For the umpteenth time I was not &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +18,7 @@ cruisecontrol.rb. For the umpteenth time I was not &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/2009/10/04/cruisecontrol-monitors-gotchas.textile">
+  <link rel="canonical" href="http://betarelease.github.com/blog/2009/10/04/cruisecontrol-monitors-gotchas.textile/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -60,8 +57,10 @@ cruisecontrol.rb. For the umpteenth time I was not &hellip;">
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+
   <li><a href="/profile.html">About</a></li>
 </ul>
+
 
 </nav>
   <div id="main">
@@ -89,40 +88,25 @@ cruisecontrol.rb. For the umpteenth time I was not &hellip;">
 
 <time datetime="2009-10-04T00:00:00-07:00" pubdate data-updated="true">Oct 4<span>th</span>, 2009</time>
         
+         | <a href="#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
 
 
+<div class="entry-content"><p>When trying to use <a href="http://github.com/betarelease/cc_monitor">cc_monitor</a> on my current project I hit the known snag of making it work with cruisecontrol.rb. For the umpteenth time I was not able to find any documentation on making it publish cc_tray compatible xml, which would make cc_monitor work with cc.rb.</p>
 
-<div class="entry-content"><p>When trying to use
-<a href="http://github.com/betarelease/cc_monitor">cc<em>monitor</a> on my
-current project I hit the known snag of making it work with
-cruisecontrol.rb. For the umpteenth time I was not able to find any
-documentation on making it publish cc</em>tray compatible xml, which would
-make cc_monitor work with cc.rb.</p>
+<p>After some googling and mucking around I downloaded latest cruisecontrol.rb and looked at its routes. I found a route “XmlServerReport.aspx” which does publish in ‘cctray’ format. I plugged it in to cc_monitor and it works like a charm.</p>
 
-<p>After some googling and mucking around I downloaded latest
-cruisecontrol.rb and looked at its routes. I found a route
-“XmlServerReport.aspx” which does publish in ‘cctray’ format. I plugged
-it in to cc_monitor and it works like a charm.</p>
+<p>So now I can announce that cc<em>monitor works with any java/ruby versions of cruisecontrol. If you would like to use cc</em>monitor with a continuous integration tool make sure it publishes a cc_tray compatible xml and you are all set.</p>
 
-<p>So now I can announce that cc<em>monitor works with any java/ruby versions
-of cruisecontrol. If you would like to use cc</em>monitor with a continuous
-integration tool make sure it publishes a cc_tray compatible xml and
-you are all set.</p>
+<p>Recently I successfully added ‘bacon’ to test my ramaze code for cc_monitor. The repository has been updated so check it out.</p>
 
-<p>Recently I successfully added ‘bacon’ to test my ramaze code for
-cc_monitor. The repository has been updated so check it out.</p>
-
-<p>I was also suggested to check out
-<a href="http://github.com/betarelease/cc_board">cc_board</a> which is
-a build monitor written in sinatra by David Vollbracht. Another app to
-make big visible charts for your team!</p>
+<p>I was also suggested to check out <a href="http://github.com/betarelease/cc_board">cc_board</a> which is a build monitor written in sinatra by David Vollbracht. Another app to make big visible charts for your team!</p>
 </div>
 
 
-  <div class="tags">Tags : </div>
   <footer>
     <p class="meta">
       
@@ -150,7 +134,7 @@ make big visible charts for your team!</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2009/10/04/cruisecontrol-monitors-gotchas.textile/" data-via="" data-counturl="http://betarelease.github.com/blog/2009/10/04/cruisecontrol-monitors-gotchas.textile/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2009/10/04/cruisecontrol-monitors-gotchas.textile/" data-via="sudhindraRao" data-counturl="http://betarelease.github.com/blog/2009/10/04/cruisecontrol-monitors-gotchas.textile/" >Tweet</a>
   
   
   
@@ -162,7 +146,7 @@ make big visible charts for your team!</p>
         <a class="basic-alignment left" href="/blog/2009/09/18/flash-on-linux.textile/" title="Previous Post: Flash on Linux">&laquo; Flash on Linux</a>
       
       
-        <a class="basic-alignment right" href="/blog/2009/12/11/cc-monitor-graphs.textile/" title="next Post: CruiseControl Monitors - Graphs and Configuration">CruiseControl Monitors - Graphs and Configuration &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2009/12/11/cc-monitor-graphs.textile/" title="Next Post: CruiseControl Monitors - Graphs and Configuration">CruiseControl Monitors - Graphs and Configuration &raquo;</a>
       
     </p>
   </footer>
@@ -200,7 +184,59 @@ make big visible charts for your team!</p>
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/betarelease">@betarelease</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
 
+        github.showRepos({
+            user: 'betarelease',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("sudhindraRao", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/sudhindraRao" class="twitter-follow-button" data-show-count="false">Follow @sudhindraRao</a>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/srrao2k?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/srrao2k">My Delicious Bookmarks &raquo;</a></p>
+</section>
 
 
 
@@ -218,6 +254,19 @@ make big visible charts for your team!</p>
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'betareleasedraftingrandomthoughts';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
