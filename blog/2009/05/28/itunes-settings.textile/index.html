@@ -9,9 +9,7 @@
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="If you are using iTunes to play your music be careful when adding music
-to the library. iTunes tries to be smart and by default it makes a copy
-of &hellip;">
+  <meta name="description" content="If you are using iTunes to play your music be careful when adding music to the library. iTunes tries to be smart and by default it makes a copy of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ of &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/2009/05/28/itunes-settings.textile">
+  <link rel="canonical" href="http://betarelease.github.com/blog/2009/05/28/itunes-settings.textile/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -59,8 +57,10 @@ of &hellip;">
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+
   <li><a href="/profile.html">About</a></li>
 </ul>
+
 
 </nav>
   <div id="main">
@@ -88,30 +88,22 @@ of &hellip;">
 
 <time datetime="2009-05-28T00:00:00-07:00" pubdate data-updated="true">May 28<span>th</span>, 2009</time>
         
+         | <a href="#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
 
 
+<div class="entry-content"><p>If you are using iTunes to play your music be careful when adding music to the library. iTunes tries to be smart and by default it makes a copy of the music you have as well as tries to organise it the way it likes. So if you do not like your music organised by artist/album and so on it will render your music unsearchable. (This is true for me since I do not organise my music by the artist album and such.)</p>
 
-<div class="entry-content"><p>If you are using iTunes to play your music be careful when adding music
-to the library. iTunes tries to be smart and by default it makes a copy
-of the music you have as well as tries to organise it the way it likes.
-So if you do not like your music organised by artist/album and so on it
-will render your music unsearchable. (This is true for me since I do not
-organise my music by the artist album and such.)</p>
-
-<p>To save the whole lot of mess it creates set the following in your
-iTunes preferences\
+<p>To save the whole lot of mess it creates set the following in your iTunes preferences
 <img src="/images/itunes_settings.png"/>.</p>
 
-<p>This way iTunes will make a list of songs but not process them the way
-it likes. You can have your own organisation of music and save a lot of
-trouble for yourself.</p>
+<p>This way iTunes will make a list of songs but not process them the way it likes. You can have your own organisation of music and save a lot of trouble for yourself.</p>
 </div>
 
 
-  <div class="tags">Tags : </div>
   <footer>
     <p class="meta">
       
@@ -139,7 +131,7 @@ trouble for yourself.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2009/05/28/itunes-settings.textile/" data-via="" data-counturl="http://betarelease.github.com/blog/2009/05/28/itunes-settings.textile/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2009/05/28/itunes-settings.textile/" data-via="sudhindraRao" data-counturl="http://betarelease.github.com/blog/2009/05/28/itunes-settings.textile/" >Tweet</a>
   
   
   
@@ -151,7 +143,7 @@ trouble for yourself.</p>
         <a class="basic-alignment left" href="/blog/2009/05/21/javascript-testing-with-seacucumber.textile/" title="Previous Post: javascript testing with seacucumber">&laquo; javascript testing with seacucumber</a>
       
       
-        <a class="basic-alignment right" href="/blog/2009/06/01/top-ten-reasons-why-maven-sucks.textile/" title="next Post: top ten reasons why maven sucks">top ten reasons why maven sucks &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2009/06/01/top-ten-reasons-why-maven-sucks.textile/" title="Next Post: top ten reasons why maven sucks">top ten reasons why maven sucks &raquo;</a>
       
     </p>
   </footer>
@@ -189,7 +181,59 @@ trouble for yourself.</p>
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/betarelease">@betarelease</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
 
+        github.showRepos({
+            user: 'betarelease',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("sudhindraRao", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/sudhindraRao" class="twitter-follow-button" data-show-count="false">Follow @sudhindraRao</a>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/srrao2k?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/srrao2k">My Delicious Bookmarks &raquo;</a></p>
+</section>
 
 
 
@@ -207,6 +251,19 @@ trouble for yourself.</p>
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'betareleasedraftingrandomthoughts';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 

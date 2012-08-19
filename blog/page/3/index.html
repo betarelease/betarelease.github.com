@@ -9,9 +9,7 @@
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="While working on my mac and trying to use giternal I ran into ‘no such
-file to load —rubygems’. While I had been using ruby apps on the machine
-for a &hellip;">
+  <meta name="description" content="After being thoroughly impressed by the training that I received when I joined ThoughtWorks I was driven to become a trainer myself. I did that in &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ for a &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/page/3">
+  <link rel="canonical" href="http://betarelease.github.com/blog/page/3/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -59,76 +57,16 @@ for a &hellip;">
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+
   <li><a href="/profile.html">About</a></li>
 </ul>
+
 
 </nav>
   <div id="main">
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/03/12/no-such-file-to-load-rubygems.textile/">No Such File to Load —rubygems</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-03-12T00:00:00-08:00" pubdate data-updated="true">Mar 12<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>While working on my mac and trying to use giternal I ran into ‘no such
-file to load —rubygems’. While I had been using ruby apps on the machine
-for a while, without any issues and with all the installed gems, this
-seemed weird.</p>
-
-<p>I tried using the irb and check if</p>
-
-<p>irb> require ‘rubygems’</p>
-
-<p>would work. But I got the same error. I was using the default mac
-version of the ruby installation that is installed at
-‘/System/Library/Frameworks/Ruby.framework…..’ and did verify that
-rubygems was installed and that rubygems.rb was also present.</p>
-
-<p>On further investigation I found that the default ruby that was run on
-the command line was 1.8.7 when I expected 1.8.6. \
-It appears that my path contained ‘/opt/local/bin’ before ‘/usr/bin’
-which made the 1.8.7 version of ruby default and thus clobbered all by
-1.8.6 settings and lost rubygems.</p>
-
-<p>To fix this I moved ‘opt/local/bin’ to be after ‘/usr/bin’ in my $PATH
-and voila everything works again.</p>
-
-<p>I have also been meaning to try RVM - maybe its time to give it a shot
-since my personal projects are on 1.8.7 and I have jruby as well as
-1.8.6 installed on my mac.</p>
-</div>
-  
-  
-  
-
-    </article>
-    <div class="tags">Tags : ruby, rubygems, irb, giternal, git, rvm, jruby, paths</div>
   
   
     <article>
@@ -153,55 +91,53 @@ since my personal projects are on 1.8.7 and I have jruby as well as
 
 <time datetime="2010-03-11T00:00:00-08:00" pubdate data-updated="true">Mar 11<span>th</span>, 2010</time>
         
+         | <a href="/blog/2010/03/11/want-to-be-a-trainer.textile/#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>After being thoroughly impressed by the <a href="">training</a> that I
-received when I joined ThoughtWorks I was driven to become a trainer
-myself. I did that in 2008 (yes it’s already been that long) and am a
-different person professionally since then.</p>
+  <div class="entry-content"><p>After being thoroughly impressed by the <a href="">training</a> that I received when I joined ThoughtWorks I was driven to become a trainer myself. I did that in 2008 (yes it’s already been that long) and am a different person professionally since then.</p>
 
-<p>I am documenting my experiences for future reference as a mulitpost on
-Training. As I continue posting the topics on the list here will become
-active. Maybe as you read it will excite you to be a trainer too.</p>
+<p>I am documenting my experiences for future reference as a mulitpost on Training. As I continue posting the topics on the list here will become active. Maybe as you read it will excite you to be a trainer too.</p>
 
-<p># Preparation\
- ## <a href="/2010/01/02/prepare-to-be-a-trainer.html">Preparing to be a
-trainer</a>\
- ## <a href="/2010/03/15/preparing-training-venue.html">Preparing the Venue</a>\
-# Training to be a Trainer\
- ## Science of Learning\
- ## Cognition\
- ## Psychology of a trainee/student/learner \
- ## Training tools\
- ## Imaginative use of training tools to suit trainee/trainer/class\
- ## Studying the material\
- ## Suiting the training material to your style and needs\
- ## Dry runs\
-# Delivering as a Trainer\
- ## Preparing for the session\
- ### Seating\
- ### Be ready with the accessories for the session\
- ### Prepare the material\
- ## How to present yourself and still be yourself\
- ## Finishing up the day\
- ## Coaching/Mentoring/One-on-one training\
-# Feedback - Desiging training\
- ## Updating session content\
- ## Updating training style\
- ## Updating training schedule\
- ## Updating training theme\
- ## Adding new content\
- ## Applying what you learnt as a trainer to your profession</p>
+<ul>
+<li>Preparation
+<strong> <a href="/2010/01/02/prepare-to-be-a-trainer.html">Preparing to be a trainer</a>
+</strong> <a href="/2010/03/15/preparing-training-venue.html">Preparing the Venue</a></li>
+<li>Training to be a Trainer
+<strong> Science of Learning
+</strong> Cognition
+<strong> Psychology of a trainee/student/learner
+</strong> Training tools
+<strong> Imaginative use of training tools to suit trainee/trainer/class
+</strong> Studying the material
+<strong> Suiting the training material to your style and needs
+</strong> Dry runs</li>
+<li>Delivering as a Trainer
+<strong> Preparing for the session
+</strong><em> Seating
+</em><strong> Be ready with the accessories for the session
+</strong>* Prepare the material
+<strong> How to present yourself and still be yourself
+</strong> Finishing up the day
+** Coaching/Mentoring/One-on-one training</li>
+<li>Feedback - Desiging training
+<strong> Updating session content
+</strong> Updating training style
+<strong> Updating training schedule
+</strong> Updating training theme
+<strong> Adding new content
+</strong> Applying what you learnt as a trainer to your profession</li>
+</ul>
+
 </div>
   
   
-  
+
 
     </article>
-    <div class="tags">Tags : trainer, speaking, prepare, thoughtworks university, sessions</div>
   
   
     <article>
@@ -226,30 +162,24 @@ trainer</a>\
 
 <time datetime="2009-12-11T00:00:00-08:00" pubdate data-updated="true">Dec 11<span>th</span>, 2009</time>
         
+         | <a href="/blog/2009/12/11/cc-monitor-graphs.textile/#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://github.com/betarelease/cc_monitor">cc_monitor</a> now
-has graphs with the success and failure showing as below</p>
+  <div class="entry-content"><p><a href="http://github.com/betarelease/cc_monitor">cc_monitor</a> now has graphs with the success and failure showing as below</p>
 
 <p><img src="/images/cc_monitor_example.png" class="image"/></p>
 
-<p>Not only that it is now configurable with a config file to set variables
-at \
-startup. And now it is also armed with activerecord mgirations. So if
-you want \
-to look at a working example of activerecord migrations outside of rails
-you \
-can use this code.</p>
+<p>Not only that it is now configurable with a config file to set variables at startup. And now it is also armed with activerecord mgirations. So if you want to look at a working example of activerecord migrations outside of rails you can use this code.</p>
 </div>
   
   
-  
+
 
     </article>
-    <div class="tags">Tags : continuous integration, ci, cruisecontrol, big visible monitors, cc\_monitor, github, opensource</div>
   
   
     <article>
@@ -274,42 +204,28 @@ can use this code.</p>
 
 <time datetime="2009-10-04T00:00:00-07:00" pubdate data-updated="true">Oct 4<span>th</span>, 2009</time>
         
+         | <a href="/blog/2009/10/04/cruisecontrol-monitors-gotchas.textile/#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>When trying to use
-<a href="http://github.com/betarelease/cc_monitor">cc<em>monitor</a> on my
-current project I hit the known snag of making it work with
-cruisecontrol.rb. For the umpteenth time I was not able to find any
-documentation on making it publish cc</em>tray compatible xml, which would
-make cc_monitor work with cc.rb.</p>
+  <div class="entry-content"><p>When trying to use <a href="http://github.com/betarelease/cc_monitor">cc_monitor</a> on my current project I hit the known snag of making it work with cruisecontrol.rb. For the umpteenth time I was not able to find any documentation on making it publish cc_tray compatible xml, which would make cc_monitor work with cc.rb.</p>
 
-<p>After some googling and mucking around I downloaded latest
-cruisecontrol.rb and looked at its routes. I found a route
-“XmlServerReport.aspx” which does publish in ‘cctray’ format. I plugged
-it in to cc_monitor and it works like a charm.</p>
+<p>After some googling and mucking around I downloaded latest cruisecontrol.rb and looked at its routes. I found a route “XmlServerReport.aspx” which does publish in ‘cctray’ format. I plugged it in to cc_monitor and it works like a charm.</p>
 
-<p>So now I can announce that cc<em>monitor works with any java/ruby versions
-of cruisecontrol. If you would like to use cc</em>monitor with a continuous
-integration tool make sure it publishes a cc_tray compatible xml and
-you are all set.</p>
+<p>So now I can announce that cc<em>monitor works with any java/ruby versions of cruisecontrol. If you would like to use cc</em>monitor with a continuous integration tool make sure it publishes a cc_tray compatible xml and you are all set.</p>
 
-<p>Recently I successfully added ‘bacon’ to test my ramaze code for
-cc_monitor. The repository has been updated so check it out.</p>
+<p>Recently I successfully added ‘bacon’ to test my ramaze code for cc_monitor. The repository has been updated so check it out.</p>
 
-<p>I was also suggested to check out
-<a href="http://github.com/betarelease/cc_board">cc_board</a> which is
-a build monitor written in sinatra by David Vollbracht. Another app to
-make big visible charts for your team!</p>
+<p>I was also suggested to check out <a href="http://github.com/betarelease/cc_board">cc_board</a> which is a build monitor written in sinatra by David Vollbracht. Another app to make big visible charts for your team!</p>
 </div>
   
   
-  
+
 
     </article>
-    <div class="tags">Tags : continuous integration, ci, cruisecontrol, big visible monitors, cc*monitor, github, opensource, cc*board</div>
   
   
     <article>
@@ -334,44 +250,38 @@ make big visible charts for your team!</p>
 
 <time datetime="2009-09-18T00:00:00-07:00" pubdate data-updated="true">Sep 18<span>th</span>, 2009</time>
         
+         | <a href="/blog/2009/09/18/flash-on-linux.textile/#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Last night when struggling to get Firefox to play with Ubuntu and Flash
-I found this \
-<a href="https://answers.launchpad.net/ubuntu/+source/firefox-3.0/+question/57822">forum</a>.</p>
+  <div class="entry-content"><p>Last night when struggling to get Firefox to play with Ubuntu and Flash I found this <a href="https://answers.launchpad.net/ubuntu/+source/firefox-3.0/+question/57822">forum</a>.</p>
 
 <p>The instructions that worked for me are as follows</p>
 
-<p>\1. Remove all installations of flash (9, 10.. )\
-2. Remove all installations of gnash\
-3. Remove all installations of swfdec\
-4. (Basically remove everything that conflicts with flash player - some
-of these things come bundled with Ubuntu)\
-5. Remove any file in “/usr/lib/firefox/plugins” with the word flash in
-its name. \
-eg. libflashplayer.so or in my case alternate-flashplugin.so.</p>
+<ol>
+<li>Remove all installations of flash (9, 10.. )</li>
+<li>Remove all installations of gnash</li>
+<li>Remove all installations of swfdec</li>
+<li>(Basically remove everything that conflicts with flash player - some of these things come bundled with Ubuntu)</li>
+<li><p>Remove any file in “/usr/lib/firefox/plugins” with the word flash in its name.
+eg. libflashplayer.so or in my case alternate-flashplugin.so.</p></li>
+<li><p>Once you have verified that all this has gone (You could use about:plugins url in your firefox to see all the plugins you have along with their associated file types) - reinstall the latest version of flash player from adobe website.</p></li>
+<li><p>You should have Hulu.com working.</p></li>
+</ol>
 
-<p>\6. Once you have verified that all this has gone (You could use
-about:plugins url in your firefox to see all the plugins you have along
-with their associated file types) - reinstall the latest version of
-flash player from adobe website.</p>
-
-<p>\7. You should have Hulu.com working.</p>
 
 <p>Hope this helps someone who is trying to do the same.</p>
 
-<p>“Now when someone asks - Do you have Flash working on Linux - you know
-what to say”</p>
+<p>“Now when someone asks - Do you have Flash working on Linux - you know what to say”</p>
 </div>
   
   
-  
+
 
     </article>
-    <div class="tags">Tags : flash, ubuntu, linux, unix, howto, tutorial, hulu.com</div>
   
   
     <article>
@@ -396,14 +306,14 @@ what to say”</p>
 
 <time datetime="2009-09-16T00:00:00-07:00" pubdate data-updated="true">Sep 16<span>th</span>, 2009</time>
         
+         | <a href="/blog/2009/09/16/learn-git.textile/#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>One big <a href="http://www.github.com"/>repository</a> and one big
-repository on <a href="http://learn.github.com/">learning it all</a>
-about git.</p>
+  <div class="entry-content"><p>One big <a href="http://www.github.com"/>repository</a> and one big repository on <a href="http://learn.github.com/">learning it all</a> about git.</p>
 
 <p>Now you can’t say you do not know enough not to try it.</p>
 
@@ -411,10 +321,9 @@ about git.</p>
 </div>
   
   
-  
+
 
     </article>
-    <div class="tags">Tags : git, tutorial, vcs, distributed vcs</div>
   
   
     <article>
@@ -439,40 +348,31 @@ about git.</p>
 
 <time datetime="2009-08-30T00:00:00-07:00" pubdate data-updated="true">Aug 30<span>th</span>, 2009</time>
         
+         | <a href="/blog/2009/08/30/tdd-with-iphone-agile-09.textile/#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>On the last day I had just enough time to listen to
-<a href="http://www.8thlight.com/main/bio?sub_action=eric">Eric
-Smith</a> and
-<a href="http://www.8thlight.com/main/bio?sub_action=eric_meyer">Eric
-Meyer</a> from <a href="http://www.8thlight.com/">8th light</a> where
-they talked about TDD with IPhone. \
-What was interesting was even while working with this difficult
-technology (Objective C is not hard but Xcode is nothing but cryptic -
-XIB files really?) they were able to build iPhone apps without giving up
-of basic principles of TDD.</p>
+  <div class="entry-content"><p>On the last day I had just enough time to listen to <a href="http://www.8thlight.com/main/bio?sub_action=eric">Eric Smith</a> and <a href="http://www.8thlight.com/main/bio?sub_action=eric_meyer">Eric Meyer</a> from <a href="http://www.8thlight.com/">8th light</a> where they talked about TDD with IPhone.  What was interesting was even while working with this difficult
+technology (Objective C is not hard but Xcode is nothing but cryptic - XIB files really?) they were able to build iPhone apps without giving up of basic principles of TDD.</p>
 
-<p>They demonstrated their struggle before any tools were available for
-Unit testing with iPhone.\
-Couple of tools they mentioned were</p>
+<p>They demonstrated their struggle before any tools were available for Unit testing with iPhone.</p>
 
-<p>\1. <a href="http://code.google.com/p/google-toolbox-for-mac/">Google
-Toolbox for the Mac</a></p>
+<p>Couple of tools they mentioned were</p>
 
-<p>\2. <a href="http://developer.apple.com/tools/unittest.html">OCUnit</a></p>
+<h1><a href="http://code.google.com/p/google-toolbox-for-mac/">Google Toolbox for the Mac</a></h1>
 
-<p>Something to make life less miserable when building better applications
-with iPhone.</p>
+<h1><a href="http://developer.apple.com/tools/unittest.html">OCUnit</a></h1>
+
+<p>Something to make life less miserable when building better applications with iPhone.</p>
 </div>
   
   
-  
+
 
     </article>
-    <div class="tags">Tags : speaker, agile, conference, chicago, mock objects, paulo caroli, sumeet moghe, thoughtworks, 2009, tdd, iphone, ocunit, 8th light, google toolbox, tdd, objective c</div>
   
   
     <article>
@@ -497,6 +397,8 @@ with iPhone.</p>
 
 <time datetime="2009-08-24T00:00:00-07:00" pubdate data-updated="true">Aug 24<span>th</span>, 2009</time>
         
+         | <a href="/blog/2009/08/24/agile-09-day-1.textile/#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
@@ -504,33 +406,24 @@ with iPhone.</p>
 
   <div class="entry-content"><p>Very busy even though I started at 11:00am.</p>
 
-<p>Met a number of ThoughtWorkers, ex-ThoughtWorkers (talking about Aslak,
-Liz, h, Foemmel, Glenn Bernsohn, Naresh Jain) and many people I did not
-know before.</p>
+<p>Met a number of ThoughtWorkers, ex-ThoughtWorkers (talking about Aslak, Liz, h, Foemmel, Glenn Bernsohn, Naresh Jain) and many people I did not know before.</p>
 
-<p>ThoughtWorks booth is a hit - atleast 25 entries for the free ipod
-touch.</p>
+<p>ThoughtWorks booth is a hit - atleast 25 entries for the free ipod touch.</p>
 
 <p>Met people from Moscow, Israel, Brazil, India, UK.</p>
 
-<p>Met people from different Agile organizations. So wonderful to see so
-much activity in the agile space. Just proves that ThoughtWorks has been
-right all along and we can say “We told you so”.</p>
+<p>Met people from different Agile organizations. So wonderful to see so much activity in the agile space. Just proves that ThoughtWorks has been right all along and we can say “We told you so”.</p>
 
-<p>Went to interesting session from Mary Poppendieck - impressed by her
-speaking\
-skills. (Hope I can come close to those skills during my talk with
-<a href="http://www.caroli.org"/>Paulo</a>).</p>
+<p>Went to interesting session from Mary Poppendieck - impressed by her speaking
+skills. (Hope I can come close to those skills during my talk with <a href="http://www.caroli.org"/>Paulo</a>).</p>
 
-<p>Hope to see many more at the Agile Open office at the ThoughtWorks
-Chicago office tomorrow.</p>
+<p>Hope to see many more at the Agile Open office at the ThoughtWorks Chicago office tomorrow.</p>
 </div>
   
   
-  
+
 
     </article>
-    <div class="tags">Tags : speaker, agile, conference, chicago, mock objects, paulo caroli, sumeet moghe, thoughtworks, 2009</div>
   
   
     <article>
@@ -555,32 +448,27 @@ Chicago office tomorrow.</p>
 
 <time datetime="2009-08-06T00:00:00-07:00" pubdate data-updated="true">Aug 6<span>th</span>, 2009</time>
         
+         | <a href="/blog/2009/08/06/agile-2009.textile/#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I will be speaking at Agile Conference 2009 in Chicago between August
-24–28. You will find all the other speakers from ThoughtWorks on
-<a href="http://connect.thoughtworks.com/agile2009/">ThoughtWorks
-website</a>.</p>
+  <div class="entry-content"><p>I will be speaking at Agile Conference 2009 in Chicago between August 24–28. You will find all the other speakers from ThoughtWorks on <a href="http://connect.thoughtworks.com/agile2009/">ThoughtWorks website</a>.</p>
 
-<p>My colleague and compadre from my TWU trainer stint Paulo Caroli and
-Sumeet Moghe will be there too.</p>
+<p>My colleague and compadre from my TWU trainer stint Paulo Caroli and Sumeet Moghe will be there too.</p>
 
 <p>See you there.</p>
 
-<p>After Print: Want to attend my session … there is an app for that
-(<a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=325405256&mt=8">Agile
-2009 Conference Connection at the AppStore</a> - written by
-ThoughtWorks)</p>
+<p>After Print: Want to attend my session … there is an app for that (<a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=325405256&mt=8">Agile
+2009 Conference Connection at the AppStore</a> - written by ThoughtWorks)</p>
 </div>
   
   
-  
+
 
     </article>
-    <div class="tags">Tags : speaker, agile, conference, chicago, mock objects, paulo caroli, sumeet moghe, thoughtworks, 2009</div>
   
   
     <article>
@@ -605,52 +493,75 @@ ThoughtWorks)</p>
 
 <time datetime="2009-06-01T00:00:00-07:00" pubdate data-updated="true">Jun 1<span>st</span>, 2009</time>
         
+         | <a href="/blog/2009/06/01/top-ten-reasons-why-maven-sucks.textile/#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>\10. maven corrupts - software, people.</p>
+  <div class="entry-content"><ol>
+<li><p>maven corrupts - software, people.</p></li>
+<li><p>maven uses an archetype (appfuse) and expects that all your projects look like the apache projects - even those that are not webservers.</p></li>
+<li><p>maven has only four build stages - compile, test, install, package - if you have a requirement to automate performance testing you are out of luck</p></li>
+<li><p>maven requires you to have a standard directory structure that is 5 subdirectories deep - regardless of the fact that your project only has 10 java files.</p></li>
+<li><p>tasks that are not implemented in maven have to be implemented in ant and need to be integrated with maven - a big nightmare.</p></li>
+<li><p>maven encourages you to integrate via binaries - thus making continuous integration difficult</p></li>
+<li><p>every time maven builds it connects to the internet (to verify/update dependencies) - building your project without the internet is extremely hard.</p></li>
+<li><p>maven manages the projects and subprojects implicitly (since there is convention and then there are overrides) - it makes debugging your build impossible.</p></li>
+<li><p>maven manages the project dependencies in its own repository - called the .m2 repository - which is not part of your application folder - thus making it impossible to track and package development environments.</p></li>
+<li><p>maven always downloads the whole internet - to keep its dependencies up to date - even though you don’t want to.</p></li>
+</ol>
 
-<p>\9. maven uses an archetype (appfuse) and expects that all your projects
-look like the apache projects - even those that are not webservers.</p>
-
-<p>\8. maven has only four build stages - compile, test, install, package -
-if you have a requirement to automate performance testing you are out of
-luck</p>
-
-<p>\7. maven requires you to have a standard directory structure that is 5
-subdirectories deep - regardless of the fact that your project only has
-10 java files.</p>
-
-<p>\6. tasks that are not implemented in maven have to be implemented in
-ant and need to be integrated with maven - a big nightmare.</p>
-
-<p>\5. maven encourages you to integrate via binaries - thus making
-continuous integration difficult</p>
-
-<p>\4. every time maven builds it connects to the internet (to
-verify/update dependencies) - building your project without the internet
-is extremely hard.</p>
-
-<p>\3. maven manages the projects and subprojects implicitly (since there
-is convention and then there are overrides) - it makes debugging your
-build impossible.</p>
-
-<p>\2. maven manages the project dependencies in its own repository -
-called the .m2 repository - which is not part of your application folder
-- thus making it impossible to track and package development
-environments.</p>
-
-<p>\1. maven always downloads the whole internet - to keep its dependencies
-up to date - even though you don’t want to.</p>
 </div>
   
   
-  
+
 
     </article>
-    <div class="tags">Tags : maven, ant, rake, agile, team, people, apache, nsfw</div>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/28/itunes-settings.textile/">iTunes Settings</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-28T00:00:00-07:00" pubdate data-updated="true">May 28<span>th</span>, 2009</time>
+        
+         | <a href="/blog/2009/05/28/itunes-settings.textile/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you are using iTunes to play your music be careful when adding music to the library. iTunes tries to be smart and by default it makes a copy of the music you have as well as tries to organise it the way it likes. So if you do not like your music organised by artist/album and so on it will render your music unsearchable. (This is true for me since I do not organise my music by the artist album and such.)</p>
+
+<p>To save the whole lot of mess it creates set the following in your iTunes preferences
+<img src="/images/itunes_settings.png"/>.</p>
+
+<p>This way iTunes will make a list of songs but not process them the way it likes. You can have your own organisation of music and save a lot of trouble for yourself.</p>
+</div>
+  
+  
+
+
+    </article>
   
   <div class="pagination">
     
@@ -692,7 +603,59 @@ up to date - even though you don’t want to.</p>
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/betarelease">@betarelease</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
 
+        github.showRepos({
+            user: 'betarelease',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("sudhindraRao", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/sudhindraRao" class="twitter-follow-button" data-show-count="false">Follow @sudhindraRao</a>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/srrao2k?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/srrao2k">My Delicious Bookmarks &raquo;</a></p>
+</section>
 
 
 
@@ -709,6 +672,19 @@ up to date - even though you don’t want to.</p>
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'betareleasedraftingrandomthoughts';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
