@@ -4,7 +4,7 @@
   <title><![CDATA[&beta;-release]]></title>
   <link href="http://betarelease.github.com/atom.xml" rel="self"/>
   <link href="http://betarelease.github.com/"/>
-  <updated>2012-09-10T11:28:00-07:00</updated>
+  <updated>2012-09-10T11:44:41-07:00</updated>
   <id>http://betarelease.github.com/</id>
   <author>
     <name><![CDATA[Sudhindra Rao]]></name>
@@ -14,51 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[SiriMingle]]></title>
-    <link href="http://betarelease.github.com/blog/2012/12/09/SiriMingle/"/>
-    <updated>2012-12-09T09:16:00-08:00</updated>
-    <id>http://betarelease.github.com/blog/2012/12/09/SiriMingle</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[moved blog to octopress]]></title>
-    <link href="http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress/"/>
-    <updated>2012-07-09T09:16:00-07:00</updated>
-    <id>http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress</id>
-    <content type="html"><![CDATA[<p> I am in the process of moving the blog from my jekyll based site to <a href="http://github.com/octopress.git">octopress</a></p>
-
-<p>You may notice :</p>
-
-<ul>
-<li>Posts show up clearer and nicer - because of octopress font selection</li>
-<li>you will see my addition of tag cloud to octopress - so tags will show</li>
-<li>archives - a list of archives arranged as an index page</li>
-</ul>
-
-
-<p>What does not yet work :</p>
-
-<ul>
-<li>Tags are not aligned on the page</li>
-<li>Disqus comments are missing - thanks to discuss your comments are safe. They just need to be linked correctly</li>
-<li>RSS feed is missing</li>
-<li>My color scheme is missing - so does not reflect the author&#8217;s personality ;)</li>
-</ul>
-
-
-<p>Hope you will bear with me while I make things easier for me to post and bring a more pleasant reading experience for  you.</p>
-
-<p>Thank you !!!</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Installing Ubuntu on MacPro with OSX Lion - Dualboot]]></title>
-    <link href="http://betarelease.github.com/blog/2012/07/09/installing-ubuntu-on-macpro-with-osx-lion/"/>
-    <updated>2012-07-09T09:16:00-07:00</updated>
-    <id>http://betarelease.github.com/blog/2012/07/09/installing-ubuntu-on-macpro-with-osx-lion</id>
+    <link href="http://betarelease.github.com/blog/2012/09/10/installing-ubuntu-on-macpro-with-osx-lion/"/>
+    <updated>2012-09-10T09:16:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/09/10/installing-ubuntu-on-macpro-with-osx-lion</id>
     <content type="html"><![CDATA[<p>Installing Ubuntu on Macpro turned out to be little trickier than I would have liked it to be. For starters OSX Lion does not detect the Ubuntu ISO disc as bootable or something that bootcamp can load an OS from. There are tricks on the web that allow you to get around that.</p>
 
 <p>I am listing a few quirks that I came across while getting all this to work.</p>
@@ -98,6 +57,38 @@ At this moment it will show you a list of existing partitions. In this list find
 <p>With this both Ubuntu and Mac OSX can be booted into without much trouble. Infact on booting into linux Grub now detects Mac OSX as well.</p>
 
 <p>Happy Dual booting&#8230;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[moved blog to octopress]]></title>
+    <link href="http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress/"/>
+    <updated>2012-07-09T09:16:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress</id>
+    <content type="html"><![CDATA[<p> I am in the process of moving the blog from my jekyll based site to <a href="http://github.com/octopress.git">octopress</a></p>
+
+<p>You may notice :</p>
+
+<ul>
+<li>Posts show up clearer and nicer - because of octopress font selection</li>
+<li>you will see my addition of tag cloud to octopress - so tags will show</li>
+<li>archives - a list of archives arranged as an index page</li>
+</ul>
+
+
+<p>What does not yet work :</p>
+
+<ul>
+<li>Tags are not aligned on the page</li>
+<li>Disqus comments are missing - thanks to discuss your comments are safe. They just need to be linked correctly</li>
+<li>RSS feed is missing</li>
+<li>My color scheme is missing - so does not reflect the author&#8217;s personality ;)</li>
+</ul>
+
+
+<p>Hope you will bear with me while I make things easier for me to post and bring a more pleasant reading experience for  you.</p>
+
+<p>Thank you !!!</p>
 ]]></content>
   </entry>
   
@@ -493,6 +484,74 @@ you need to project multiple things at the same time.</p></li>
 <li>Electric outlets and Wireless Internet/Shared network</li>
 <li>Projectors</li>
 </ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Preparing to be a trainer]]></title>
+    <link href="http://betarelease.github.com/blog/2010/03/12/prepare-to-be-a-trainer.textile/"/>
+    <updated>2010-03-12T00:00:00-08:00</updated>
+    <id>http://betarelease.github.com/blog/2010/03/12/prepare-to-be-a-trainer.textile</id>
+    <content type="html"><![CDATA[<p>Preparing to be a trainer is more of a mental activity than physical. To
+be one you would want to observe one and learn how they do it. I had the
+opportunity of being trained by a set of great trainers/speakers and
+also working them to understand how they prepared to be a trainer.
+Mostly it is about being aware of the responsibility. It takes time to
+get a feel for the amount of work that goes into being a trainer. To
+facilitate this we started by studying the course material that was
+already available (In a sense I was lucky that there was so much refined
+course material available that I did not need to invest any time in
+design the course. Designing a course is a major undertaking and can be
+done only after much experience [#feedback]).</p>
+
+<p>Another thing you must do is actually be a co-trainer/teaching assistant
+at a training session to get a feel of the mechanics of it all.(What
+gets overlooked is the fact that managing time/schedule and training
+content is harder than it appears.) To prepare to be such a person one
+needs to know the complete training course. To be a developer trainer I
+went through the exercise of reading all the material and also solving
+and reasoning all the examples for the course. At times it also helps to
+have multiple solutions at hand. In collaboration with other trainers
+and trainees we have managed to have a repository of such sample
+solutions that we are prepared with to hand out to trainees.</p>
+
+<p>Once you have a grip on the course content you need to plan and replay
+the plan of how the content will be presented. Pairing on course content
+tremendously helps. In case of vast curriculum it helps to divide
+responsibility between the pair to deliver certain topics based on
+experience, enthusiasm and freshness of the trainer. Making a plan of
+the day for every half hour slot helps get a feel of timeliness as well
+as helps focus on delivering the most important message of the session
+effectively. Rehearsing all this with a pair is greatly useful. We had
+the opportunity to rehearse this training with the smaller group to time
+ourselves as well as refine delivery of content. Understanding what
+messages are to be delivering during the session and what content is to
+be learnt after class/further exercise helps divide the content and
+reduce course load.</p>
+
+<p>There is a lot of physical activity involved too. To enhance retention
+and recollection it may be a good idea to prepare homework/extra work
+problems. Some students really gain a lot from working on these in their
+spare time. A trick that also helps retention is ‘rinse and repeat’ - We
+provided handouts of the most important messages of the session and
+reviewed sessions at the end and few days later.</p>
+
+<p>Preparing also needs to consider the amount of stationary required,
+hardware required, accessories such as timers, props and power
+availability at the venue.[#venue]</p>
+
+<p>Training is a lot of hard work. Do not jump in if you don’t thing 12
+hour days + dinner + a night out are not something you can take. Not to
+mention activities that require you to be available on a weekend.</p>
+
+<ol>
+<li>Prepare course content</li>
+<li>Plan out each day</li>
+<li>Rehearse</li>
+<li>Ensure retention by way of handouts or reviews</li>
+<li>Prepare the venue to suit the training</li>
+</ol>
 
 ]]></content>
   </entry>
