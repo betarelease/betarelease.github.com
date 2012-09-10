@@ -9,7 +9,7 @@
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="Over the past few months I have been using a community version of bashprofile, bashlogin, emacs settings and such. It started when Muness shared his &hellip;">
+  <meta name="description" content="I have an airport express that I used to use as my wireless router when I travel. Very convenient and useful when hotels do not provide a wireless.( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +67,152 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile/">Airport Express as Remote Speakers for Airplay - Also With Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-30T00:00:00-07:00" pubdate data-updated="true">Sep 30<span>th</span>, 2011</time>
+        
+         | <a href="/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have an airport express that I used to use as my wireless router when I travel. Very convenient and useful when hotels do not provide a wireless.(Yes I am looking at you Marriott.) Airport Express thanks to apple technology also supports airplay to play music over the air, and/or printer sharing via a USB connection.</p>
+
+<p>I was hoping to connect my desktop and my laptop to my music system which is located in another room than these machines. Apparently airport express can connect with your existing wireless router as a client (yes they have thought of everything) allowing you to do exactly that.</p>
+
+<p>Here is a list of quirks you need to remember when you try to set it up as a <a href="http://support.apple.com/kb/HT2272?viewlocale=en_US">wireless
+client</a>.</p>
+
+<ol>
+<li><p>Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1~~11.</p></li>
+<li><p>Plug in the airport express and connect it to your mac using the ethernet cable.</p></li>
+<li><p>Start airport utility~~ which will try to detect any airport devices but will not find any.</p></li>
+<li><p>Hard reset by pressing the reset button with a paper clip for atleast 10 seconds. The light blinks rapidly when you are holding the pin and then in 30 seconds becomes steady - this means that airport express is restarting.</p></li>
+<li><p>Now rescan on the airport utility - it should find one device with name ‘Base station xxxxxx’ - with last 6 digits from the mac address. It should have a yellow icon next to it - indicating that it has not connected to the internet.</p></li>
+<li><p>Perform a Manual Setup - DO NOT hit continue.</p></li>
+<li><p>Change the channel number that is automatically set on the airport express to the one from your wireless router.</p></li>
+<li><p>In ‘Wireless’ connect the airport express as a client - select ‘Join an existing wireless network’ - select appropriate SSID of the wireless router.</p></li>
+<li><p>Browse through other tabs if you are interested in the details - else click ‘Update’.</p></li>
+<li><p>The airport express should restart and reappear on the Airport Utility. This usually takes over a minute. When it reappears it should appear with the new name you chose and with a green light next to it - indicating it was able to connect to your wireless router.</p></li>
+<li><p>If everything was successful and airport express liked the ‘Enable for Airplay’ selection you made - you will see a red light in the stereo socket light up. Connect your speakers to airport express and you should be able to airplay your music using iTunes.</p></li>
+</ol>
+
+
+<p>Notes:</p>
+
+<ul>
+<li><p>You may encounter “AirPort Utility was unable to find your AirPort wireless device after restarting.” One of the reasons for this is that Airport express cannot connect to your router with WPA2 or any other security.(Look at <a href="http://www.mac-forums.com/forums/internet-networking-wireless/103890-airport-express-existing-wireless-network-help.html">Airport Express Amber Light</a> for more details.)</p></li>
+<li><p>To ensure security I disabled ‘SSID broadcast’ and enabled MAC filtering on my router. I added the MAC addresses of my Airport Express (Airport Admin Utility will show those addresses when it detects Airport Express.)</p></li>
+</ul>
+
+
+<p>To allow your linux machine to connect and airplay to the airport express you need install pulseaudio’s drivers and support for remote audio protocol by running <a href="http://www.makeuseof.com/tag/apples-airtunes-ubuntulinux/">airtunes with Linux</a></p>
+
+<div>
+  <pre><code class='ruby'>sudo apt-get install pulseaudio-module-raop paprefs
+
+(I am not making this up- The protocol is Remote Audio Output Protocol - raop)</code></pre>
+</div>
+
+
+<p>Setup pulseaudio to enable remote speakers as described in <a href="http://blog.paulbetts.org/index.php/2007/04/15/pulseaudio-in-ubuntu-feisty-play-sound-over-the-network/">PulseAudio settings</a>.</p>
+
+<p>Once it is installed you may need to restart your Linux machine. On restarting you should see your newly available remote speakers in your Sound Preferences. Now you should be able to stream from your Linux machine too.</p>
+
+<p>And you are done.</p>
+
+<p>Enjoy remote streaming.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/12/18/why-firefox.textile/">Why I Use Firefox Over Chrome?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-18T00:00:00-08:00" pubdate data-updated="true">Dec 18<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/12/18/why-firefox.textile/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For development I choose to use tools which make the code transparent. Hence I prefer to use simple text editors over IDEs (although I like IntelliJ for Java code), or browsers that have good builtin support for debugging over closed/magical ones (hence Firefox/Chrome/Safari over IE).</p>
+
+<p>Recently I switched to Chrome as my primary browser since it promised to have all the add-ons to make it comparable to Firefox. On the contrary, in fact it still lacks the power and the flexibility of Firefox for development. Here are a few reasons why Firefox is still better at supporting development:</p>
+
+<ul>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/748/">greasemonkey</a> for Firefox works with XMLHTTPRequests for different origin - <a href="http://greasemetal.31tools.com/">greasemetal</a> (now <a href="http://www.chromium.org/developers/design-documents/user-scripts">userscripts</a>) for Google Chrome has still not been able to fix this issue.</li>
+</ul>
+
+
+<p>_“GM<em>xmlhttpRequest is same-origin only.&#8221; - <a href="http://www.chromium.org/developers/design-documents/user-scripts">User Scripts</a>
+.</em></p>
+
+<ul>
+<li><p>A number of add-ons on Firefox show useful information on the status bar - I use ”DCurrency“:<a href="https://addons.mozilla.org/en-US/firefox/addon/6462/">https://addons.mozilla.org/en-US/firefox/addon/6462/</a>, ”CruiseControl Monitor“:<a href="https://addons.mozilla.org/en-US/firefox/addon/896/">https://addons.mozilla.org/en-US/firefox/addon/896/</a>.</p></li>
+<li><p>”Selenium IDE&#8221;:<a href="http://seleniumhq.org/projects/ide">http://seleniumhq.org/projects/ide</a>/ is available for Firefox - a big plus when I am trying to record andplay while I am trying to debug some apps.</p></li>
+<li><p>In the minimal view my frequently used bookmarks always show in Firefox ~~Google Chrome shows them when I open a new tab only. Maybe a minor annoyance but I cannot reuse the current tab with a single click access to my bookmarks.</p></li>
+<li><p>Minor annoyance~~ when I maximize the window on OSX Google Chrome expands only vertically. Firefox does not have this problem.</p></li>
+<li><p>Even with proxy switchers Chrome depends/modifies system proxy settings (diabolical). When using on Windows changing the proxy on IE will affect Chrome and vice-versa.</p></li>
+</ul>
+
+
+<p><em>“Chrome uses system’s proxy settings (IE proxy settings on Wndows) because it doesn’t have its own proxy settings yet (see <a href="http://crbug.com/266">http://crbug.com/266)</a>).Therefore, changing Chrome’s proxy settings using Switchy will also affect the system proxy settings.” - quote from <a href="https://chrome.google.com/extensions/detail/caehdcpeofiiigpdhbabniblemipncjj">Proxy Switchy!</a> extension.</em></p>
+
+<p>That means when I use Chrome as a browser with tools like <a href="http://sahi.co.in/w/">Sahi</a>, it will affect how other things work.</p>
+
+<p>In conclusion, for now Firefox is the best browser for development.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -467,158 +613,6 @@ you need to project multiple things at the same time.</p></li>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/03/12/prepare-to-be-a-trainer.textile/">Preparing to Be a Trainer</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-03-12T00:00:00-08:00" pubdate data-updated="true">Mar 12<span>th</span>, 2010</time>
-        
-         | <a href="/blog/2010/03/12/prepare-to-be-a-trainer.textile/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Preparing to be a trainer is more of a mental activity than physical. To
-be one you would want to observe one and learn how they do it. I had the
-opportunity of being trained by a set of great trainers/speakers and
-also working them to understand how they prepared to be a trainer.
-Mostly it is about being aware of the responsibility. It takes time to
-get a feel for the amount of work that goes into being a trainer. To
-facilitate this we started by studying the course material that was
-already available (In a sense I was lucky that there was so much refined
-course material available that I did not need to invest any time in
-design the course. Designing a course is a major undertaking and can be
-done only after much experience [#feedback]).</p>
-
-<p>Another thing you must do is actually be a co-trainer/teaching assistant
-at a training session to get a feel of the mechanics of it all.(What
-gets overlooked is the fact that managing time/schedule and training
-content is harder than it appears.) To prepare to be such a person one
-needs to know the complete training course. To be a developer trainer I
-went through the exercise of reading all the material and also solving
-and reasoning all the examples for the course. At times it also helps to
-have multiple solutions at hand. In collaboration with other trainers
-and trainees we have managed to have a repository of such sample
-solutions that we are prepared with to hand out to trainees.</p>
-
-<p>Once you have a grip on the course content you need to plan and replay
-the plan of how the content will be presented. Pairing on course content
-tremendously helps. In case of vast curriculum it helps to divide
-responsibility between the pair to deliver certain topics based on
-experience, enthusiasm and freshness of the trainer. Making a plan of
-the day for every half hour slot helps get a feel of timeliness as well
-as helps focus on delivering the most important message of the session
-effectively. Rehearsing all this with a pair is greatly useful. We had
-the opportunity to rehearse this training with the smaller group to time
-ourselves as well as refine delivery of content. Understanding what
-messages are to be delivering during the session and what content is to
-be learnt after class/further exercise helps divide the content and
-reduce course load.</p>
-
-<p>There is a lot of physical activity involved too. To enhance retention
-and recollection it may be a good idea to prepare homework/extra work
-problems. Some students really gain a lot from working on these in their
-spare time. A trick that also helps retention is ‘rinse and repeat’ - We
-provided handouts of the most important messages of the session and
-reviewed sessions at the end and few days later.</p>
-
-<p>Preparing also needs to consider the amount of stationary required,
-hardware required, accessories such as timers, props and power
-availability at the venue.[#venue]</p>
-
-<p>Training is a lot of hard work. Do not jump in if you don’t thing 12
-hour days + dinner + a night out are not something you can take. Not to
-mention activities that require you to be available on a weekend.</p>
-
-<ol>
-<li>Prepare course content</li>
-<li>Plan out each day</li>
-<li>Rehearse</li>
-<li>Ensure retention by way of handouts or reviews</li>
-<li>Prepare the venue to suit the training</li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/03/12/no-such-file-to-load-rubygems.textile/">No Such File to Load —rubygems</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-03-12T00:00:00-08:00" pubdate data-updated="true">Mar 12<span>th</span>, 2010</time>
-        
-         | <a href="/blog/2010/03/12/no-such-file-to-load-rubygems.textile/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>While working on my mac and trying to use giternal I ran into ‘no such file to load —rubygems’. While I had been using ruby apps on the machine for a while, without any issues and with all the installed gems, this seemed weird.</p>
-
-<p>I tried using the irb and check if</p>
-
-<div>
-  <pre><code class='mysql'>irb\&gt; require ‘rubygems’</code></pre>
-</div>
-
-
-<p>would work. But I got the same error. I was using the default mac version of the ruby installation that is installed at ‘/System/Library/Frameworks/Ruby.framework…..’ and did verify that rubygems was installed and that rubygems.rb was also present.</p>
-
-<p>On further investigation I found that the default ruby that was run on the command line was 1.8.7 when I expected 1.8.6.</p>
-
-<p>It appears that my path contained ‘/opt/local/bin’ before ‘/usr/bin’ which made the 1.8.7 version of ruby default and thus clobbered all by 1.8.6 settings and lost rubygems.</p>
-
-<p>To fix this I moved ‘opt/local/bin’ to be after ‘/usr/bin’ in my $PATH and voila everything works again.</p>
-
-<p>I have also been meaning to try RVM - maybe its time to give it a shot since my personal projects are on 1.8.7 and I have jruby as well as 1.8.6 installed on my mac.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -637,7 +631,15 @@ mention activities that require you to be available on a weekend.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/09/SiriMingle/">SiriMingle</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/07/09/moved-blog-to-octopress/">moved blog to octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/09/installing-ubuntu-on-macpro-with-osx-lion/">Installing Ubuntu on MacPro with OSX Lion - Dualboot</a>
       </li>
     
       <li class="post">
@@ -646,14 +648,6 @@ mention activities that require you to be available on a weekend.</p>
     
       <li class="post">
         <a href="/blog/2012/05/10/ubuntu-power-management/">ubuntu power management</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/17/mac-remote-with-presentations/">Mac remote with presentations</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/13/agile-and-beyond/">Agile and Beyond 2012</a>
       </li>
     
   </ul>

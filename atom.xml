@@ -4,7 +4,7 @@
   <title><![CDATA[&beta;-release]]></title>
   <link href="http://betarelease.github.com/atom.xml" rel="self"/>
   <link href="http://betarelease.github.com/"/>
-  <updated>2012-08-13T13:18:59-07:00</updated>
+  <updated>2012-09-10T11:28:00-07:00</updated>
   <id>http://betarelease.github.com/</id>
   <author>
     <name><![CDATA[Sudhindra Rao]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SiriMingle]]></title>
+    <link href="http://betarelease.github.com/blog/2012/12/09/SiriMingle/"/>
+    <updated>2012-12-09T09:16:00-08:00</updated>
+    <id>http://betarelease.github.com/blog/2012/12/09/SiriMingle</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[moved blog to octopress]]></title>
@@ -42,6 +51,53 @@
 <p>Hope you will bear with me while I make things easier for me to post and bring a more pleasant reading experience for  you.</p>
 
 <p>Thank you !!!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Installing Ubuntu on MacPro with OSX Lion - Dualboot]]></title>
+    <link href="http://betarelease.github.com/blog/2012/07/09/installing-ubuntu-on-macpro-with-osx-lion/"/>
+    <updated>2012-07-09T09:16:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/07/09/installing-ubuntu-on-macpro-with-osx-lion</id>
+    <content type="html"><![CDATA[<p>Installing Ubuntu on Macpro turned out to be little trickier than I would have liked it to be. For starters OSX Lion does not detect the Ubuntu ISO disc as bootable or something that bootcamp can load an OS from. There are tricks on the web that allow you to get around that.</p>
+
+<p>I am listing a few quirks that I came across while getting all this to work.</p>
+
+<p>The Challenge: Install Ubuntu on a MacPro that is running OSX Lion and make it so that it can dualboot to ubuntu.</p>
+
+<ul>
+<li>Install REFit</li>
+</ul>
+
+
+<p>Download and install REFit. This will allow your BIOS to work with bootloaders other than that of Apple. Once you have installed it restart you machine. If you are lucky you will see the REFIt menu on restart. Do not be disappointed if you do not see it at first. Restart again and you will surely see the REFIt menu this time. Once you have REFIt installed it is time to partition the HardDisk to make room for Ubuntu.</p>
+
+<ul>
+<li>Partitioning the disk</li>
+</ul>
+
+
+<p>OSX comes with two utilities that allow you to partition your hard disk. Word of caution: Do not use another partitioning tool as it has been knows to cause problems - especially when booting back into the Mac. You will put your data on the Mac OSX partition at risk.
+Given that you have to use OSX to atleast initially partitioning disks - you can choose between Disk Utility or Boot camp assistant. In both scenarios the partitioning is pretty clearly documented and easy. In the case of bootcamp with the new UI select &#8220;Install  or remove Windows 7&#8221; and uncheck &#8220;Download the latest Windows support from Apple&#8221;.</p>
+
+<p>When prompted choose the partition size for Windows by dragging the partitioner. Once you have a desirable size configured clicking &#8216;Continue&#8217; will look for a Windows 7 disk for installing Windows on the new partition. You can trick the boot camp assistant by actually inserting a bootable Windows 7 disk. Once it detects the disk and starts partitioning you can remove the Windows 7 disk and replace it with Ubuntu bootable disk. Once the partitioning is complete close Bootcamp Assistant.</p>
+
+<ul>
+<li>Installing Ubuntu</li>
+</ul>
+
+
+<p>Now restart the machine and hold the &#8216;C&#8217; key while restarting. This will allow you to boot from the bootable CD Drive. Once booting starts you should see the Ubuntu installation UI. Follow the instructions till the time, when it asks you for a partition to install Ubuntu.
+Choose manual partition editing.
+At this moment it will show you a list of existing partitions. In this list find the partition you created for Windows(should be labelled as fat32 or msdos or something that indicates its a windows partition). Delete this partition. You should have a partition called &#8220;FREE SPACE&#8221;. Now select this partition called &#8220;FREE SPACE&#8221;(about the size of your original partition for Windows) and create a partition on it of type EXT4 and &#8220;/&#8221; being mounted from here.(Make note of this partition information eg: /dev/sda3)</p>
+
+<p>Write this partition information to the disk and let Ubuntu do its thing. Follow the instructions on-screen to configure Ubuntu to your liking. Ubuntu will ask you where it should write the grub bootloader. At this prompt enter the above partition information /dev/sda3. This will ensure that REFIt will be able to find Ubuntu on your harddisk and allow you to boot into it. This step is the key to the process of being able to use the Ubuntu partition at all.</p>
+
+<p>Once the installation of Ubuntu is completed shutdown your machine and restart. On restart you will see a REFIt menu with an option to select &#8216;Penguin operating system&#8217;. You may see multiple penguins. Pick the penguin that points to your harddisk partition above(/dev/sda3 => &#8216;Boot from Hard disk partition 3&#8217;) option and you can boot into Ubuntu.</p>
+
+<p>With this both Ubuntu and Mac OSX can be booted into without much trouble. Infact on booting into linux Grub now detects Mac OSX as well.</p>
+
+<p>Happy Dual booting&#8230;</p>
 ]]></content>
   </entry>
   
@@ -438,100 +494,6 @@ you need to project multiple things at the same time.</p></li>
 <li>Projectors</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Preparing to be a trainer]]></title>
-    <link href="http://betarelease.github.com/blog/2010/03/12/prepare-to-be-a-trainer.textile/"/>
-    <updated>2010-03-12T00:00:00-08:00</updated>
-    <id>http://betarelease.github.com/blog/2010/03/12/prepare-to-be-a-trainer.textile</id>
-    <content type="html"><![CDATA[<p>Preparing to be a trainer is more of a mental activity than physical. To
-be one you would want to observe one and learn how they do it. I had the
-opportunity of being trained by a set of great trainers/speakers and
-also working them to understand how they prepared to be a trainer.
-Mostly it is about being aware of the responsibility. It takes time to
-get a feel for the amount of work that goes into being a trainer. To
-facilitate this we started by studying the course material that was
-already available (In a sense I was lucky that there was so much refined
-course material available that I did not need to invest any time in
-design the course. Designing a course is a major undertaking and can be
-done only after much experience [#feedback]).</p>
-
-<p>Another thing you must do is actually be a co-trainer/teaching assistant
-at a training session to get a feel of the mechanics of it all.(What
-gets overlooked is the fact that managing time/schedule and training
-content is harder than it appears.) To prepare to be such a person one
-needs to know the complete training course. To be a developer trainer I
-went through the exercise of reading all the material and also solving
-and reasoning all the examples for the course. At times it also helps to
-have multiple solutions at hand. In collaboration with other trainers
-and trainees we have managed to have a repository of such sample
-solutions that we are prepared with to hand out to trainees.</p>
-
-<p>Once you have a grip on the course content you need to plan and replay
-the plan of how the content will be presented. Pairing on course content
-tremendously helps. In case of vast curriculum it helps to divide
-responsibility between the pair to deliver certain topics based on
-experience, enthusiasm and freshness of the trainer. Making a plan of
-the day for every half hour slot helps get a feel of timeliness as well
-as helps focus on delivering the most important message of the session
-effectively. Rehearsing all this with a pair is greatly useful. We had
-the opportunity to rehearse this training with the smaller group to time
-ourselves as well as refine delivery of content. Understanding what
-messages are to be delivering during the session and what content is to
-be learnt after class/further exercise helps divide the content and
-reduce course load.</p>
-
-<p>There is a lot of physical activity involved too. To enhance retention
-and recollection it may be a good idea to prepare homework/extra work
-problems. Some students really gain a lot from working on these in their
-spare time. A trick that also helps retention is ‘rinse and repeat’ - We
-provided handouts of the most important messages of the session and
-reviewed sessions at the end and few days later.</p>
-
-<p>Preparing also needs to consider the amount of stationary required,
-hardware required, accessories such as timers, props and power
-availability at the venue.[#venue]</p>
-
-<p>Training is a lot of hard work. Do not jump in if you don’t thing 12
-hour days + dinner + a night out are not something you can take. Not to
-mention activities that require you to be available on a weekend.</p>
-
-<ol>
-<li>Prepare course content</li>
-<li>Plan out each day</li>
-<li>Rehearse</li>
-<li>Ensure retention by way of handouts or reviews</li>
-<li>Prepare the venue to suit the training</li>
-</ol>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[no such file to load —rubygems]]></title>
-    <link href="http://betarelease.github.com/blog/2010/03/12/no-such-file-to-load-rubygems.textile/"/>
-    <updated>2010-03-12T00:00:00-08:00</updated>
-    <id>http://betarelease.github.com/blog/2010/03/12/no-such-file-to-load-rubygems.textile</id>
-    <content type="html"><![CDATA[<p>While working on my mac and trying to use giternal I ran into ‘no such file to load —rubygems’. While I had been using ruby apps on the machine for a while, without any issues and with all the installed gems, this seemed weird.</p>
-
-<p>I tried using the irb and check if</p>
-
-<div>
-  <pre><code class='mysql'>irb\&gt; require ‘rubygems’</code></pre>
-</div>
-
-
-<p>would work. But I got the same error. I was using the default mac version of the ruby installation that is installed at ‘/System/Library/Frameworks/Ruby.framework…..’ and did verify that rubygems was installed and that rubygems.rb was also present.</p>
-
-<p>On further investigation I found that the default ruby that was run on the command line was 1.8.7 when I expected 1.8.6.</p>
-
-<p>It appears that my path contained ‘/opt/local/bin’ before ‘/usr/bin’ which made the 1.8.7 version of ruby default and thus clobbered all by 1.8.6 settings and lost rubygems.</p>
-
-<p>To fix this I moved ‘opt/local/bin’ to be after ‘/usr/bin’ in my $PATH and voila everything works again.</p>
-
-<p>I have also been meaning to try RVM - maybe its time to give it a shot since my personal projects are on 1.8.7 and I have jruby as well as 1.8.6 installed on my mac.</p>
 ]]></content>
   </entry>
   
