@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Installing Ubuntu on MacPro with OSX Lion - Dualboot"
-date: 2012-07-09 09:16
+date: 2012-09-10 09:16
 comments: true
 ---
  
