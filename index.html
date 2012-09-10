@@ -9,7 +9,8 @@
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="I am in the process of moving the blog from my jekyll based site to octopress You may notice : Posts show up clearer and nicer - because of &hellip;">
+  <meta name="description" content="
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -73,6 +74,44 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2012/12/09/SiriMingle/">SiriMingle</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-09T09:16:00-08:00" pubdate data-updated="true">Dec 9<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/12/09/SiriMingle/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2012/07/09/moved-blog-to-octopress/">Moved Blog to Octopress</a></h1>
     
     
@@ -122,6 +161,82 @@
 <p>Hope you will bear with me while I make things easier for me to post and bring a more pleasant reading experience for  you.</p>
 
 <p>Thank you !!!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/09/installing-ubuntu-on-macpro-with-osx-lion/">Installing Ubuntu on MacPro With OSX Lion - Dualboot</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-09T09:16:00-07:00" pubdate data-updated="true">Jul 9<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/07/09/installing-ubuntu-on-macpro-with-osx-lion/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Installing Ubuntu on Macpro turned out to be little trickier than I would have liked it to be. For starters OSX Lion does not detect the Ubuntu ISO disc as bootable or something that bootcamp can load an OS from. There are tricks on the web that allow you to get around that.</p>
+
+<p>I am listing a few quirks that I came across while getting all this to work.</p>
+
+<p>The Challenge: Install Ubuntu on a MacPro that is running OSX Lion and make it so that it can dualboot to ubuntu.</p>
+
+<ul>
+<li>Install REFit</li>
+</ul>
+
+
+<p>Download and install REFit. This will allow your BIOS to work with bootloaders other than that of Apple. Once you have installed it restart you machine. If you are lucky you will see the REFIt menu on restart. Do not be disappointed if you do not see it at first. Restart again and you will surely see the REFIt menu this time. Once you have REFIt installed it is time to partition the HardDisk to make room for Ubuntu.</p>
+
+<ul>
+<li>Partitioning the disk</li>
+</ul>
+
+
+<p>OSX comes with two utilities that allow you to partition your hard disk. Word of caution: Do not use another partitioning tool as it has been knows to cause problems - especially when booting back into the Mac. You will put your data on the Mac OSX partition at risk.
+Given that you have to use OSX to atleast initially partitioning disks - you can choose between Disk Utility or Boot camp assistant. In both scenarios the partitioning is pretty clearly documented and easy. In the case of bootcamp with the new UI select &#8220;Install  or remove Windows 7&#8221; and uncheck &#8220;Download the latest Windows support from Apple&#8221;.</p>
+
+<p>When prompted choose the partition size for Windows by dragging the partitioner. Once you have a desirable size configured clicking &#8216;Continue&#8217; will look for a Windows 7 disk for installing Windows on the new partition. You can trick the boot camp assistant by actually inserting a bootable Windows 7 disk. Once it detects the disk and starts partitioning you can remove the Windows 7 disk and replace it with Ubuntu bootable disk. Once the partitioning is complete close Bootcamp Assistant.</p>
+
+<ul>
+<li>Installing Ubuntu</li>
+</ul>
+
+
+<p>Now restart the machine and hold the &#8216;C&#8217; key while restarting. This will allow you to boot from the bootable CD Drive. Once booting starts you should see the Ubuntu installation UI. Follow the instructions till the time, when it asks you for a partition to install Ubuntu.
+Choose manual partition editing.
+At this moment it will show you a list of existing partitions. In this list find the partition you created for Windows(should be labelled as fat32 or msdos or something that indicates its a windows partition). Delete this partition. You should have a partition called &#8220;FREE SPACE&#8221;. Now select this partition called &#8220;FREE SPACE&#8221;(about the size of your original partition for Windows) and create a partition on it of type EXT4 and &#8220;/&#8221; being mounted from here.(Make note of this partition information eg: /dev/sda3)</p>
+
+<p>Write this partition information to the disk and let Ubuntu do its thing. Follow the instructions on-screen to configure Ubuntu to your liking. Ubuntu will ask you where it should write the grub bootloader. At this prompt enter the above partition information /dev/sda3. This will ensure that REFIt will be able to find Ubuntu on your harddisk and allow you to boot into it. This step is the key to the process of being able to use the Ubuntu partition at all.</p>
+
+<p>Once the installation of Ubuntu is completed shutdown your machine and restart. On restart you will see a REFIt menu with an option to select &#8216;Penguin operating system&#8217;. You may see multiple penguins. Pick the penguin that points to your harddisk partition above(/dev/sda3 => &#8216;Boot from Hard disk partition 3&#8217;) option and you can boot into Ubuntu.</p>
+
+<p>With this both Ubuntu and Mac OSX can be booted into without much trouble. Infact on booting into linux Grub now detects Mac OSX as well.</p>
+
+<p>Happy Dual booting&#8230;</p>
 </div>
   
   
@@ -473,152 +588,6 @@ simple.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile/">Airport Express as Remote Speakers for Airplay - Also With Linux</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-30T00:00:00-07:00" pubdate data-updated="true">Sep 30<span>th</span>, 2011</time>
-        
-         | <a href="/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have an airport express that I used to use as my wireless router when I travel. Very convenient and useful when hotels do not provide a wireless.(Yes I am looking at you Marriott.) Airport Express thanks to apple technology also supports airplay to play music over the air, and/or printer sharing via a USB connection.</p>
-
-<p>I was hoping to connect my desktop and my laptop to my music system which is located in another room than these machines. Apparently airport express can connect with your existing wireless router as a client (yes they have thought of everything) allowing you to do exactly that.</p>
-
-<p>Here is a list of quirks you need to remember when you try to set it up as a <a href="http://support.apple.com/kb/HT2272?viewlocale=en_US">wireless
-client</a>.</p>
-
-<ol>
-<li><p>Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1~~11.</p></li>
-<li><p>Plug in the airport express and connect it to your mac using the ethernet cable.</p></li>
-<li><p>Start airport utility~~ which will try to detect any airport devices but will not find any.</p></li>
-<li><p>Hard reset by pressing the reset button with a paper clip for atleast 10 seconds. The light blinks rapidly when you are holding the pin and then in 30 seconds becomes steady - this means that airport express is restarting.</p></li>
-<li><p>Now rescan on the airport utility - it should find one device with name ‘Base station xxxxxx’ - with last 6 digits from the mac address. It should have a yellow icon next to it - indicating that it has not connected to the internet.</p></li>
-<li><p>Perform a Manual Setup - DO NOT hit continue.</p></li>
-<li><p>Change the channel number that is automatically set on the airport express to the one from your wireless router.</p></li>
-<li><p>In ‘Wireless’ connect the airport express as a client - select ‘Join an existing wireless network’ - select appropriate SSID of the wireless router.</p></li>
-<li><p>Browse through other tabs if you are interested in the details - else click ‘Update’.</p></li>
-<li><p>The airport express should restart and reappear on the Airport Utility. This usually takes over a minute. When it reappears it should appear with the new name you chose and with a green light next to it - indicating it was able to connect to your wireless router.</p></li>
-<li><p>If everything was successful and airport express liked the ‘Enable for Airplay’ selection you made - you will see a red light in the stereo socket light up. Connect your speakers to airport express and you should be able to airplay your music using iTunes.</p></li>
-</ol>
-
-
-<p>Notes:</p>
-
-<ul>
-<li><p>You may encounter “AirPort Utility was unable to find your AirPort wireless device after restarting.” One of the reasons for this is that Airport express cannot connect to your router with WPA2 or any other security.(Look at <a href="http://www.mac-forums.com/forums/internet-networking-wireless/103890-airport-express-existing-wireless-network-help.html">Airport Express Amber Light</a> for more details.)</p></li>
-<li><p>To ensure security I disabled ‘SSID broadcast’ and enabled MAC filtering on my router. I added the MAC addresses of my Airport Express (Airport Admin Utility will show those addresses when it detects Airport Express.)</p></li>
-</ul>
-
-
-<p>To allow your linux machine to connect and airplay to the airport express you need install pulseaudio’s drivers and support for remote audio protocol by running <a href="http://www.makeuseof.com/tag/apples-airtunes-ubuntulinux/">airtunes with Linux</a></p>
-
-<div>
-  <pre><code class='ruby'>sudo apt-get install pulseaudio-module-raop paprefs
-
-(I am not making this up- The protocol is Remote Audio Output Protocol - raop)</code></pre>
-</div>
-
-
-<p>Setup pulseaudio to enable remote speakers as described in <a href="http://blog.paulbetts.org/index.php/2007/04/15/pulseaudio-in-ubuntu-feisty-play-sound-over-the-network/">PulseAudio settings</a>.</p>
-
-<p>Once it is installed you may need to restart your Linux machine. On restarting you should see your newly available remote speakers in your Sound Preferences. Now you should be able to stream from your Linux machine too.</p>
-
-<p>And you are done.</p>
-
-<p>Enjoy remote streaming.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/12/18/why-firefox.textile/">Why I Use Firefox Over Chrome?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-12-18T00:00:00-08:00" pubdate data-updated="true">Dec 18<span>th</span>, 2010</time>
-        
-         | <a href="/blog/2010/12/18/why-firefox.textile/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>For development I choose to use tools which make the code transparent. Hence I prefer to use simple text editors over IDEs (although I like IntelliJ for Java code), or browsers that have good builtin support for debugging over closed/magical ones (hence Firefox/Chrome/Safari over IE).</p>
-
-<p>Recently I switched to Chrome as my primary browser since it promised to have all the add-ons to make it comparable to Firefox. On the contrary, in fact it still lacks the power and the flexibility of Firefox for development. Here are a few reasons why Firefox is still better at supporting development:</p>
-
-<ul>
-<li><a href="https://addons.mozilla.org/en-US/firefox/addon/748/">greasemonkey</a> for Firefox works with XMLHTTPRequests for different origin - <a href="http://greasemetal.31tools.com/">greasemetal</a> (now <a href="http://www.chromium.org/developers/design-documents/user-scripts">userscripts</a>) for Google Chrome has still not been able to fix this issue.</li>
-</ul>
-
-
-<p>_“GM<em>xmlhttpRequest is same-origin only.&#8221; - <a href="http://www.chromium.org/developers/design-documents/user-scripts">User Scripts</a>
-.</em></p>
-
-<ul>
-<li><p>A number of add-ons on Firefox show useful information on the status bar - I use ”DCurrency“:<a href="https://addons.mozilla.org/en-US/firefox/addon/6462/">https://addons.mozilla.org/en-US/firefox/addon/6462/</a>, ”CruiseControl Monitor“:<a href="https://addons.mozilla.org/en-US/firefox/addon/896/">https://addons.mozilla.org/en-US/firefox/addon/896/</a>.</p></li>
-<li><p>”Selenium IDE&#8221;:<a href="http://seleniumhq.org/projects/ide">http://seleniumhq.org/projects/ide</a>/ is available for Firefox - a big plus when I am trying to record andplay while I am trying to debug some apps.</p></li>
-<li><p>In the minimal view my frequently used bookmarks always show in Firefox ~~Google Chrome shows them when I open a new tab only. Maybe a minor annoyance but I cannot reuse the current tab with a single click access to my bookmarks.</p></li>
-<li><p>Minor annoyance~~ when I maximize the window on OSX Google Chrome expands only vertically. Firefox does not have this problem.</p></li>
-<li><p>Even with proxy switchers Chrome depends/modifies system proxy settings (diabolical). When using on Windows changing the proxy on IE will affect Chrome and vice-versa.</p></li>
-</ul>
-
-
-<p><em>“Chrome uses system’s proxy settings (IE proxy settings on Wndows) because it doesn’t have its own proxy settings yet (see <a href="http://crbug.com/266">http://crbug.com/266)</a>).Therefore, changing Chrome’s proxy settings using Switchy will also affect the system proxy settings.” - quote from <a href="https://chrome.google.com/extensions/detail/caehdcpeofiiigpdhbabniblemipncjj">Proxy Switchy!</a> extension.</em></p>
-
-<p>That means when I use Chrome as a browser with tools like <a href="http://sahi.co.in/w/">Sahi</a>, it will affect how other things work.</p>
-
-<p>In conclusion, for now Firefox is the best browser for development.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -635,7 +604,15 @@ client</a>.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/09/SiriMingle/">SiriMingle</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/07/09/moved-blog-to-octopress/">moved blog to octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/09/installing-ubuntu-on-macpro-with-osx-lion/">Installing Ubuntu on MacPro with OSX Lion - Dualboot</a>
       </li>
     
       <li class="post">
@@ -644,14 +621,6 @@ client</a>.</p>
     
       <li class="post">
         <a href="/blog/2012/05/10/ubuntu-power-management/">ubuntu power management</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/17/mac-remote-with-presentations/">Mac remote with presentations</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/13/agile-and-beyond/">Agile and Beyond 2012</a>
       </li>
     
   </ul>
