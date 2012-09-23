@@ -9,7 +9,7 @@
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="Over the past few months I have been using a community version of bashprofile, bashlogin, emacs settings and such. It started when Muness shared his &hellip;">
+  <meta name="description" content="For development I choose to use tools which make the code transparent. Hence I prefer to use simple text editors over IDEs (although I like IntelliJ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +67,69 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/12/18/why-firefox.textile/">Why I Use Firefox Over Chrome?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-18T00:00:00-08:00" pubdate data-updated="true">Dec 18<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/12/18/why-firefox.textile/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For development I choose to use tools which make the code transparent. Hence I prefer to use simple text editors over IDEs (although I like IntelliJ for Java code), or browsers that have good builtin support for debugging over closed/magical ones (hence Firefox/Chrome/Safari over IE).</p>
+
+<p>Recently I switched to Chrome as my primary browser since it promised to have all the add-ons to make it comparable to Firefox. On the contrary, in fact it still lacks the power and the flexibility of Firefox for development. Here are a few reasons why Firefox is still better at supporting development:</p>
+
+<ul>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/748/">greasemonkey</a> for Firefox works with XMLHTTPRequests for different origin - <a href="http://greasemetal.31tools.com/">greasemetal</a> (now <a href="http://www.chromium.org/developers/design-documents/user-scripts">userscripts</a>) for Google Chrome has still not been able to fix this issue.</li>
+</ul>
+
+
+<p>_“GM<em>xmlhttpRequest is same-origin only.&#8221; - <a href="http://www.chromium.org/developers/design-documents/user-scripts">User Scripts</a>
+.</em></p>
+
+<ul>
+<li><p>A number of add-ons on Firefox show useful information on the status bar - I use ”DCurrency“:<a href="https://addons.mozilla.org/en-US/firefox/addon/6462/">https://addons.mozilla.org/en-US/firefox/addon/6462/</a>, ”CruiseControl Monitor“:<a href="https://addons.mozilla.org/en-US/firefox/addon/896/">https://addons.mozilla.org/en-US/firefox/addon/896/</a>.</p></li>
+<li><p>”Selenium IDE&#8221;:<a href="http://seleniumhq.org/projects/ide">http://seleniumhq.org/projects/ide</a>/ is available for Firefox - a big plus when I am trying to record andplay while I am trying to debug some apps.</p></li>
+<li><p>In the minimal view my frequently used bookmarks always show in Firefox ~~Google Chrome shows them when I open a new tab only. Maybe a minor annoyance but I cannot reuse the current tab with a single click access to my bookmarks.</p></li>
+<li><p>Minor annoyance~~ when I maximize the window on OSX Google Chrome expands only vertically. Firefox does not have this problem.</p></li>
+<li><p>Even with proxy switchers Chrome depends/modifies system proxy settings (diabolical). When using on Windows changing the proxy on IE will affect Chrome and vice-versa.</p></li>
+</ul>
+
+
+<p><em>“Chrome uses system’s proxy settings (IE proxy settings on Wndows) because it doesn’t have its own proxy settings yet (see <a href="http://crbug.com/266">http://crbug.com/266)</a>).Therefore, changing Chrome’s proxy settings using Switchy will also affect the system proxy settings.” - quote from <a href="https://chrome.google.com/extensions/detail/caehdcpeofiiigpdhbabniblemipncjj">Proxy Switchy!</a> extension.</em></p>
+
+<p>That means when I use Chrome as a browser with tools like <a href="http://sahi.co.in/w/">Sahi</a>, it will affect how other things work.</p>
+
+<p>In conclusion, for now Firefox is the best browser for development.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -564,61 +627,6 @@ mention activities that require you to be available on a weekend.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/03/12/no-such-file-to-load-rubygems.textile/">No Such File to Load —rubygems</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-03-12T00:00:00-08:00" pubdate data-updated="true">Mar 12<span>th</span>, 2010</time>
-        
-         | <a href="/blog/2010/03/12/no-such-file-to-load-rubygems.textile/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>While working on my mac and trying to use giternal I ran into ‘no such file to load —rubygems’. While I had been using ruby apps on the machine for a while, without any issues and with all the installed gems, this seemed weird.</p>
-
-<p>I tried using the irb and check if</p>
-
-<div>
-  <pre><code class='mysql'>irb\&gt; require ‘rubygems’</code></pre>
-</div>
-
-
-<p>would work. But I got the same error. I was using the default mac version of the ruby installation that is installed at ‘/System/Library/Frameworks/Ruby.framework…..’ and did verify that rubygems was installed and that rubygems.rb was also present.</p>
-
-<p>On further investigation I found that the default ruby that was run on the command line was 1.8.7 when I expected 1.8.6.</p>
-
-<p>It appears that my path contained ‘/opt/local/bin’ before ‘/usr/bin’ which made the 1.8.7 version of ruby default and thus clobbered all by 1.8.6 settings and lost rubygems.</p>
-
-<p>To fix this I moved ‘opt/local/bin’ to be after ‘/usr/bin’ in my $PATH and voila everything works again.</p>
-
-<p>I have also been meaning to try RVM - maybe its time to give it a shot since my personal projects are on 1.8.7 and I have jruby as well as 1.8.6 installed on my mac.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -637,6 +645,10 @@ mention activities that require you to be available on a weekend.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/09/10/installing-ubuntu-on-macpro-with-osx-lion/">Installing Ubuntu on MacPro with OSX Lion - Dualboot</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/07/09/moved-blog-to-octopress/">moved blog to octopress</a>
       </li>
     
@@ -650,10 +662,6 @@ mention activities that require you to be available on a weekend.</p>
     
       <li class="post">
         <a href="/blog/2012/03/17/mac-remote-with-presentations/">Mac remote with presentations</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/13/agile-and-beyond/">Agile and Beyond 2012</a>
       </li>
     
   </ul>
