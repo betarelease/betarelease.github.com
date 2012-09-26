@@ -8,6 +8,7 @@ layout: default
   {% assign content = post.content %}
     <article>
       {% include article.html %}
+      <div class="tags">Tags : {{ post.tags | join: ", "}}</div>
     </article>
   {% endfor %}
   <div class="pagination">

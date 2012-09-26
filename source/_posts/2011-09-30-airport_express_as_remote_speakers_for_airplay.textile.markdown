@@ -7,31 +7,18 @@ streaming, airplay]
 
 I have an airport express that I used to use as my wireless router when I travel. Very convenient and useful when hotels do not provide a wireless.(Yes I am looking at you Marriott.) Airport Express thanks to apple technology also supports airplay to play music over the air, and/or printer sharing via a USB connection.
 
-I was hoping to connect my desktop and my laptop to my music system which is located in another room than these machines. Apparently airport express can connect with your existing wireless router as a client (yes they have thought of everything) allowing you to do exactly that.
+I was hoping to connect my desktop and my laptop to my music system which is located in another room than these machines. Apparently airport express can connect with your existing wireless router as a client (yes they have thought of everything) allowing you to do exactly that. Here is a list of quirks you need to remember when you try to set it up as a [wireless client](http://support.apple.com/kb/HT2272?viewlocale=en_US).
 
-Here is a list of quirks you need to remember when you try to set it up as a [wireless
-client](http://support.apple.com/kb/HT2272?viewlocale=en_US).
-
-1. Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1~~11.
-
+1. Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1 to 11. 
 2. Plug in the airport express and connect it to your mac using the ethernet cable.
-
 3. Start airport utility~~ which will try to detect any airport devices but will not find any.
-
 4. Hard reset by pressing the reset button with a paper clip for atleast 10 seconds. The light blinks rapidly when you are holding the pin and then in 30 seconds becomes steady - this means that airport express is restarting.
-
 5. Now rescan on the airport utility - it should find one device with name ‘Base station xxxxxx’ - with last 6 digits from the mac address. It should have a yellow icon next to it - indicating that it has not connected to the internet.
-
 6. Perform a Manual Setup - DO NOT hit continue.
-
 7. Change the channel number that is automatically set on the airport express to the one from your wireless router.
-
 8. In ‘Wireless’ connect the airport express as a client - select ‘Join an existing wireless network’ - select appropriate SSID of the wireless router.
-
 9. Browse through other tabs if you are interested in the details - else click ‘Update’.
-
 10. The airport express should restart and reappear on the Airport Utility. This usually takes over a minute. When it reappears it should appear with the new name you chose and with a green light next to it - indicating it was able to connect to your wireless router.
-
 11. If everything was successful and airport express liked the ‘Enable for Airplay’ selection you made - you will see a red light in the stereo socket light up. Connect your speakers to airport express and you should be able to airplay your music using iTunes.
 
 Notes:
