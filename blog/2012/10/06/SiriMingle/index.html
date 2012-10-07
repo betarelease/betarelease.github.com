@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>grok grack - &beta;-release</title>
+  <title>SiriMingle - Siri assistance for Mingle - &beta;-release</title>
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="Recently I was trying to host git repository from an already existing
-(non-bare) repository. I
-was looking for a solution that does not force me to &hellip;">
+  <meta name="description" content="TL&;DR Announcing SiriMingle - a tool to interact with Mingle using SiriProxy. Bringing the power of Siri voice control to modify cards, get status &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ was looking for a solution that does not force me to &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/2012/01/19/grok-grack/">
+  <link rel="canonical" href="http://betarelease.github.com/blog/2012/10/06/SiriMingle/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -72,7 +70,7 @@ was looking for a solution that does not force me to &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Grok Grack</h1>
+      <h1 class="entry-title">SiriMingle - Siri Assistance for Mingle</h1>
     
     
       <p class="meta">
@@ -88,7 +86,7 @@ was looking for a solution that does not force me to &hellip;">
   
 
 
-<time datetime="2012-01-19T00:00:00-08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2012</time>
+<time datetime="2012-10-06T18:16:00-07:00" pubdate data-updated="true">Oct 6<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -97,25 +95,85 @@ was looking for a solution that does not force me to &hellip;">
   </header>
 
 
-<div class="entry-content"><p>Recently I was trying to host git repository from an already existing
-(non-bare) repository. I
-was looking for a solution that does not force me to create a bare
-repository and does not
-require me to install apache or some such webserver on my machine.</p>
+<div class="entry-content"><p>TL&;DR</p>
 
-<p>I found a wonderful tool written by Scott Chacon called
-<a href="https://github.com/schacon/grack.git">grack</a>. grack is a git server on
-top of rack. Its elegance is in its design. It consists of few hundred
-lines of a rack middleware (awesome!) and a 6–8 line config file that
-allows you to host any repository over http. Setting it up on a local
-machine was really easy. Even hosting multiple repositories is trivial.</p>
+<p>Announcing SiriMingle - a tool to interact with Mingle using SiriProxy. Bringing the power of Siri voice control to modify cards, get status and ask questions about the project.</p>
 
-<p>I discovered one quirk when my server was not accessible, was due to
-binding it specifically to 127.0.0.1.
-Avoid this and bind to the hostname instead.</p>
+<p>It can be downloaded from <a href="http://github.com/betarelease/sirimingle.git">sirimingle</a> and used with SiriProxy.</p>
 
-<p>Many thanks to Scott Chacon, Github, Rack and Ruby for keeping it so
-simple.</p>
+<p>I do not know what SiriProxy is&#8230;. Read on</p>
+
+<p>SiriProxy is a proxy written in ruby 1.9 to allow people to use the power of Siri to perform useful tasks. Setting up SiriProxy was not trivial before. Over time and on 12.04 it can be more easily done.</p>
+
+<p>Here is how:</p>
+
+<ul>
+<li><p>Install Ubuntu 12.04 on your virtualbox(virtual box link), or natively on your desktop/macpro.(For dualbooting on macpro follow the instructions : )
+On virtualbox the following setting needs to be configured to ensure that the VM running Ubuntu gets a native IP address on the host network. (Configure bridge&#8230;&#8230;.).</p></li>
+<li><p>Install git, ruby et al.. (Assuming that you already know this)</p></li>
+<li><p>Download the <a href="http://github.com/betarelease/SiriProxy.git/install_deps.sh">install_deps.sh</a> script to get you started. It is recommended that you download the whole project.
+Run the script. This script should install all dependencies required for dnsmasq. dnsmasq is a tool that allows you to perform dns masquerading on any network. After running this script you should have the following : dnsmasq, rvm and ruby 1.9.3 installed.</p></li>
+</ul>
+
+
+<p><a href="http://www.techjawa.com/2012/01/31/guide-setup-working-siriproxy-three-little-pigs/">Guide: Setup Working SiriProxy</a> is a great guide to setting SiriProxy correctly. You can choose to ignore setting up the Three Little Pigs server.
+Follow the instructions closely to setup Ubuntu 12.04 with dnsmasq and Siriproxy.</p>
+
+<p>If everything has gone well so far you should see</p>
+
+<div>
+  <pre>
+    <code class='ruby'>&quot;Starting server on port 443&quot;</code>
+  </pre>
+</div>
+
+
+<p>This verifies that the dnsmasq is setup correctly and that Siriproxy can be run on your machine.</p>
+
+<p>Now change</p>
+
+<div>
+  <pre>
+    <code class='ruby'>siriproxy gencerts # generates certificates in .siriproxy folder</code>
+  </pre>
+</div>
+
+
+<p>Email this certificate and install it on your phone by opening the email and opening the attachment.</p>
+
+<p>Once the cert is installed change the dns settings for the network and add the IP address of your Ubuntu machine before the other DNS server entry.</p>
+
+<p>Now your phone is ready to talk to your Siriproxy server.</p>
+
+<p>Restart your SiriProxy server by</p>
+
+<div>
+  <pre>
+    <code class='ruby'>rvmsudo siriproxy server</code>
+  </pre>
+</div>
+
+
+<p>Invoke Siri on your phone: You should see the interaction logs in your terminal indicating that infact Siri is connecting to your SiriProxy via your dnsmasq.</p>
+
+<p>Once you have SiriProxy setup change the ~/.siriproxy/config.yml to add your mingle hostname and credentials. This will allow SiriProxy to interact with the Mingle API.</p>
+
+<p>Restart SiriProxy by doing the following:</p>
+
+<div>
+  <pre>
+    <code class='ruby'>rake install
+
+siriproxy bundle #this should install the dependencies including the siriproxy-sirimingle plugin.
+
+rvmsudo siriproxy server</code>
+  </pre>
+</div>
+
+
+<p>Once the server is started you should be able to talk to SiriMingle.</p>
+
+<p>Let the Siri be with you.</p>
 </div>
 
 
@@ -138,7 +196,7 @@ simple.</p>
   
 
 
-<time datetime="2012-01-19T00:00:00-08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2012</time>
+<time datetime="2012-10-06T18:16:00-07:00" pubdate data-updated="true">Oct 6<span>th</span>, 2012</time>
       
 
 
@@ -146,7 +204,7 @@ simple.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2012/01/19/grok-grack/" data-via="sudhindraRao" data-counturl="http://betarelease.github.com/blog/2012/01/19/grok-grack/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2012/10/06/SiriMingle/" data-via="sudhindraRao" data-counturl="http://betarelease.github.com/blog/2012/10/06/SiriMingle/" >Tweet</a>
   
   
   
@@ -155,14 +213,18 @@ simple.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2011/12/07/simple-dashboard-with-tab-slideshow.textile/" title="Previous Post: Simple Dashboard with Tab Slideshow">&laquo; Simple Dashboard with Tab Slideshow</a>
+        <a class="basic-alignment left" href="/blog/2012/09/10/installing-ubuntu-on-macpro-with-osx-lion/" title="Previous Post: Installing Ubuntu on MacPro with OSX Lion - Dualboot">&laquo; Installing Ubuntu on MacPro with OSX Lion - Dualboot</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/03/06/vendorizing-gems-with-bundler/" title="Next Post: Bundler with vendorized gems">Bundler with vendorized gems &raquo;</a>
       
     </p>
   </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -271,7 +333,10 @@ simple.</p>
       var disqus_shortname = 'betareleasedraftingrandomthoughts';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://betarelease.github.com/blog/2012/10/06/SiriMingle/';
+        var disqus_url = 'http://betarelease.github.com/blog/2012/10/06/SiriMingle/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
