@@ -2,6 +2,7 @@
 layout: post
 title: "Installing Ubuntu on MacPro with OSX Lion - Dualboot"
 date: 2012-09-10 09:16
+tags: [osx, linux, dualboot, boot,REFIt, EFI, grub, partition, bootcamp]
 comments: true
 ---
  
