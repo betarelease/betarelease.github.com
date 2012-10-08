@@ -4,7 +4,7 @@
   <title><![CDATA[&beta;-release]]></title>
   <link href="http://betarelease.github.com/atom.xml" rel="self"/>
   <link href="http://betarelease.github.com/"/>
-  <updated>2012-09-10T11:44:41-07:00</updated>
+  <updated>2012-10-06T18:04:36-07:00</updated>
   <id>http://betarelease.github.com/</id>
   <author>
     <name><![CDATA[Sudhindra Rao]]></name>
@@ -12,6 +12,93 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SiriMingle - Siri assistance for Mingle]]></title>
+    <link href="http://betarelease.github.com/blog/2012/10/06/SiriMingle/"/>
+    <updated>2012-10-06T18:16:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/10/06/SiriMingle</id>
+    <content type="html"><![CDATA[<p>TL&;DR</p>
+
+<p>Announcing SiriMingle - a tool to interact with Mingle using SiriProxy. Bringing the power of Siri voice control to modify cards, get status and ask questions about the project.</p>
+
+<p>It can be downloaded from <a href="http://github.com/betarelease/sirimingle.git">sirimingle</a> and used with SiriProxy.</p>
+
+<p>I do not know what SiriProxy is&#8230;. Read on</p>
+
+<p>SiriProxy is a proxy written in ruby 1.9 to allow people to use the power of Siri to perform useful tasks. Setting up SiriProxy was not trivial before. Over time and on 12.04 it can be more easily done.</p>
+
+<p>Here is how:</p>
+
+<ul>
+<li><p>Install Ubuntu 12.04 on your virtualbox(virtual box link), or natively on your desktop/macpro.(For dualbooting on macpro follow the instructions : )
+On virtualbox the following setting needs to be configured to ensure that the VM running Ubuntu gets a native IP address on the host network. (Configure bridge&#8230;&#8230;.).</p></li>
+<li><p>Install git, ruby et al.. (Assuming that you already know this)</p></li>
+<li><p>Download the <a href="http://github.com/betarelease/SiriProxy.git/install_deps.sh">install_deps.sh</a> script to get you started. It is recommended that you download the whole project.
+Run the script. This script should install all dependencies required for dnsmasq. dnsmasq is a tool that allows you to perform dns masquerading on any network. After running this script you should have the following : dnsmasq, rvm and ruby 1.9.3 installed.</p></li>
+</ul>
+
+
+<p><a href="http://www.techjawa.com/2012/01/31/guide-setup-working-siriproxy-three-little-pigs/">Guide: Setup Working SiriProxy</a> is a great guide to setting SiriProxy correctly. You can choose to ignore setting up the Three Little Pigs server.
+Follow the instructions closely to setup Ubuntu 12.04 with dnsmasq and Siriproxy.</p>
+
+<p>If everything has gone well so far you should see</p>
+
+<div>
+  <pre>
+    <code class='ruby'>&quot;Starting server on port 443&quot;</code>
+  </pre>
+</div>
+
+
+<p>This verifies that the dnsmasq is setup correctly and that Siriproxy can be run on your machine.</p>
+
+<p>Now change</p>
+
+<div>
+  <pre>
+    <code class='ruby'>siriproxy gencerts # generates certificates in .siriproxy folder</code>
+  </pre>
+</div>
+
+
+<p>Email this certificate and install it on your phone by opening the email and opening the attachment.</p>
+
+<p>Once the cert is installed change the dns settings for the network and add the IP address of your Ubuntu machine before the other DNS server entry.</p>
+
+<p>Now your phone is ready to talk to your Siriproxy server.</p>
+
+<p>Restart your SiriProxy server by</p>
+
+<div>
+  <pre>
+    <code class='ruby'>rvmsudo siriproxy server</code>
+  </pre>
+</div>
+
+
+<p>Invoke Siri on your phone: You should see the interaction logs in your terminal indicating that infact Siri is connecting to your SiriProxy via your dnsmasq.</p>
+
+<p>Once you have SiriProxy setup change the ~/.siriproxy/config.yml to add your mingle hostname and credentials. This will allow SiriProxy to interact with the Mingle API.</p>
+
+<p>Restart SiriProxy by doing the following:</p>
+
+<div>
+  <pre>
+    <code class='ruby'>rake install
+
+siriproxy bundle #this should install the dependencies including the siriproxy-sirimingle plugin.
+
+rvmsudo siriproxy server</code>
+  </pre>
+</div>
+
+
+<p>Once the server is started you should be able to talk to SiriMingle.</p>
+
+<p>Let the Siri be with you.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Installing Ubuntu on MacPro with OSX Lion - Dualboot]]></title>
@@ -175,7 +262,9 @@ Bundler tries to fix issues with having to manage your gems(and their related de
 location of your choosing. This path can then be added to your application to load all the <br />
 frozen gems. The following command with the path set to the location you would like to unpack your gems allows you to use bundler to vendorize gems.</p>
 <div>
-<pre><code class='ruby'>bundle install --path vendor/bundle</code></pre>
+<pre>
+<code class='ruby'>bundle install --path vendor/bundle</code>
+</pre>
 </div>
 <p>You can then add these gems to your application as you would for vendorized gems.</p>
 <h3>Bundler with rvm and gemsets</h3>
@@ -185,12 +274,16 @@ frozen gems. The following command with the path set to the location you would l
 <p>Bundler allows you to install and update a set of gems based on the Gemfile. But it is not obvious how you would set up an application that has local gems installed to start using bundler. To start you need to delete all gems from the current gems. Having a clean workspace allows bundler to install gems from Gemfile without conflicts and can prevent a lot of confusion when multiple versions of a gem being installed side by side.</p>
 <p>Here is a snippet that will allow you to clean your gemset.</p>
 <div>
-<pre><code class='ruby'>Delete all gems from gemset
-gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code></pre>
+<pre>
+<code class='ruby'>Delete all gems from gemset
+gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code>
+</pre>
 </div>
 <p>In most cases this will work. But rake seems to be installed as part of the global gemset. So the above command will delete all gems till rake and then abort. To skip deleting rake change the above script as follows</p>
 <div>
-<pre><code class='ruby'>gem list | cut -d ' ' -f1 | ack -v 'rake' | xargs gem uninstall -aIx</code></pre>
+<pre>
+<code class='ruby'>gem list | cut -d ' ' -f1 | ack -v 'rake' | xargs gem uninstall -aIx</code>
+</pre>
 </div>
 <p>(ack is further reading if you don&#8217;t already know what it does.)</p>]]></content>
   </entry>
@@ -240,23 +333,20 @@ simple.</p>
     <id>http://betarelease.github.com/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile</id>
     <content type="html"><![CDATA[<p>I have an airport express that I used to use as my wireless router when I travel. Very convenient and useful when hotels do not provide a wireless.(Yes I am looking at you Marriott.) Airport Express thanks to apple technology also supports airplay to play music over the air, and/or printer sharing via a USB connection.</p>
 
-<p>I was hoping to connect my desktop and my laptop to my music system which is located in another room than these machines. Apparently airport express can connect with your existing wireless router as a client (yes they have thought of everything) allowing you to do exactly that.</p>
-
-<p>Here is a list of quirks you need to remember when you try to set it up as a <a href="http://support.apple.com/kb/HT2272?viewlocale=en_US">wireless
-client</a>.</p>
+<p>I was hoping to connect my desktop and my laptop to my music system which is located in another room than these machines. Apparently airport express can connect with your existing wireless router as a client (yes they have thought of everything) allowing you to do exactly that. Here is a list of quirks you need to remember when you try to set it up as a <a href="http://support.apple.com/kb/HT2272?viewlocale=en_US">wireless client</a>.</p>
 
 <ol>
-<li><p>Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1~~11.</p></li>
-<li><p>Plug in the airport express and connect it to your mac using the ethernet cable.</p></li>
-<li><p>Start airport utility~~ which will try to detect any airport devices but will not find any.</p></li>
-<li><p>Hard reset by pressing the reset button with a paper clip for atleast 10 seconds. The light blinks rapidly when you are holding the pin and then in 30 seconds becomes steady - this means that airport express is restarting.</p></li>
-<li><p>Now rescan on the airport utility - it should find one device with name ‘Base station xxxxxx’ - with last 6 digits from the mac address. It should have a yellow icon next to it - indicating that it has not connected to the internet.</p></li>
-<li><p>Perform a Manual Setup - DO NOT hit continue.</p></li>
-<li><p>Change the channel number that is automatically set on the airport express to the one from your wireless router.</p></li>
-<li><p>In ‘Wireless’ connect the airport express as a client - select ‘Join an existing wireless network’ - select appropriate SSID of the wireless router.</p></li>
-<li><p>Browse through other tabs if you are interested in the details - else click ‘Update’.</p></li>
-<li><p>The airport express should restart and reappear on the Airport Utility. This usually takes over a minute. When it reappears it should appear with the new name you chose and with a green light next to it - indicating it was able to connect to your wireless router.</p></li>
-<li><p>If everything was successful and airport express liked the ‘Enable for Airplay’ selection you made - you will see a red light in the stereo socket light up. Connect your speakers to airport express and you should be able to airplay your music using iTunes.</p></li>
+<li>Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1 to 11.</li>
+<li>Plug in the airport express and connect it to your mac using the ethernet cable.</li>
+<li>Start airport utility~~ which will try to detect any airport devices but will not find any.</li>
+<li>Hard reset by pressing the reset button with a paper clip for atleast 10 seconds. The light blinks rapidly when you are holding the pin and then in 30 seconds becomes steady - this means that airport express is restarting.</li>
+<li>Now rescan on the airport utility - it should find one device with name ‘Base station xxxxxx’ - with last 6 digits from the mac address. It should have a yellow icon next to it - indicating that it has not connected to the internet.</li>
+<li>Perform a Manual Setup - DO NOT hit continue.</li>
+<li>Change the channel number that is automatically set on the airport express to the one from your wireless router.</li>
+<li>In ‘Wireless’ connect the airport express as a client - select ‘Join an existing wireless network’ - select appropriate SSID of the wireless router.</li>
+<li>Browse through other tabs if you are interested in the details - else click ‘Update’.</li>
+<li>The airport express should restart and reappear on the Airport Utility. This usually takes over a minute. When it reappears it should appear with the new name you chose and with a green light next to it - indicating it was able to connect to your wireless router.</li>
+<li>If everything was successful and airport express liked the ‘Enable for Airplay’ selection you made - you will see a red light in the stereo socket light up. Connect your speakers to airport express and you should be able to airplay your music using iTunes.</li>
 </ol>
 
 
@@ -271,9 +361,11 @@ client</a>.</p>
 <p>To allow your linux machine to connect and airplay to the airport express you need install pulseaudio’s drivers and support for remote audio protocol by running <a href="http://www.makeuseof.com/tag/apples-airtunes-ubuntulinux/">airtunes with Linux</a></p>
 
 <div>
-  <pre><code class='ruby'>sudo apt-get install pulseaudio-module-raop paprefs
+  <pre>
+    <code class='ruby'>sudo apt-get install pulseaudio-module-raop paprefs
 
-(I am not making this up- The protocol is Remote Audio Output Protocol - raop)</code></pre>
+(I am not making this up- The protocol is Remote Audio Output Protocol - raop)</code>
+  </pre>
 </div>
 
 
@@ -484,74 +576,6 @@ you need to project multiple things at the same time.</p></li>
 <li>Electric outlets and Wireless Internet/Shared network</li>
 <li>Projectors</li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Preparing to be a trainer]]></title>
-    <link href="http://betarelease.github.com/blog/2010/03/12/prepare-to-be-a-trainer.textile/"/>
-    <updated>2010-03-12T00:00:00-08:00</updated>
-    <id>http://betarelease.github.com/blog/2010/03/12/prepare-to-be-a-trainer.textile</id>
-    <content type="html"><![CDATA[<p>Preparing to be a trainer is more of a mental activity than physical. To
-be one you would want to observe one and learn how they do it. I had the
-opportunity of being trained by a set of great trainers/speakers and
-also working them to understand how they prepared to be a trainer.
-Mostly it is about being aware of the responsibility. It takes time to
-get a feel for the amount of work that goes into being a trainer. To
-facilitate this we started by studying the course material that was
-already available (In a sense I was lucky that there was so much refined
-course material available that I did not need to invest any time in
-design the course. Designing a course is a major undertaking and can be
-done only after much experience [#feedback]).</p>
-
-<p>Another thing you must do is actually be a co-trainer/teaching assistant
-at a training session to get a feel of the mechanics of it all.(What
-gets overlooked is the fact that managing time/schedule and training
-content is harder than it appears.) To prepare to be such a person one
-needs to know the complete training course. To be a developer trainer I
-went through the exercise of reading all the material and also solving
-and reasoning all the examples for the course. At times it also helps to
-have multiple solutions at hand. In collaboration with other trainers
-and trainees we have managed to have a repository of such sample
-solutions that we are prepared with to hand out to trainees.</p>
-
-<p>Once you have a grip on the course content you need to plan and replay
-the plan of how the content will be presented. Pairing on course content
-tremendously helps. In case of vast curriculum it helps to divide
-responsibility between the pair to deliver certain topics based on
-experience, enthusiasm and freshness of the trainer. Making a plan of
-the day for every half hour slot helps get a feel of timeliness as well
-as helps focus on delivering the most important message of the session
-effectively. Rehearsing all this with a pair is greatly useful. We had
-the opportunity to rehearse this training with the smaller group to time
-ourselves as well as refine delivery of content. Understanding what
-messages are to be delivering during the session and what content is to
-be learnt after class/further exercise helps divide the content and
-reduce course load.</p>
-
-<p>There is a lot of physical activity involved too. To enhance retention
-and recollection it may be a good idea to prepare homework/extra work
-problems. Some students really gain a lot from working on these in their
-spare time. A trick that also helps retention is ‘rinse and repeat’ - We
-provided handouts of the most important messages of the session and
-reviewed sessions at the end and few days later.</p>
-
-<p>Preparing also needs to consider the amount of stationary required,
-hardware required, accessories such as timers, props and power
-availability at the venue.[#venue]</p>
-
-<p>Training is a lot of hard work. Do not jump in if you don’t thing 12
-hour days + dinner + a night out are not something you can take. Not to
-mention activities that require you to be available on a weekend.</p>
-
-<ol>
-<li>Prepare course content</li>
-<li>Plan out each day</li>
-<li>Rehearse</li>
-<li>Ensure retention by way of handouts or reviews</li>
-<li>Prepare the venue to suit the training</li>
-</ol>
 
 ]]></content>
   </entry>
