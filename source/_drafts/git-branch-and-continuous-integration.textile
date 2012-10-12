@@ -1,0 +1,55 @@
+---
+layout: post
+title: Git Branch and Continuous Integration
+---
+
+
+
+Recently I have been hearing about how git is awesome with its local and remote and its ease of creating and dealing with branches. Another idea that is making the rounds is about how to use git in your agile development to do story based branching. 
+
+Something about post1 and post2 struck me as an aberration which prompted me to write up this post.
+
+MORE details from the 2 posts.
+
+
+Consider a simple situation where there is a team of 2 pairs working on an application. 
+Also imagine that they use some kind of a continuous integration tool to integrate their changes and a green build makes their day.
+They go about doing their job by picking up a story each. Let us say(realistically) that the two stories have some kind of an overlap - not a serious one but some functionality developed in story 1 is being used by story 2 in some way.
+
+Both the pairs are fired up with this new idea of story branching and they want to practice that. So both the pair start with a fresh copy of the codebase and both are at revision 0.
+
+            ----rev0-1-1---rev0-1-2---rev0-1-3---rev0-1-4---rev0-1-5----
+            |                                                           |
+---rev 0 --------------------------------------------------------------rev0-1-5---------------------------------------
+            |                                                                                |                       |
+            |                                                                                |                       |
+            ----rev0-2-1---rev0-2-2---rev0-2-3---rev0-2-4---rev0-2-5---rev0-2-6---rev0-1-5-and-rev0-2-6---rev0-2-7---
+
+
+During the course of development(as illustrated above) pair working on story 1 makes 5 changes and they keep on commiting to their branch locally. They also claim that they do a 'git pull' into the branch continuously but since nothing is being checked in to the rev0(or master) they do not get any changes.
+
+The same thing happens with the pair that is working with story 2 - they make 7 changes and they keep on commiting to their local branch. They also claim that they are pulling regularly(but from nothing because nothing changed on the branch).
+
+Say that the pair working on story 1 finishes their story because that was a smaller story or whatever and they check in to the master. They do not encounter any merges/conflicts. The build is successful(because hopefully this pair checked in the changes after their local build was successful) and their job is done.
+
+Now let us see what happens to the other pair. Because their story was bigger they are taking longer to finish it. Just when they are about to make final changes they checkin to their local branch (which is rev0-2-6) and then they pull. Now they are stuck with lots of merges/conflicts because they have to now deal with a big bang checkin that happened because pair 1 finished their story. Now pair 2 has to spend time on resolving the merges/conflicts and ensuring that their code can integrate. What make this resolution harder is that since this is a big bang checkin the number of merges/conflicts rises and is significantly tougher to achieve - especially after a gruesome toil after working through the story.
+And we have known from history that making big bang changes does not work - is not agile, is not continuously integrable and so on. Also if you look closely at the above picture it looks like a picture of staggered integration(which is not continuous) and will mostly lead to someone reverting someone elses changes because they are just too hard/too many to merge and resolve.
+
+Now consider a scenario where these pairs were commiting to the master after every checkin to the local. Also that this every checkin is a small change(a failing test and some code that makes the test pass - typically a few lines of code and only a couple of files changed)
+
+            ----rev0-1-1---rev1-1-2---rev0-1-3---rev0-1-4---rev0-1-5----
+            |            |           |          |         |             |
+---rev 0---------------------rev1------rev2---------rev4-------rev5------------rev6-----
+            |            |           |          |         |             |              | |
+            |            |           |          |         |             |              |                       |
+            ----rev0-2-1---rev0-2-2---rev0-2-3---rev0-2-4---rev0-2-5---rev0-2-6---rev0-1-5-and-rev0-2-6---rev0-2-7---
+
+In this scenario both the pairs checkin - say every 15 minutes - because they do just that - failing test - passing test - refactor - checkin. Each pair has to deal with significantly less merges/conflicts. These conflicts are easy to resolve mainly because they are small in number. The pairs are less worried about what happens at the end of the story. There is no 'will my 20 files get reverted/significantly changed' fear. This distributes the load of merge and conflict resolution so no one pair bears the burden because they got stuck with a bigger story. Also every change that is made gets integrated(if I may say here) continuously!!!!!. After every change the team makes the build passes and the code works because these are small changes of which all the conflicts have been resolved.
+Hopefully thus making your team agile again.
+
+You may find that proponents of scenario 1 say that it works for them and they have even used it on teams with collaboration. I think it works for them because it is precisely that - just for them. Allow me to explain. In scenario 1 if the rest of the team continuous to use continuous integration and checking in to the master after every change they don't see any issue. This proponent of story branching does exactly as the recipes suggest and does a 'git pul' before every local change is made. So this proponent does keep on merging and resolving conflicts.(Remember that the rest of the team has not seen his changes so they do not need to worry about resolving conflicts with his code). When he is done he checks in to the master(after pulling and resolving conflicts all by himself). He gets a successful build indicating that his way of working is good and valid.
+But I think the proponent misses the point - he does not realise that his technique works in isolation because he is the only one doing the branching. He also fails to realise that he is the only one doing all the merging(lets say he is a pacifist and likes to resolve conflicts - good for him, may be he can help out in international affairs/politics), while the rest of the team is not even feeling the burden of merging.
+
+In conclusion, I want to say that git story branching is not necessarily such a good idea for a collaborative, agile, continuously integrated projects. For everything else it may be another story. So if you work on a collaborative, agile, real continuous integrated projects - say no to git story branching(also 'say no to drugs!').
+
+(Astute readers may also have realised that these scenarios can also be imagined with any other version control system that can branch - like say subversion. People who understand continuous integration chose the second scenario not because the SCM was complex - we know how bad svn branching is sometimes - but because checking in continuously and thus integrating continuously made sense.)

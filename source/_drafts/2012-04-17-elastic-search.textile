@@ -1,0 +1,32 @@
+---
+layout: post
+title: Elastic Search 
+tags: [software, search, synonyms, google, lucene, apache, ruby, elasticsearch, acts_as_full_text_searchable]
+---
+
+For the application that I am currently building, we started migrating the old acts_as_full_text_searchable to lucene based search using elastic_search. Here are some notes on what we learnt along the way.
+
+A little history
+
+acts_as_full_text_searchable is a rails gem that allows indexing of your data into a database table and run queries against this index. It allows features like 'weighting' to allowyou to tune the result-set to suit your needs.
+
+Issues:
+acts_as_full_text_searchable is slow. As the index size grows the search gets slower.
+
+It stores all its index data into a database table. As the index grows in size so does this table. Rebuilding this index once its corrupt does take a long time. 
+
+
+
+
+Our need:
+
+We realized that since search is not our core competence it would help us to use a canned search engine and allow it to do what it does best - search. Looking at the web revealed that lucene is the most popular such search library. Over years lucene has received a lot of attention and has been tuned to death to make it robust. The web-mind indicated that if you are using anything other than lucene for your search - you are probably in one of these two categories - you are building a better search engine or you are doing it wrong.
+
+We were not building a better search engine, so we started looking at more support around lucene. We found a number of tools - lucene has come a long way since I used it in 2007. A lot of java-based solutions were available. 
+
+Comparison of all the solutions HERE
+
+
+Elastic Search
+
+

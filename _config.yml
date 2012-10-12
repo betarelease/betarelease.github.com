@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://www.sudhindrarao.com 
+url: http://betarelease.github.com
 title: "&beta;-release"
 subtitle: "version x.1 - always &beta; always released"
 author: Sudhindra Rao
@@ -85,7 +85,7 @@ pinboard_user:
 pinboard_count: 3
 
 # Delicious
-delicious_user:
+delicious_user: srrao2k
 delicious_count: 3
 
 # Disqus Comments

@@ -1,0 +1,24 @@
+---
+layout: post
+title: Installing IO on OSX with homebrew
+tags: [io, programming, language, osx, brew]
+---
+
+
+
+When working on code samples from "Seven Languages in Seven Weeks":http://pragprog.com/titles/btlang/seven-languages-in-seven-weeks I was trying to install "io":http://www.iolanguage.com/ on my osx. Documents suggested using the new and cool "homebrew":http://mxcl.github.com/homebrew/ to install io. 
+
+Using brew to install it I was stumbling across conflicts due to the presence of Macports on my machine.
+
+
+install cmake from the cross platform makefile generator website
+
+install gmp and readline from brew 
+
+run build.sh from within downloaded io source
+
+cd build and run make and make install 
+
+you should have io.
+
+Ignore everything else that people ask you to install. You may need it but atleast not to get started with io.

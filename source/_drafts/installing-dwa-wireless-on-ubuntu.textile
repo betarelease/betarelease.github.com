@@ -1,0 +1,36 @@
+---
+layout: post
+title: Installing DWA-125 Dlink adapter on Ubuntu - over and over again 
+tags: [ubuntu, dwa, dlink, wireless, modprobe, drivers, usb, adapter]
+---
+
+
+Looks like they want to make it really hard to install and use USB
+wireless adapters on Ubuntu. With the newest version 11.10 of Ubuntu, I
+had to download an even newer version of Dlink driver. 
+
+One of the issues I faced while building the driver : Multiple versions
+of linux kernel. 
+
+If you have multiple versions of the linux kernel installed - and do not
+know which version is being booted into - look at your grub
+configuration. Check for the latest versions of the kernel and install
+it. Once this kernel version is installed, boot your Ubuntu into this
+kernel and delete all the older kernel versions. The reason for doing
+this is that different kernel versions have different compatibilities
+for the modules you would be installing on them. Also some libraries are
+compiled into the kernel and conflict with the compile when you run a
+'make' or 'make install'.
+
+Once you have a clean kernel, build the latest Dlink driver with this
+kernel. 
+
+After building the binaries run 'modprobe rt5470sta'. Ensure that you
+have already blacklisted other drivers from loading 'rt2870sta,
+rt3070sta'.
+
+Once this is installed and loaded, add it to init.d.
+
+
+
+

@@ -1,0 +1,58 @@
+---
+layout: post
+title: Private methods - Can TDD help in identifying classes?
+tags: [ programming, language, TDD, ruby, model, agile, xp, software, design ]
+
+---
+
+Agile/XP is a set of principles to allow fast response to change. In facilitating this XP promotes unit testing and Test Driven Development. Unit testing and having a better safety net reduce the fear of impending change. Having said that unit tests can only test classes/methods that are public/accessible to the test(as an API or otherwise). 
+
+Private methods on the other hand are not accessible to be directly unit tested(except for in languages like ruby). Private methods often are created to move complicated logic locally used by the class outside of the api. Here is an example
+
+{% highlight ruby linenos%}
+  class SavingsAccount
+
+    // Assumption: the following constants are results of a service call
+    INTEREST_RATE = 0.015
+    BONUS = 50
+  
+    def initialize(amount)
+      @amount = amount + BONUS
+      @deposit_timestamp = Time.now
+    end
+
+    def deposit(amount)
+      @amount += amount
+      @deposit_timestamp = Time.now
+    end
+  
+    def interest
+      @amount * INTEREST_RATE * period
+    end
+    
+    private
+      def period
+        Time.now - @deposit_timestamp
+      end
+  
+  end
+{% endhighlight %}
+
+In the above case the private method period cannot be tested or has to be tested indirectly. Often times this private method grows in size and complexity - in the interest of keeping the public/api method less complex and more readable. Now, more and more critical functionality, needs to be tested indirectly. This makes it hard to test all paths of logic in the private method.
+
+Such scenarios are often found it production code that has bugs - either because the private method did too much or if one or many of its code paths was not exercised through a test. There is a chance that this private method could be tested in some obscure way via a functional test - but that is a remote chance and even if it does exist, it is part of a slower feedback loop. A functional test does not allow sandboxed testing either.
+
+Leaving such private methods untested(i.e. without the safety net around them) is risky. To refactor out of this situation and to test the bug being fixed we want this private method to be visible to the tests somehow. 
+
+{% highlight ruby linenos%}
+  class Duration
+    def period
+      Time.now - @deposit_timestamp
+    end
+  end
+{% endhighlight %}
+
+Extracting a private method in this way helps isolate complex functionality by identifying vital behaviour in the system. Using such technique has helped in many instances where complexity was hidden deep.
+
+Another principle that helps or acts as thumb rule is - design classes that are small and encapsulated. Pedantically this could mean each meaty method is refactored into a class. Instead we keep classes short, 7 methods each about 3 lines long serves as a good rule help maintain discipline. Anything else inside public methods, or private methods is a possible refactoring.
+

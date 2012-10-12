@@ -1,0 +1,55 @@
+---
+layout: post
+title: Why you should move away from your version control systems to git?
+tags: [.NET, programming, source control, windows, microsoft, tfs, git, distributed, hg, mercurial, svn, subversion, version control]
+---
+In the last few years since the foray of git into mainstream it has been a learning experience to participate in migrating codebases to git. Here I write a few reasons and lessons in how these migrations were done.
+
+
+
+
+1) moving away from svn
+Remember the days when svn was cool, that was when cvs was popular and lot of vendor owned solutions for version control were ruling the market(Rational Rose had ClearCase, Perforce, StarTeam and the like). svn brought in the new and cool concept of atomic checkins, it also gave the team the freedom to checkin frequently and often - like cvs it did not have gated checkins and locked files. svn was really liberating. Soon enough lot of opensource friendly crowd joined in and a few limitations of svn started making themselves visible. svn based its change mechanism of file path(sounds very straightforward), making it a nightmare to track file path changes. It was the time when, if you knew how to rename files in svn you were considered good at svn. If you knew how the merges worked and could resolve large file merges - you were an expert.
+
+svn branching was just a copy of the trunk. It was simple but again you had to maintain these branches and had to checkout each one, atleast those which were in production. Managing changesets between branches to trunk was close to being magical. Merging was known to take hours(I did spend an entire weekend resolving branch merges - time I have lost to svn.)
+
+svn depends on a central server - thus providing a single synchronisation point. Having a central server based system presented a lot of challenges - no offline commit, no failure protection. Managing experimental work had to be done as patches. Usual workflow around this was to checkin those patches(tracking version of which did not make any sense) and later copies of these patches - all named cryptically (sraos_fix_for_bug_1234.patch). Finding the right code and resurrecting such dated patches was more often than not futile.
+
+svn mirroring was a suggested and tried solution for protecting the central server from failures - it worked iff it was done right. I always found myself at the wrong end of such implementations. One of the svn mirrors I was working with had a master slave configuration and slaves updated the metadata of changesets immediately(since they were light) and actual changesets about 5 mins later. This gave the client an impression that everything was alright when updating metadata while the files actually did not get updated. I have faced a broken build many a times due only to this feature of mirroring.
+
+Considering how overbearing the workflow around svn became, it was natural for teams to move away form svn. git came as a life saver. Although initially we looked at git since it was a better distributed version control system, many of its features became more fitting as we started using it.
+
+
+2) moving away from tfs
+
+[Derek Hammer has recently posted why using TFS in your development organisation is a terrible idea. Having said that moving away from TFS is not straightforward. I will try to list activities you may have to consider while performing such a migration.]
+
+In the last year, I have worked on teams with TFS and most recently with a team using mercurial as their version control solutions. Many of the reasons why using TFS is a bad have been written up by Derek Hammer in the above post. 
+
+
+3) mercurial to git
+
+More recently though, using mercurial in anger has brought out the key differences in git and mercurial.
+Here is what I saw about mercurial
+* Mercurial is easy to use if you have been an svn user - It means exactly that. You will get the good and the bad things of svn on your distributed mercurial repository. 
+* Doing a file move in the version control systems is so 1990 and prone to weirdness. Since svn relies on the filesystem to be the source of truth we need to let svn know that we would like to rename or move a file. Obviously if done wrongly you lose all relevant commit history. Thus rendering the version control system useless.
+* Creating stash equivalents - they call them shelvesets - is ridiculous in terms of usage and not repeatable. My team has resorted to emailing patches to one another since shelving is not reliable. 
+* Branching in mercurial is a nightmare - like in svn. Merging from one branch to another means checking out branches and worrying what happens when you pick a change that was many changes later than the last change. TFS chose to pick all the changes in between. Hg has the same problem. This problem lead to creating patches and sending them around with a lot of manual intervention. Git on the other hand will allow cherry pick.
+* Repository size - Repository size of git including the branches(since branches are nothing but commits) - is smaller than that of hg or tfs. This makes cloning faster and repository portable. Using an object approach has helped tremendously in git distributed design.
+* Having a centralized repository has the same issues that svn had - request response time, enormous investment in server infrastructure, mirroring issues - although reduced with distribution in case of hg, managing the central server as the blessed one.
+* With the most recent addition of 'git stash -u' which stashes unstaged commits git is way ahead and getting the support it needs. Mercurial on the other hand is based on creating plugins - even for basic functionality like shelving - making it a toy in comparison to git.
+
+I would like to list the activities and organizational readiness to be carried out while migrating :
+
+* Research your current version control system in comparison to git - Whatever your VCS can do git can do better("git is better":http://www.whyisgitbetterthanx.com)
+
+* Look for tools to fit the workflow of various users in your organization  - git is best used on command line, even on windows - but there are now many GUI tools to make the windows crowd happy. (LIST ALL WINDOWS UI TOOLS FOR GIT)
+
+* Atleast 2 sessions with the developers and testers to discuss how git can fit into their workflow. In the last attempt we did 2 presentations on git and then one hands-on workshop on how to use git for different workflows. This brought out the efficiencies git can provide and ironed out the understanding of git philosophy. We emphasised on changesets, auto rename, not losing checkins, disconnected workflow, blessing commits, stash and  branching.
+
+* Upon migration to git prepare all workstations to support git - even visual studio is supported by git.
+
+* Train/pair with the team to bring team up to speed on git usage and getting them comfortable with using git daily as well as under duress.
+
+
+

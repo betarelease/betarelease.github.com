@@ -1,0 +1,33 @@
+---
+layout: post
+title: svn merge - Agile, Traceability, Release Management et al.
+---
+
+I have been a long fan of the principle 'using the right tool for the right job'.(anecdote: when we were at a tin smithy class in college I was using the screwdriver handle to bend thin sheets of tin into shape. On seeing what I was doing my instructor stopped and asked me "Would you use a spatula to eat your food?" and then added "You should always use the right tool for the right job. That is exactly what I am going to teach you." and that lesson has stuck.)
+
+Case in point is the use of tools when you are practicing XP and Agile. Among other things the process in Agile encourages transparency and traceability. For instance, when we release a new version of the application we build, we would like to know what stories have been completed, what bugs have been completed, what are the new additional technical issues that were fixed and so on. 
+A typical release note would look like
+
+Release version 1.8.6 of application Blah
+
+Stories completed
+1234: login with single sign on
+3563: show detailed profile with picture
+345: Show company logo with scaling
+....
+Bugs fixed
+B87: User session times out in 10 secs - User needs more time to respond increase session timeout to 2 mins
+B35: Login button moves when on IE6, fix the position of the login button.
+.....
+Tech task
+
+(you get the idea)
+
+What would be useful to know from a developer/deployer point of view is what does this version 1.8.6 correspond to with the repository revision for example what is the svn revision for this version.
+
+So typical release note would be modified as
+
+Release version 1.8.6(svn revision 37718) application Blah
+
+Having done that we come across situations when we have a version in production say 1.8.6 and it needs to be patched for a bug that needs to be fixed before the next release.
+

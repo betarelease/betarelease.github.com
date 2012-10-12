@@ -1,0 +1,74 @@
+---
+layout: post
+title: Middleware Architectures - Rack
+---
+
+
+
+"Rack":http://rack.rubyforge.org/ - Rack provides a minimal interface between webservers supporting Ruby and Ruby frameworks. Rack is a HTTP request processing middleware as proposed in the "Rack Specification":http://rack.rubyforge.org/doc/SPEC.html
+
+
+
+(Another useful resource is "Rack as explained by the creator":http://chneukirchen.org/blog/archive/2007/02/introducing-rack.html)
+
+Using middleware design in our application was straightforward. 
+
+Here is an example of how you would add Rack::Lint to validate requests before they are processed :
+
+In config.ru(stands for config.rackup and can be thought of as similar to config.rb in rails)
+
+{% highlight ruby linenos%}
+use Rack::Lint
+use Rack::CommonLogger, Logger.new
+...
+{% endhighlight %}
+
+In our application we had to process queries in succession based on an algorithm hierarchy. Middleware Architecture facilitated that kind of processing with very simple configuration. We built each of the queries as a middleware and churned through them in a predefined order, terminating as soon as we had a result.
+
+Our query chains looked as follows
+
+Queries = [Queries::FindMovieByMovieAndCast, Queries::FindMoviebyMovie, Queries::FindMoviebySimilarity....]
+
+We built a query processor similar to the middleware that processed queries in the order they are listed in the array above.
+
+Queries looked as follows: 
+
+{% highlight ruby linenos%}
+
+module Queries
+  class FindMovieByMovieAndCast
+  
+    def call
+      process with movie and cast
+    end
+  end
+end
+
+module Queries
+  class FindMoviebyMovie
+  
+    def call
+      process with movie
+    end
+  end
+end
+
+module Queries
+  class FindMoviebySimilarity
+  
+    def call
+      process with movie by similarity
+    end
+  end
+end
+
+{% endhighlight %}
+
+All we needed to do is add them in the order of specificity into the call chain and we were done. If this order changed we just changed the order in the array above and processed it accordingly.
+
+The ease and simplicity of building functionality greatly reduced our development effort while keeping our application maintainable. 
+
+I found the information on the following blogs useful
+"Ruby Reflector":http://rubyreflector.com/config-ru
+
+"Ruby Rack Middleware Tutorial":http://vision-media.ca/resources/ruby/ruby-rack-middleware-tutorial

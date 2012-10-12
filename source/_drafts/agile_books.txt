@@ -1,0 +1,5 @@
+# Agile Samurai
+# Continuous Delivery
+# Nat Pryce's TDD book
+# Feathers' Legacy code thing
+# Practices of an agile developer

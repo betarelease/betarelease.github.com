@@ -1,0 +1,11 @@
+install cmake from the cross platform makefile generator website
+
+install gmp and readline from brew 
+
+run build.sh from within downloaded io source
+
+cd build and run make and make install 
+
+you should have io.
+
+Ignore everything else that people ask you to install. You may need it but atleast not to get started with io.

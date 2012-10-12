@@ -1,0 +1,27 @@
+---
+layout: post
+title: Git can haz no verzion - or why git is the best code repository
+---
+
+
+
+I have worked with one of each - Rational Rose, Rational Clearcase, Starteam, IBM Clearcase, CVS, svn and git. And so far I like git to be way ahead of this natural progression. 
+
+Some notes on why you should recommend using git(and no other) on your next serious assignment
+
+Git is a distributed repository for things
+- Git allows you to checkin code and collaborate with your team worldwide. It is pretty slick with its merging capabilities. It understands and can diff/merge standard(txt) files by default. As well as identifying certain binary formats. For formats that it does not understand you could specify an action corresponding to a certain binary format. It will not force merge binary files and allow the user to make a decision.
+
+Git is actually not a version control system at all - it is a code repository
+- Git is not a traditional version control system. It does not have a central repository which is the master of all records and prevails in case of conflict or confusion. Git has multiple repositories. A team/a user can decide which such repository they consider as their master. This decision can later be changed(in case that master crashes, is unavailable for any reason). Thus it helps XP teams collaborate and have collective code ownership.
+
+
+Git can do branching and merging - way better than your version control system
+
+Git has "git stash"
+
+Git has github
+
+Git was designed and written by linux developers
+
+Git has so much documentation available

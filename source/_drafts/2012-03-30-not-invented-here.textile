@@ -1,0 +1,21 @@
+---
+layout: post
+title: Not Invented Here
+tags: [software, building, programs, useful, craft, craftsmanship, art, ruby]
+---
+
+In the few years of software development and consulting that I have done, I have seen a few people and tendencies. Each project that I have been on has been different in itself, but I could always draw up some similarities. Two of the most strikingly common were - panic and not invented here syndrome.
+
+No living human is immune to nervousness. There will be a time in everyone's life when a certain situation makes you nervous. What is important is how you decide to deal with panic. When the panic situation can determine your job, it is hard to say how the affected would behave. Having said that you can still learn from these situations and adjust your behaviour if a similar situation occurs. Over time you can learn to cope with panic(you may never be able to win over - but there are techniques to let you cope with it). There are many tools and experts available who can help you deal with such situations. 
+
+
+The other similarity, and more striking according to me in softw
+are world is the 'Not Invented Here' syndrome.
+This manifests in environments where inventions are attached to 
+glorification. The ability to invent is what makes us different from other animals. Inventions indicate progress, and feed our desire to explore and stand-out. Inventions do come naturally, but in our recent history we have been programmed to expect glory - more so in the science and math world that I live in. Our academic training is actually geared towards making many small inventions on our way to graduation and present the one that stands out. The only glory we get for all that is a graduation certificate.
+
+Whereas in the professional world, the same small invention seeks its glory. We see 'Monthly inventor awards', 'Best inventor', 'I am inventor' glorifications. On the flip side if you look at the opensource world there are inventions happening by the minute - also happening when you are asleep. "github":http://github.com is an example of such inventions. With all this software available it still does not stop 
+
+It is natural to be attached to a creation that you burnt the midnight oil on(this still holds - since we need to burn petrol to make electricity to burn ours lamps at midnight.) In software the first lesson I was taught was that - your software needs to be good/ even great. But whatever it maybe be open to ideas and changes. If it has to live on, it will need to change, you will need to lose ownership. Your software needs to become public, to be evaluated many times over to prove its value. During this process it will change, it will be compared against others and will last only if it prevails in value, community.
+
+Also with age of software it tends to become more and more irrelevant. So an idea that you built something with when you joined this company may no longer be valid and useful. 
