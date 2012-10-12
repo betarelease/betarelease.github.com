@@ -37,7 +37,7 @@ If everything has gone well so far you should see
 
 This verifies that the dnsmasq is setup correctly and that Siriproxy can be run on your machine. 
 
-Now change
+Now generate a certificate 
  
 {% highlight ruby linenos%}
 siriproxy gencerts # generates certificates in .siriproxy folder
@@ -45,8 +45,10 @@ siriproxy gencerts # generates certificates in .siriproxy folder
 
 Email this certificate and install it on your phone by opening the email and opening the attachment. 
 
-Once the cert is installed change the dns settings for the network and add the IP address of your Ubuntu machine before the other DNS server entry.
+{% img left /images/sirimingle_cert.png 300 500 %}
+{% img right /images/dns_entry.png 300 500 %}
 
+Once the cert is installed change the dns settings for the network and add the IP address of your Ubuntu machine before the other DNS server entry.
 
 Now your phone is ready to talk to your Siriproxy server.
 
