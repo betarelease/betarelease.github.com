@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "SiriMingle - Siri assistance for Mingle"
-date: 2012-10-06 18:16
+date: 2012-10-14 12:16
 comments: true
 tags: [siri, iphone, osx, ios, siriproxy, mingle, sirimingle, api, crack, httparty, plugin, robot, sudo]
 
 ---
+(updated with screenshots 10/14/2012)
 
 TL&;DR
 
