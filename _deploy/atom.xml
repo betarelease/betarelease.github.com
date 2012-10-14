@@ -4,7 +4,7 @@
   <title><![CDATA[&beta;-release]]></title>
   <link href="http://betarelease.github.com/atom.xml" rel="self"/>
   <link href="http://betarelease.github.com/"/>
-  <updated>2012-10-11T22:37:26-07:00</updated>
+  <updated>2012-10-14T13:01:08-07:00</updated>
   <id>http://betarelease.github.com/</id>
   <author>
     <name><![CDATA[Sudhindra Rao]]></name>
@@ -15,10 +15,12 @@
   
   <entry>
     <title type="html"><![CDATA[SiriMingle - Siri assistance for Mingle]]></title>
-    <link href="http://betarelease.github.com/blog/2012/10/06/SiriMingle/"/>
-    <updated>2012-10-06T18:16:00-07:00</updated>
-    <id>http://betarelease.github.com/blog/2012/10/06/SiriMingle</id>
-    <content type="html"><![CDATA[<p>TL&;DR</p>
+    <link href="http://betarelease.github.com/blog/2012/10/14/SiriMingle/"/>
+    <updated>2012-10-14T12:16:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/10/14/SiriMingle</id>
+    <content type="html"><![CDATA[<p>(updated with screenshots 10/14/2012)</p>
+
+<p>TL&;DR</p>
 
 <p>Announcing SiriMingle - a tool to interact with Mingle using SiriProxy. Bringing the power of Siri voice control to modify cards, get status and ask questions about the project.</p>
 
