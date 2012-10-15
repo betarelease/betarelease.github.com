@@ -14,6 +14,8 @@ Announcing SiriMingle - a tool to interact with Mingle using SiriProxy. Bringing
 
 It can be downloaded from [sirimingle](http://github.com/betarelease/sirimingle.git) and used with SiriProxy.
 
+[A Demo of how it works](http://youtu.be/8ONszZN7q9U)
+
 I do not know what SiriProxy is.... Read on
 
 SiriProxy is a proxy written in ruby 1.9 to allow people to use the power of Siri to perform useful tasks. Setting up SiriProxy was not trivial before. Over time and on 12.04 it can be more easily done. 
