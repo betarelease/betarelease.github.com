@@ -23,7 +23,9 @@ SiriProxy is a proxy written in ruby 1.9 to allow people to use the power of Sir
 Here is how:
 
 * Install Ubuntu 12.04 on your virtualbox(virtual box link), or natively on your desktop/macpro.(For dualbooting on macpro follow the instructions : )
-On virtualbox the following setting needs to be configured to ensure that the VM running Ubuntu gets a native IP address on the host network. (Configure bridge.......).
+On virtualbox the following setting needs to be configured to ensure that the VM running Ubuntu gets a native IP address on the host network. 
+
+{% img left /images/vm_config.png 300 500 %}
 
 * Install git, ruby et al.. (Assuming that you already know this)
 
