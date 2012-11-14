@@ -4,7 +4,7 @@
   <title><![CDATA[&beta;-release]]></title>
   <link href="http://betarelease.github.com/atom.xml" rel="self"/>
   <link href="http://betarelease.github.com/"/>
-  <updated>2012-11-14T13:40:36+05:30</updated>
+  <updated>2012-11-14T13:48:22+05:30</updated>
   <id>http://betarelease.github.com/</id>
   <author>
     <name><![CDATA[Sudhindra Rao]]></name>
@@ -15,14 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[SiriMingle - Siri assistance for Mingle]]></title>
-    <link href="http://betarelease.github.com/blog/2012/10/06/SiriMingle/"/>
-    <updated>2012-10-06T18:16:00+05:30</updated>
-    <id>http://betarelease.github.com/blog/2012/10/06/SiriMingle</id>
-    <content type="html"><![CDATA[<p>TL&;DR</p>
+    <link href="http://betarelease.github.com/blog/2012/10/14/SiriMingle/"/>
+    <updated>2012-10-14T12:16:00+05:30</updated>
+    <id>http://betarelease.github.com/blog/2012/10/14/SiriMingle</id>
+    <content type="html"><![CDATA[<p>(updated with screenshots 10/14/2012)</p>
+
+<p>TL&;DR</p>
 
 <p>Announcing SiriMingle - a tool to interact with Mingle using SiriProxy. Bringing the power of Siri voice control to modify cards, get status and ask questions about the project.</p>
 
 <p>It can be downloaded from <a href="http://github.com/betarelease/sirimingle.git">sirimingle</a> and used with SiriProxy.</p>
+
+<p><a href="http://youtu.be/8ONszZN7q9U">A Demo of how it works</a></p>
 
 <p>I do not know what SiriProxy is&#8230;. Read on</p>
 
@@ -31,8 +35,14 @@
 <p>Here is how:</p>
 
 <ul>
-<li><p>Install Ubuntu 12.04 on your virtualbox(virtual box link), or natively on your desktop/macpro.(For dualbooting on macpro follow the instructions : )
-On virtualbox the following setting needs to be configured to ensure that the VM running Ubuntu gets a native IP address on the host network. (Configure bridge&#8230;&#8230;.).</p></li>
+<li>Install Ubuntu 12.04 on your virtualbox(virtual box link), or natively on your desktop/macpro.(For dualbooting on macpro follow the instructions : )
+On virtualbox the following setting needs to be configured to ensure that the VM running Ubuntu gets a native IP address on the host network.</li>
+</ul>
+
+
+<p><img class="left" src="http://betarelease.github.com/images/vm_config.png" width="300" height="500"></p>
+
+<ul>
 <li><p>Install git, ruby et al.. (Assuming that you already know this)</p></li>
 <li><p>Download the <a href="http://github.com/betarelease/SiriProxy.git/install_deps.sh">install_deps.sh</a> script to get you started. It is recommended that you download the whole project.
 Run the script. This script should install all dependencies required for dnsmasq. dnsmasq is a tool that allows you to perform dns masquerading on any network. After running this script you should have the following : dnsmasq, rvm and ruby 1.9.3 installed.</p></li>
@@ -53,7 +63,7 @@ Follow the instructions closely to setup Ubuntu 12.04 with dnsmasq and Siriproxy
 
 <p>This verifies that the dnsmasq is setup correctly and that Siriproxy can be run on your machine.</p>
 
-<p>Now change</p>
+<p>Now generate a certificate</p>
 
 <div>
   <pre>
@@ -63,6 +73,9 @@ Follow the instructions closely to setup Ubuntu 12.04 with dnsmasq and Siriproxy
 
 
 <p>Email this certificate and install it on your phone by opening the email and opening the attachment.</p>
+
+<p><img class="left" src="http://betarelease.github.com/images/sirimingle_cert.png" width="300" height="500">
+<img class="right" src="http://betarelease.github.com/images/dns_entry.png" width="300" height="500"></p>
 
 <p>Once the cert is installed change the dns settings for the network and add the IP address of your Ubuntu machine before the other DNS server entry.</p>
 
@@ -152,7 +165,14 @@ At this moment it will show you a list of existing partitions. In this list find
     <link href="http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress/"/>
     <updated>2012-07-09T09:16:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress</id>
-    <content type="html"><![CDATA[<p> I am in the process of moving the blog from my jekyll based site to <a href="http://github.com/octopress.git">octopress</a></p>
+    <content type="html"><![CDATA[<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+
+<h1> I am in the process of moving the blog from my jekyll based site to <a href="http://github.com/octopress.git">octopress</a></h1>
+
+<p> I am in the process of moving the blog from my jekyll based site to octopress:&#8221;http://github.com/octopress.git&#8221;. You will see that some of
+things work like:</p>
+
+<blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><p>efb99d8ecfc7e2582f4ce8560588e004a7d4d942</p></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote>
 
 <p>You may notice :</p>
 
