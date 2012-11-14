@@ -1,17 +1,20 @@
 ---
 layout: post
 title: "SiriMingle - Siri assistance for Mingle"
-date: 2012-10-06 18:16
+date: 2012-10-14 12:16
 comments: true
 tags: [siri, iphone, osx, ios, siriproxy, mingle, sirimingle, api, crack, httparty, plugin, robot, sudo]
 
 ---
+(updated with screenshots 10/14/2012)
 
 TL&;DR
 
 Announcing SiriMingle - a tool to interact with Mingle using SiriProxy. Bringing the power of Siri voice control to modify cards, get status and ask questions about the project. 
 
 It can be downloaded from [sirimingle](http://github.com/betarelease/sirimingle.git) and used with SiriProxy.
+
+[A Demo of how it works](http://youtu.be/8ONszZN7q9U)
 
 I do not know what SiriProxy is.... Read on
 
@@ -20,7 +23,9 @@ SiriProxy is a proxy written in ruby 1.9 to allow people to use the power of Sir
 Here is how:
 
 * Install Ubuntu 12.04 on your virtualbox(virtual box link), or natively on your desktop/macpro.(For dualbooting on macpro follow the instructions : )
-On virtualbox the following setting needs to be configured to ensure that the VM running Ubuntu gets a native IP address on the host network. (Configure bridge.......).
+On virtualbox the following setting needs to be configured to ensure that the VM running Ubuntu gets a native IP address on the host network. 
+
+{% img left /images/vm_config.png 300 500 %}
 
 * Install git, ruby et al.. (Assuming that you already know this)
 
@@ -37,7 +42,7 @@ If everything has gone well so far you should see
 
 This verifies that the dnsmasq is setup correctly and that Siriproxy can be run on your machine. 
 
-Now change
+Now generate a certificate 
  
 {% highlight ruby linenos%}
 siriproxy gencerts # generates certificates in .siriproxy folder
@@ -45,8 +50,10 @@ siriproxy gencerts # generates certificates in .siriproxy folder
 
 Email this certificate and install it on your phone by opening the email and opening the attachment. 
 
-Once the cert is installed change the dns settings for the network and add the IP address of your Ubuntu machine before the other DNS server entry.
+{% img left /images/sirimingle_cert.png 300 500 %}
+{% img right /images/dns_entry.png 300 500 %}
 
+Once the cert is installed change the dns settings for the network and add the IP address of your Ubuntu machine before the other DNS server entry.
 
 Now your phone is ready to talk to your Siriproxy server.
 

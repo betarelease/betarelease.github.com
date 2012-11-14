@@ -3,7 +3,6 @@
 .sass-cache
 .gist-cache
 .pygments-cache
-_deploy
 public
 sass.old
 source.old
@@ -12,3 +11,4 @@ source/stylesheets/screen.css
 vendor
 node_modules
 blog/
+_deploy
