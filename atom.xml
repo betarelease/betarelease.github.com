@@ -4,7 +4,11 @@
   <title><![CDATA[&beta;-release]]></title>
   <link href="http://betarelease.github.com/atom.xml" rel="self"/>
   <link href="http://betarelease.github.com/"/>
+<<<<<<< HEAD
   <updated>2012-10-14T19:08:05-07:00</updated>
+=======
+  <updated>2012-10-14T22:19:16-07:00</updated>
+>>>>>>> 5c7b0206cb0b69b6508ff73bbf38fcc4c15cad99
   <id>http://betarelease.github.com/</id>
   <author>
     <name><![CDATA[Sudhindra Rao]]></name>
@@ -15,15 +19,29 @@
   
   <entry>
     <title type="html"><![CDATA[SiriMingle - Siri assistance for Mingle]]></title>
+<<<<<<< HEAD
     <link href="http://betarelease.github.com/blog/2012/10/06/SiriMingle/"/>
     <updated>2012-10-06T18:16:00-07:00</updated>
     <id>http://betarelease.github.com/blog/2012/10/06/SiriMingle</id>
     <content type="html"><![CDATA[<p>TL&;DR</p>
+=======
+    <link href="http://betarelease.github.com/blog/2012/10/14/SiriMingle/"/>
+    <updated>2012-10-14T12:16:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/10/14/SiriMingle</id>
+    <content type="html"><![CDATA[<p>(updated with screenshots 10/14/2012)</p>
+
+<p>TL&;DR</p>
+>>>>>>> 5c7b0206cb0b69b6508ff73bbf38fcc4c15cad99
 
 <p>Announcing SiriMingle - a tool to interact with Mingle using SiriProxy. Bringing the power of Siri voice control to modify cards, get status and ask questions about the project.</p>
 
 <p>It can be downloaded from <a href="http://github.com/betarelease/sirimingle.git">sirimingle</a> and used with SiriProxy.</p>
 
+<<<<<<< HEAD
+=======
+<p><a href="http://youtu.be/8ONszZN7q9U">A Demo of how it works</a></p>
+
+>>>>>>> 5c7b0206cb0b69b6508ff73bbf38fcc4c15cad99
 <p>I do not know what SiriProxy is&#8230;. Read on</p>
 
 <p>SiriProxy is a proxy written in ruby 1.9 to allow people to use the power of Siri to perform useful tasks. Setting up SiriProxy was not trivial before. Over time and on 12.04 it can be more easily done.</p>
@@ -53,7 +71,11 @@ Follow the instructions closely to setup Ubuntu 12.04 with dnsmasq and Siriproxy
 
 <p>This verifies that the dnsmasq is setup correctly and that Siriproxy can be run on your machine.</p>
 
+<<<<<<< HEAD
 <p>Now change</p>
+=======
+<p>Now generate a certificate</p>
+>>>>>>> 5c7b0206cb0b69b6508ff73bbf38fcc4c15cad99
 
 <div>
   <pre>
@@ -64,6 +86,12 @@ Follow the instructions closely to setup Ubuntu 12.04 with dnsmasq and Siriproxy
 
 <p>Email this certificate and install it on your phone by opening the email and opening the attachment.</p>
 
+<<<<<<< HEAD
+=======
+<p><img class="left" src="http://betarelease.github.com/images/sirimingle_cert.png" width="300" height="500">
+<img class="right" src="http://betarelease.github.com/images/dns_entry.png" width="300" height="500"></p>
+
+>>>>>>> 5c7b0206cb0b69b6508ff73bbf38fcc4c15cad99
 <p>Once the cert is installed change the dns settings for the network and add the IP address of your Ubuntu machine before the other DNS server entry.</p>
 
 <p>Now your phone is ready to talk to your Siriproxy server.</p>
@@ -96,6 +124,12 @@ rvmsudo siriproxy server</code>
 
 <p>Once the server is started you should be able to talk to SiriMingle.</p>
 
+<<<<<<< HEAD
+=======
+<iframe width="420" height="315" src="http://www.youtube.com/embed/8ONszZN7q9U" frameborder="0" allowfullscreen></iframe>
+
+
+>>>>>>> 5c7b0206cb0b69b6508ff73bbf38fcc4c15cad99
 <p>Let the Siri be with you.</p>
 ]]></content>
   </entry>
@@ -152,7 +186,18 @@ At this moment it will show you a list of existing partitions. In this list find
     <link href="http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress/"/>
     <updated>2012-07-09T09:16:00-07:00</updated>
     <id>http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress</id>
+<<<<<<< HEAD
     <content type="html"><![CDATA[<p> I am in the process of moving the blog from my jekyll based site to <a href="http://github.com/octopress.git">octopress</a></p>
+=======
+    <content type="html"><![CDATA[<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+
+<h1> I am in the process of moving the blog from my jekyll based site to <a href="http://github.com/octopress.git">octopress</a></h1>
+
+<p> I am in the process of moving the blog from my jekyll based site to octopress:&#8221;http://github.com/octopress.git&#8221;. You will see that some of
+things work like:</p>
+
+<blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><p>efb99d8ecfc7e2582f4ce8560588e004a7d4d942</p></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote>
+>>>>>>> 5c7b0206cb0b69b6508ff73bbf38fcc4c15cad99
 
 <p>You may notice :</p>
 
