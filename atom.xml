@@ -4,7 +4,7 @@
   <title><![CDATA[&beta;-release]]></title>
   <link href="http://betarelease.github.com/atom.xml" rel="self"/>
   <link href="http://betarelease.github.com/"/>
-  <updated>2012-11-14T13:48:22+05:30</updated>
+  <updated>2012-11-14T14:02:18+05:30</updated>
   <id>http://betarelease.github.com/</id>
   <author>
     <name><![CDATA[Sudhindra Rao]]></name>
@@ -108,6 +108,8 @@ rvmsudo siriproxy server</code>
 
 
 <p>Once the server is started you should be able to talk to SiriMingle.</p>
+
+<p><video width='480' height='360' preload='none' controls poster=''><source src='http://youtu.be/8ONszZN7q9U' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/></video></p>
 
 <p>Let the Siri be with you.</p>
 ]]></content>
