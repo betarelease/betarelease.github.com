@@ -4,7 +4,7 @@
   <title><![CDATA[&beta;-release]]></title>
   <link href="http://betarelease.github.com/atom.xml" rel="self"/>
   <link href="http://betarelease.github.com/"/>
-  <updated>2012-10-14T19:08:05-07:00</updated>
+  <updated>2012-11-14T13:40:36+05:30</updated>
   <id>http://betarelease.github.com/</id>
   <author>
     <name><![CDATA[Sudhindra Rao]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[SiriMingle - Siri assistance for Mingle]]></title>
     <link href="http://betarelease.github.com/blog/2012/10/06/SiriMingle/"/>
-    <updated>2012-10-06T18:16:00-07:00</updated>
+    <updated>2012-10-06T18:16:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2012/10/06/SiriMingle</id>
     <content type="html"><![CDATA[<p>TL&;DR</p>
 
@@ -103,7 +103,7 @@ rvmsudo siriproxy server</code>
   <entry>
     <title type="html"><![CDATA[Installing Ubuntu on MacPro with OSX Lion - Dualboot]]></title>
     <link href="http://betarelease.github.com/blog/2012/09/10/installing-ubuntu-on-macpro-with-osx-lion/"/>
-    <updated>2012-09-10T09:16:00-07:00</updated>
+    <updated>2012-09-10T09:16:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2012/09/10/installing-ubuntu-on-macpro-with-osx-lion</id>
     <content type="html"><![CDATA[<p>Installing Ubuntu on Macpro turned out to be little trickier than I would have liked it to be. For starters OSX Lion does not detect the Ubuntu ISO disc as bootable or something that bootcamp can load an OS from. There are tricks on the web that allow you to get around that.</p>
 
@@ -150,7 +150,7 @@ At this moment it will show you a list of existing partitions. In this list find
   <entry>
     <title type="html"><![CDATA[moved blog to octopress]]></title>
     <link href="http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress/"/>
-    <updated>2012-07-09T09:16:00-07:00</updated>
+    <updated>2012-07-09T09:16:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress</id>
     <content type="html"><![CDATA[<p> I am in the process of moving the blog from my jekyll based site to <a href="http://github.com/octopress.git">octopress</a></p>
 
@@ -182,7 +182,7 @@ At this moment it will show you a list of existing partitions. In this list find
   <entry>
     <title type="html"><![CDATA[why blog?]]></title>
     <link href="http://betarelease.github.com/blog/2012/05/15/why-blog/"/>
-    <updated>2012-05-15T00:00:00-07:00</updated>
+    <updated>2012-05-15T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2012/05/15/why-blog</id>
     <content type="html"><![CDATA[<p>I have come across too many people who are either not willing to blog, or do not see the point. This blog post is for them.</p>
 <p>(Recently, <a href="http://pagilista.blogspot.com/2012/05/how-to-become-blogger-in-5-steps.html">Elena Yatzeck</a> posted on this subject as well.)</p>
@@ -216,7 +216,7 @@ At this moment it will show you a list of existing partitions. In this list find
   <entry>
     <title type="html"><![CDATA[ubuntu power management]]></title>
     <link href="http://betarelease.github.com/blog/2012/05/10/ubuntu-power-management/"/>
-    <updated>2012-05-10T00:00:00-07:00</updated>
+    <updated>2012-05-10T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2012/05/10/ubuntu-power-management</id>
     <content type="html"><![CDATA[<p>(Intended date of release 2012/02/13. Procrastination&#8230;. Finally released today.)</p>
 <p>After upgrading to Ubuntu 11.10(Oneiric Oncelot) I had a unique problem with my machine that was not googleable. All I could see is a symptom where my <span class="caps">CPU</span> fans would start full speed and keep blowing for a while. While they were up all my CPUs would be at 100% utilization. On various occasions that this would happen I had to restart the machine as it became unresponsive. Often times this would happen at nights when the machine is not being used.</p>
@@ -228,7 +228,7 @@ I decided to try and turn this daemon off. Now my <span class="caps">CPU</span> 
   <entry>
     <title type="html"><![CDATA[Mac remote with presentations]]></title>
     <link href="http://betarelease.github.com/blog/2012/03/17/mac-remote-with-presentations/"/>
-    <updated>2012-03-17T00:00:00-07:00</updated>
+    <updated>2012-03-17T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2012/03/17/mac-remote-with-presentations</id>
     <content type="html"><![CDATA[<p>When preparing for a presentation recently I was looking at various presentation tools at my disposal.</p>
 <p>Purchasing one of those mouse like remotes was an option. I already had a magic mouse that could do the job. I also had a mac remote with keys that indicated forward/reverse. But by default it cannot be used as a mouse like remote for forward/reverse.</p>
@@ -240,7 +240,7 @@ I decided to try and turn this daemon off. Now my <span class="caps">CPU</span> 
   <entry>
     <title type="html"><![CDATA[Agile and Beyond 2012]]></title>
     <link href="http://betarelease.github.com/blog/2012/03/13/agile-and-beyond/"/>
-    <updated>2012-03-13T00:00:00-07:00</updated>
+    <updated>2012-03-13T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2012/03/13/agile-and-beyond</id>
     <content type="html"><![CDATA[<p>I had the opportunity to speak at the <a href="http://agileandbeyond.org">Agile and Beyond</a> conference recently. I loved the crowd, excellent turnout of 650+ people mostly from the Detroit MI area. Everyone was enthusiastic about learning how Agile can change the way they do their daily jobs.</p>
 <p>I had a chance to present my ideas on improving how you refactor builds to get better feedback and change the way you work. I was also excited because this time I did a complete powerpoint/keynote free <a href="http://betarelease.github.com/build_feedback/slides.html">presentation</a>. I used <a href="http://imakewebthings.com/deck.js/">deck.js</a> and the good markdown tweak called <a href="https://github.com/infews/keydown">keydown</a>. Need to make a few feature additions to keydown soon.(I said it first : A fun project would be make <a href="https://github.com/bartaz/impress.js">impress.js</a> markdown friendly, like keydown.)</p>
@@ -253,7 +253,7 @@ I decided to try and turn this daemon off. Now my <span class="caps">CPU</span> 
   <entry>
     <title type="html"><![CDATA[Bundler with vendorized gems]]></title>
     <link href="http://betarelease.github.com/blog/2012/03/06/vendorizing-gems-with-bundler/"/>
-    <updated>2012-03-06T00:00:00-08:00</updated>
+    <updated>2012-03-06T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2012/03/06/vendorizing-gems-with-bundler</id>
     <content type="html"><![CDATA[<p>Bundler is a tool for managing installed libraries on a ruby project. It comes bundled with rails 3 but can be used standalone without rails. <br />
 Bundler tries to fix issues with having to manage your gems(and their related dependencies and versions) in a clean way. In doing so it allows you to work on your application and not have to worry about dependencies sucking the life out of your releases.</p>
@@ -291,7 +291,7 @@ gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code>
   <entry>
     <title type="html"><![CDATA[grok grack]]></title>
     <link href="http://betarelease.github.com/blog/2012/01/19/grok-grack/"/>
-    <updated>2012-01-19T00:00:00-08:00</updated>
+    <updated>2012-01-19T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2012/01/19/grok-grack</id>
     <content type="html"><![CDATA[<p>Recently I was trying to host git repository from an already existing
 (non-bare) repository. I
@@ -318,7 +318,7 @@ simple.</p>
   <entry>
     <title type="html"><![CDATA[Simple Dashboard with Tab Slideshow]]></title>
     <link href="http://betarelease.github.com/blog/2011/12/07/simple-dashboard-with-tab-slideshow.textile/"/>
-    <updated>2011-12-07T00:00:00-08:00</updated>
+    <updated>2011-12-07T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2011/12/07/simple-dashboard-with-tab-slideshow.textile</id>
     <content type="html"><![CDATA[<p>I had almost forgotten about <a href="http://addons.mozilla.org/en-US/firefox/addon/tab-slideshow/">Tab Slideshow</a> for Firefox but an appropriate application of it jogged my memory. We wanted to show a few build reports on the dashboard and also wanted them to be big and visible. Also the reports do not change as rapidly as the build and can afford to be little delayed (since mostly we are showing long running build results). So we just opened up those reports in a tab each and started ‘Tab Slideshow’. Worked like a charm. We now have the simplest dashboard.</p>
 
@@ -329,7 +329,7 @@ simple.</p>
   <entry>
     <title type="html"><![CDATA[Airport Express as Remote Speakers for Airplay - Also with Linux]]></title>
     <link href="http://betarelease.github.com/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile/"/>
-    <updated>2011-09-30T00:00:00-07:00</updated>
+    <updated>2011-09-30T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile</id>
     <content type="html"><![CDATA[<p>I have an airport express that I used to use as my wireless router when I travel. Very convenient and useful when hotels do not provide a wireless.(Yes I am looking at you Marriott.) Airport Express thanks to apple technology also supports airplay to play music over the air, and/or printer sharing via a USB connection.</p>
 
@@ -382,7 +382,7 @@ simple.</p>
   <entry>
     <title type="html"><![CDATA[Why I use Firefox over Chrome?]]></title>
     <link href="http://betarelease.github.com/blog/2010/12/18/why-firefox.textile/"/>
-    <updated>2010-12-18T00:00:00-08:00</updated>
+    <updated>2010-12-18T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2010/12/18/why-firefox.textile</id>
     <content type="html"><![CDATA[<p>For development I choose to use tools which make the code transparent. Hence I prefer to use simple text editors over IDEs (although I like IntelliJ for Java code), or browsers that have good builtin support for debugging over closed/magical ones (hence Firefox/Chrome/Safari over IE).</p>
 
@@ -416,7 +416,7 @@ simple.</p>
   <entry>
     <title type="html"><![CDATA[Boost your BASH - and never again work with a plain shell]]></title>
     <link href="http://betarelease.github.com/blog/2010/10/25/boost-your-bash.textile/"/>
-    <updated>2010-10-25T00:00:00-07:00</updated>
+    <updated>2010-10-25T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2010/10/25/boost-your-bash.textile</id>
     <content type="html"><![CDATA[<p>Over the past few months I have been using a community version of bash<em>profile, bash</em>login, emacs settings and such. It started when <a href="http://github.com/muness">Muness</a> shared his bash_vcs (which was pimped command prompt) and I was hooked. I noticed a few projects that were sharing similar shell settings and enhancements. Forking from <a href="http://github.com/ttripp/dotfiles">Toby’s dotfiles</a> I started enhancing my experience on every machine I worked. This not only lead me to have a better understanding how different flavours of Unix work and also helped me automate a lot of my day to day activities.</p>
 
@@ -429,7 +429,7 @@ simple.</p>
   <entry>
     <title type="html"><![CDATA[Software KVM that works on linux, OSX and Windows]]></title>
     <link href="http://betarelease.github.com/blog/2010/09/12/software-kvm-for-linux-osx-windows.textile/"/>
-    <updated>2010-09-12T00:00:00-07:00</updated>
+    <updated>2010-09-12T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2010/09/12/software-kvm-for-linux-osx-windows.textile</id>
     <content type="html"><![CDATA[<p>I was using <a href="http://www.abyssoft.com/software/teleport/">Teleport for Mac</a> as my KVM. But I could only control a mac mini and my laptop with it. I was looking for something that would work with Ubuntu and MacOSX switching the keyboard and mouse between them.</p>
 
@@ -448,7 +448,7 @@ simple.</p>
   <entry>
     <title type="html"><![CDATA[Ruby Kaigi 2010 - Report]]></title>
     <link href="http://betarelease.github.com/blog/2010/09/12/ruby-kaigi-report.textile/"/>
-    <updated>2010-09-12T00:00:00-07:00</updated>
+    <updated>2010-09-12T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2010/09/12/ruby-kaigi-report.textile</id>
     <content type="html"><![CDATA[<p>Returned from Ruby Kaigi last weekend. The conference was held in Tsukuba International Convention Center and attended much of the enthusiastic ruby community (including Matz, Chad Fowler, Charles Nutter, Yehuda Katz et al). Had a blast presenting ‘Rocking the Enterprise with Ruby’.</p>
 
@@ -467,7 +467,7 @@ simple.</p>
   <entry>
     <title type="html"><![CDATA[Ruby Kaigi 2010 - Rocking the Enterprise with Ruby]]></title>
     <link href="http://betarelease.github.com/blog/2010/08/28/ruby-kaigi-2010.textile/"/>
-    <updated>2010-08-28T00:00:00-07:00</updated>
+    <updated>2010-08-28T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2010/08/28/ruby-kaigi-2010.textile</id>
     <content type="html"><![CDATA[<p>Uploading the beta version of the presentation for today’s ruby kaigi talk.</p>
 
@@ -482,7 +482,7 @@ simple.</p>
   <entry>
     <title type="html"><![CDATA[Streaming Media from Ubuntu to Bravia]]></title>
     <link href="http://betarelease.github.com/blog/2010/08/04/streaming-media-from-ubuntu-to-bravia.textile/"/>
-    <updated>2010-08-04T00:00:00-07:00</updated>
+    <updated>2010-08-04T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2010/08/04/streaming-media-from-ubuntu-to-bravia.textile</id>
     <content type="html"><![CDATA[<p>Over this weekend I set out to connect my Ubuntu machine with my Sony Bravia TV.( With inspiration from <a href="http://thoughtworker.in/2010/07/20/dns-323-ps3-and-upnp/">Sachin Dharmapurikar</a> and <a href="http://en.wikipedia.org/wiki/Digital_Living_Network_Alliance">DLNA</a>.)</p>
 
@@ -501,7 +501,7 @@ simple.</p>
   <entry>
     <title type="html"><![CDATA[Setting up wireless usb card on Ubuntu - Lucid Lynx]]></title>
     <link href="http://betarelease.github.com/blog/2010/06/25/setup-wireless-on-ubuntu.textile/"/>
-    <updated>2010-06-25T00:00:00-07:00</updated>
+    <updated>2010-06-25T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2010/06/25/setup-wireless-on-ubuntu.textile</id>
     <content type="html"><![CDATA[<p>I have faced the same problems with Wireless Networking as mentioned by
 many on the web.</p>
@@ -513,7 +513,7 @@ many on the web.</p>
   <entry>
     <title type="html"><![CDATA[ActiveResource is an oxymoron?]]></title>
     <link href="http://betarelease.github.com/blog/2010/06/07/activeresource-is-an-oxymoron.textile/"/>
-    <updated>2010-06-07T00:00:00-07:00</updated>
+    <updated>2010-06-07T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2010/06/07/activeresource-is-an-oxymoron.textile</id>
     <content type="html"><![CDATA[<p>One of the projects I worked on recently consisted of a number of applications interacting with each other over REST. These applications were written with an intention to obtain loose-coupling between them.</p>
 
@@ -528,7 +528,7 @@ many on the web.</p>
   <entry>
     <title type="html"><![CDATA[Preparing the Training Venue]]></title>
     <link href="http://betarelease.github.com/blog/2010/03/15/prepare-training-venue.textile/"/>
-    <updated>2010-03-15T00:00:00-07:00</updated>
+    <updated>2010-03-15T00:00:00+05:30</updated>
     <id>http://betarelease.github.com/blog/2010/03/15/prepare-training-venue.textile</id>
     <content type="html"><![CDATA[<p>The venue and the setting in which the training is conducted forms a
 very important part of how the training is received. When selecting the
