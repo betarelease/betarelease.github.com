@@ -4,14 +4,7 @@ title: "moved blog to octopress"
 date: 2012-07-09 09:16
 comments: true
 ---
-<<<<<<< HEAD
- I am in the process of moving the blog from my jekyll based site to [octopress](http://github.com/octopress.git)
-=======
- I am in the process of moving the blog from my jekyll based site to octopress:"http://github.com/octopress.git". You will see that some of
-things work like:
->>>>>>> efb99d8ecfc7e2582f4ce8560588e004a7d4d942
-
-
+ I am in the process of moving the blog from my jekyll based site to octopress:"http://github.com/octopress.git". You will see that some of things work like:
 You may notice :
 
 * Posts show up clearer and nicer - because of octopress font selection
