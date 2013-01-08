@@ -12,3 +12,4 @@ vendor
 node_modules
 blog/
 _deploy
+blog/
