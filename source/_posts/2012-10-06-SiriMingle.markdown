@@ -79,6 +79,6 @@ rvmsudo siriproxy server
 
 Once the server is started you should be able to talk to SiriMingle.
 
-{% video http://youtu.be/8ONszZN7q9U 480 360 %}
+<iframe width="420" height="315" src="http://www.youtube.com/embed/8ONszZN7q9U" frameborder="0" allowfullscreen></iframe>
 
 Let the Siri be with you.
