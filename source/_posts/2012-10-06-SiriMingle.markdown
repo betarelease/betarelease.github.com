@@ -6,17 +6,11 @@ comments: true
 tags: [siri, iphone, osx, ios, siriproxy, mingle, sirimingle, api, crack, httparty, plugin, robot, sudo]
 
 ---
-(updated with screenshots 10/14/2012)
-
-TL&;DR
+<iframe width="420" height="315" src="http://www.youtube.com/embed/8ONszZN7q9U" frameborder="0" allowfullscreen></iframe>
 
 Announcing SiriMingle - a tool to interact with Mingle using SiriProxy. Bringing the power of Siri voice control to modify cards, get status and ask questions about the project. 
 
 It can be downloaded from [sirimingle](http://github.com/betarelease/sirimingle.git) and used with SiriProxy.
-
-[A Demo of how it works](http://youtu.be/8ONszZN7q9U)
-
-I do not know what SiriProxy is.... Read on
 
 SiriProxy is a proxy written in ruby 1.9 to allow people to use the power of Siri to perform useful tasks. Setting up SiriProxy was not trivial before. Over time and on 12.04 it can be more easily done. 
 
@@ -78,7 +72,5 @@ rvmsudo siriproxy server
 {% endhighlight %}
 
 Once the server is started you should be able to talk to SiriMingle.
-
-<iframe width="420" height="315" src="http://www.youtube.com/embed/8ONszZN7q9U" frameborder="0" allowfullscreen></iframe>
 
 Let the Siri be with you.
