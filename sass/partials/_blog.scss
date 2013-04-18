@@ -18,7 +18,7 @@ article {
       margin: 0;
       &.meta {
         @extend .sans;
-        text-transform: uppercase;
+        text-transform: lowercase;
         position: relative; top: 0;
       }
     }
@@ -32,6 +32,14 @@ article {
     padding-top: 0.8em;
     background: $img-border top left repeat-x;
   }
+  .tags {
+    font-size: .7em;
+    line-height: 1.2em;
+  }
+  .comments {
+    font-size: .8em;
+    line-height: 1.2em;
+  }  
   .entry-content & h2:first-child, header + h2 { padding-top: 0; }
   h2:first-child, header + h2 { background: none; }
   .feature {

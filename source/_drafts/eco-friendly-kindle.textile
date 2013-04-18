@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Eco Friendly Kindle"
+date: 2013-03-18
+comments: true
+tags: [hacking, kindle, linux, os, raspberrypi, raspberry, iphone, jailbreak]
+---
+
+Someone(read Patty Carlin) gave me her used Kindle and I realized, the e-book reader from amazon is an amazing machine. I have found out since then that it run linux(atleast kernel 2.6), can be jailbroken and further can be used as a display for the raspberry pi. 
+
+Since all this reading intrigued me I went about actually jailbreaking it and tweaking it to suit my use. So far I have been able to turn on/off usb networking, wireless secure shell and read books in landscape mode to list some of its abilities.
+
+I have built the [KindleWeatherDisplay][http://github.com/betarelease/KindleWeatherDisplay.git], thanks to [Matthew Petroff][http://www.mpetroff.net/archives/2012/09/14/kindle-weather-display/] and [@shatteredhaven][http://www.shatteredhaven.com/2012/11/1347365-kindle-weather-display.html] for their detailed instructions it was very easy to use and change.(I built a ruby version instead of python).
+
+
+LINUX and RMAGICK etc install instructions........ go here
