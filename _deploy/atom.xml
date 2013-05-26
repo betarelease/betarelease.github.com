@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[&beta;-release]]></title>
+  <link href="http://betarelease.github.com/atom.xml" rel="self"/>
+  <link href="http://betarelease.github.com/"/>
+  <updated>2013-05-26T15:50:37-07:00</updated>
+  <id>http://betarelease.github.com/</id>
+  <author>
+    <name><![CDATA[Sudhindra Rao]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Android Intensive - collaborative learning experience]]></title>
+    <link href="http://betarelease.github.com/blog/2013/05/25/android-intensive/"/>
+    <updated>2013-05-25T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2013/05/25/android-intensive</id>
+    <content type="html"><![CDATA[<p>At our San Francisco office we have been working on building mobile development capabilities recently. Here is a little glimpse into what we did to make it work.</p>
+
+<p>The plan was to build enough initial capability so that we could bring everyone at a collaborative workshop and take their skills to the next level. This program started by a facilitated learning around designing applications for the mobile. We focused on Android platform.</p>
+
+<ul>
+<li>Introduction to Android and self-learning</li>
+</ul>
+
+
+<p>At the start of the learning session we gathered the developers and split them into teams to allow for collaboration based on colocation and interest. Once the teams were setup they worked on figuring out what they would like to build during this learning experience. Since the focus was learning the ability to deliver business driven value was allowed to be compromised when it made sense.</p>
+
+<p>Most of the development team was fairly inexperienced with this technology so we involved Kris to get us started. He helped us get started with a video explaining us how the ecosystem differs from a basic java stack and how to use the IDE and build sytem. Once we all got a hang of it, the teams were on their own course of trying to build something and test it with prevalent testing tools.</p>
+
+<p>One of the teams figured out how to use Robolectric for unit tests. Another group figured out how to use calabash tests and build this on TravisCI. While the teams were addressing different domains, their basic problems were similar viz. making requests, receiving data, displaying it efficiently. Once the teams were more comfortable breaking and building their apps, we started planning for a collaborative workshop.</p>
+
+<p>Key: Build teams to facilitate self-learning.</p>
+
+<ul>
+<li>Planning for the training</li>
+</ul>
+
+
+<p>We chalked out a weekend where we were able to get all the developers and trainers in the same location for a workshop. Apart from how long the training was we wanted to ensure that whatever we covered applied to all the teams and the applications that they were building. The initial versions of the applications were looked at, and assessed to understand testability, domain and maturity.
+Given the structure of the program and the heavy collaboration we wanted to ensure - we wanted tackle a well defined set of stories that would be small. Also, that the stories needed to cover enough ground into the Android technology space.</p>
+
+<p><img class="left" src="http://betarelease.github.com/images/piggy.jpeg" width="450" height="700"></p>
+
+<p>Key: Focus on short set of cohesive stories.</p>
+
+<ul>
+<li>Planning the stories</li>
+</ul>
+
+
+<p>Another goal was to ensure that the teams met each other and were able to share skills across the different experience levels, we decided to pick one application that everyone would work on. We picked that application and setup the teams to have the code downloaded and ready to be shared. Using the same application gave us a clear direction to write stories for the workshop and also we could ensure consistency of learning across teams.</p>
+
+<ul>
+<li>Setup of the workshop and getting started</li>
+</ul>
+
+
+<p>When we began we started with a quick review of the plan for the day. We allowed everyone to get the smae codebase on their machines and ensure that all of that works as expected on all of them. Once they all had the same code we paired people off in such a way that we had enough coverage within each pair about the knowledge of the shared code. Thus ensuring that each pair could get a quick headstart.</p>
+
+<p>Key: Start with a short icebreaker to ensure safe environment.</p>
+
+<ul>
+<li>Narrowing the scope of the exercise</li>
+</ul>
+
+
+<p>The aspirations for the workshop were to learn building applications with location services, accelerometer, cross app integration and such. But after the review of the state of the applications it was realized that the application development process needed to focus more on the basics -like building the interfaces more cleanly, allowing for testing, allowing for change and refactoring and improving performance of the application. So a smaller more achievable set of stories were created that would address the above goals. The original aspirations - some of them can be learnt by looking at examples and some of them were postponed for a later workshop.</p>
+
+<p>Key: Plan for more than the time allocated, but expect to finish less and adapt.</p>
+
+<ul>
+<li>Development practices that help during a workshop</li>
+</ul>
+
+
+<p>The workshop trainers and teams agreed on a few ground rules during the training.
+- Progressively work on adding features to the stories being built
+- Pair during development and share the same code
+- Present the code at every recess and discuss and critique code
+- Understand the alternatives during each show and tell
+- Take the best parts/patterns and share them as baseline for the next exercise
+- After every recess - share code and switch pairs - to allow sharing experience
+- No developer left behind - Help each other setup machines, checkin code, understand concepts and move on.</p>
+
+<p><img class="left" src="http://betarelease.github.com/images/android_pairing.jpeg" width="450" height="700"></p>
+
+<p>Key: Do frequent checks to ensure that everyone is engaged and keep pace of the session.</p>
+
+<ul>
+<li>Uncovering hard lessons.</li>
+</ul>
+
+
+<p>The intent of this workshop was to bring all the teams together and collaborate. While doing so we wanted to understand some basic concepts in depth. Ensuring people collaborate on the same project, sharing code periodically and developing a feature in depth worked for us well. We were not able to cover as much as we had planned but were able to discover patterns, discuss them and apply them to our applications. Having the focus ensured the richness of learning. We were able to build complete UI, make it testable and learn how to tune its performance. We were able to learn how Android behaves and communicates with a service.
+Learning about the mobile experience - especially where we learnt how to allow the user to scroll through a bunch of listings with images without giving a feel of &#8216;the app is still loading as it is scrolled&#8217; - was what we achieved by the end of the workshop.</p>
+
+<p><img class="left" src="http://betarelease.github.com/images/android_showcase.jpeg" width="450" height="700"></p>
+
+<p>Concepts we learnt:
+- The Android toolkit, Junit and Robolectric are not always in sync. So beware of version compatibilities between these. We fixed the incompatibilities by using Android SDK platform version 17.
+- Robolectric does some clever things to allow you to be able to mock the context for Android objects - so that you can test them.
+- Load images and other streams of data using AsyncTask so that the app loads immediately
+- Use an Adapter to delegate the tasks of loading all the listing data. This allows you to also change the implementation, point to a different endpoint, tune it for performance without changing how the UI has been laid out.
+- The ViewHolder allows separation between domain objects and how they are wired to the data. The Adapter can delegate such tasks to the ViewHolder thus allowing to change the view as and when the experience needs to change it.</p>
+
+<p>After the last session of pairing we were able to discuss and summarize what we learnt through a retrospective. Although we all agreed that we did not get everything done, the overall workshop was helpful in bringing everyone together and learning a few concepts in detail.</p>
+
+<p>Key: Working on some key concepts indepth helped the overall focus of the workshop.</p>
+
+<p>Acknowledgement: This workshop and the program would not have been this awesome without Kris Gonzalez and Michael Wongwaisayawan</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SiriMingle - Siri assistance for Mingle]]></title>
+    <link href="http://betarelease.github.com/blog/2012/10/14/SiriMingle/"/>
+    <updated>2012-10-14T12:16:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/10/14/SiriMingle</id>
+    <content type="html"><![CDATA[<iframe width="420" height="315" src="http://www.youtube.com/embed/8ONszZN7q9U" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Announcing SiriMingle - a tool to interact with Mingle using SiriProxy. Bringing the power of Siri voice control to modify cards, get status and ask questions about the project.</p>
+
+<p>It can be downloaded from <a href="http://github.com/betarelease/sirimingle.git">sirimingle</a> and used with SiriProxy.</p>
+
+<p>SiriProxy is a proxy written in ruby 1.9 to allow people to use the power of Siri to perform useful tasks. Setting up SiriProxy was not trivial before. Over time and on 12.04 it can be more easily done.</p>
+
+<p>Here is how:</p>
+
+<ul>
+<li>Install Ubuntu 12.04 on your virtualbox(virtual box link), or natively on your desktop/macpro.(For dualbooting on macpro follow the instructions : )
+On virtualbox the following setting needs to be configured to ensure that the VM running Ubuntu gets a native IP address on the host network.</li>
+</ul>
+
+
+<p><img class="left" src="http://betarelease.github.com/images/vm_config.png" width="300" height="500"></p>
+
+<ul>
+<li><p>Install git, ruby et al.. (Assuming that you already know this)</p></li>
+<li><p>Download the <a href="http://github.com/betarelease/SiriProxy.git/install_deps.sh">install_deps.sh</a> script to get you started. It is recommended that you download the whole project.
+Run the script. This script should install all dependencies required for dnsmasq. dnsmasq is a tool that allows you to perform dns masquerading on any network. After running this script you should have the following : dnsmasq, rvm and ruby 1.9.3 installed.</p></li>
+</ul>
+
+
+<p><a href="http://www.techjawa.com/2012/01/31/guide-setup-working-siriproxy-three-little-pigs/">Guide: Setup Working SiriProxy</a> is a great guide to setting SiriProxy correctly. You can choose to ignore setting up the Three Little Pigs server.
+Follow the instructions closely to setup Ubuntu 12.04 with dnsmasq and Siriproxy.</p>
+
+<p>If everything has gone well so far you should see</p>
+
+<div>
+  <pre>
+    <code class='ruby'>&quot;Starting server on port 443&quot;</code>
+  </pre>
+</div>
+
+
+<p>This verifies that the dnsmasq is setup correctly and that Siriproxy can be run on your machine.</p>
+
+<p>Now generate a certificate</p>
+
+<div>
+  <pre>
+    <code class='ruby'>siriproxy gencerts # generates certificates in .siriproxy folder</code>
+  </pre>
+</div>
+
+
+<p>Email this certificate and install it on your phone by opening the email and opening the attachment.</p>
+
+<p><img class="left" src="http://betarelease.github.com/images/sirimingle_cert.png" width="300" height="500">
+<img class="right" src="http://betarelease.github.com/images/dns_entry.png" width="300" height="500"></p>
+
+<p>Once the cert is installed change the dns settings for the network and add the IP address of your Ubuntu machine before the other DNS server entry.</p>
+
+<p>Now your phone is ready to talk to your Siriproxy server.</p>
+
+<p>Restart your SiriProxy server by</p>
+
+<div>
+  <pre>
+    <code class='ruby'>rvmsudo siriproxy server</code>
+  </pre>
+</div>
+
+
+<p>Invoke Siri on your phone: You should see the interaction logs in your terminal indicating that infact Siri is connecting to your SiriProxy via your dnsmasq.</p>
+
+<p>Once you have SiriProxy setup change the ~/.siriproxy/config.yml to add your mingle hostname and credentials. This will allow SiriProxy to interact with the Mingle API.</p>
+
+<p>Restart SiriProxy by doing the following:</p>
+
+<div>
+  <pre>
+    <code class='ruby'>rake install
+
+siriproxy bundle #this should install the dependencies including the siriproxy-sirimingle plugin.
+
+rvmsudo siriproxy server</code>
+  </pre>
+</div>
+
+
+<p>Once the server is started you should be able to talk to SiriMingle.</p>
+
+<p>Let the Siri be with you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Installing Ubuntu on MacPro with OSX Lion - Dualboot]]></title>
+    <link href="http://betarelease.github.com/blog/2012/09/10/installing-ubuntu-on-macpro-with-osx-lion/"/>
+    <updated>2012-09-10T09:16:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/09/10/installing-ubuntu-on-macpro-with-osx-lion</id>
+    <content type="html"><![CDATA[<p>Installing Ubuntu on Macpro turned out to be little trickier than I would have liked it to be. For starters OSX Lion does not detect the Ubuntu ISO disc as bootable or something that bootcamp can load an OS from. There are tricks on the web that allow you to get around that.</p>
+
+<p>I am listing a few quirks that I came across while getting all this to work.</p>
+
+<p>The Challenge: Install Ubuntu on a MacPro that is running OSX Lion and make it so that it can dualboot to ubuntu.</p>
+
+<ul>
+<li>Install REFit</li>
+</ul>
+
+
+<p>Download and install REFit. This will allow your BIOS to work with bootloaders other than that of Apple. Once you have installed it restart you machine. If you are lucky you will see the REFIt menu on restart. Do not be disappointed if you do not see it at first. Restart again and you will surely see the REFIt menu this time. Once you have REFIt installed it is time to partition the HardDisk to make room for Ubuntu.</p>
+
+<ul>
+<li>Partitioning the disk</li>
+</ul>
+
+
+<p>OSX comes with two utilities that allow you to partition your hard disk. Word of caution: Do not use another partitioning tool as it has been knows to cause problems - especially when booting back into the Mac. You will put your data on the Mac OSX partition at risk.
+Given that you have to use OSX to atleast initially partitioning disks - you can choose between Disk Utility or Boot camp assistant. In both scenarios the partitioning is pretty clearly documented and easy. In the case of bootcamp with the new UI select &#8220;Install  or remove Windows 7&#8221; and uncheck &#8220;Download the latest Windows support from Apple&#8221;.</p>
+
+<p>When prompted choose the partition size for Windows by dragging the partitioner. Once you have a desirable size configured clicking &#8216;Continue&#8217; will look for a Windows 7 disk for installing Windows on the new partition. You can trick the boot camp assistant by actually inserting a bootable Windows 7 disk. Once it detects the disk and starts partitioning you can remove the Windows 7 disk and replace it with Ubuntu bootable disk. Once the partitioning is complete close Bootcamp Assistant.</p>
+
+<ul>
+<li>Installing Ubuntu</li>
+</ul>
+
+
+<p>Now restart the machine and hold the &#8216;C&#8217; key while restarting. This will allow you to boot from the bootable CD Drive. Once booting starts you should see the Ubuntu installation UI. Follow the instructions till the time, when it asks you for a partition to install Ubuntu.
+Choose manual partition editing.
+At this moment it will show you a list of existing partitions. In this list find the partition you created for Windows(should be labelled as fat32 or msdos or something that indicates its a windows partition). Delete this partition. You should have a partition called &#8220;FREE SPACE&#8221;. Now select this partition called &#8220;FREE SPACE&#8221;(about the size of your original partition for Windows) and create a partition on it of type EXT4 and &#8220;/&#8221; being mounted from here.(Make note of this partition information eg: /dev/sda3)</p>
+
+<p>Write this partition information to the disk and let Ubuntu do its thing. Follow the instructions on-screen to configure Ubuntu to your liking. Ubuntu will ask you where it should write the grub bootloader. At this prompt enter the above partition information /dev/sda3. This will ensure that REFIt will be able to find Ubuntu on your harddisk and allow you to boot into it. This step is the key to the process of being able to use the Ubuntu partition at all.</p>
+
+<p>Once the installation of Ubuntu is completed shutdown your machine and restart. On restart you will see a REFIt menu with an option to select &#8216;Penguin operating system&#8217;. You may see multiple penguins. Pick the penguin that points to your harddisk partition above(/dev/sda3 => &#8216;Boot from Hard disk partition 3&#8217;) option and you can boot into Ubuntu.</p>
+
+<p>With this both Ubuntu and Mac OSX can be booted into without much trouble. Infact on booting into linux Grub now detects Mac OSX as well.</p>
+
+<p>Happy Dual booting&#8230;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[moved blog to octopress]]></title>
+    <link href="http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress/"/>
+    <updated>2012-07-09T09:16:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress</id>
+    <content type="html"><![CDATA[<p> I am in the process of moving the blog from my jekyll based site to <a href="http://github.com/octopress.git">octopress</a>. You will see that some of things work like:
+You may notice :</p>
+
+<ul>
+<li>Posts show up clearer and nicer - because of octopress font selection</li>
+<li>you will see my addition of tag cloud to octopress - so tags will show</li>
+<li>archives - a list of archives arranged as an index page</li>
+</ul>
+
+
+<p>What does not yet work :</p>
+
+<ul>
+<li>Tags are not aligned on the page</li>
+<li>Disqus comments are missing - thanks to discuss your comments are safe. They just need to be linked correctly</li>
+<li>RSS feed is missing</li>
+<li>My color scheme is missing - so does not reflect the author&#8217;s personality ;)</li>
+</ul>
+
+
+<p>Hope you will bear with me while I make things easier for me to post and bring a more pleasant reading experience for  you.</p>
+
+<p>Thank you !!!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[why blog?]]></title>
+    <link href="http://betarelease.github.com/blog/2012/05/15/why-blog/"/>
+    <updated>2012-05-15T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/05/15/why-blog</id>
+    <content type="html"><![CDATA[<p>I have come across too many people who are either not willing to blog, or do not see the point. This blog post is for them.</p>
+<p>(Recently, <a href="http://pagilista.blogspot.com/2012/05/how-to-become-blogger-in-5-steps.html">Elena Yatzeck</a> posted on this subject as well.)</p>
+<p>I recently read a one-liner &#8220;I see I scorn, I do I regret, I blog to not forget&#8221;. (Usually I am turned off by one liners intending to pack everything including the reason for life in minimum words, but this one I like because it is funny enough.)</p>
+<p>This above quote is enough motivation to keep me going on my blogging. In the day and age of #fb and #RT it is difficult to get people excited about the value of details and being able to express in elaboration. Blogs come to the rescue.</p>
+<p>I experience this loss of details quite a bit. Recently on my <a href="http://charlespetzold.com/etc/DoesVisualStudioRotTheMind.html">M$ platform based assignment</a> I forgot to blog what we did to make our .<span class="caps">NET</span> application development painless. Now when I try to recollect some lessons I learnt I have to depend on my memory which is sloppy about details. I blog to ensure that I have less of these situations and that I can use my experience to my advantage &#8211; also maybe readers of my blog will benefit as well.</p>
+<p>I would like to encourage more blogging so that I can benefit from your knowledge and learnings.</p>
+<p>Here are a few reasons you should consider blogging:</p>
+<ol>
+	<li>Twitter is too short to explain anything in detail.</li>
+	<li>Facebook will not understand when you say a lot without being emotional about it.</li>
+	<li>Your long term memory is not that good &#8211; also it is not google searchable.</li>
+	<li>All the short messages are easily lost in your tweetdeck. Google search will yield the desired message but will not provide you the context it appeared in.</li>
+	<li>Blogs are on the web and searchable via google.</li>
+	<li>Blogs can be as elaborate as you like &#8211; can be tagged, followed, copied and pasted from, tweeted about, and can turn into articles for publication.</li>
+	<li>Blogs can also be collected and turned into books &#8211; for free.</li>
+	<li>Self promotion &#8211; <a href="http://blog.jayfields.com/2008/08/be-your-start-up.html">A good post by Jay Fields</a></li>
+	<li>Blogs are permanent records(mostly) and they can be used to jog your own memory &#8211; or reminisce.</li>
+</ol>
+<p>How and where to blog?</p>
+<ol>
+	<li><a href="http://www.wordpress.com">Wordpress</a></li>
+	<li><a href="https://xkcd.com/1043/">Tumblr</a></li>
+	<li><a href="http://www.blogger.com">blogger</a> &#8211; beware of their weird copyright requirements.</li>
+	<li><a href="http://www.github.com">github</a> &#8211; <a href="http://github.com/octopress.git">octopress</a></li>
+	<li>build your own blog engine and push it to <a href="http://www.heroku.com">heroku</a></li>
+</ol>
+<p>What are you waiting for? Go write something.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ubuntu power management]]></title>
+    <link href="http://betarelease.github.com/blog/2012/05/10/ubuntu-power-management/"/>
+    <updated>2012-05-10T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/05/10/ubuntu-power-management</id>
+    <content type="html"><![CDATA[<p>(Intended date of release 2012/02/13. Procrastination&#8230;. Finally released today.)</p>
+<p>After upgrading to Ubuntu 11.10(Oneiric Oncelot) I had a unique problem with my machine that was not googleable. All I could see is a symptom where my <span class="caps">CPU</span> fans would start full speed and keep blowing for a while. While they were up all my CPUs would be at 100% utilization. On various occasions that this would happen I had to restart the machine as it became unresponsive. Often times this would happen at nights when the machine is not being used.</p>
+<p>Recently when I was researching how to manage power settings with LUbuntu(which is harder than it sounds) I found that powernapd was something that Ubuntu running in background to manage power usage of the machine components. This sounds like a reasonable thing to run since Ubuntu now supports Netbooks, Notebooks and Desktops all at the same time. In my case since I am running Ubuntu on a desktop it did not need such strict power management. <br />
+I decided to try and turn this daemon off. Now my <span class="caps">CPU</span> utilizations reflect the amount of processor power my currently running applications use and there is no fan whirring anymore.</p>
+<p>ProTip: Tweak your Ubuntu &#8211; Lubuntu is minimalistic so use Ubuntu Gnome to tweak LUbuntu settings.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mac remote with presentations]]></title>
+    <link href="http://betarelease.github.com/blog/2012/03/17/mac-remote-with-presentations/"/>
+    <updated>2012-03-17T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/03/17/mac-remote-with-presentations</id>
+    <content type="html"><![CDATA[<p>When preparing for a presentation recently I was looking at various presentation tools at my disposal.</p>
+<p>Purchasing one of those mouse like remotes was an option. I already had a magic mouse that could do the job. I also had a mac remote with keys that indicated forward/reverse. But by default it cannot be used as a mouse like remote for forward/reverse.</p>
+<p>I stumbled upon <a href="http://www.filewell.com/iRedLite/">iRedlite</a> . Just the tool I was looking for to use the slick mac remote for my presentation.</p>
+<p>As an added bonus iRedlite is programmable to achieve different functionality based on the context of the application. Also that application context can be changed using the remote.</p>
+<p>Thank you <a href="http://tinbert.com/">tin:b</a> for such applications. They have many more &#8211; check them out.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Agile and Beyond 2012]]></title>
+    <link href="http://betarelease.github.com/blog/2012/03/13/agile-and-beyond/"/>
+    <updated>2012-03-13T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2012/03/13/agile-and-beyond</id>
+    <content type="html"><![CDATA[<p>I had the opportunity to speak at the <a href="http://agileandbeyond.org">Agile and Beyond</a> conference recently. I loved the crowd, excellent turnout of 650+ people mostly from the Detroit MI area. Everyone was enthusiastic about learning how Agile can change the way they do their daily jobs.</p>
+<p>I had a chance to present my ideas on improving how you refactor builds to get better feedback and change the way you work. I was also excited because this time I did a complete powerpoint/keynote free <a href="http://betarelease.github.com/build_feedback/slides.html">presentation</a>. I used <a href="http://imakewebthings.com/deck.js/">deck.js</a> and the good markdown tweak called <a href="https://github.com/infews/keydown">keydown</a>. Need to make a few feature additions to keydown soon.(I said it first : A fun project would be make <a href="https://github.com/bartaz/impress.js">impress.js</a> markdown friendly, like keydown.)</p>
+<p>Lots of great presentations &#8211; varying form lean, kanban to plain old agile. Excellent facility at the Ford Convention Center, also had some time to see Detroit and also <a href="http://www.thehenryford.org">The Henry Ford Museum</a>.</p>
+<p>Overall a great experience. Thank you agile and beyond team.</p>
+<p><img class="image" src="http://betarelease.github.com/images/ford_convention_center.jpg"><br />
+(Ford Convention Center image from <a href="http://agileandbeyond.org">agileandbeyond.org</a> )</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bundler with vendorized gems]]></title>
+    <link href="http://betarelease.github.com/blog/2012/03/06/vendorizing-gems-with-bundler/"/>
+    <updated>2012-03-06T00:00:00-08:00</updated>
+    <id>http://betarelease.github.com/blog/2012/03/06/vendorizing-gems-with-bundler</id>
+    <content type="html"><![CDATA[<p>Bundler is a tool for managing installed libraries on a ruby project. It comes bundled with rails 3 but can be used standalone without rails. <br />
+Bundler tries to fix issues with having to manage your gems(and their related dependencies and versions) in a clean way. In doing so it allows you to work on your application and not have to worry about dependencies sucking the life out of your releases.</p>
+<p>Off late I have been working on an application that vendorizes its gems and packages them while shipping the application. Since this application is also been built in the traditional way(rails 2) I was looking to use bundler with it to do the vendorization. Turns out bundler supports such a use case.</p>
+<p>For a packaged application bundler allows you to freeze the gems and unpack them in the <br />
+location of your choosing. This path can then be added to your application to load all the <br />
+frozen gems. The following command with the path set to the location you would like to unpack your gems allows you to use bundler to vendorize gems.</p>
+<div>
+<pre>
+<code class='ruby'>bundle install --path vendor/bundle</code>
+</pre>
+</div>
+<p>You can then add these gems to your application as you would for vendorized gems.</p>
+<h3>Bundler with rvm and gemsets</h3>
+<p>One of the popular opinions is to just use bundler and ditch gemsets. I tend to use both gemsets and bundler to my advantage. This helps especially when I am working on multiple applications and when I am not online all the time. I ensure that my bundle is upto date before I go offline and then can work on my apps when I am offline by switching gemsets. Sometimes I tend to have multiple gemsets built when I am working on changing or experimenting with gems.</p>
+<p>That way I do not have conflicts when I am using one version of rake for a ruby 1.8.7 application while my other ruby 1.9.3 application uses the latest and greatest rake gem.</p>
+<h3>Cleaning your gems before using bundler</h3>
+<p>Bundler allows you to install and update a set of gems based on the Gemfile. But it is not obvious how you would set up an application that has local gems installed to start using bundler. To start you need to delete all gems from the current gems. Having a clean workspace allows bundler to install gems from Gemfile without conflicts and can prevent a lot of confusion when multiple versions of a gem being installed side by side.</p>
+<p>Here is a snippet that will allow you to clean your gemset.</p>
+<div>
+<pre>
+<code class='ruby'>Delete all gems from gemset
+gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code>
+</pre>
+</div>
+<p>In most cases this will work. But rake seems to be installed as part of the global gemset. So the above command will delete all gems till rake and then abort. To skip deleting rake change the above script as follows</p>
+<div>
+<pre>
+<code class='ruby'>gem list | cut -d ' ' -f1 | ack -v 'rake' | xargs gem uninstall -aIx</code>
+</pre>
+</div>
+<p>(ack is further reading if you don&#8217;t already know what it does.)</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[grok grack]]></title>
+    <link href="http://betarelease.github.com/blog/2012/01/19/grok-grack/"/>
+    <updated>2012-01-19T00:00:00-08:00</updated>
+    <id>http://betarelease.github.com/blog/2012/01/19/grok-grack</id>
+    <content type="html"><![CDATA[<p>Recently I was trying to host git repository from an already existing
+(non-bare) repository. I
+was looking for a solution that does not force me to create a bare
+repository and does not
+require me to install apache or some such webserver on my machine.</p>
+
+<p>I found a wonderful tool written by Scott Chacon called
+<a href="https://github.com/schacon/grack.git">grack</a>. grack is a git server on
+top of rack. Its elegance is in its design. It consists of few hundred
+lines of a rack middleware (awesome!) and a 6–8 line config file that
+allows you to host any repository over http. Setting it up on a local
+machine was really easy. Even hosting multiple repositories is trivial.</p>
+
+<p>I discovered one quirk when my server was not accessible, was due to
+binding it specifically to 127.0.0.1.
+Avoid this and bind to the hostname instead.</p>
+
+<p>Many thanks to Scott Chacon, Github, Rack and Ruby for keeping it so
+simple.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Simple Dashboard with Tab Slideshow]]></title>
+    <link href="http://betarelease.github.com/blog/2011/12/07/simple-dashboard-with-tab-slideshow.textile/"/>
+    <updated>2011-12-07T00:00:00-08:00</updated>
+    <id>http://betarelease.github.com/blog/2011/12/07/simple-dashboard-with-tab-slideshow.textile</id>
+    <content type="html"><![CDATA[<p>I had almost forgotten about <a href="http://addons.mozilla.org/en-US/firefox/addon/tab-slideshow/">Tab Slideshow</a> for Firefox but an appropriate application of it jogged my memory. We wanted to show a few build reports on the dashboard and also wanted them to be big and visible. Also the reports do not change as rapidly as the build and can afford to be little delayed (since mostly we are showing long running build results). So we just opened up those reports in a tab each and started ‘Tab Slideshow’. Worked like a charm. We now have the simplest dashboard.</p>
+
+<p>Note: <a href="https://chrome.google.com/webstore/detail/loepeenhjndiclafjgoackjblfhonogb">Tab Slideshow for Chrome</a> does not seem to refresh the tabs where as the Firefox version does what is expected.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Airport Express as Remote Speakers for Airplay - Also with Linux]]></title>
+    <link href="http://betarelease.github.com/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile/"/>
+    <updated>2011-09-30T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2011/09/30/airport_express_as_remote_speakers_for_airplay.textile</id>
+    <content type="html"><![CDATA[<p>I have an airport express that I used to use as my wireless router when I travel. Very convenient and useful when hotels do not provide a wireless.(Yes I am looking at you Marriott.) Airport Express thanks to apple technology also supports airplay to play music over the air, and/or printer sharing via a USB connection.</p>
+
+<p>I was hoping to connect my desktop and my laptop to my music system which is located in another room than these machines. Apparently airport express can connect with your existing wireless router as a client (yes they have thought of everything) allowing you to do exactly that. Here is a list of quirks you need to remember when you try to set it up as a <a href="http://support.apple.com/kb/HT2272?viewlocale=en_US">wireless client</a>.</p>
+
+<ol>
+<li>Prerequisites - Note down the channel number your current wireless router is transmitting on - anywhere between 1 to 11.</li>
+<li>Plug in the airport express and connect it to your mac using the ethernet cable.</li>
+<li>Start airport utility~~ which will try to detect any airport devices but will not find any.</li>
+<li>Hard reset by pressing the reset button with a paper clip for atleast 10 seconds. The light blinks rapidly when you are holding the pin and then in 30 seconds becomes steady - this means that airport express is restarting.</li>
+<li>Now rescan on the airport utility - it should find one device with name ‘Base station xxxxxx’ - with last 6 digits from the mac address. It should have a yellow icon next to it - indicating that it has not connected to the internet.</li>
+<li>Perform a Manual Setup - DO NOT hit continue.</li>
+<li>Change the channel number that is automatically set on the airport express to the one from your wireless router.</li>
+<li>In ‘Wireless’ connect the airport express as a client - select ‘Join an existing wireless network’ - select appropriate SSID of the wireless router.</li>
+<li>Browse through other tabs if you are interested in the details - else click ‘Update’.</li>
+<li>The airport express should restart and reappear on the Airport Utility. This usually takes over a minute. When it reappears it should appear with the new name you chose and with a green light next to it - indicating it was able to connect to your wireless router.</li>
+<li>If everything was successful and airport express liked the ‘Enable for Airplay’ selection you made - you will see a red light in the stereo socket light up. Connect your speakers to airport express and you should be able to airplay your music using iTunes.</li>
+</ol>
+
+
+<p>Notes:</p>
+
+<ul>
+<li><p>You may encounter “AirPort Utility was unable to find your AirPort wireless device after restarting.” One of the reasons for this is that Airport express cannot connect to your router with WPA2 or any other security.(Look at <a href="http://www.mac-forums.com/forums/internet-networking-wireless/103890-airport-express-existing-wireless-network-help.html">Airport Express Amber Light</a> for more details.)</p></li>
+<li><p>To ensure security I disabled ‘SSID broadcast’ and enabled MAC filtering on my router. I added the MAC addresses of my Airport Express (Airport Admin Utility will show those addresses when it detects Airport Express.)</p></li>
+</ul>
+
+
+<p>To allow your linux machine to connect and airplay to the airport express you need install pulseaudio’s drivers and support for remote audio protocol by running <a href="http://www.makeuseof.com/tag/apples-airtunes-ubuntulinux/">airtunes with Linux</a></p>
+
+<div>
+  <pre>
+    <code class='ruby'>sudo apt-get install pulseaudio-module-raop paprefs
+
+(I am not making this up- The protocol is Remote Audio Output Protocol - raop)</code>
+  </pre>
+</div>
+
+
+<p>Setup pulseaudio to enable remote speakers as described in <a href="http://blog.paulbetts.org/index.php/2007/04/15/pulseaudio-in-ubuntu-feisty-play-sound-over-the-network/">PulseAudio settings</a>.</p>
+
+<p>Once it is installed you may need to restart your Linux machine. On restarting you should see your newly available remote speakers in your Sound Preferences. Now you should be able to stream from your Linux machine too.</p>
+
+<p>And you are done.</p>
+
+<p>Enjoy remote streaming.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Why I use Firefox over Chrome?]]></title>
+    <link href="http://betarelease.github.com/blog/2010/12/18/why-firefox.textile/"/>
+    <updated>2010-12-18T00:00:00-08:00</updated>
+    <id>http://betarelease.github.com/blog/2010/12/18/why-firefox.textile</id>
+    <content type="html"><![CDATA[<p>For development I choose to use tools which make the code transparent. Hence I prefer to use simple text editors over IDEs (although I like IntelliJ for Java code), or browsers that have good builtin support for debugging over closed/magical ones (hence Firefox/Chrome/Safari over IE).</p>
+
+<p>Recently I switched to Chrome as my primary browser since it promised to have all the add-ons to make it comparable to Firefox. On the contrary, in fact it still lacks the power and the flexibility of Firefox for development. Here are a few reasons why Firefox is still better at supporting development:</p>
+
+<ul>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/748/">greasemonkey</a> for Firefox works with XMLHTTPRequests for different origin - <a href="http://greasemetal.31tools.com/">greasemetal</a> (now <a href="http://www.chromium.org/developers/design-documents/user-scripts">userscripts</a>) for Google Chrome has still not been able to fix this issue.</li>
+</ul>
+
+
+<p>_“GM<em>xmlhttpRequest is same-origin only.&#8221; - <a href="http://www.chromium.org/developers/design-documents/user-scripts">User Scripts</a>
+.</em></p>
+
+<ul>
+<li><p>A number of add-ons on Firefox show useful information on the status bar - I use ”DCurrency“:<a href="https://addons.mozilla.org/en-US/firefox/addon/6462/">https://addons.mozilla.org/en-US/firefox/addon/6462/</a>, ”CruiseControl Monitor“:<a href="https://addons.mozilla.org/en-US/firefox/addon/896/">https://addons.mozilla.org/en-US/firefox/addon/896/</a>.</p></li>
+<li><p>”Selenium IDE&#8221;:<a href="http://seleniumhq.org/projects/ide">http://seleniumhq.org/projects/ide</a>/ is available for Firefox - a big plus when I am trying to record andplay while I am trying to debug some apps.</p></li>
+<li><p>In the minimal view my frequently used bookmarks always show in Firefox ~~Google Chrome shows them when I open a new tab only. Maybe a minor annoyance but I cannot reuse the current tab with a single click access to my bookmarks.</p></li>
+<li><p>Minor annoyance~~ when I maximize the window on OSX Google Chrome expands only vertically. Firefox does not have this problem.</p></li>
+<li><p>Even with proxy switchers Chrome depends/modifies system proxy settings (diabolical). When using on Windows changing the proxy on IE will affect Chrome and vice-versa.</p></li>
+</ul>
+
+
+<p><em>“Chrome uses system’s proxy settings (IE proxy settings on Wndows) because it doesn’t have its own proxy settings yet (see <a href="http://crbug.com/266">http://crbug.com/266)</a>).Therefore, changing Chrome’s proxy settings using Switchy will also affect the system proxy settings.” - quote from <a href="https://chrome.google.com/extensions/detail/caehdcpeofiiigpdhbabniblemipncjj">Proxy Switchy!</a> extension.</em></p>
+
+<p>That means when I use Chrome as a browser with tools like <a href="http://sahi.co.in/w/">Sahi</a>, it will affect how other things work.</p>
+
+<p>In conclusion, for now Firefox is the best browser for development.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Boost your BASH - and never again work with a plain shell]]></title>
+    <link href="http://betarelease.github.com/blog/2010/10/25/boost-your-bash.textile/"/>
+    <updated>2010-10-25T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2010/10/25/boost-your-bash.textile</id>
+    <content type="html"><![CDATA[<p>Over the past few months I have been using a community version of bash<em>profile, bash</em>login, emacs settings and such. It started when <a href="http://github.com/muness">Muness</a> shared his bash_vcs (which was pimped command prompt) and I was hooked. I noticed a few projects that were sharing similar shell settings and enhancements. Forking from <a href="http://github.com/ttripp/dotfiles">Toby’s dotfiles</a> I started enhancing my experience on every machine I worked. This not only lead me to have a better understanding how different flavours of Unix work and also helped me automate a lot of my day to day activities.</p>
+
+<p>Allow me to introduce <a href="http://github.com/betarelease/dotfiles">the dotfiles project</a> which comes with all those enhancements - stolen and tweaked from many sources - and with valuable help from <a href="http://github.com/pturley">Patrick Turley</a>. Recent additions include bash_boost and what could be called the beginnings of a javavm (inspired by rvm for ruby.) Now with more brainpower behind dotfiles we hope to add more features fast. Next steps include adding support for zsh.</p>
+
+<p>Give it a try, fork it or point us to more stuff we can steal to improve it for you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Software KVM that works on linux, OSX and Windows]]></title>
+    <link href="http://betarelease.github.com/blog/2010/09/12/software-kvm-for-linux-osx-windows.textile/"/>
+    <updated>2010-09-12T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2010/09/12/software-kvm-for-linux-osx-windows.textile</id>
+    <content type="html"><![CDATA[<p>I was using <a href="http://www.abyssoft.com/software/teleport/">Teleport for Mac</a> as my KVM. But I could only control a mac mini and my laptop with it. I was looking for something that would work with Ubuntu and MacOSX switching the keyboard and mouse between them.</p>
+
+<p>I found <a href="http://code.google.com/p/synergy-plus/">Synergy Plus</a> that was exactly the software KVM for my purpose. (There is also an older project called <a href="http://synergy2.sourceforge.net/">Synergy</a>, but Synergy Plus is the latest copy being managed on google code.)</p>
+
+<p>Setting up my Ubuntu machine as the server and my OSX laptop as a client was facilitated by</p>
+
+<p><a href="http://www.mattcutts.com/blog/how-to-configure-synergy-in-six-steps/">Configure Synergy in six steps</a></p>
+
+<p><a href="http://www.foogazi.com/2010/05/27/how-to-configure-synergy-on-mac-osx-and-windows-xp/">Use synergy between OSX and linux</a></p>
+
+<p>One issue I had was using a PC keyboard with OSX (since my Ubuntu server is the synergy server). I was not able to map the Super key to be theCommand key. Tried various options with keymapping on Ubuntu without much success. Resolutions welcome.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby Kaigi 2010 - Report]]></title>
+    <link href="http://betarelease.github.com/blog/2010/09/12/ruby-kaigi-report.textile/"/>
+    <updated>2010-09-12T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2010/09/12/ruby-kaigi-report.textile</id>
+    <content type="html"><![CDATA[<p>Returned from Ruby Kaigi last weekend. The conference was held in Tsukuba International Convention Center and attended much of the enthusiastic ruby community (including Matz, Chad Fowler, Charles Nutter, Yehuda Katz et al). Had a blast presenting ‘Rocking the Enterprise with Ruby’.</p>
+
+<p>Of all the sessions I could attend I liked Matz keynote focusing on the direction of Ruby 2.0. Especially the focus on mix-ins, issues with module mixins and list of ancestors. Class-boxes also looked a very interesting concept. Makes me want to use ruby 2.0 now. Based on the timeline discussed it is on track to be released sometime in 2011. (<a href="http://rubykaigi.tdiary.net/20100829.html#">Ruby 2.0</a>)</p>
+
+<p>I also liked the treatment of metaprogramming handed out by <a href="http://ducktypo.blogspot.com/">Paolo ‘Nusco’ Perrotta</a>. A delightful presenter who can draw great illustrations as well as explain the issues in ruby programming very well. His message ‘Look at source code from projects to learn what they are doing’. Also, he concluded that what works in Ruby works because of its design (metaprogramming, mixins) may not work in Java/C#. So when you come to ruby you may have to change the way you think.</p>
+
+<p>Very enthusiastic response to lightning talks (in fact entries to lightning talks were closed even before the start of the conference). Youngest ruby programmer (Shota Fukumori @sora_h) who wants to change ruby internals with his gem ‘few’ and <a href="http://github.com/benhoskings/babushka">babushka</a> by Ben Hoskings were my favourites.(<a href="http://rubykaigi.tdiary.net/20100831.html#p01">Lightning Talks</a>)</p>
+
+<p>The conference was organised very well, with an unofficial and official party on Friday and Saturday. Thanks to everyone who worked to make this a success.</p>
+
+<p><img class="image" src="http://betarelease.github.com/images/rubykaigi_staff.jpg"> (RubyKaigi 2010 Staff (by Naoto Takai))</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby Kaigi 2010 - Rocking the Enterprise with Ruby]]></title>
+    <link href="http://betarelease.github.com/blog/2010/08/28/ruby-kaigi-2010.textile/"/>
+    <updated>2010-08-28T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2010/08/28/ruby-kaigi-2010.textile</id>
+    <content type="html"><![CDATA[<p>Uploading the beta version of the presentation for today’s ruby kaigi talk.</p>
+
+<p><a href="http://betarelease.github.com/images/rocking_the_enterprise.key">Rocking the Enterprise with Ruby (Keynote)</a></p>
+
+<p><a href="http://betarelease.github.com/images/rocking_the_enterprise.ppt">Rocking the Enterprise with Ruby (PowerPoint)</a></p>
+
+<p>Be virtually there!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Streaming Media from Ubuntu to Bravia]]></title>
+    <link href="http://betarelease.github.com/blog/2010/08/04/streaming-media-from-ubuntu-to-bravia.textile/"/>
+    <updated>2010-08-04T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2010/08/04/streaming-media-from-ubuntu-to-bravia.textile</id>
+    <content type="html"><![CDATA[<p>Over this weekend I set out to connect my Ubuntu machine with my Sony Bravia TV.( With inspiration from <a href="http://thoughtworker.in/2010/07/20/dns-323-ps3-and-upnp/">Sachin Dharmapurikar</a> and <a href="http://en.wikipedia.org/wiki/Digital_Living_Network_Alliance">DLNA</a>.)</p>
+
+<p>Googling yielded a number of techniques to stream media from linux over the home network. Some that did suit Bravia and some that did not. The easiest one to work with was <a href="http://blog.mycila.com/2010/01/dlna-on-sony-bravia-tvs.html">minidlna server</a>. Snappy install and my Bravia recognised it like any other streaming website. I am running the minidlna server for my music and photos and all the content that is in DVD/mpeg2 format.(<a href="http://wiki.oppodigital.com/index.php?title=DLNA_Linux">How to install on linux</a>)</p>
+
+<p>I do have some videos that came to me as avi and minidlna does not support transcoding. (There are some that describe how to do it with Windows but no out of the box solution with linux yet.) Google for <a href="http://ps3mediaserver.blogspot.com/">PS3 Media servers</a> I stumbled upon a <a href="http://code.google.com/p/ps3mediaserver/">PS3 Media Server for Linux</a> - which is a java application that streams and transcodes nicely.</p>
+
+<p>To get the video to be non-jittery and avoid ffmpeg/tsmuxer crashing I had to tone the transcoding down to Lowest Quality. Even with that the video is pleasing albeit a bit grainy in some cases. Documentation suggests allocating more memory or CPU might help.</p>
+
+<p>To support all this I also installed a bunch of libraries described by many to help <a href="http://juliensimon.blogspot.com/2008/12/howto-compiling-mediatomb.html">transcode,mux and display thumbnails.</a>. The instructions are for mediatomb but these libraries work with other dlna servers.</p>
+
+<p>Next stop Getting <a href="http://www.r3uk.com/index.php/home/38-software/122-ps3-dlna-streaming-in-ubuntu-gutsy">mediatomb to work on linux and bravia</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up wireless usb card on Ubuntu - Lucid Lynx]]></title>
+    <link href="http://betarelease.github.com/blog/2010/06/25/setup-wireless-on-ubuntu.textile/"/>
+    <updated>2010-06-25T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2010/06/25/setup-wireless-on-ubuntu.textile</id>
+    <content type="html"><![CDATA[<p>I have faced the same problems with Wireless Networking as mentioned by
+many on the web.</p>
+
+<p>I tried <a href="https://help.ubuntu.com/community/HardwareSupportComponentsWirelessNetworkCardsLinksys#USB">Hardware Compatibility List for Linux</a> and many links on that list. In an attempt to install custom drivers I would always end up with a network card that would detect wireless but never would communicate over wireless. After going through a number of cards and uninstalling and installing drivers I found one that worked really well without resorting to the ndiswrapper solution (dealing with anything windows just feels unclean). Finally I found a card that worked and also provided native linux drivers.The wireless usb card that worked was - <a href="http://sasha.gerrand.id.au/2010/06/03/resolving-driver-problems-for-d-link-dwa-125-wireless-150-usb-adapter-in-ubuntu/">D-Link DWA–125 with Ubuntu Lucid Lynx</a>.It also helped that D-Link in fact published a linux driver for their wireless usb card.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ActiveResource is an oxymoron?]]></title>
+    <link href="http://betarelease.github.com/blog/2010/06/07/activeresource-is-an-oxymoron.textile/"/>
+    <updated>2010-06-07T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2010/06/07/activeresource-is-an-oxymoron.textile</id>
+    <content type="html"><![CDATA[<p>One of the projects I worked on recently consisted of a number of applications interacting with each other over REST. These applications were written with an intention to obtain loose-coupling between them.</p>
+
+<p>While writing more controller actions I noticed something that we were doing repeatedly - anytime one particular model changed in the domain it caused a ripple effect of making us change all the consumers in the application suite. These models were all exposed across applications by using ActiveResource. ActiveResource forced us to change every one of the model/model manifestations in the application.</p>
+
+<p>The main intent of the decoupling effort was to help us change these applications almost independently of each other. These applications were supposed to only depend on the exposed interfaces. What ActiveResource did was forced us to tightly-couple them and a single change caused a ripple effect.</p>
+
+<p>So my question is ‘Is ActiveResource an oxymoron?’ - Especially considering the fact that Active means really simple but strong coupling. Active does apply nicely to a database record and eases development by getting out of the way. But in case of lightly or ideally decoupled applications does the Active make sense? - Probably not. So if you want to expose objects and their behaviours over the wire maybe ActiveResource is not such a good idea.</p>
+]]></content>
+  </entry>
+  
+</feed>
