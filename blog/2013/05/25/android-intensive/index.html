@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Moved my blog to github pages, and how I did it - &beta;-release</title>
+  <title>Android Intensive - collaborative learning experience - &beta;-release</title>
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="I have moved my personal blog from blogspot to
-[github pages][http://github.com/blog/272-github-pages].
-[Dr. Nic][http://drnicwilliams.com/2008/12/21 &hellip;">
+  <meta name="description" content="At our San Francisco office we have been working on building mobile development capabilities recently. Here is a little glimpse into what we did to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/2009/01/11/moved_to_github_pages.textile/">
+  <link rel="canonical" href="http://betarelease.github.com/blog/2013/05/25/android-intensive/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -71,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">Moved My Blog to Github Pages, and How I Did It</h1>
+      <h1 class="entry-title">Android Intensive - Collaborative Learning Experience</h1>
     
     
       <p class="meta">
@@ -86,15 +84,100 @@
   
 
 
-<time datetime="2009-01-11T00:00:00-08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2009</time></p>
+<time datetime="2013-05-25T00:00:00-07:00" pubdate data-updated="true">May 25<span>th</span>, 2013</time></p>
       <p class="tags"></p>
     
   </header>
 
 
-<div class="entry-content"><p>I have moved my personal blog from blogspot to
-[github pages][http://github.com/blog/272-github-pages].
-[Dr. Nic][http://drnicwilliams.com/2008/12/21/migrating-project-websites-to-github-pages-with-sake-tasks-new-websites-with-jekyll_generator/&#8221;] and [Mojombo][http://github.com/mojombo/tpw/tree/master] helped me do it with Jekyll.</p>
+<div class="entry-content"><p>At our San Francisco office we have been working on building mobile development capabilities recently. Here is a little glimpse into what we did to make it work.</p>
+
+<p>The plan was to build enough initial capability so that we could bring everyone at a collaborative workshop and take their skills to the next level. This program started by a facilitated learning around designing applications for the mobile. We focused on Android platform.</p>
+
+<ul>
+<li>Introduction to Android and self-learning</li>
+</ul>
+
+
+<p>At the start of the learning session we gathered the developers and split them into teams to allow for collaboration based on colocation and interest. Once the teams were setup they worked on figuring out what they would like to build during this learning experience. Since the focus was learning the ability to deliver business driven value was allowed to be compromised when it made sense.</p>
+
+<p>Most of the development team was fairly inexperienced with this technology so we involved Kris to get us started. He helped us get started with a video explaining us how the ecosystem differs from a basic java stack and how to use the IDE and build sytem. Once we all got a hang of it, the teams were on their own course of trying to build something and test it with prevalent testing tools.</p>
+
+<p>One of the teams figured out how to use Robolectric for unit tests. Another group figured out how to use calabash tests and build this on TravisCI. While the teams were addressing different domains, their basic problems were similar viz. making requests, receiving data, displaying it efficiently. Once the teams were more comfortable breaking and building their apps, we started planning for a collaborative workshop.</p>
+
+<p>Key: Build teams to facilitate self-learning.</p>
+
+<ul>
+<li>Planning for the training</li>
+</ul>
+
+
+<p>We chalked out a weekend where we were able to get all the developers and trainers in the same location for a workshop. Apart from how long the training was we wanted to ensure that whatever we covered applied to all the teams and the applications that they were building. The initial versions of the applications were looked at, and assessed to understand testability, domain and maturity.
+Given the structure of the program and the heavy collaboration we wanted to ensure - we wanted tackle a well defined set of stories that would be small. Also, that the stories needed to cover enough ground into the Android technology space.</p>
+
+<p>Key: Focus on short set of cohesive stories.</p>
+
+<ul>
+<li>Planning the stories</li>
+</ul>
+
+
+<p>Another goal was to ensure that the teams met each other and were able to share skills across the different experience levels, we decided to pick one application that everyone would work on. We picked that application and setup the teams to have the code downloaded and ready to be shared. Using the same application gave us a clear direction to write stories for the workshop and also we could ensure consistency of learning across teams.</p>
+
+<ul>
+<li>Setup of the workshop and getting started</li>
+</ul>
+
+
+<p>When we began we started with a quick review of the plan for the day. We allowed everyone to get the smae codebase on their machines and ensure that all of that works as expected on all of them. Once they all had the same code we paired people off in such a way that we had enough coverage within each pair about the knowledge of the shared code. Thus ensuring that each pair could get a quick headstart.</p>
+
+<p>Key: Start with a short icebreaker to ensure safe environment.</p>
+
+<ul>
+<li>Narrowing the scope of the exercise</li>
+</ul>
+
+
+<p>The aspirations for the workshop were to learn building applications with location services, accelerometer, cross app integration and such. But after the review of the state of the applications it was realized that the application development process needed to focus more on the basics -like building the interfaces more cleanly, allowing for testing, allowing for change and refactoring and improving performance of the application. So a smaller more achievable set of stories were created that would address the above goals. The original aspirations - some of them can be learnt by looking at examples and some of them were postponed for a later workshop.</p>
+
+<p>Key: Plan for more than the time allocated, but expect to finish less and adapt.</p>
+
+<ul>
+<li>Development practices that help during a workshop</li>
+</ul>
+
+
+<p>The workshop trainers and teams agreed on a few ground rules during the training.
+- Progressively work on adding features to the stories being built
+- Pair during development and share the same code
+- Present the code at every recess and discuss and critique code
+- Understand the alternatives during each show and tell
+- Take the best parts/patterns and share them as baseline for the next exercise
+- After every recess - share code and switch pairs - to allow sharing experience
+- No developer left behind - Help each other setup machines, checkin code, understand concepts and move on.</p>
+
+<p>Key: Do frequent checks to ensure that everyone is engaged and keep pace of the session.</p>
+
+<ul>
+<li>Uncovering hard lessons.</li>
+</ul>
+
+
+<p>The intent of this workshop was to bring all the teams together and collaborate. While doing so we wanted to understand some basic concepts in depth. Ensuring people collaborate on the same project, sharing code periodically and developing a feature in depth worked for us well. We were not able to cover as much as we had planned but were able to discover patterns, discuss them and apply them to our applications. Having the focus ensured the richness of learning. We were able to build complete UI, make it testable and learn how to tune its performance. We were able to learn how Android behaves and communicates with a service.
+Learning about the mobile experience - especially where we learnt how to allow the user to scroll through a bunch of listings with images without giving a feel of &#8216;the app is still loading as it is scrolled&#8217; - was what we achieved by the end of the workshop.</p>
+
+<p>Concepts we learnt:
+- The Android toolkit, Junit and Robolectric are not always in sync. So beware of version compatibilities between these. We fixed the incompatibilities by using Android SDK platform version 17.
+- Robolectric does some clever things to allow you to be able to mock the context for Android objects - so that you can test them.
+- Load images and other streams of data using AsyncTask so that the app loads immediately
+- Use an Adapter to delegate the tasks of loading all the listing data. This allows you to also change the implementation, point to a different endpoint, tune it for performance without changing how the UI has been laid out.
+- The ViewHolder allows separation between domain objects and how they are wired to the data. The Adapter can delegate such tasks to the ViewHolder thus allowing to change the view as and when the experience needs to change it.</p>
+
+<p>After the last session of pairing we were able to discuss and summarize what we learnt through a retrospective. Although we all agreed that we did not get everything done, the overall workshop was helpful in bringing everyone together and learning a few concepts in detail.</p>
+
+<p>Key: Working on some key concepts indepth helped the overall focus of the workshop.</p>
+
+<p>Acknowledgement: This workshop and the program would not have been this awesome without Kris Gonzalez and Michael Wongwaisayawan</p>
 </div>
 
 
@@ -117,7 +200,7 @@
   
 
 
-<time datetime="2009-01-11T00:00:00-08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2009</time>
+<time datetime="2013-05-25T00:00:00-07:00" pubdate data-updated="true">May 25<span>th</span>, 2013</time>
       
 
 
@@ -125,7 +208,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2009/01/11/moved_to_github_pages.textile/" data-via="sudhindraRao" data-counturl="http://betarelease.github.com/blog/2009/01/11/moved_to_github_pages.textile/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2013/05/25/android-intensive/" data-via="sudhindraRao" data-counturl="http://betarelease.github.com/blog/2013/05/25/android-intensive/" >Tweet</a>
   
   
   
@@ -134,10 +217,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2009/01/10/old-blog-on-blogger.textile/" title="Previous Post: Moved my blog to github pages">&laquo; Moved my blog to github pages</a>
+        <a class="basic-alignment left" href="/blog/2012/10/14/SiriMingle/" title="Previous Post: SiriMingle - Siri assistance for Mingle">&laquo; SiriMingle - Siri assistance for Mingle</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2009/01/16/accordion_in_javascript.textile/" title="Next Post: accordion.js that is simple and works with prototype1.6">accordion.js that is simple and works with prototype1.6 &raquo;</a>
       
     </p>
   </footer>
