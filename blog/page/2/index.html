@@ -9,7 +9,8 @@
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="Simple Dashboard With Tab Slideshow Dec 7th, 2011 dashboard, firefox, chrome, agile, big visible, feedback I had almost forgotten about Tab &hellip;">
+  <meta name="description" content="Grok Grack Jan 19th, 2012 ruby, rack, git, unix, github, chacon Recently I was trying to host git repository from an already existing
+(non-bare) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +67,62 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/19/grok-grack/">Grok Grack</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-19T00:00:00-08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2012</time></p>
+      <p class="tags">ruby, rack, git, unix, github, chacon</p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recently I was trying to host git repository from an already existing
+(non-bare) repository. I
+was looking for a solution that does not force me to create a bare
+repository and does not
+require me to install apache or some such webserver on my machine.</p>
+
+<p>I found a wonderful tool written by Scott Chacon called
+<a href="https://github.com/schacon/grack.git">grack</a>. grack is a git server on
+top of rack. Its elegance is in its design. It consists of few hundred
+lines of a rack middleware (awesome!) and a 6–8 line config file that
+allows you to host any repository over http. Setting it up on a local
+machine was really easy. Even hosting multiple repositories is trivial.</p>
+
+<p>I discovered one quirk when my server was not accessible, was due to
+binding it specifically to 127.0.0.1.
+Avoid this and bind to the hostname instead.</p>
+
+<p>Many thanks to Scott Chacon, Github, Rack and Ruby for keeping it so
+simple.</p>
+</div>
+  
+  
+
+
+      
+       <a class="comments" href="/blog/2012/01/19/grok-grack/#disqus_thread">Comments</a>
+      
+
+    </article>
   
   
     <article>
@@ -523,50 +580,6 @@ many on the web.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/06/07/activeresource-is-an-oxymoron.textile/">ActiveResource Is an Oxymoron?</a></h1>
-    
-    
-      <p class="meta">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-06-07T00:00:00-07:00" pubdate data-updated="true">Jun 7<span>th</span>, 2010</time></p>
-      <p class="tags">ruby, rails, activeresource, misuse, decoupling, REST</p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>One of the projects I worked on recently consisted of a number of applications interacting with each other over REST. These applications were written with an intention to obtain loose-coupling between them.</p>
-
-<p>While writing more controller actions I noticed something that we were doing repeatedly - anytime one particular model changed in the domain it caused a ripple effect of making us change all the consumers in the application suite. These models were all exposed across applications by using ActiveResource. ActiveResource forced us to change every one of the model/model manifestations in the application.</p>
-
-<p>The main intent of the decoupling effort was to help us change these applications almost independently of each other. These applications were supposed to only depend on the exposed interfaces. What ActiveResource did was forced us to tightly-couple them and a single change caused a ripple effect.</p>
-
-<p>So my question is ‘Is ActiveResource an oxymoron?’ - Especially considering the fact that Active means really simple but strong coupling. Active does apply nicely to a database record and eases development by getting out of the way. But in case of lightly or ideally decoupled applications does the Active make sense? - Probably not. So if you want to expose objects and their behaviours over the wire maybe ActiveResource is not such a good idea.</p>
-</div>
-  
-  
-
-
-      
-       <a class="comments" href="/blog/2010/06/07/activeresource-is-an-oxymoron.textile/#disqus_thread">Comments</a>
-      
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -601,6 +614,10 @@ many on the web.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/08/01/android-intensive-refined/">Android Intensive - Refined</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/05/25/android-intensive/">Android Intensive - collaborative learning experience</a>
       </li>
     
@@ -614,10 +631,6 @@ many on the web.</p>
     
       <li class="post">
         <a href="/blog/2012/07/09/moved-blog-to-octopress/">moved blog to octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/05/15/why-blog/">why blog?</a>
       </li>
     
   </ul>
