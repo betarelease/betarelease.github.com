@@ -9,7 +9,7 @@
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="Android Intensive - Refined Aug 1st, 2013 android, google, phone, java, robolectric, calabash, hockeyapp At our San Francisco office we have been &hellip;">
+  <meta name="description" content="EbDeployer Nov 12th, 2013 eb_deployer, EbDeployer, eb_deploy, elastic beanstalk, amazon, aws, cloud, mingle, services, saas If you have been &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,130 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/11/12/eb_deployer/">EbDeployer</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-12T00:00:00-08:00" pubdate data-updated="true">Nov 12<span>th</span>, 2013</time></p>
+      <p class="tags">eb_deployer, EbDeployer, eb_deploy, elastic beanstalk, amazon, aws, cloud, mingle, services, saas</p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you have been following this blog, you may have been curious what I have been upto recently. Few weeks ago we(Pengchao Wang and I ) go selected to speak at the aws re:invent 2013 conference to speak about our tool eb_deployer.</p>
+
+<p>Here is a little bit of insight on what it is about and why we wrote it.</p>
+
+<h2>So you want to use the cloud</h2>
+
+<p>So like everyone else wanted to put our software on the cloud and stop maintaining a shrinkwrap version. Among other things we want to develop many features - fast and have them enhanced as we go. We started building or transforming Mingle to be a SaaS but slowly. When we wanted to add new services that did not belong in Mingle we build them as separate services. This is how Cycle Time Analytics and Single Sign On is built for Mingle. While putting these services on the &#8216;cloud&#8217; we started mending our ways to follow the amazon way. The first attempt along that way was to use CloudFormation and we chose that because it gave us ultimate flexibility and control.</p>
+
+<h2>But do not want to do any work</h2>
+
+<p>But CloudFormation meant a bit of work to maintain the definitions and be meticulous about turning each and every knob and getting it right. We did not want to do any work for the new services we were building since we did not have the constraints of Mingle.</p>
+
+<h2>You should think of Elastic Beanstalk</h2>
+
+<p>On closer look we found Elastic Beanstalk - a technology meant especially for our needs - minimum work maximum benefit. We started building and deploying to Elastic Beanstalk stacks(as they are called) and were amazed with how much we could get accomplished with little effort. Elastic Beanstalk gave us basic technology stack along with autoscaling, basic monitoring and logging all in the bundle. But we wanted to do more with it - think continuous delivery.</p>
+
+<h2>And use EbDeployer</h2>
+
+<p>Elastic Beanstalk allowed us to worry less about deployments more about our code. When we started deploying regularly we found Elastic Beanstalk wanting in some areas. So Pengchao Wang started building now what we call EbDeployer - a tool for automated blue-green deployments for your continuous delivery cycle.</p>
+
+<p>EbDeployer as it is built relieves you from the pain of writing any Elastic Beanstalk api code. All you need to do is package your application, define some basic parameters and deploy(or eb_deploy). You are done!</p>
+
+<p>You can find out more about <a href="http://ThoughtWorkStudios.github.io/eb_deployer">EbDeployer</a> from our talk at <a href="https://portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=Sudhindra+Rao&amp;searchType=session&amp;tc=0&amp;sortBy=abbreviationSort&amp;p=">aws re:invent 2013</a>. Also checkout the tutorial on the website.</p>
+</div>
+  
+  
+
+
+      
+       <a class="comments" href="/blog/2013/11/12/eb_deployer/#disqus_thread">Comments</a>
+      
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/20/thought-makers-build-me-something/">ThoughtMakers Meetup - Build Me Something</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-20T00:00:00-07:00" pubdate data-updated="true">Oct 20<span>th</span>, 2013</time></p>
+      <p class="tags">thoughtworks, makers, builders, hardware, raspberrypi, robotics, robots, electronics, buildlight</p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The ThoughtMakers meetup was kicked off last week in the San Francisco office. This was the first meeting of enthusiasts sharing ideas and projects that bridged the gap between the real and virtual world.</p>
+
+<h2>Skillset and interests</h2>
+
+<p>We started this group since there was plenty of interest in understanding the hardware world and we had a number of people who already were into tinkering/breaking and building electronic toys. So we thought putting some energy behind it would present another way of people to interact and share.</p>
+
+<p>A quick survey of the room revealed that a number of them had dabbled in building something hardware in their past - school days, self learnings, job experience. The room was largely split between enthusiasts wanting to build/have built remote controlled toys and the other half eager to solder everything. A number of enthusiasts were in this group to find out if they could learn and find someone to mentor them initially to jump the self-learning curve.</p>
+
+<h2>Showcasing what we had already</h2>
+
+<p>Antonio presented his vision of the internet of things. He stressed on why it is now easily possible to venture into the hardware world - what with easy access to cheap hardware - arduino, raspberrypi and such. He also focused on showcasing how this tinkering could lead to useful solutions for the businesses.</p>
+
+<p>Pete Hodgson showcased his awesome build light- built with an arduino board and strip of multicolor LEDs all wired up inside a cheap IKEA table lamp.</p>
+
+<p>I showed off Ian&#8217;s Mingle card wall reader built for RFID cards that interfaces with Mingle on the web, and the leap motion control we prototyped for using Mingle with gestures.</p>
+
+<h2>What is happening next and why you should join?</h2>
+
+<p>Everyone participating is excited to build something soon. So we will be working on presenting our ideas and finding people to pair with/get support from.</p>
+
+<p>There are also some lightning talks planned - some around self learning these skills and some around the cool projects we will be building.</p>
+
+<p>Also watch out for some guest speakers with some expertise and hands on experience in the field of building hardware.</p>
+
+<p>If you have a project in mind do come along and share.</p>
+
+<p>It happens every other Wednesday from 6pm to 8pm. Next one is scheduled for Oct 30th.</p>
+</div>
+  
+  
+
+
+      
+       <a class="comments" href="/blog/2013/10/20/thought-makers-build-me-something/#disqus_thread">Comments</a>
+      
+
+    </article>
   
   
     <article>
@@ -676,115 +800,6 @@ I decided to try and turn this daemon off. Now my <span class="caps">CPU</span> 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/13/agile-and-beyond/">Agile and Beyond 2012</a></h1>
-    
-    
-      <p class="meta">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-13T00:00:00-07:00" pubdate data-updated="true">Mar 13<span>th</span>, 2012</time></p>
-      <p class="tags">conference, speaking, agile, lean, kanban, detroit, michigan, ford, builds, CI, feedback</p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I had the opportunity to speak at the <a href="http://agileandbeyond.org">Agile and Beyond</a> conference recently. I loved the crowd, excellent turnout of 650+ people mostly from the Detroit MI area. Everyone was enthusiastic about learning how Agile can change the way they do their daily jobs.</p>
-<p>I had a chance to present my ideas on improving how you refactor builds to get better feedback and change the way you work. I was also excited because this time I did a complete powerpoint/keynote free <a href="http://betarelease.github.com/build_feedback/slides.html">presentation</a>. I used <a href="http://imakewebthings.com/deck.js/">deck.js</a> and the good markdown tweak called <a href="https://github.com/infews/keydown">keydown</a>. Need to make a few feature additions to keydown soon.(I said it first : A fun project would be make <a href="https://github.com/bartaz/impress.js">impress.js</a> markdown friendly, like keydown.)</p>
-<p>Lots of great presentations &#8211; varying form lean, kanban to plain old agile. Excellent facility at the Ford Convention Center, also had some time to see Detroit and also <a href="http://www.thehenryford.org">The Henry Ford Museum</a>.</p>
-<p>Overall a great experience. Thank you agile and beyond team.</p>
-<p><img class="image" src="/images/ford_convention_center.jpg"><br />
-(Ford Convention Center image from <a href="http://agileandbeyond.org">agileandbeyond.org</a> )</p></div>
-  
-  
-
-
-      
-       <a class="comments" href="/blog/2012/03/13/agile-and-beyond/#disqus_thread">Comments</a>
-      
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/06/vendorizing-gems-with-bundler/">Bundler With Vendorized Gems</a></h1>
-    
-    
-      <p class="meta">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-06T00:00:00-08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time></p>
-      <p class="tags">bundler, ruby, rails, gems, rubygems, vendor, dependencies, ack, cut, rake, gemset, rvm</p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Bundler is a tool for managing installed libraries on a ruby project. It comes bundled with rails 3 but can be used standalone without rails. <br />
-Bundler tries to fix issues with having to manage your gems(and their related dependencies and versions) in a clean way. In doing so it allows you to work on your application and not have to worry about dependencies sucking the life out of your releases.</p>
-<p>Off late I have been working on an application that vendorizes its gems and packages them while shipping the application. Since this application is also been built in the traditional way(rails 2) I was looking to use bundler with it to do the vendorization. Turns out bundler supports such a use case.</p>
-<p>For a packaged application bundler allows you to freeze the gems and unpack them in the <br />
-location of your choosing. This path can then be added to your application to load all the <br />
-frozen gems. The following command with the path set to the location you would like to unpack your gems allows you to use bundler to vendorize gems.</p>
-<div>
-<pre>
-<code class='ruby'>bundle install --path vendor/bundle</code>
-</pre>
-</div>
-<p>You can then add these gems to your application as you would for vendorized gems.</p>
-<h3>Bundler with rvm and gemsets</h3>
-<p>One of the popular opinions is to just use bundler and ditch gemsets. I tend to use both gemsets and bundler to my advantage. This helps especially when I am working on multiple applications and when I am not online all the time. I ensure that my bundle is upto date before I go offline and then can work on my apps when I am offline by switching gemsets. Sometimes I tend to have multiple gemsets built when I am working on changing or experimenting with gems.</p>
-<p>That way I do not have conflicts when I am using one version of rake for a ruby 1.8.7 application while my other ruby 1.9.3 application uses the latest and greatest rake gem.</p>
-<h3>Cleaning your gems before using bundler</h3>
-<p>Bundler allows you to install and update a set of gems based on the Gemfile. But it is not obvious how you would set up an application that has local gems installed to start using bundler. To start you need to delete all gems from the current gems. Having a clean workspace allows bundler to install gems from Gemfile without conflicts and can prevent a lot of confusion when multiple versions of a gem being installed side by side.</p>
-<p>Here is a snippet that will allow you to clean your gemset.</p>
-<div>
-<pre>
-<code class='ruby'>Delete all gems from gemset
-gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code>
-</pre>
-</div>
-<p>In most cases this will work. But rake seems to be installed as part of the global gemset. So the above command will delete all gems till rake and then abort. To skip deleting rake change the above script as follows</p>
-<div>
-<pre>
-<code class='ruby'>gem list | cut -d ' ' -f1 | ack -v 'rake' | xargs gem uninstall -aIx</code>
-</pre>
-</div>
-<p>(ack is further reading if you don&#8217;t already know what it does.)</p></div>
-  
-  
-
-
-      
-       <a class="comments" href="/blog/2012/03/06/vendorizing-gems-with-bundler/#disqus_thread">Comments</a>
-      
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -817,6 +832,14 @@ gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/11/12/eb_deployer/">EbDeployer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/20/thought-makers-build-me-something/">ThoughtMakers Meetup - Build me something</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/08/01/android-intensive-refined/">Android Intensive - Refined</a>
       </li>
     
@@ -826,14 +849,6 @@ gem list | cut -d &#8217; &#8217; -f1 | xargs gem uninstall -aIx</code>
     
       <li class="post">
         <a href="/blog/2012/10/14/SiriMingle/">SiriMingle - Siri assistance for Mingle</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/10/installing-ubuntu-on-macpro-with-osx-lion/">Installing Ubuntu on MacPro with OSX Lion - Dualboot</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/09/moved-blog-to-octopress/">moved blog to octopress</a>
       </li>
     
   </ul>
