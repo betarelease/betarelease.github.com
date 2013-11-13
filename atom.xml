@@ -4,7 +4,7 @@
   <title><![CDATA[&beta;-release]]></title>
   <link href="http://betarelease.github.com/atom.xml" rel="self"/>
   <link href="http://betarelease.github.com/"/>
-  <updated>2013-11-13T09:59:48-08:00</updated>
+  <updated>2013-11-13T10:01:44-08:00</updated>
   <id>http://betarelease.github.com/</id>
   <author>
     <name><![CDATA[Sudhindra Rao]]></name>
@@ -18,7 +18,7 @@
     <link href="http://betarelease.github.com/blog/2013/11/12/eb_deployer/"/>
     <updated>2013-11-12T00:00:00-08:00</updated>
     <id>http://betarelease.github.com/blog/2013/11/12/eb_deployer</id>
-    <content type="html"><![CDATA[<p>If you have been following this blog, you may have been curious what I have been upto recently. Few weeks ago we(Pengchao Wang and I ) go selected to speak at the aws re:invent 2013 conference to speak about our tool eb_deployer.</p>
+    <content type="html"><![CDATA[<p>If you have been following this blog, you may have been curious what I have been upto recently. Few weeks ago we(Pengchao Wang and I ) got selected to speak at the aws re:invent 2013 conference to speak about our tool eb_deployer.</p>
 
 <p>Here is a little bit of insight on what it is about and why we wrote it.</p>
 
