@@ -22,5 +22,5 @@ Elastic Beanstalk allowed us to worry less about deployments more about our code
 
 EbDeployer as it is built relieves you from the pain of writing any Elastic Beanstalk api code. All you need to do is package your application, define some basic parameters and deploy(or eb_deploy). You are done!
 
-You can find out more about [EbDeployer](http://ThoughtWorkStudios.github.io/eb_deployer) from our talk at [aws re:invent 2013](https://portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=Sudhindra+Rao&searchType=session&tc=0&sortBy=abbreviationSort&p=). Also checkout the tutorial on the website.
+You can find out more about [EbDeployer](http://ThoughtWorksStudios.github.io/eb_deployer) from our talk at [aws re:invent 2013](https://portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=Sudhindra+Rao&searchType=session&tc=0&sortBy=abbreviationSort&p=). Also checkout the tutorial on the website.
 
