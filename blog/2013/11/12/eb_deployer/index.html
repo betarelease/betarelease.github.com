@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ruby Kaigi 2010 - Report - &beta;-release</title>
+  <title>EbDeployer - &beta;-release</title>
   <meta name="author" content="Sudhindra Rao">
 
   
-  <meta name="description" content="Returned from Ruby Kaigi last weekend. The conference was held in Tsukuba International Convention Center and attended much of the enthusiastic ruby &hellip;">
+  <meta name="description" content="If you have been following this blog, you may have been curious what I have been upto recently. Few weeks ago we(Pengchao Wang and I ) got selected &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://betarelease.github.com/blog/2010/09/12/ruby-kaigi-report.textile/">
+  <link rel="canonical" href="http://betarelease.github.com/blog/2013/11/12/eb_deployer/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -69,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">Ruby Kaigi 2010 - Report</h1>
+      <h1 class="entry-title">EbDeployer</h1>
     
     
       <p class="meta">
@@ -84,23 +84,35 @@
   
 
 
-<time datetime="2010-09-12T00:00:00-07:00" pubdate data-updated="true">Sep 12<span>th</span>, 2010</time></p>
+<time datetime="2013-11-12T00:00:00-08:00" pubdate data-updated="true">Nov 12<span>th</span>, 2013</time></p>
       <p class="tags"></p>
     
   </header>
 
 
-<div class="entry-content"><p>Returned from Ruby Kaigi last weekend. The conference was held in Tsukuba International Convention Center and attended much of the enthusiastic ruby community (including Matz, Chad Fowler, Charles Nutter, Yehuda Katz et al). Had a blast presenting ‘Rocking the Enterprise with Ruby’.</p>
+<div class="entry-content"><p>If you have been following this blog, you may have been curious what I have been upto recently. Few weeks ago we(Pengchao Wang and I ) got selected to speak at the aws re:invent 2013 conference to speak about our tool eb_deployer.</p>
 
-<p>Of all the sessions I could attend I liked Matz keynote focusing on the direction of Ruby 2.0. Especially the focus on mix-ins, issues with module mixins and list of ancestors. Class-boxes also looked a very interesting concept. Makes me want to use ruby 2.0 now. Based on the timeline discussed it is on track to be released sometime in 2011. (<a href="http://rubykaigi.tdiary.net/20100829.html#">Ruby 2.0</a>)</p>
+<p>Here is a little bit of insight on what it is about and why we wrote it.</p>
 
-<p>I also liked the treatment of metaprogramming handed out by <a href="http://ducktypo.blogspot.com/">Paolo ‘Nusco’ Perrotta</a>. A delightful presenter who can draw great illustrations as well as explain the issues in ruby programming very well. His message ‘Look at source code from projects to learn what they are doing’. Also, he concluded that what works in Ruby works because of its design (metaprogramming, mixins) may not work in Java/C#. So when you come to ruby you may have to change the way you think.</p>
+<h2>So you want to use the cloud</h2>
 
-<p>Very enthusiastic response to lightning talks (in fact entries to lightning talks were closed even before the start of the conference). Youngest ruby programmer (Shota Fukumori @sora_h) who wants to change ruby internals with his gem ‘few’ and <a href="http://github.com/benhoskings/babushka">babushka</a> by Ben Hoskings were my favourites.(<a href="http://rubykaigi.tdiary.net/20100831.html#p01">Lightning Talks</a>)</p>
+<p>So like everyone else wanted to put our software on the cloud and stop maintaining a shrinkwrap version. Among other things we want to develop many features - fast and have them enhanced as we go. We started building or transforming Mingle to be a SaaS but slowly. When we wanted to add new services that did not belong in Mingle we build them as separate services. This is how Cycle Time Analytics and Single Sign On is built for Mingle. While putting these services on the &#8216;cloud&#8217; we started mending our ways to follow the amazon way. The first attempt along that way was to use CloudFormation and we chose that because it gave us ultimate flexibility and control.</p>
 
-<p>The conference was organised very well, with an unofficial and official party on Friday and Saturday. Thanks to everyone who worked to make this a success.</p>
+<h2>But do not want to do any work</h2>
 
-<p><img class="image" src="/images/rubykaigi_staff.jpg"> (RubyKaigi 2010 Staff (by Naoto Takai))</p>
+<p>But CloudFormation meant a bit of work to maintain the definitions and be meticulous about turning each and every knob and getting it right. We did not want to do any work for the new services we were building since we did not have the constraints of Mingle.</p>
+
+<h2>You should think of Elastic Beanstalk</h2>
+
+<p>On closer look we found Elastic Beanstalk - a technology meant especially for our needs - minimum work maximum benefit. We started building and deploying to Elastic Beanstalk stacks(as they are called) and were amazed with how much we could get accomplished with little effort. Elastic Beanstalk gave us basic technology stack along with autoscaling, basic monitoring and logging all in the bundle. But we wanted to do more with it - think continuous delivery.</p>
+
+<h2>And use EbDeployer</h2>
+
+<p>Elastic Beanstalk allowed us to worry less about deployments more about our code. When we started deploying regularly we found Elastic Beanstalk wanting in some areas. So Pengchao Wang started building now what we call EbDeployer - a tool for automated blue-green deployments for your continuous delivery cycle.</p>
+
+<p>EbDeployer as it is built relieves you from the pain of writing any Elastic Beanstalk api code. All you need to do is package your application, define some basic parameters and deploy(or eb_deploy). You are done!</p>
+
+<p>You can find out more about <a href="http://ThoughtWorksStudios.github.io/eb_deployer">EbDeployer</a> from our talk at <a href="https://portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=Sudhindra+Rao&amp;searchType=session&amp;tc=0&amp;sortBy=abbreviationSort&amp;p=">aws re:invent 2013</a>. Also checkout the tutorial on the website.</p>
 </div>
 
 
@@ -123,7 +135,7 @@
   
 
 
-<time datetime="2010-09-12T00:00:00-07:00" pubdate data-updated="true">Sep 12<span>th</span>, 2010</time>
+<time datetime="2013-11-12T00:00:00-08:00" pubdate data-updated="true">Nov 12<span>th</span>, 2013</time>
       
 
 
@@ -131,7 +143,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2010/09/12/ruby-kaigi-report.textile/" data-via="sudhindraRao" data-counturl="http://betarelease.github.com/blog/2010/09/12/ruby-kaigi-report.textile/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://betarelease.github.com/blog/2013/11/12/eb_deployer/" data-via="sudhindraRao" data-counturl="http://betarelease.github.com/blog/2013/11/12/eb_deployer/" >Tweet</a>
   
   
   
@@ -140,10 +152,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2010/08/28/ruby-kaigi-2010.textile/" title="Previous Post: Ruby Kaigi 2010 - Rocking the Enterprise with Ruby">&laquo; Ruby Kaigi 2010 - Rocking the Enterprise with Ruby</a>
+        <a class="basic-alignment left" href="/blog/2013/10/20/thought-makers-build-me-something/" title="Previous Post: ThoughtMakers Meetup - Build me something">&laquo; ThoughtMakers Meetup - Build me something</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2010/09/12/software-kvm-for-linux-osx-windows.textile/" title="Next Post: Software KVM that works on linux, OSX and Windows">Software KVM that works on linux, OSX and Windows &raquo;</a>
       
     </p>
   </footer>

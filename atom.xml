@@ -4,7 +4,7 @@
   <title><![CDATA[&beta;-release]]></title>
   <link href="http://betarelease.github.com/atom.xml" rel="self"/>
   <link href="http://betarelease.github.com/"/>
-  <updated>2013-08-01T18:23:25-07:00</updated>
+  <updated>2013-11-13T10:01:44-08:00</updated>
   <id>http://betarelease.github.com/</id>
   <author>
     <name><![CDATA[Sudhindra Rao]]></name>
@@ -12,6 +12,72 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[EbDeployer]]></title>
+    <link href="http://betarelease.github.com/blog/2013/11/12/eb_deployer/"/>
+    <updated>2013-11-12T00:00:00-08:00</updated>
+    <id>http://betarelease.github.com/blog/2013/11/12/eb_deployer</id>
+    <content type="html"><![CDATA[<p>If you have been following this blog, you may have been curious what I have been upto recently. Few weeks ago we(Pengchao Wang and I ) got selected to speak at the aws re:invent 2013 conference to speak about our tool eb_deployer.</p>
+
+<p>Here is a little bit of insight on what it is about and why we wrote it.</p>
+
+<h2>So you want to use the cloud</h2>
+
+<p>So like everyone else wanted to put our software on the cloud and stop maintaining a shrinkwrap version. Among other things we want to develop many features - fast and have them enhanced as we go. We started building or transforming Mingle to be a SaaS but slowly. When we wanted to add new services that did not belong in Mingle we build them as separate services. This is how Cycle Time Analytics and Single Sign On is built for Mingle. While putting these services on the &#8216;cloud&#8217; we started mending our ways to follow the amazon way. The first attempt along that way was to use CloudFormation and we chose that because it gave us ultimate flexibility and control.</p>
+
+<h2>But do not want to do any work</h2>
+
+<p>But CloudFormation meant a bit of work to maintain the definitions and be meticulous about turning each and every knob and getting it right. We did not want to do any work for the new services we were building since we did not have the constraints of Mingle.</p>
+
+<h2>You should think of Elastic Beanstalk</h2>
+
+<p>On closer look we found Elastic Beanstalk - a technology meant especially for our needs - minimum work maximum benefit. We started building and deploying to Elastic Beanstalk stacks(as they are called) and were amazed with how much we could get accomplished with little effort. Elastic Beanstalk gave us basic technology stack along with autoscaling, basic monitoring and logging all in the bundle. But we wanted to do more with it - think continuous delivery.</p>
+
+<h2>And use EbDeployer</h2>
+
+<p>Elastic Beanstalk allowed us to worry less about deployments more about our code. When we started deploying regularly we found Elastic Beanstalk wanting in some areas. So Pengchao Wang started building now what we call EbDeployer - a tool for automated blue-green deployments for your continuous delivery cycle.</p>
+
+<p>EbDeployer as it is built relieves you from the pain of writing any Elastic Beanstalk api code. All you need to do is package your application, define some basic parameters and deploy(or eb_deploy). You are done!</p>
+
+<p>You can find out more about <a href="http://ThoughtWorksStudios.github.io/eb_deployer">EbDeployer</a> from our talk at <a href="https://portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=Sudhindra+Rao&amp;searchType=session&amp;tc=0&amp;sortBy=abbreviationSort&amp;p=">aws re:invent 2013</a>. Also checkout the tutorial on the website.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ThoughtMakers Meetup - Build me something]]></title>
+    <link href="http://betarelease.github.com/blog/2013/10/20/thought-makers-build-me-something/"/>
+    <updated>2013-10-20T00:00:00-07:00</updated>
+    <id>http://betarelease.github.com/blog/2013/10/20/thought-makers-build-me-something</id>
+    <content type="html"><![CDATA[<p>The ThoughtMakers meetup was kicked off last week in the San Francisco office. This was the first meeting of enthusiasts sharing ideas and projects that bridged the gap between the real and virtual world.</p>
+
+<h2>Skillset and interests</h2>
+
+<p>We started this group since there was plenty of interest in understanding the hardware world and we had a number of people who already were into tinkering/breaking and building electronic toys. So we thought putting some energy behind it would present another way of people to interact and share.</p>
+
+<p>A quick survey of the room revealed that a number of them had dabbled in building something hardware in their past - school days, self learnings, job experience. The room was largely split between enthusiasts wanting to build/have built remote controlled toys and the other half eager to solder everything. A number of enthusiasts were in this group to find out if they could learn and find someone to mentor them initially to jump the self-learning curve.</p>
+
+<h2>Showcasing what we had already</h2>
+
+<p>Antonio presented his vision of the internet of things. He stressed on why it is now easily possible to venture into the hardware world - what with easy access to cheap hardware - arduino, raspberrypi and such. He also focused on showcasing how this tinkering could lead to useful solutions for the businesses.</p>
+
+<p>Pete Hodgson showcased his awesome build light- built with an arduino board and strip of multicolor LEDs all wired up inside a cheap IKEA table lamp.</p>
+
+<p>I showed off Ian&#8217;s Mingle card wall reader built for RFID cards that interfaces with Mingle on the web, and the leap motion control we prototyped for using Mingle with gestures.</p>
+
+<h2>What is happening next and why you should join?</h2>
+
+<p>Everyone participating is excited to build something soon. So we will be working on presenting our ideas and finding people to pair with/get support from.</p>
+
+<p>There are also some lightning talks planned - some around self learning these skills and some around the cool projects we will be building.</p>
+
+<p>Also watch out for some guest speakers with some expertise and hands on experience in the field of building hardware.</p>
+
+<p>If you have a project in mind do come along and share.</p>
+
+<p>It happens every other Wednesday from 6pm to 8pm. Next one is scheduled for Oct 30th.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android Intensive - Refined]]></title>
@@ -629,37 +695,6 @@ simple.</p>
 <p><a href="http://betarelease.github.com/images/rocking_the_enterprise.ppt">Rocking the Enterprise with Ruby (PowerPoint)</a></p>
 
 <p>Be virtually there!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Streaming Media from Ubuntu to Bravia]]></title>
-    <link href="http://betarelease.github.com/blog/2010/08/04/streaming-media-from-ubuntu-to-bravia.textile/"/>
-    <updated>2010-08-04T00:00:00-07:00</updated>
-    <id>http://betarelease.github.com/blog/2010/08/04/streaming-media-from-ubuntu-to-bravia.textile</id>
-    <content type="html"><![CDATA[<p>Over this weekend I set out to connect my Ubuntu machine with my Sony Bravia TV.( With inspiration from <a href="http://thoughtworker.in/2010/07/20/dns-323-ps3-and-upnp/">Sachin Dharmapurikar</a> and <a href="http://en.wikipedia.org/wiki/Digital_Living_Network_Alliance">DLNA</a>.)</p>
-
-<p>Googling yielded a number of techniques to stream media from linux over the home network. Some that did suit Bravia and some that did not. The easiest one to work with was <a href="http://blog.mycila.com/2010/01/dlna-on-sony-bravia-tvs.html">minidlna server</a>. Snappy install and my Bravia recognised it like any other streaming website. I am running the minidlna server for my music and photos and all the content that is in DVD/mpeg2 format.(<a href="http://wiki.oppodigital.com/index.php?title=DLNA_Linux">How to install on linux</a>)</p>
-
-<p>I do have some videos that came to me as avi and minidlna does not support transcoding. (There are some that describe how to do it with Windows but no out of the box solution with linux yet.) Google for <a href="http://ps3mediaserver.blogspot.com/">PS3 Media servers</a> I stumbled upon a <a href="http://code.google.com/p/ps3mediaserver/">PS3 Media Server for Linux</a> - which is a java application that streams and transcodes nicely.</p>
-
-<p>To get the video to be non-jittery and avoid ffmpeg/tsmuxer crashing I had to tone the transcoding down to Lowest Quality. Even with that the video is pleasing albeit a bit grainy in some cases. Documentation suggests allocating more memory or CPU might help.</p>
-
-<p>To support all this I also installed a bunch of libraries described by many to help <a href="http://juliensimon.blogspot.com/2008/12/howto-compiling-mediatomb.html">transcode,mux and display thumbnails.</a>. The instructions are for mediatomb but these libraries work with other dlna servers.</p>
-
-<p>Next stop Getting <a href="http://www.r3uk.com/index.php/home/38-software/122-ps3-dlna-streaming-in-ubuntu-gutsy">mediatomb to work on linux and bravia</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setting up wireless usb card on Ubuntu - Lucid Lynx]]></title>
-    <link href="http://betarelease.github.com/blog/2010/06/25/setup-wireless-on-ubuntu.textile/"/>
-    <updated>2010-06-25T00:00:00-07:00</updated>
-    <id>http://betarelease.github.com/blog/2010/06/25/setup-wireless-on-ubuntu.textile</id>
-    <content type="html"><![CDATA[<p>I have faced the same problems with Wireless Networking as mentioned by
-many on the web.</p>
-
-<p>I tried <a href="https://help.ubuntu.com/community/HardwareSupportComponentsWirelessNetworkCardsLinksys#USB">Hardware Compatibility List for Linux</a> and many links on that list. In an attempt to install custom drivers I would always end up with a network card that would detect wireless but never would communicate over wireless. After going through a number of cards and uninstalling and installing drivers I found one that worked really well without resorting to the ndiswrapper solution (dealing with anything windows just feels unclean). Finally I found a card that worked and also provided native linux drivers.The wireless usb card that worked was - <a href="http://sasha.gerrand.id.au/2010/06/03/resolving-driver-problems-for-d-link-dwa-125-wireless-150-usb-adapter-in-ubuntu/">D-Link DWA–125 with Ubuntu Lucid Lynx</a>.It also helped that D-Link in fact published a linux driver for their wireless usb card.</p>
 ]]></content>
   </entry>
   
