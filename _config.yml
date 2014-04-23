@@ -8,7 +8,7 @@ subtitle: "version x.1 - always &beta; always released"
 author: Sudhindra Rao
 simple_search: http://google.com/search
 description: blog about technology, community, beta ideas
-
+hide_design_credits: true
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
 # http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
@@ -58,10 +58,10 @@ default_asides: [asides/twitter.html, asides/recent_posts.html, tag_cloud.html,a
 # ----------------------- #
 
 # Github repositories
-github_user: betarelease
-github_repo_count: 0
-github_show_profile_link: true
-github_skip_forks: true
+#github_user: betarelease
+#github_repo_count: 0
+#github_show_profile_link: true
+#github_skip_forks: true
 
 # Twitter
 twitter_user: sudhindraRao

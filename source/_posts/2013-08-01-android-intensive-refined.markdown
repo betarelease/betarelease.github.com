@@ -21,7 +21,7 @@ Having everything setup had us started on the right foot. Kris also consciously 
 
 _Key: Small, achievable, sharable goals._
 
-
+<!--more-->
 ## Concepts we learnt and implemented
 
   - Adding the action bar to an application
