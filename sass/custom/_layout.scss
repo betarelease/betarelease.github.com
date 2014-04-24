@@ -19,3 +19,15 @@
 //$sidebar-pad-medium: 15px;
 //$sidebar-pad-wide: 20px;
 //$sidebar-width-wide: 300px;
+
+.avatar {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eee;
+  transition-property: left;
+  transition-duration: 0.5s;
+}
