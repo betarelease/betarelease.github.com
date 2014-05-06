@@ -23,7 +23,7 @@ _Key: Build teams to facilitate self-learning._
 We chalked out a weekend where we were able to get all the developers and trainers in the same location for a workshop. Apart from how long the training was we wanted to ensure that whatever we covered applied to all the teams and the applications that they were building. The initial versions of the applications were looked at, and assessed to understand testability, domain and maturity. 
 Given the structure of the program and the heavy collaboration we wanted to ensure - we wanted tackle a well defined set of stories that would be small. Also, that the stories needed to cover enough ground into the Android technology space.
 
-{% img left /images/piggy.jpeg 450 700 %}
+{% img left /images/piggy.jpeg 700 450 %}
 
 _Key: Focus on short set of cohesive stories._
 
@@ -55,7 +55,7 @@ The workshop trainers and teams agreed on a few ground rules during the training
    -   After every recess - share code and switch pairs - to allow sharing experience
    -   No developer left behind - Help each other setup machines, checkin code, understand concepts and move on.
 
-{% img left /images/android_pairing.jpeg 450 700 %}
+{% img left /images/android_pairing.jpeg 700 450%}
 
 _Key: Do frequent checks to ensure that everyone is engaged and keep pace of the session._
 
@@ -64,7 +64,7 @@ _Key: Do frequent checks to ensure that everyone is engaged and keep pace of the
 The intent of this workshop was to bring all the teams together and collaborate. While doing so we wanted to understand some basic concepts in depth. Ensuring people collaborate on the same project, sharing code periodically and developing a feature in depth worked for us well. We were not able to cover as much as we had planned but were able to discover patterns, discuss them and apply them to our applications. Having the focus ensured the richness of learning. We were able to build complete UI, make it testable and learn how to tune its performance. We were able to learn how Android behaves and communicates with a service. 
 Learning about the mobile experience - especially where we learnt how to allow the user to scroll through a bunch of listings with images without giving a feel of 'the app is still loading as it is scrolled' - was what we achieved by the end of the workshop. 
 
-{% img left /images/android_showcase.jpeg 450 700 %}
+{% img left /images/android_showcase.jpeg 700 450%}
 
 Concepts we learnt:
 

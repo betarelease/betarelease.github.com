@@ -16,7 +16,7 @@ _Key: Ensure better preparation with setup of environments._
 <!--more-->
 ## Smaller lessons, quicker turnaround, more collaboration
 
-{% img left /images/code_showcase.jpg 450 700 %}
+{% img left /images/code_showcase.jpg 700 450 %}
 
 Having everything setup had us started on the right foot. Kris also consciously chose stories that would be implemented in a short time so that we would have more time to talk about the nuances and learn more. Since the code was ready to deploy making small changes and iteratively see it work was a satisfying experience to the developers. We also did more frequent/more showcases of code as we observed that there were multiple approaches being implemented. At one point of time it was a competition, where everyone wanted the best implementation to be shown and used. This debate of ideas kept the mood light and allowed for healthy critique of implementation. Also since it was being done iteratively and committed to the code base everytime we would be able to see/trace the evolution of the implementation.
 
