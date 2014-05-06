@@ -17,6 +17,7 @@ One of the teams figured out how to use Robolectric for unit tests. Another grou
 
 _Key: Build teams to facilitate self-learning._
 
+<!--more-->
 ## Planning for the training
 
 We chalked out a weekend where we were able to get all the developers and trainers in the same location for a workshop. Apart from how long the training was we wanted to ensure that whatever we covered applied to all the teams and the applications that they were building. The initial versions of the applications were looked at, and assessed to understand testability, domain and maturity. 

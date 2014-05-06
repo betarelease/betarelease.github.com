@@ -13,6 +13,7 @@ One of the feedback items in the past Android Intensive Retrospective was the ti
 
 _Key: Ensure better preparation with setup of environments._
 
+<!--more-->
 ## Smaller lessons, quicker turnaround, more collaboration
 
 {% img left /images/code_showcase.jpg 450 700 %}
