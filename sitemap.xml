@@ -156,7 +156,7 @@
     </url>
     <url>
         <loc>http://betarelease.github.com/blog/2012/07/09/moved-blog-to-octopress/</loc>
-        <lastmod>2013-01-12T18:26:09-08:00</lastmod>
+        <lastmod>2013-05-28T11:56:19-07:00</lastmod>
     </url>
     <url>
         <loc>
@@ -166,26 +166,40 @@
     </url>
     <url>
         <loc>http://betarelease.github.com/blog/2012/10/14/SiriMingle/</loc>
-        <lastmod>2013-01-12T18:26:48-08:00</lastmod>
+        <lastmod>2013-05-28T11:56:19-07:00</lastmod>
     </url>
     <url>
         <loc>http://betarelease.github.com/blog/2013/05/25/android-intensive/</loc>
-        <lastmod>2013-05-25T19:01:27-07:00</lastmod>
+        <lastmod>2013-08-01T18:21:50-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://betarelease.github.com/blog/2013/08/01/android-intensive-refined/</loc>
+        <lastmod>2013-08-01T18:22:28-07:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://betarelease.github.com/blog/2013/10/20/thought-makers-build-me-something/
+        </loc>
+        <lastmod>2013-11-12T11:33:18-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://betarelease.github.com/blog/2013/11/12/eb_deployer/</loc>
+        <lastmod>2013-11-13T10:01:10-08:00</lastmod>
     </url>
     <url>
         <loc>http://betarelease.github.com/about/</loc>
-        <lastmod>2013-01-12T18:08:32-08:00</lastmod>
+        <lastmod>2013-05-28T11:56:19-07:00</lastmod>
     </url>
     <url>
         <loc>http://betarelease.github.com/blog/archives/</loc>
-        <lastmod>2013-05-25T19:01:27-07:00</lastmod>
+        <lastmod>2013-11-13T10:01:10-08:00</lastmod>
     </url>
     <url>
         <loc>http://betarelease.github.com/</loc>
-        <lastmod>2013-05-25T19:01:27-07:00</lastmod>
+        <lastmod>2013-11-13T10:01:10-08:00</lastmod>
     </url>
     <url>
         <loc>http://betarelease.github.com/profile.html</loc>
-        <lastmod>2013-01-12T18:08:32-08:00</lastmod>
+        <lastmod>2013-05-28T11:56:19-07:00</lastmod>
     </url>
 </urlset>

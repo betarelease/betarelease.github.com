@@ -14,21 +14,20 @@ The Challenge: Install Ubuntu on a MacPro that is running OSX Lion and make it s
 
 
 
-* Install REFit
+## Install REFit
 
 Download and install REFit. This will allow your BIOS to work with bootloaders other than that of Apple. Once you have installed it restart you machine. If you are lucky you will see the REFIt menu on restart. Do not be disappointed if you do not see it at first. Restart again and you will surely see the REFIt menu this time. Once you have REFIt installed it is time to partition the HardDisk to make room for Ubuntu.
 
+<!--more-->
 
-* Partitioning the disk
+## Partitioning the disk
 
 OSX comes with two utilities that allow you to partition your hard disk. Word of caution: Do not use another partitioning tool as it has been knows to cause problems - especially when booting back into the Mac. You will put your data on the Mac OSX partition at risk.
 Given that you have to use OSX to atleast initially partitioning disks - you can choose between Disk Utility or Boot camp assistant. In both scenarios the partitioning is pretty clearly documented and easy. In the case of bootcamp with the new UI select "Install  or remove Windows 7" and uncheck "Download the latest Windows support from Apple".
 
 When prompted choose the partition size for Windows by dragging the partitioner. Once you have a desirable size configured clicking 'Continue' will look for a Windows 7 disk for installing Windows on the new partition. You can trick the boot camp assistant by actually inserting a bootable Windows 7 disk. Once it detects the disk and starts partitioning you can remove the Windows 7 disk and replace it with Ubuntu bootable disk. Once the partitioning is complete close Bootcamp Assistant.
 
-
-
-* Installing Ubuntu
+## Installing Ubuntu
 
 Now restart the machine and hold the 'C' key while restarting. This will allow you to boot from the bootable CD Drive. Once booting starts you should see the Ubuntu installation UI. Follow the instructions till the time, when it asks you for a partition to install Ubuntu. 
 Choose manual partition editing.
