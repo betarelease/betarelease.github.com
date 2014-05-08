@@ -1,3 +1,6 @@
 [submodule ".themes/MediumFox"]
-	path = .themes/MediumFox
-	url = https://github.com/sevenadrian/MediumFox
+  path = .themes/MediumFox
+  url = https://github.com/sevenadrian/MediumFox
+[submodule ".themes/foxslide"]
+  path = .themes/foxslide
+  url = https://github.com/sevenadrian/foxslide
