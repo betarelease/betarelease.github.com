@@ -20,7 +20,9 @@ Here is how:
 On virtualbox the following setting needs to be configured to ensure that the VM running Ubuntu gets a native IP address on the host network. 
 
 <!--more-->
+<!-- {% img left /images/vm_config.png 300 500 %} -->
 
+<img src="{{ root_url }}/images/vm_config.png" />
 
 * Install git, ruby et al.. (Assuming that you already know this)
 
@@ -45,8 +47,12 @@ siriproxy gencerts # generates certificates in .siriproxy folder
 
 Email this certificate and install it on your phone by opening the email and opening the attachment. 
 
-{% img left /images/sirimingle_cert.png 300 500 %}
-{% img right /images/dns_entry.png 300 500 %}
+<!-- {% img left /images/sirimingle_cert.png 300 500 %} -->
+<img src="{{ root_url }}/images/sirimingle_cert.png" />
+
+<!-- {% img right /images/dns_entry.png 300 500 %} -->
+<img src="{{ root_url }}/images/dns_entry.png" />
+
 
 Once the cert is installed change the dns settings for the network and add the IP address of your Ubuntu machine before the other DNS server entry.
 
