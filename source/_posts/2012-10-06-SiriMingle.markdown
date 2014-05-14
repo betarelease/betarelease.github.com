@@ -20,7 +20,7 @@ Here is how:
 On virtualbox the following setting needs to be configured to ensure that the VM running Ubuntu gets a native IP address on the host network. 
 
 <!--more-->
-{% img left /images/vm_config.png 300 500 %}
+
 
 * Install git, ruby et al.. (Assuming that you already know this)
 
