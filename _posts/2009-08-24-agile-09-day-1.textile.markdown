@@ -1,0 +1,21 @@
+---
+layout: post
+title: Agile Conference 2009 - day 1
+tags: [speaker, agile, conference, chicago, mock objects, paulo caroli,
+sumeet moghe, thoughtworks, 2009]
+---
+
+Very busy even though I started at 11:00am.
+
+Met a number of ThoughtWorkers, ex-ThoughtWorkers (talking about Aslak, Liz, h, Foemmel, Glenn Bernsohn, Naresh Jain) and many people I did not know before.
+
+ThoughtWorks booth is a hit - atleast 25 entries for the free ipod touch.
+
+Met people from Moscow, Israel, Brazil, India, UK.
+
+Met people from different Agile organizations. So wonderful to see so much activity in the agile space. Just proves that ThoughtWorks has been right all along and we can say “We told you so”.
+
+Went to interesting session from Mary Poppendieck - impressed by her speaking
+skills. (Hope I can come close to those skills during my talk with <a href="http://www.caroli.org"/>Paulo</a>).
+
+Hope to see many more at the Agile Open office at the ThoughtWorks Chicago office tomorrow.

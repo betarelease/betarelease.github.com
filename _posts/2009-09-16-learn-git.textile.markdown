@@ -1,0 +1,11 @@
+---
+layout: post
+title: Learn Git
+tags: [git, tutorial, vcs, distributed vcs]
+---
+
+One big <a href="http://www.github.com"/>repository</a> and one big repository on <a href="http://learn.github.com/">learning it all</a> about git.
+
+Now you can’t say you do not know enough not to try it.
+
+“May the Git be with you!”

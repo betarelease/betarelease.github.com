@@ -55,7 +55,7 @@ html {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 0.5rem 0.5rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
@@ -65,7 +65,7 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 18rem;
+    width: 16rem;
     text-align: left;
   }
 }
@@ -79,8 +79,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
-  font-size: 3.25rem;
+  font-size: 1.5rem;
 }
 
 /* Sidebar nav */
@@ -247,4 +246,16 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+.avatar {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eee;
+  transition-property: left;
+  transition-duration: 0.5s;
 }
