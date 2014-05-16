@@ -6,7 +6,8 @@ highlighter:      pygments
 permalink:        pretty
 
 # Setup
-title:            Sudhindra Rao("&beta;-release")
+title:            Sudhindra Rao
+subtitle:         '&beta;-release'
 tagline:          'A Jekyll theme'
 description:      'Developer, Coach, Practitioner, Robotics Geek, Cricket Fan in San Francisco'
 url:              http://betarelease.github.com
