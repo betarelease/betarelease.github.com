@@ -75,15 +75,19 @@ html {
   color: #fff;
 }
 
+.fineprint {
+  color: rgba(255,255,255,.7);
+  font-size: 0.75rem;
+}
 /* About section */
 .sidebar-about h1 {
-  color: #fff;
+  color: #EF5B6C;
   margin-top: 0;
   font-size: 1.5rem;
 }
 
 .sidebar-about h2 {
-  color: red;
+  color: #EF5B6C;
   margin-top: 0;
   font-size: 1rem;
 }
