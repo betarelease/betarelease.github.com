@@ -4,3 +4,6 @@
 [submodule ".themes/foxslide"]
   path = .themes/foxslide
   url = https://github.com/sevenadrian/foxslide
+[submodule "posts"]
+	path = posts
+	url = git://github.com/betarelease/blog_posts.git
