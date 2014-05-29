@@ -55,7 +55,7 @@ html {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 0.5rem 0.5rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
@@ -65,7 +65,7 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 18rem;
+    width: 16rem;
     text-align: left;
   }
 }
@@ -75,6 +75,10 @@ html {
   color: #fff;
 }
 
+.fineprint {
+  color: rgba(255,255,255,.7);
+  font-size: 0.75rem;
+}
 /* About section */
 .sidebar-about h1 {
   color: #EF5B6C;
@@ -248,10 +252,13 @@ a.sidebar-nav-item:focus {
   color: #8f5536;
 }
 
+<<<<<<< HEAD
 .fineprint {
   color: rgba(255,255,255,.7);
   font-size: 0.75rem;
 }
+=======
+>>>>>>> 7b82f349a72d589f6f2583eb92bf574c9b04cf5c
 .avatar {
   position: relative;
   width: 140px;
