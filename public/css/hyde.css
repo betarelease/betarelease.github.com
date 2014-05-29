@@ -77,10 +77,9 @@ html {
 
 /* About section */
 .sidebar-about h1 {
-  color: #fff;
+  color: #EF5B6C;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
-  font-size: 3.25rem;
+  font-size: 1.5rem;
 }
 
 /* Sidebar nav */
@@ -247,4 +246,20 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+.fineprint {
+  color: rgba(255,255,255,.7);
+  font-size: 0.75rem;
+}
+.avatar {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eee;
+  transition-property: left;
+  transition-duration: 0.5s;
 }
