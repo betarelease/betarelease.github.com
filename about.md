@@ -11,7 +11,13 @@ Sudhindra works as a developer in the trenches building applications that are cr
 His success stories include building an application for the largest publishing company in Chicago, a large datacenter automation effort, large auctioning system and recently a voting application to help out with national elections. His experiences have taught him about various aspects of application delivery - User Experience, Performance, Maintainability.
 
 In his free time he dabbles in learning by writing small applications or tools - most of which are shared on [his github account](http://github.com/betarelease).
-Sudhindra has also worked as an agile/ruby evangelist. He developed training/coaching sessions and has delivered them to success. He also likes speaking at conferences and has recently presented at [RubyKaigi 2010](http://rubykaigi.org) and [Agile Eastern Europe 2010](http://agileee.org).
+Sudhindra has also worked as an agile/ruby evangelist. He developed training/coaching sessions and has delivered them to success. He also likes speaking at conferences and has spoken at 
+
+- [aws re:invent 2013](http://blogs.aws.amazon.com/application-management/post/TxZ8FZHFP6EYOQ/AWS-re-Invent-2013-Sessions-Now-Available)
+- [Agile and Beyond 2012](http://agileandbeyond.org)
+- [Agile Eastern Europe 2010](http://agileee.org).
+- [RubyKaigi 2010](http://rubykaigi.org)
+- [Agile 2009](http://agileconf.com)
 
 Sudhindra writes about his experiences in software development here.
 He tweets as [@sudhindraRao](http://twitter.com/sudhindraRao)
