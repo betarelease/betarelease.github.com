@@ -7,15 +7,15 @@
 
   {% include sidebar.html %}
   <div class="topbar">
-    <span><img class="tiny-avatar" src="/images/me.png">Sudhindra Rao</span>
+    <span class="menu-trigger"><img class="tiny-avatar" src="/images/me.png">Sudhindra Rao</span>
   </div>
   <div class="content container">
     {{ content }}
   </div>
   <script type="text/javascript">
-  $(".tiny-avatar").click(function(){
+  $(".menu-trigger").click(function(){
     $(".topbar").toggleClass("slide-right");
-    $(".sidebar" ).slideToggle("slow"); 
+    $(".sidebar" ).slideToggle("slow");
   });
   </script>
 </body>
