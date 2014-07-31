@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include sidebar.html %}
-
-    <div class="content container">
-      {{ content }}
-    </div>
-
-  </body>
+  {% include sidebar.html %}
+  <div class="topbar">
+    <span><img class="tiny-avatar" src="/images/me.png">Sudhindra Rao</span>
+  </div>
+  <div class="content container">
+    {{ content }}
+  </div>
+  <script type="text/javascript">
+  $(".tiny-avatar").click(function(){
+    $(".topbar").toggleClass("slide-right");
+    $(".sidebar" ).slideToggle("slow"); 
+  });
+  </script>
+</body>
 </html>
