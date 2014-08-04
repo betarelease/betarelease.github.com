@@ -293,3 +293,9 @@ img.tiny-avatar {
   transition-property: left;
   transition-duration: 0.5s;
 }
+
+img.twitter {
+  float: right;
+  margin-right: 30px;
+  width: 25px;
+}
