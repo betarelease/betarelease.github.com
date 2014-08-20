@@ -8,7 +8,7 @@
   {% include sidebar.html %}
   <div class="topbar">
     <span class="menu-trigger"><img class="tiny-avatar" src="/images/me.png">Sudhindra Rao</span>
-    <a href="http://twitter.com/sudhindraRao"><img class="twitter" src="/images/Twitter_logo_blue.png"></a>
+    <span class="twitter"><a href="http://twitter.com/sudhindraRao"><img src="/images/Twitter_logo_blue.png"></a></span>
   </div>
 
   <div class="content container">
@@ -17,8 +17,7 @@
 
   <script type="text/javascript">
   $(".menu-trigger").click(function(){
-    $(".topbar").toggleClass("slide-right");
-    $(".sidebar" ).slideToggle("slow");
+    $(".sidebar").animate({width: 'toggle'})
   });
   </script>
 </body>

@@ -294,7 +294,7 @@ img.tiny-avatar {
   transition-duration: 0.5s;
 }
 
-img.twitter {
+.twitter {
   float: right;
   margin-right: 30px;
   width: 25px;
