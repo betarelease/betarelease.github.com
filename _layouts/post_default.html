@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+{% include head.html %}
+
+<body>
+
+  {% include sidebar.html %}
+  <h1 class="post-splash-image"></h1>
+  <div class="topbar">
+    <span class="menu-trigger"><img class="tiny-avatar" src="/images/me.png">Sudhindra Rao</span>
+    <span class="twitter"><a href="http://twitter.com/sudhindraRao"><img src="/images/Twitter_logo_blue.png"></a></span>
+  </div>
+
+  <div class="content container">
+    {{ content }}
+  </div>
+
+  <script type="text/javascript">
+  $(".menu-trigger").click(function(){
+    $(".sidebar").animate({width: 'toggle'})
+  });
+  </script>
+</body>
+</html>
