@@ -4,19 +4,19 @@ title: About
 ---
 
 <p><img class="avatar" src="/images/me.png" alt="Sudhindra Rao" /></p>
-  
+
 Sudhindra believes in releasing fast and often and hence the name of this blog. This blog is updated as soon as content is available and some of the content might not be completely flushed out. Some of the content is updated based on community feedback.
 
 Sudhindra works as a developer in the trenches building applications that are critical to business. He has worked with various technologies starting with Java and recently worked with Ruby on Rack.
 His success stories include building an application for the largest publishing company in Chicago, a large datacenter automation effort, large auctioning system and recently a voting application to help out with national elections. His experiences have taught him about various aspects of application delivery - User Experience, Performance, Maintainability.
 
 In his free time he dabbles in learning by writing small applications or tools - most of which are shared on [his github account](http://github.com/betarelease).
-Sudhindra has also worked as an agile/ruby evangelist. He developed training/coaching sessions and has delivered them to success. He also likes speaking at conferences and has spoken at 
+Sudhindra has also worked as an agile/ruby evangelist. He developed training/coaching sessions and has delivered them to success. He also likes speaking at conferences and has spoken at
 
-- [aws re:invent 2013](http://blogs.aws.amazon.com/application-management/post/TxZ8FZHFP6EYOQ/AWS-re-Invent-2013-Sessions-Now-Available)
-- [Agile and Beyond 2012](http://agileandbeyond.org)
+- [aws re:invent 2013](http://blogs.aws.amazon.com/application-management/post/TxZ8FZHFP6EYOQ/AWS-re-Invent-2013-Sessions-Now-Available) - [My Article](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)
+- [Agile and Beyond 2012](http://agileandbeyond.org) - [My Slides](http://betarelease.github.io/build_feedback/slides.html)
 - [Agile Eastern Europe 2010](http://agileee.org).
-- [RubyKaigi 2010](http://rubykaigi.org)
+- [RubyKaigi 2010](http://rubykaigi.org) - [My Slides](http://betarelease.github.io/images/rocking_the_enterprise.ppt)
 - [Agile 2009](http://agileconf.com)
 
 Sudhindra writes about his experiences in software development here.
