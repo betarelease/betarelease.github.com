@@ -13,10 +13,10 @@ His success stories include building an application for the largest publishing c
 In his free time he dabbles in learning by writing small applications or tools - most of which are shared on [his github account](http://github.com/betarelease).
 Sudhindra has also worked as an agile/ruby evangelist. He developed training/coaching sessions and has delivered them to success. He also likes speaking at conferences and has spoken at
 
-- [aws re:invent 2013](http://blogs.aws.amazon.com/application-management/post/TxZ8FZHFP6EYOQ/AWS-re-Invent-2013-Sessions-Now-Available) - [My Article](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)
-- [Agile and Beyond 2012](http://agileandbeyond.org) - [My Slides](http://betarelease.github.io/build_feedback/slides.html)
+- [aws re:invent 2013](http://blogs.aws.amazon.com/application-management/post/TxZ8FZHFP6EYOQ/AWS-re-Invent-2013-Sessions-Now-Available) - [Article](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)
+- [Agile and Beyond 2012](http://agileandbeyond.org) - [Slides](http://betarelease.github.io/build_feedback/slides.html)
 - [Agile Eastern Europe 2010](http://agileee.org).
-- [RubyKaigi 2010](http://rubykaigi.org) - [My Slides](http://betarelease.github.io/images/rocking_the_enterprise.ppt)
+- [RubyKaigi 2010](http://rubykaigi.org) - [Slides](http://betarelease.github.io/images/rocking_the_enterprise.ppt)
 - [Agile 2009](http://agileconf.com)
 
 Sudhindra writes about his experiences in software development here.
