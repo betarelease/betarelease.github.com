@@ -3,7 +3,9 @@ layout: research
 title: Status of the Cloud
 ---
 
-Building Distributed applications:
+# Building Distributed applications
+
+I have been building large scale distributed applications since the last few years and would like to illustrate a few examples and learnings.
 
 ## Building a large scale datacenter management application
 
@@ -38,9 +40,8 @@ Cloud would like to be consistent at all times - but that is a wish. Cloud archi
 
 Another problem is people need to update applications all the time.
 
-I will detail some learnings around
-
-* What to cloud services do to support high availability?
+* How does a cloud service ensure high availability?
+Data centers use high level of virtualization to provision compute instances and provide high availability. Virtualization allows the data centers to provide an abstraction of hardware thus allowing them to replace and fix broken hardware from time to time. Since Virtual Machines(VMs) can be provisioned for different operating systems a lot of downtime can be saved by pre-provisioning and hot swapping them even in case of hardware failures.
 
   * Benefits of virtualization:
     * Computer is a resource
