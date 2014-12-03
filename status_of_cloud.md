@@ -80,5 +80,11 @@ Data centers use high level of virtualization to provision compute instances and
 References:
 
 * [Interprocess Comms in Cloud: Pros, Cons of Microservices Architectures - Sudhir Tonse](https://www.youtube.com/watch?v=CriDUYtfrjs)
+- [aws re:invent 2013 - EbDeployer](https://www.slideshare.net/AmazonWebServices/aws-elastic-beanstalk-under-the-hood-dmg301-aws-reinvent-2013-28428616) - [Article](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)
+- [Agile and Beyond 2012](http://agileandbeyond.org) - [Slides](http://betarelease.github.io/build_feedback/slides.html)
+- [Agile Eastern Europe 2010](http://agileee.org).
+- [RubyKaigi 2010](http://rubykaigi.org) - [Slides](http://betarelease.github.io/images/rocking_the_enterprise.ppt)
+- [Agile 2009](http://agileconf.com)
 
+* [My Insights Article1]
 hystrix and prana from netflix

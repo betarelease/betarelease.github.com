@@ -13,11 +13,17 @@ His success stories include building an application for the largest publishing c
 In his free time he dabbles in learning by writing small applications or tools - most of which are shared on [his github account](http://github.com/betarelease).
 Sudhindra has also worked as an agile/ruby evangelist. He developed training/coaching sessions and has delivered them to success. He also likes speaking at conferences and has spoken at
 
-- [aws re:invent 2013](http://blogs.aws.amazon.com/application-management/post/TxZ8FZHFP6EYOQ/AWS-re-Invent-2013-Sessions-Now-Available) - [Article](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)
+- [aws re:invent 2013](http://www.confreaks.com/videos/4469-awsrei2013-aws-elastic-beanstalk-under-the-hood-dmg301) - [Slides](http://www.slideshare.net/AmazonWebServices/aws-elastic-beanstalk-under-the-hood-dmg301-aws-reinvent-2013-28428616)
 - [Agile and Beyond 2012](http://agileandbeyond.org) - [Slides](http://betarelease.github.io/build_feedback/slides.html)
-- [Agile Eastern Europe 2010](http://agileee.org).
-- [RubyKaigi 2010](http://rubykaigi.org) - [Slides](http://betarelease.github.io/images/rocking_the_enterprise.ppt)
-- [Agile 2009](http://agileconf.com)
+- [Agile Eastern Europe 2010](http://agileee.org) - [Slides](http://www.slideshare.net/releasebeta/making-feedback-visible)
+- [RubyKaigi 2010](http://rubykaigi.org) - [Slides](http://www.slideshare.net/releasebeta/rocking-the-enterprise-with-ruby-rubykaigi-2010)
+- [Agile 2009](http://agileconf.com) - [Slides](http://www.slideshare.net/releasebeta/mock-objectsinaction-paulocaroliandsudhindraraoagile2009final)
+
+Articles he has written
+
+- [How we moved to the cloud](http://www.thoughtworks.com/insights/blog/how-we-moved-cloud)
+- [Automate your Deployments with EbDeployer](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)
+
 
 Sudhindra writes about his experiences in software development here.
 He tweets as [@sudhindraRao](http://twitter.com/sudhindraRao)
