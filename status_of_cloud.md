@@ -21,7 +21,9 @@ Another application based on a workflow mechanism was built to ensure that the c
 
 _Key learning: Large data stores that scale and replicate across ocean boundaries have latency as well as performance issues. Choose to build geography limited applications. Provide only an aggregated or summary view at the cross geography level._
 
-_Reference: - [RubyKaigi 2010](http://rubykaigi.org) - [Slides](http://betarelease.github.io/images/rocking_the_enterprise.ppt)_
+References:
+
+- [RubyKaigi 2010](http://rubykaigi.org) - [Slides](http://betarelease.github.io/images/rocking_the_enterprise.ppt)_
 
 ## A large scale data store for an election campaign
 
@@ -44,11 +46,11 @@ Replicating across zones(datacenters) ensured our application and its data was a
 
 _Key learning: Scaling applications does not necessarily need the applications to be distributed. Other mechanisms like data resilience, zone replication, Content Delivery Networks, Elastic Cache, User customized cache are all valid and great solutions before distributing application load._
 
-_Reference:
-* [My article on moving to the cloud](http://www.thoughtworks.com/insights/blog/how-we-moved-cloud)
-* [EbDeployer](https://www.slideshare.net/AmazonWebServices/aws-elastic-beanstalk-under-the-hood-dmg301-aws-reinvent-2013-28428616)
-* [Article](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)_
+References:
 
+* [My article on moving to the cloud](http://www.thoughtworks.com/insights/blog/how-we-moved-cloud)
+* [EbDeployer - Slides](https://www.slideshare.net/AmazonWebServices/aws-elastic-beanstalk-under-the-hood-dmg301-aws-reinvent-2013-28428616)
+* [EbDeployer - Article](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)
 
 
 ## Recommendations for building new age distributed systems
