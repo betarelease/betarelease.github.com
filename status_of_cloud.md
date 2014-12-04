@@ -44,6 +44,13 @@ Replicating across zones(datacenters) ensured our application and its data was a
 
 _Key learning: Scaling applications does not necessarily need the applications to be distributed. Other mechanisms like data resilience, zone replication, Content Delivery Networks, Elastic Cache, User customized cache are all valid and great solutions before distributing application load._
 
+_Reference:
+* [My article on moving to the cloud](http://www.thoughtworks.com/insights/blog/how-we-moved-cloud)
+* [EbDeployer](https://www.slideshare.net/AmazonWebServices/aws-elastic-beanstalk-under-the-hood-dmg301-aws-reinvent-2013-28428616)
+* [Article](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)_
+
+
+
 ## Recommendations for building new age distributed systems
 
 After having built a few distributed solutions I have learnt and observed a few things.Here are some recommendations based on those learnings.
@@ -91,14 +98,6 @@ Data centers use high level of virtualization to provision compute instances and
 1/3 of all internet traffic in US is Netflix
 
 
-References:
+Other References:
 
 * [Interprocess Comms in Cloud: Pros, Cons of Microservices Architectures - Sudhir Tonse](https://www.youtube.com/watch?v=CriDUYtfrjs)
-- [aws re:invent 2013 - EbDeployer](https://www.slideshare.net/AmazonWebServices/aws-elastic-beanstalk-under-the-hood-dmg301-aws-reinvent-2013-28428616) - [Article](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)
-- [Agile and Beyond 2012](http://agileandbeyond.org) - [Slides](http://betarelease.github.io/build_feedback/slides.html)
-- [Agile Eastern Europe 2010](http://agileee.org).
-- [RubyKaigi 2010](http://rubykaigi.org) - [Slides](http://betarelease.github.io/images/rocking_the_enterprise.ppt)
-- [Agile 2009](http://agileconf.com)
-
-* [My Insights Article1]
-hystrix and prana from netflix
