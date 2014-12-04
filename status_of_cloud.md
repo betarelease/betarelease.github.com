@@ -23,7 +23,7 @@ _Key learning: Large data stores that scale and replicate across ocean boundarie
 
 References:
 
-- [RubyKaigi 2010](http://rubykaigi.org) - [Slides](http://betarelease.github.io/images/rocking_the_enterprise.ppt)_
+- [RubyKaigi 2010](http://rubykaigi.org) - [Slides](http://betarelease.github.io/images/rocking_the_enterprise.ppt)
 
 ## A large scale data store for an election campaign
 
