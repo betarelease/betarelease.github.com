@@ -35,10 +35,31 @@ All this becomes even more complicated when the application changes hands throug
 
 Thanks to this suite of tests we have often found bugs/test failures in areas that seemed to be remotely connected to the features being built. Some of the deeper coupling became obvious to us
 
+Another thing that is unique about this build for Mingle is that we run all tests - ALL TESTS. - before we declare success. There is no regression test suite - which runs after the fact for 8 hours, there is delayed feedback cycle. 40 mins is all it takes for anything and EVERYTHING to pass. If you look at it this way, then WE ACTUALLY HAVE THE FASTEST BUILD POSSIBLE. We could and have delivered critical changes to Mingle in matter of a couple of hours.
+
 ## Highly Parallelized CI Build
+
+If we are to run any portion of this build - which consists of 8500 units/functionals and about 3000 acceptance tests - in a single process, it will take longer than an hour. We do not have that kind of patience. But we rely on these tests to point out complex relationships among features/modules. In order to derive the same value from these tests without waiting forever we decided to throw hardware at the problem.
+
+What we have is a massively parallelized gocd build pipeline which runs these tests in under an hour. Even for such a long build we have invested about 100 cores of processing power hosted on really fast machines. We have started using openstack to manage these environments thus saving us a lot of time in case of VM failures, and at times when we have to apply OS patches/upgrades.
 
 
 ## Power consumption as a build metric
 
+For the number of tests we run and the throughput we would want we could technically throw more hardware at this problem. But thta wouldn't achieve much. Especially throwing more hardware means buying more resources - racks, machines, networking etc. The constraints we face are not how much hardware we can buy but how much it costs to run more hardware. We are now limited by how much electricity we consume and how much network bandwidth we use at our data center - because that is the cost that rapidly grows. With newest hardware and its increased resilience - the comparitive costs justify adding more hardware, but for their power needs and space needs we cannot do so.
 
 ## Fast Feedback, Fast Feedback, Fast Feedback
+
+But what about FAST feedback? you might ask. We also think the same - we want fast feedback.
+
+Certainly 40 mins is long enough. How do we get faster then? How did we get faster in the past?
+
+We previously had a 2+ hour long build.(I can feel the cringe). We took it upon ourselves to shorten it slowly but surely. We tackled the low hanging fruits -deleting old, crummy, frequently failing tests and writing a faster/shorter test instead. This takes time - and it did. It took us upwards of 6 months to get to where we are.
+
+Another thing we did was reduce the number of stages in our pipeline and heavily parallelize. We also pruned/postponed tests that were for the slowly/not changing parts of the application. So frequently changing modules were built for fast feedback.
+
+We picked a different tool to replace some of our acceptance tests and are migrating to using capybara and webdriver for new tests or rewriting tests.
+
+Slowly but certainly we are deprecating/deleting acceptance tests that are flaky/broken or in general do not seem focused enough. Along with these tests that are not able to explain the features - succintly are moved over and rewritten in rspec.
+
+This strategy has yielded great results for us. If we continue this exercise we can certainly make our build even faster.
