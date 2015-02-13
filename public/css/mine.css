@@ -75,3 +75,12 @@ img.tiny-avatar {
 .post-date {
   font-size: medium;
 }
+
+.inset {
+  border: 1px dashed black;
+  background-color: rgba(96, 98, 99, 0.55);
+  padding-left: 2em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-top:1em;
+}
