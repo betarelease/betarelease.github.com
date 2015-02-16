@@ -84,3 +84,12 @@ img.tiny-avatar {
   padding-bottom: 1em;
   padding-top:1em;
 }
+
+p:first-of-type:first-letter{
+    float: left;
+    line-height:90%;
+    padding-right: 0.1em;
+
+    font-weight: bold;
+    font-size: 2.5em;
+}
