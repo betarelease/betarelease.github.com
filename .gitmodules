@@ -1,3 +1,4 @@
 [submodule "_posts"]
-	path = _posts
-	url = https://github.com/betarelease/blog_posts.git
+  path = _posts
+  url = https://github.com/betarelease/blog_posts.git
+  branch = master
