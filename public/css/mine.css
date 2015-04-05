@@ -81,11 +81,12 @@ img.tiny-avatar {
 
 .inset {
   border: 1px dashed black;
-  background-color: rgba(96, 98, 99, 0.55);
+  background-color: rgba(119, 122, 122, 0.3);
   padding-left: 2em;
   padding-right: 1em;
   padding-bottom: 1em;
   padding-top:1em;
+  font-style: italic;
 }
 
 /*p:first-of-type:first-letter{
