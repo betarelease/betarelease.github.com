@@ -1,3 +1,6 @@
+html{
+  font-family: 'Lora', serif;
+}
 .fineprint {
   color: rgba(255,255,255,.7);
   font-size: 0.75rem;
@@ -85,11 +88,11 @@ img.tiny-avatar {
   padding-top:1em;
 }
 
-p:first-of-type:first-letter{
+/*p:first-of-type:first-letter{
     float: left;
     line-height:90%;
     padding-right: 0.1em;
 
     font-weight: bold;
     font-size: 2.5em;
-}
+}*/
