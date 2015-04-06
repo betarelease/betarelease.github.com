@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% include head.html %}
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% unless page.title %}{% endunless %}</title>
+  <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+  <link href="//fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/stylesheets/about.css">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header__inner">
+        <h1 class="header__title">I'm <strong>Sudhindra Rao</strong>, a <strong>Software Delivery Expert</strong> based in the San Francisco Bay Area.</h1>
+        Follow me on:
+        <ul class="social-links">
+          <li><a href="http://twitter.com/sudhindrarao/" target="_blank"><i class="fa fa-twitter fa-2x" title="twitter"></i></a></li>
+          <li><a href="https://github.com/betarelease/" target="_blank"><i class="fa fa-github fa-2x" title="github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/sudhindrarao" target="_blank"><i class="fa fa-linkedin-square fa-2x" title="linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main role="main">
+    <section class="section">
+      <div class="container">
+        <div class="section__inner">
+          <h2>Recent blog posts</h2>
+          {{ content }}
+        </div>
+      </div>
+    </section>
+  </main>
+  {% include footer.html %}
+</body>
+</html>
