@@ -3,6 +3,11 @@
 
 @charset "UTF-8";
 
+// bourbon and neat for responsive
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+
 // Global
 @import "about/variables";
 @import "about/mixins";
