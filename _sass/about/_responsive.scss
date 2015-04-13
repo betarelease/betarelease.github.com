@@ -1,9 +1,9 @@
 .header {
   @extend %header-footer-common;
-  margin-bottom: 4rem;
   background-image: url("/images/me_cows.png");
+  background-repeat: no-repeat;
 
-  @include lg-and-up {
+  @include media($desktop) {
     background-image: url("/images/me_cows.png");
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@
   // Use 120% to avoid covering my face on small screen
   padding-bottom: 120%;
 
-  @include lg-and-up {
+  @include media($desktop) {
     padding-top: 8%;
     padding-bottom: 8%;
     margin-left: 50%;
@@ -29,4 +29,23 @@
 .header__title {
   margin-bottom: 1.25em;
   color: black;
+}
+
+
+div.container {
+  @include outer-container;
+}
+
+.section{
+  margin-top: 1rem;
+}
+.gallery-item {
+  @include span-columns(4);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1em;
+
+  @include media($mobile) {
+    @include span-columns(4);
+  }
 }

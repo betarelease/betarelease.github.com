@@ -1,4 +1,6 @@
-.container {
+div.container {
+  @include outer-container;
+
   max-width: 95rem;
   margin: 0 auto;
   padding-left: 5%;

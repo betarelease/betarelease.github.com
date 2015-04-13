@@ -3,6 +3,7 @@
 }
 
 .section__inner {
+
   &.section__inner--narrow {
     @include lg-and-up {
       width: 60%;

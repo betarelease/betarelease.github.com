@@ -3,10 +3,8 @@ layout: about
 hide_sidebar: true
 title: Sudhindra Rao
 ---
-<div class="row gallery-wrapper">
-
   {% for post in site.posts limit:3 %}
-  <div class="col col--experience gallery-item">
+  <div class="gallery-item">
 
     {% unless post.draft %}
       <h1 class="news-title">
@@ -21,5 +19,3 @@ title: Sudhindra Rao
     {% endunless %}
   </div>
   {% endfor %}
-
-</div>

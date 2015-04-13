@@ -1,11 +1,17 @@
 @import "neat/neat-helpers"; // or "neat-helpers" when in Rails
 
-// Change the grid settings
-$column: 90px;
-$gutter: 30px;
-$grid-columns: 10;
-$max-width: em(1088);
+// Widths
+$mobile-width: em(480);
+$small-tablet-width: em(720);
+$large-tablet-width: em(960);
+$desktop-width: em(1050);
 
-// Define your breakpoints
-$tablet: new-breakpoint(max-width 768px 8);
-$mobile: new-breakpoint(max-width 480px 4);
+// Bourbon Neat Breakpoints
+$mobile: new-breakpoint(max-width $mobile-width, 4);
+$small-tablet: new-breakpoint(min-width $small-tablet-width max-width $large-tablet-width - 1, 8);
+$large-tablet: new-breakpoint(min-width $large-tablet-width max-width $desktop-width - 1, 12);
+$tablet: new-breakpoint(min-width $small-tablet-width max-width $desktop-width - 1, 12);
+$desktop: new-breakpoint(min-width $desktop-width, 16);
+
+$small-tablet-down: new-breakpoint(max-width $large-tablet-width, 8);
+$tablet-down: new-breakpoint(max-width $desktop, 8);

@@ -9,6 +9,8 @@
 }
 
 .gallery-item {
+  @include span-columns(4);
+  @include omega();
   margin-bottom: 3rem;
   font-size: 1em;
 }
