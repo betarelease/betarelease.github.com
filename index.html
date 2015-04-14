@@ -7,11 +7,11 @@ title: Sudhindra Rao
   <div class="gallery-item">
 
     {% unless post.draft %}
-      <h1 class="news-title">
+      <h3 class="news-title">
         <a href="{{ post.url }}">
           {{ post.title }}
         </a>
-      </h1>
+      </h3>
 
       <span class="post-date">{{ post.date | date_to_string }}</span>
       {{ post.excerpt | textilize }}
