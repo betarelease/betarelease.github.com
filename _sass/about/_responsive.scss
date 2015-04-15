@@ -27,8 +27,14 @@
 }
 
 .header__title {
-  margin-bottom: 1.25em;
-  color: black;
+  padding: 0.1em;
+  background-color: $color-light-link;
+  margin: 1em 1em 1.25em 0;
+
+  h1{
+    margin-left: 1em;
+    color: black;
+  }
 }
 
 

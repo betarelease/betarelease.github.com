@@ -26,13 +26,13 @@ h1, h2, h3 {
 }
 
 h1 {
-  margin: 0;
   font-size: $font-size-h1;
   font-weight: 100;
   letter-spacing: -1px;
 
   strong {
-    font-weight: $font-weight-heading;
+    background-color:$color-light-link;
+    padding: 0.1em;
   }
 }
 

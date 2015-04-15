@@ -3,19 +3,37 @@ layout: about
 hide_sidebar: true
 title: Sudhindra Rao
 ---
-  {% for post in site.posts limit:3 %}
-  <div class="gallery-item">
+<main role="main">
+  <section class="section">
+    <div class="container">
+      <h2>Recent blog posts</h2><a href="blogs">More Blogs...</a></h3>
+      {% capture recent_blogs %}{% include recent_blogs.md %}{% endcapture %}
+      {{ recent_blogs | markdownify }}
+    </div>
+  </section>
 
-    {% unless post.draft %}
-      <h3 class="news-title">
-        <a href="{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </h3>
+  <section class="section">
+    <div class="container">
+      <h2>Project highlights</h2>
+      {% capture projects %}{% include projects.md %}{% endcapture %}
+      {{ projects | markdownify }}
+    </div>
+  </section>
 
-      <span class="post-date">{{ post.date | date_to_string }}</span>
-      {{ post.excerpt | textilize }}
-      <a href="{{ post.url }}">Read...</a>
-    {% endunless %}
-  </div>
-  {% endfor %}
+  <section class="section">
+    <div class="container">
+      <h2>Presentations</h2>
+      {% capture presentations %}{% include presentations.md %}{% endcapture %}
+      {{ presentations | markdownify }}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Articles</h2>
+      {% capture articles %}{% include articles.md %}{% endcapture %}
+      {{ articles | markdownify }}
+    </div>
+  </section>
+
+</main>
