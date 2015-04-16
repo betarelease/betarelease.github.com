@@ -45,13 +45,18 @@ div.container {
 .section{
   margin-top: 1rem;
 }
+
 .gallery-item {
   @include span-columns(4);
-  margin-top: 1em;
   margin-bottom: 1em;
   font-size: 1em;
 
   @include media($mobile) {
     @include span-columns(4);
   }
+}
+
+.placeholder{
+  height: 20em;
+  display: block;
 }

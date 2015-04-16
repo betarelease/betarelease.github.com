@@ -6,7 +6,7 @@ title: Sudhindra Rao
 <main role="main">
   <section class="section">
     <div class="container">
-      <h2>Recent blog posts</h2><a href="blogs">More Blogs...</a></h3>
+      <h2>Recent blog posts</h2><h3><a href="blogs">More Blogs...</a></h3>
       {% capture recent_blogs %}{% include recent_blogs.md %}{% endcapture %}
       {{ recent_blogs | markdownify }}
     </div>
