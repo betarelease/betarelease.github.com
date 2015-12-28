@@ -1,29 +1,26 @@
 <div class="gallery-item">
-
-    <h3 class="news-title">
-      <a href="http://thoughtworksstudios.github.io/eb_deployer/">
-        <img src="/images/ebdeployer.png"/>
-      </a>
-    </h3>
-
+  <p>EbDeployer</p>
+  <h3 class="news-title">
+    <a href="http://thoughtworksstudios.github.io/eb_deployer/">
+      <img src="/images/ebdeployer.png"/>
+    </a>
+  </h3>
 </div>
 
 <div class="gallery-item">
-
-    <h3 class="news-title">
-      <a href="http://github.com/betarelease/cc_monitor">
-        <img src="/images/cc_monitor_example.png" width="300"/>
-      </a>
-    </h3>
-
+  <p>CruiseControl Monitor</p>
+  <h3 class="news-title">
+    <a href="http://github.com/betarelease/cc_monitor">
+      <img src="/images/cc_monitor_example.png" width="300"/>
+    </a>
+  </h3>
 </div>
 
 <div class="gallery-item">
-
-    <h3 class="news-title">
-      <a href="http://github.com/betarelease/sirimingle">
-          <iframe width="320" height="180" src="https://www.youtube.com/embed/8ONszZN7q9U" frameborder="0" allowfullscreen></iframe>
-      </a>
-    </h3>
-
+  <p>Siri Mingle</p>
+  <h3 class="news-title">
+    <a href="http://github.com/betarelease/sirimingle">
+        <iframe width="320" height="180" src="https://www.youtube.com/embed/8ONszZN7q9U" frameborder="0" allowfullscreen></iframe>
+    </a>
+  </h3>
 </div>

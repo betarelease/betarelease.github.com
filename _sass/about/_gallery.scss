@@ -13,6 +13,10 @@
   @include omega();
   margin-bottom: 3rem;
   font-size: 1em;
+
+  p {
+    font-size: 2em;
+  }
 }
 
 .news-title{

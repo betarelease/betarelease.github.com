@@ -1,4 +1,4 @@
-He also writes occasionally. Some of his recent work is documented at
+I was lucky to get published here
 
 * [How we moved to the cloud](http://www.thoughtworks.com/insights/blog/how-we-moved-cloud)
 * [Automate your Deployments with EbDeployer](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)

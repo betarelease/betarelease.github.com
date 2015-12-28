@@ -6,7 +6,7 @@ title: Sudhindra Rao
 <main role="main">
   <section class="section">
     <div class="container">
-      <h2>Recent blog posts</h2><h3><a href="blogs">More Blogs...</a></h3>
+      <h2><a href="blogs">Recent blog posts</a></h2>
       {% capture recent_blogs %}{% include recent_blogs.md %}{% endcapture %}
       {{ recent_blogs | markdownify }}
     </div>
@@ -14,7 +14,7 @@ title: Sudhindra Rao
 
   <section class="section">
     <div class="container">
-      <h2>Project highlights</h2>
+      <h2>Some useful code I have written</h2>
       {% capture projects %}{% include projects.md %}{% endcapture %}
       {{ projects | markdownify }}
     </div>
@@ -22,7 +22,7 @@ title: Sudhindra Rao
 
   <section class="section">
     <div class="container">
-      <h2>Presentations</h2>
+      <h2>I was surprised people listened</h2>
       {% capture presentations %}{% include presentations.md %}{% endcapture %}
       {{ presentations | markdownify }}
     </div>
@@ -30,7 +30,7 @@ title: Sudhindra Rao
 
   <section class="section">
     <div class="container">
-      <h2>Articles</h2>
+      <h2>Who would have thought they would get published</h2>
       {% capture articles %}{% include articles.md %}{% endcapture %}
       {{ articles | markdownify }}
     </div>
