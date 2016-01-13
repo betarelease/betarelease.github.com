@@ -1,39 +1,245 @@
----
-layout: default
-title: Drafts
----
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-<div class="posts">
-  {% for post in site.posts %}
-    {% if post.draft %}
-      <div class="post">
-        <h1 class="post-title">
-          <a href="{{ post.url }}">
-            {{ post.title }}
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+
+      EPIC integration &middot; Sudhindra Rao
+
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/mine.css">
+  <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+  <div class="sidebar" style="display:none">
+  <div class="container">
+    <div class="sidebar-about">
+      <p>Developer, Coach, Practitioner, Robotics Geek, Cricket Fan in San Francisco</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+        <a href="/">Home</a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+            <li class="sidebar-nav-item">
+              <a href="/about/">About</a>
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <li class="sidebar-nav-item"><a href="https://github.com/betarelease">GitHub</a></li>
+    </ul>
+    <p class="fineprint">&copy; 2009 - . All rights reserved.</p>
+    <p class="fineprint">Modified from https://github.com/poole</p>
+  </div>
+</div>
+
+  <h1 class="post-splash-image"></h1>
+  <div class="topbar">
+    <span class="menu-trigger"><img class="tiny-avatar" src="/images/me.png">Sudhindra Rao</span>
+    <span class="twitter"><a href="http://twitter.com/sudhindraRao"><img src="/images/Twitter_logo_blue.png"></a></span>
+  </div>
+
+  <div class="content container">
+    <div class="post">
+  <h1 class="post-title">EPIC integration</h1>
+  <span class="post-date">13 Jan 2016</span>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="sudhindraRao">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <h2>Glooko - Diabetes Management Platform</h2>
+
+<p>I was very excited to find Glooko and start working there last year. Glooko has built a diabetes management platform - where we enable users to sync with variety of blood glucose meters(BGM), continuous glucose meters(CGM) and Insulin Pumps. Once this data is uploaded the users can review them in context with their fitness data, food data, as well as other clinical information to help with managing their blood glucose levels. Glooko platform also enables health care providers(Doctors, nurses, caregivers, parents) to monitor diabetes for under care persons.</p>
+
+<p>At Glooko we now have a data platform that is open to integrations. Our preferred way to integrate is via our RESTful APIs using JSON.</p>
+
+<h2>EPIC Integration</h2>
+
+<p>Although that is the case a number of our partners/healthcare systems have invested in Electronic Health Record(EHR) software that is in place as well as the Doctors are comfortable using that technology. In order to integrate with the EHR technologies we had to learn about them and build custom integration with them.</p>
+
+<!--more-->
+
+<p>One of the frontrunners in EHR technology is <a href="http://www.epic.com/">EPIC</a>. EPIC EHR is used by a number of clinics and hospitals and provides a single window view into all the data for the patient. EPIC also allows for some integration points into the EHR if some strict protocols are adhered to. Newer versions of EPIC promise better ways of integration but their installations are few and path to upgrading them is longer based on how quickly the IT organizations are able to roll them out.</p>
+
+<p>EPIC 2012 WSDL specification was handed to us to build a WebService to adhere to this WSDL.</p>
+
+<h2>Build Web Services in Ruby</h2>
+
+<p>I had not done anything with WSDLs for a while let alone building an actual webservice. Doing all this in Ruby/Rails seemed to be another challenge. Thanks to  <a href="https://github.com/inossidabile">Boris Staal</a> for building the <a href="https://github.com/inossidabile/wash_out">wash_out gem</a> which made this task much more achievable.
+I was able to build a webservice pretty quickly and test it using <a href="https://github.com/savonrb/savon">savon</a> and everything seemed to be working within a day or two.
+I was able to use a <a href="http://wsdlbrowser.com">WSDLBrowser</a> to see the webservice I had built and also run a few tests to retrieve data.</p>
+
+<p>For some reason though it refused to work against the real EPIC EHR. We found the usual suspects - semantic gaps in what the wsdl expected (capital letters vs small letters), date of birth format(specified in a different string format) etc and we were fixed them.
+These fixes got us that much closer to the integration but we continued to receive generic soap syntax errors.
+Then we found deep in the stack possible reason for these errors.</p>
+
+<h2>Double Enveloped Soap request</h2>
+
+<p>The EPIC WSDL required us process a soap request that contained two soap envelopes instead of one. The EPIC clients seem to have this issue where they expect double envelopes sent by their requests and our server was not able to process them(given that it was built against standard soap). Once we found this issue we were able to patch <a href="https://github.com/glooko/wash_out">our fork of wash_out gem</a> and accomodate these requests.</p>
+
+<p>Once this was resolved we were able to see and process requests from EPIC and integrate successfully. For those of you who are having issues with EPIC and integrating them with you ruby server feel free to use <a href="https://github.com/glooko/wash_out">our fork of wash_out gem</a>.</p>
+
+<h2>Result</h2>
+
+<p>With this integration successful, we were able to release this to our users at AtriusHealth. We also are happy that we partnered with Michael Lee from Atrius and he had some words of praise for us. <a href="http://campaign.r20.constantcontact.com/render?ca=2a3ac90a-fdd5-4be1-9fc6-c4aef3c5ca25&amp;c=592c8410-604f-11e4-a758-d4ae52754aa9&amp;ch=5992e700-604f-11e4-a758-d4ae52754aa9">MobiHealthNews</a></p>
+
+<p>I would like to acknowledge the effort put in by Amanda Lee for making this integration a success.</p>
+
+
+       <!-- disqus comment -->
+
+     <div id="disqus_thread"></div>
+     <script type="text/javascript">
+         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+         var disqus_shortname = 'betareleasedraftingrandomthoughts'; // required: replace example with your forum shortname
+
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+     </script>
+     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+
+      <li>
+        <h3>
+          <a href="/2015/02/09/isnt_40mins_too_long/">
+            Isn't 40 mins too long for a build?
+            <small>09 Feb 2015</small>
           </a>
-        </h1>
+        </h3>
+      </li>
 
-        <span class="post-date">{{ post.date | date_to_string }}</span>
-        {{ post.excerpt | textilize }}
-        <a href="{{ post.url }}">Read...</a>
-      </div>
-    {% endif %}
-  {% endfor %}
+      <li>
+        <h3>
+          <a href="/2014/10/08/elasticsearch-logs-and-papertrail/">
+            Pushing ElasticSearch logs to Papertrail
+            <small>08 Oct 2014</small>
+          </a>
+        </h3>
+      </li>
+
+      <li>
+        <h3>
+          <a href="/2014/06/19/mingle-loves-github/">
+            Mingle Loves GitHub
+            <small>19 Jun 2014</small>
+          </a>
+        </h3>
+      </li>
+
+  </ul>
 </div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+  </div>
+
+  <script type="text/javascript">
+  $(".menu-trigger").click(function(){
+    $(".sidebar").animate({width: 'toggle'})
+  });
+  </script>
+</body>
+</html>
