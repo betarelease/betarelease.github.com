@@ -117,10 +117,6 @@
 
 
 
-
-
-
-
       <li class="sidebar-nav-item"><a href="https://github.com/betarelease">GitHub</a></li>
     </ul>
     <p class="fineprint">&copy; 2009 - . All rights reserved.</p>
@@ -137,47 +133,50 @@
   <div class="content container">
     <div class="post">
   <h1 class="post-title">EPIC integration</h1>
-  <span class="post-date">13 Jan 2016</span>
+  <span class="post-date">21 Jan 2016</span>
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="sudhindraRao">Tweet</a>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
   <h2>Glooko - Diabetes Management Platform</h2>
 
-<p>I was very excited to find Glooko and start working there last year. Glooko has built a diabetes management platform - where we enable users to sync with variety of blood glucose meters(BGM), continuous glucose meters(CGM) and Insulin Pumps. Once this data is uploaded the users can review them in context with their fitness data, food data, as well as other clinical information to help with managing their blood glucose levels. Glooko platform also enables health care providers(Doctors, nurses, caregivers, parents) to monitor diabetes for under care persons.</p>
+<p>I was very excited to find out about <a href="http://www.glooko.com">Glooko</a> and start working there last year. Glooko has built a unified diabetes management platform, where we enable users to sync data from a variety of blood glucose meters, continuous glucose monitor(CGM) and insulin pumps, as well as popular fitness trackers. Once their data is uploaded, users can review their diabetes data in context with their insulin, food and fitness data, as well as other relevant clinical information to help with manage their blood glucose levels and keep them under control. Glooko platform also enables health care providers(doctors, nurses, caregivers, parents, etc.) to monitor a person with diabetes remotely and provide more timely, collaborative care.</p>
 
-<p>At Glooko we now have a data platform that is open to integrations. Our preferred way to integrate is via our RESTful APIs using JSON.</p>
+<p>At Glooko, we now have a data platform that is open to integrations. Our preferred way to integrate is via our RESTful APIs using JSON.</p>
 
 <h2>EPIC Integration</h2>
 
-<p>Although that is the case a number of our partners/healthcare systems have invested in Electronic Health Record(EHR) software that is in place as well as the Doctors are comfortable using that technology. In order to integrate with the EHR technologies we had to learn about them and build custom integration with them.</p>
+<p>Although Glooko is also available on the web and sends patient data securely via the cloud, a number of our partners/healthcare systems have invested in and are required to use Electronic Health Records(EHR) software in their clinic. And doctors are familiar and comfortable using that technology. In order to integrate with EHR technologies we had to learn about them and build custom integration with them.</p>
 
 <!--more-->
 
-<p>One of the frontrunners in EHR technology is <a href="http://www.epic.com/">EPIC</a>. EPIC EHR is used by a number of clinics and hospitals and provides a single window view into all the data for the patient. EPIC also allows for some integration points into the EHR if some strict protocols are adhered to. Newer versions of EPIC promise better ways of integration but their installations are few and path to upgrading them is longer based on how quickly the IT organizations are able to roll them out.</p>
+<p>One of the frontrunners in EHR technology is <a href="http://www.epic.com/">EPIC</a>. EPIC EHR is used by a number of clinics and hospitals and provides a single window view into all patients&#39; the data. EPIC also allows for some integration points into their EHR as long as the 3rd party adheres to their strict protocols. Newer versions of EPIC promise better ways for integration but their installations are few and the path to upgrading them is long, which is based on how quickly the health system&#39;s IT organization is able to do the installation.</p>
 
-<p>EPIC 2012 WSDL specification was handed to us to build a WebService to adhere to this WSDL.</p>
+<p>EPIC 2012 WSDL specification was handed to us to build a WebService that adheres to this WSDL.</p>
 
 <h2>Build Web Services in Ruby</h2>
 
-<p>I had not done anything with WSDLs for a while let alone building an actual webservice. Doing all this in Ruby/Rails seemed to be another challenge. Thanks to  <a href="https://github.com/inossidabile">Boris Staal</a> for building the <a href="https://github.com/inossidabile/wash_out">wash_out gem</a> which made this task much more achievable.
-I was able to build a webservice pretty quickly and test it using <a href="https://github.com/savonrb/savon">savon</a> and everything seemed to be working within a day or two.
+<p>I had not done anything with WSDLs for a while, let alone building an actual webservice. Doing all of this in Ruby/Rails seemed to be whole other challenge. Thank you to <a href="https://github.com/inossidabile">Boris Staal</a> for building the <a href="https://github.com/inossidabile/wash_out">wash_out gem</a> which made this task much more achievable.</p>
+
+<p>I was able to build a webservice pretty quickly and test it using <a href="https://github.com/savonrb/savon">savon</a> and fortunately, everything seemed to be working within a day or two.
 I was able to use a <a href="http://wsdlbrowser.com">WSDLBrowser</a> to see the webservice I had built and also run a few tests to retrieve data.</p>
 
-<p>For some reason though it refused to work against the real EPIC EHR. We found the usual suspects - semantic gaps in what the wsdl expected (capital letters vs small letters), date of birth format(specified in a different string format) etc and we were fixed them.
-These fixes got us that much closer to the integration but we continued to receive generic soap syntax errors.
-Then we found deep in the stack possible reason for these errors.</p>
+<p>For some reason though, the webservice to work against the real EPIC EHR. We found the usual suspects - semantic gaps in what the wsdl expected (capital letters vs small letters), date of birth format(specified in a different string format) etc. Thus, we were fixed them.
+While these fixes got us that much closer to completing the integration, we continued to receive generic soap syntax errors.
+Then we found deep in the stack a possible reason for these errors.</p>
 
 <h2>Double Enveloped Soap request</h2>
 
-<p>The EPIC WSDL required us process a soap request that contained two soap envelopes instead of one. The EPIC clients seem to have this issue where they expect double envelopes sent by their requests and our server was not able to process them(given that it was built against standard soap). Once we found this issue we were able to patch <a href="https://github.com/glooko/wash_out">our fork of wash_out gem</a> and accomodate these requests.</p>
+<p>The EPIC WSDL required us to process a soap request that contained two SOAP envelopes instead of one. The EPIC clients seemed to have an issue where they expected double envelopes sent by their requests and our server was unable to process them(given that it was built against standard SOAP). Once we found this issue we were able to patch <a href="https://github.com/glooko/wash_out">our fork of wash_out gem</a> and accommodate these requests.</p>
 
-<p>Once this was resolved we were able to see and process requests from EPIC and integrate successfully. For those of you who are having issues with EPIC and integrating them with you ruby server feel free to use <a href="https://github.com/glooko/wash_out">our fork of wash_out gem</a>.</p>
+<p>Once this was resolved, we were able to see and process requests from EPIC and integrate successfully. For those of you who are having issues with EPIC and integrating them with you ruby server feel free to use <a href="https://github.com/glooko/wash_out">our fork of wash_out gem</a>.</p>
+
+<p>(In general, &quot;WashOut is a gem that greatly simplifies creation of SOAP service providers. But if you have a chance, please <a href="http://stopsoap.com/">stopsoap</a>&quot;)</p>
 
 <h2>Result</h2>
 
-<p>With this integration successful, we were able to release this to our users at AtriusHealth. We also are happy that we partnered with Michael Lee from Atrius and he had some words of praise for us. <a href="http://campaign.r20.constantcontact.com/render?ca=2a3ac90a-fdd5-4be1-9fc6-c4aef3c5ca25&amp;c=592c8410-604f-11e4-a758-d4ae52754aa9&amp;ch=5992e700-604f-11e4-a758-d4ae52754aa9">MobiHealthNews</a></p>
+<p>With this successful integration, we were able to release this to our users at <a href="http://www.atriushealth.org">Atrius Health</a>. Based on the quality of our work along with our partnership with Dr. Michael Lee from Atrius Health, he had some words of praise for us. <a href="http://campaign.r20.constantcontact.com/render?ca=2a3ac90a-fdd5-4be1-9fc6-c4aef3c5ca25&amp;c=592c8410-604f-11e4-a758-d4ae52754aa9&amp;ch=5992e700-604f-11e4-a758-d4ae52754aa9">MobiHealthNews</a>.</p>
 
-<p>I would like to acknowledge the effort put in by Amanda Lee for making this integration a success.</p>
+<p>Thank you Amanda Lee from Atrius Health for her patience and support during this integration.</p>
 
 
        <!-- disqus comment -->

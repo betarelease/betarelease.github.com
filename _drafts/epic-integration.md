@@ -36,8 +36,10 @@ The EPIC WSDL required us to process a soap request that contained two SOAP enve
 
 Once this was resolved, we were able to see and process requests from EPIC and integrate successfully. For those of you who are having issues with EPIC and integrating them with you ruby server feel free to use [our fork of wash_out gem](https://github.com/glooko/wash_out).
 
+(In general, "WashOut is a gem that greatly simplifies creation of SOAP service providers. But if you have a chance, please [stopsoap](http://stopsoap.com/)")
+
 ## Result
 
-With this successful integration, we were able to release this to our users at [Atrius Health](http://www.atriushealth.org). Based on the quality of our work along with our partnership with Dr. Michael Lee from Atrius Health,he had some words of praise for us. [MobiHealthNews](http://campaign.r20.constantcontact.com/render?ca=2a3ac90a-fdd5-4be1-9fc6-c4aef3c5ca25&c=592c8410-604f-11e4-a758-d4ae52754aa9&ch=5992e700-604f-11e4-a758-d4ae52754aa9).
+With this successful integration, we were able to release this to our users at [Atrius Health](http://www.atriushealth.org). Based on the quality of our work along with our partnership with Dr. Michael Lee from Atrius Health, he had some words of praise for us. [MobiHealthNews](http://campaign.r20.constantcontact.com/render?ca=2a3ac90a-fdd5-4be1-9fc6-c4aef3c5ca25&c=592c8410-604f-11e4-a758-d4ae52754aa9&ch=5992e700-604f-11e4-a758-d4ae52754aa9).
 
 Thank you Amanda Lee from Atrius Health for her patience and support during this integration.
