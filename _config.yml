@@ -1,6 +1,5 @@
 # Dependencies
 markdown:         redcarpet
-highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
@@ -14,8 +13,6 @@ url:              http://betarelease.github.com
 author:
   name:           'Sudhindra Rao'
   url:            https://twitter.com/sudhindraRao
-
-paginate:         5
 
 excerpt_separator: <!--more-->
 # Custom vars
