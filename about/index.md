@@ -2,10 +2,8 @@
 layout: page
 title: About Sudhindra Rao
 image:
-  path: http://example.com/so-simple-sample-image-4.jpg
-  feature: so-simple-sample-image-4.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  path: /images/mission_peaks.png
+  feature: mission_peaks.png
 ---
 <p><img class="avatar" src="/images/me.png" alt="Sudhindra Rao" /></p>
 
