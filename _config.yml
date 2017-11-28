@@ -5,7 +5,7 @@ locale: en_US
 description: releasing my thoughts.. 1 beta at a time
 logo: favicon_image.png
 search: true
-url: http://localhost:4000
+url: http://betarelease.github.com
 
 # Jekyll configuration
 
