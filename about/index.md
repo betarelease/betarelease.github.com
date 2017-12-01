@@ -5,8 +5,6 @@ image:
   path: /images/mission_peaks.png
   feature: mission_peaks.png
 ---
-<p><img class="avatar" src="/images/me.png" alt="Sudhindra Rao" /></p>
-
 Sudhindra believes in releasing fast and often and hence the name of this blog. This blog is updated as soon as content is available and some of the content might not be completely flushed out.
 
 Sudhindra works as a developer in the trenches building applications that are critical to business. He has worked with various technologies starting with Java and recently worked with Ruby.
