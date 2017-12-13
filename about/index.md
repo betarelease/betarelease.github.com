@@ -2,8 +2,8 @@
 layout: page
 title: About Sudhindra Rao
 image:
-  path: /images/mission_peaks.png
-  feature: mission_peaks.png
+  path: /images/pilot.png
+  feature: pilot.png
 ---
 Sudhindra believes in releasing fast and often and hence the name of this blog. This blog is updated as soon as content is available and some of the content might not be completely flushed out.
 
