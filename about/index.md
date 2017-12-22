@@ -25,6 +25,9 @@ He writes outside of this blog, occasionally. Some of his recent work is documen
 * [Automate your Deployments with EbDeployer](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)
 * [How Mingle built its ElasticSearch cluster on AWS](http://www.thoughtworks.com/mingle/news/scaling/2015/01/06/How-Mingle-Built-ElasticSearch-Cluster.html)
 
+You can hear my voice on the following podcasts:
+* [Mingle, 10000 tests and CD pipeline](https://devchat.tv/ruby-rogues/194-rr-real-life-jruby-with-sudhindra-r-rao)
+
 Sudhindra writes about his experiences in software development here.
 He tweets as [@sudhindraRao](http://twitter.com/sudhindraRao)
 
