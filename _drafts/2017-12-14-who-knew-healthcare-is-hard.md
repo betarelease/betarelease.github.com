@@ -83,16 +83,23 @@ The above example illustrates the nuances involved in storing the data as well a
 ## Identify, fix issue, fix process, Repeat - and document all the way
 
 Working in this environment and under these constraints means that you need a process that is well
-defined and encourages adaptability.
+defined to encourage adaptability.
 
 
-Some tools and technologies that can help you with all this:
+## Tools and Technologies
 
-* Code scanning
-* Code quality - OWASP 10
-* Static code scanning - Code Climate
-* Black box application scanning - QualysGuard
-* White box application scanning - QualysGuard - vulnerability scanning
+### Code quality
+ The team that builds a medical device needs to adhere to quality standards that are exceptional. NIST defines some of those standards. Along with those, a number of software engineering techniques can be applied while building such quality into the device. These tools should at a minimum verify the scans against [OWASP standards](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)
+
+### Code scanning
+[Static code scanning tools](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis) help with scanning code for known vulnerabilities and inconsistencies.
+
+## Application scanning
+A number of [dynamic code scanning] tools(https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) scan for security vulnerabilities, normally from outside in. When these tools look only at public interfaces and operate outside the system they perform blackbox scans.
+
+Another scanner called the [Vulernability scanner](https://en.wikipedia.org/wiki/Vulnerability_scanner) usually sits inside the network and performs host based vulnerability scanning. This host can scan the internal network to identify any vulnerabilities that are exploitable.
+
+
 * Infrastructure Monitoring - Intrusion Detection
 * Penetration testing
 * SLA

@@ -31,4 +31,10 @@ You can hear my voice on the following podcasts:
 Sudhindra writes about his experiences in software development here.
 He tweets as [@sudhindraRao](http://twitter.com/sudhindraRao)
 
+<iframe src="http://githubbadge.appspot.com/betarelease" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+
+
+
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="sudhindrarao"><a class="LI-simple-link" href='https://www.linkedin.com/in/sudhindrarao?trk=profile-badge'>Sudhindra Rao</a></div>
+
 Thanks for reading!
