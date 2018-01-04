@@ -3,7 +3,7 @@
 title: Beta Release
 locale: en_US
 description: releasing my thoughts.. 1 beta at a time
-logo: favicon_image.png
+logo: beta.png
 search: true
 url: http://betarelease.github.com
 
@@ -41,7 +41,7 @@ comments: true
 # Site owner
 owner:
   name: Sudhindra Rao
-  avatar: me_vancouver.png
+  avatar: grand_canyon.png
   disqus-shortname: betareleasedraftingrandomthoughts
   twitter: sudhindraRao
   github: betarelease
