@@ -28,6 +28,8 @@ He writes outside of this blog, occasionally. Some of his recent work is documen
 You can hear my voice on the following podcasts:
 * [Mingle, 10000 tests and CD pipeline](https://devchat.tv/ruby-rogues/194-rr-real-life-jruby-with-sudhindra-r-rao)
 
+* [My Ruby Story](https://devchat.tv/ruby-rogues/mrs-029-sudhindra-rao)
+
 Sudhindra writes about his experiences in software development here.
 He tweets as [@sudhindraRao](http://twitter.com/sudhindraRao)
 
