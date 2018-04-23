@@ -5,12 +5,10 @@ image:
   path: /images/pilot.png
   feature: pilot.png
 ---
-Sudhindra believes in releasing fast and often and hence the name of this blog. This blog is updated as soon as content is available and some of the content might not be completely flushed out.
-
+Sudhindra believes in releasing fast and often and hence the name of this blog.
 Sudhindra works as a developer in the trenches building applications that are critical to business. He has worked with various technologies starting with Java and recently worked with Ruby.
 His success stories include building an application for the largest publishing company in Chicago, a large datacenter automation effort, large auctioning system and recently a voting application to help out with national elections. His experiences have taught him about various aspects of application delivery - User Experience, Performance, Maintainability.
 
-In his free time he dabbles in learning by writing small applications or tools - most of which are shared on [his github account](http://github.com/betarelease).
 Sudhindra has also worked as an agile/ruby evangelist. He developed training/coaching sessions and has delivered them to success. He also likes speaking at conferences and has spoken at
 
 * [aws re:invent 2013](http://www.confreaks.com/videos/4469-awsrei2013-aws-elastic-beanstalk-under-the-hood-dmg301) - EbDeployer - [Slides](http://www.slideshare.net/AmazonWebServices/aws-elastic-beanstalk-under-the-hood-dmg301-aws-reinvent-2013-28428616)
@@ -30,12 +28,9 @@ You can hear his voice on the following podcasts:
 
 * [My Ruby Story](https://devchat.tv/ruby-rogues/mrs-029-sudhindra-rao)
 
-Sudhindra writes about his experiences in software development here.
-He tweets as [@sudhindraRao](http://twitter.com/sudhindraRao)
+In his free time he dabbles in learning by writing small applications or tools - most of which are shared on his github account.
 
 <iframe src="http://githubbadge.appspot.com/betarelease" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
-
-
 
 <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="sudhindrarao"><a class="LI-simple-link" href='https://www.linkedin.com/in/sudhindrarao?trk=profile-badge'>Sudhindra Rao</a></div>
 
