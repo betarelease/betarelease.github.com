@@ -11,6 +11,6 @@ I write outside of this blog as well. Some my other publications are:
 You can hear my voice on the following podcasts:
 * [Mingle, 10000 tests and CD pipeline](https://devchat.tv/ruby-rogues/194-rr-real-life-jruby-with-sudhindra-r-rao)
 
-* [My Ruby Story](https://devchat.tv/ruby-rogues/mrs-029-sudhindra-rao)
+* [My Ruby Story](https://devchat.tv/my-ruby-story/mrs-029-sudhindra-rao)
 
 If you would like me to appear in your publication or your podcast please email me at sudhindra(dot)r(dot)rao(at)gmail.
