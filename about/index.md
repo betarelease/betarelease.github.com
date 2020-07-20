@@ -2,8 +2,8 @@
 layout: page
 title: About Sudhindra Rao
 image:
-  path: /images/pilot.png
-  feature: pilot.png
+  path: /images/reinvent.png
+  feature: reinvent.png
 ---
 Sudhindra believes in releasing fast and often and hence the name of this blog.
 Sudhindra works as a developer in the trenches building applications that are critical to business. He has worked with various technologies starting with Java and recently worked with Ruby.
