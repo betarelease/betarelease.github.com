@@ -1,4 +1,4 @@
-# So Simple theme being used via remote-theme - so that we do not have to install and maintain a gem.
+# medium theme now.
 remote_theme: "wowthemesnet/mediumish-theme-jekyll"
 
 # Site wide configuration
