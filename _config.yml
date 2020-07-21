@@ -13,16 +13,29 @@ url: //betarelease.github.io
 # Jekyll configuration
 
 permalink:   /:categories/:title/
+
+# Authors
+authors:
+  sal:
+    name: Sudhindra Rao
+    gravatar: grand_canyon.png
+    email: myfirstname.r.lastname@gmail.com
+    twitter: sudhindraRao
+    github: betarelease
+    linkedin: sudhindrarao
+    description: "Author of SiriMingle and other goodies"
+
 markdown:    kramdown
 highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
 plugins:
+  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jemoji
+  - jekyll-seo-tag
+  - jekyll-archives
 
 kramdown:
   input: GFM
