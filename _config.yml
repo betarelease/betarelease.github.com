@@ -1,42 +1,56 @@
-# medium theme now.
-remote_theme: "wowthemesnet/mediumish-theme-jekyll"
+# Site
 
-# Site wide configuration
-
+name: Beta Release
 title: Beta Release
 locale: en_US
 description: releasing my thoughts.. 1 beta at a time
-logo: beta.png
-search: true
+logo: 'images/beta.png'
+favicon: 'images/favicon.ico'
+disqus: 'betareleasedraftingrandomthoughts'
+share: true
+comments: true
+
 url: //betarelease.github.io
 
-# Jekyll configuration
+permalink: /:title/
 
-permalink:   /:categories/:title/
-
-# Authors
-authors:
-  sal:
-    name: Sudhindra Rao
-    gravatar: grand_canyon.png
-    email: myfirstname.r.lastname@gmail.com
-    twitter: sudhindraRao
-    github: betarelease
-    linkedin: sudhindrarao
-    description: "Author of SiriMingle and other goodies"
-
-markdown:    kramdown
-highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: compressed
+# Plugins
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-archives
 
+# Site owner
+owner:
+  name: Sudhindra Rao
+  avatar: images/grand_canyon.png
+  disqus-shortname: betareleasedraftingrandomthoughts
+  bio: "Hi, I am Sudhindra, I like to talk about technology and help people build software at a sustainable pace. If you like what you read here follow me on twitter."
+  twitter: https://twitter.com/sudhindraRao
+  github: betarelease
+  linkedin: sudhindrarao
+
+# Defaults
+defaults:
+
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      author: sal
+      avatar: images/grand_canyon.jpg
+
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+
+# Syntax
+markdown: kramdown
+highlighter: rouge
 kramdown:
   input: GFM
   auto_ids: true
@@ -47,19 +61,13 @@ kramdown:
 
 mathjax: true
 
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile",
-"Rakefile.rb", "tmp", ".less", "*.sublime-project", "*.sublime-workspace",
-"test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile",
-"Gemfile.lock", "LICENSE", "README.md", "vendor"]
+# Paginate
+paginate: 10
 
-share: true
-comments: true
-# Site owner
-owner:
-  name: Sudhindra Rao
-  avatar: grand_canyon.png
-  disqus-shortname: betareleasedraftingrandomthoughts
-  twitter: sudhindraRao
-  github: betarelease
-  linkedin: sudhindrarao
+sass:
+  sass_dir: _sass
+  style: compressed
+
+include: ["_pages", ".htaccess"]
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
