@@ -1,0 +1,261 @@
+% Copyright 2013 Christophe-Marie Duquesne <chmd@chmd.fr>
+% Copyright 2014 Mark Szepieniec <http://github.com/mszep>
+% 
+% ConText style for making a resume with pandoc. Inspired by moderncv.
+% 
+% This CSS document is delivered to you under the CC BY-SA 3.0 License.
+% https://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+
+\startmode[*mkii]
+  \enableregime[utf-8]  
+  \setupcolors[state=start]
+\stopmode
+
+\setupcolor[hex]
+\definecolor[titlegrey][h=757575]
+\definecolor[sectioncolor][h=397249]
+\definecolor[rulecolor][h=9cb770]
+
+% Enable hyperlinks
+\setupinteraction[state=start, color=sectioncolor]
+
+\setuppapersize [A4][A4]
+\setuplayout    [width=middle, height=middle,
+                 backspace=20mm, cutspace=0mm,
+                 topspace=10mm, bottomspace=20mm,
+                 header=0mm, footer=0mm]
+
+%\setuppagenumbering[location={footer,center}]
+
+\setupbodyfont[11pt, helvetica]
+
+\setupwhitespace[medium]
+
+\setupblackrules[width=31mm, color=rulecolor]
+
+\setuphead[chapter]      [style=\tfd]
+\setuphead[section]      [style=\tfd\bf, color=titlegrey, align=middle]
+\setuphead[subsection]   [style=\tfb\bf, color=sectioncolor, align=right,
+                          before={\leavevmode\blackrule\hspace}]
+\setuphead[subsubsection][style=\bf]
+
+\setuphead[chapter, section, subsection, subsubsection][number=no]
+
+%\setupdescriptions[width=10mm]
+
+\definedescription
+  [description]
+  [headstyle=bold, style=normal,
+   location=hanging, width=18mm, distance=14mm, margin=0cm]
+
+\setupitemize[autointro, packed]    % prevent orphan list intro
+\setupitemize[indentnext=no]
+
+\setupfloat[figure][default={here,nonumber}]
+\setupfloat[table][default={here,nonumber}]
+
+\setuptables[textwidth=max, HL=none]
+\setupxtable[frame=off,option={stretch,width}]
+
+\setupthinrules[width=15em] % width of horizontal rules
+
+\setupdelimitedtext
+  [blockquote]
+  [before={\setupalign[middle]},
+   indentnext=no,
+  ]
+
+
+\starttext
+
+\section[title={Sudhindra Rao},reference={sudhindra-rao}]
+
+\useURL[url1][mailto:sudhindra.r.rao@gmail.com][][sudhindra.r.rao@gmail.com]\from[url1]
++1(312)953-9487
+
+Twitter: @sudhindraRao,
+\useURL[url2][http://linkedin.com/in/sudhindraRao][][LinkedIn:
+sudhindraRao]\from[url2]
+
+\thinrule
+
+\startitemize[packed]
+\item
+  Experienced Engineer with a keen sense of building what a team needs -
+  software and culture.
+\item
+  Experienced with building applications for - healthcare, media, voter
+  campaigning.
+\item
+  Experienced in building real distributed systems on different Cloud
+  systems as well as standalone
+\item
+  I like to do hands on work while teaching and have been successful in
+  developing teams with sustainable/continuing learning culture.
+\item
+  In healthcare, I have built a large scale diabetes datalake at Glooko.
+\item
+  Most recently I have been building a kubernetes platform(VMware Tanzu)
+  which removes the Ops from kubernetes
+\stopitemize
+
+\thinrule
+
+\subsection[title={Education},reference={education}]
+
+\startdescription{2003-2007}
+  {\bf PhD Candidate, Computer Science}; University of Cincinnati
+
+  {\em Thesis title: Distributed data replication and data availability
+  in loosely connected systems}
+\stopdescription
+
+\startdescription{2000-2003}
+  {\bf Master of Science, Computer Engineering}; University of
+  Cincinnati
+\stopdescription
+
+\startdescription{1997-1999}
+  {\bf Master of Technology, Electrical Engineering}; IIT Bombay
+\stopdescription
+
+\subsection[title={Experience},reference={experience}]
+
+\startdescription{VMware 2020 - Present}
+  {\bf Software Delivery Lead}
+
+  \startitemize[packed]
+  \item
+    Building a kubernetes platform(Tanzu Kubernetes Grid -TKG) that is
+    easy to maintain and upgrade
+  \item
+    Building a better organization with simple team principles of
+    feedback and sustainable pace
+  \item
+    Engineering for maintainability over building the perfect solutions
+  \item
+    Managing team delivery schedules
+  \item
+    Providing architecture and continuous delivery process direction
+  \stopitemize
+\stopdescription
+
+\startdescription{Pivotal Software 2018 - 2020}
+  {\bf Software Delivery Lead}
+
+  \startitemize[packed]
+  \item
+    Bridging the gap between development and delivery for Pivotal
+    Container Service(PKS) now VMware Tanzu
+  \item
+    Increasing visibility of code and its flow through the system
+  \item
+    Creating mentorship opportunities for people around me
+  \item
+    Building a better organization with simple team principles of
+    feedback
+  \item
+    Engineering for maintainability over building the perfect solutions.
+  \item
+    Build CI/CD practice for building complex component integrations
+  \item
+    Built a Release Engineering process/practice for traceable delivery
+  \stopitemize
+\stopdescription
+
+\startdescription{Sahaj Software 2017 - 2018}
+  {\bf Solutions Consultant - Data Management and Machine Learning}
+
+  \startitemize[packed]
+  \item
+    Building Data intensive applications
+  \item
+    Using Machine Learning to help making decisions
+  \item
+    Applying Blockchain for non-traditional use cases.
+  \item
+    Building a DevOps and Continuous Delivery Practice
+  \stopitemize
+\stopdescription
+
+\startdescription{Glooko Inc.~2015 - 2017}
+  {\bf Principal Software Engineer/Engineering Manager}
+
+  \startitemize[packed]
+  \item
+    Built a platform that aggregates and analyzes Billions of diabetes
+    related data points - one of its kind in the industry
+  \item
+    Built an organization around building HIPAA and FDA compliant Device
+    software
+  \item
+    Hired and trained the frontend/mobile app development teams
+  \item
+    Developed Continuous Delivery culture
+  \item
+    Integrated with the world's best AI system to data analytics
+  \item
+    Built and delivered processes around security of data and patient
+    safety
+  \item
+    Built a culture around better leveraging UX teams
+  \item
+    Engaged and developed an employee review process to reflect the
+    culture and goals of the company
+  \item
+    Consistently delivered features in a highly regulated environment
+    with high quality and auditability
+  \item
+    Developed team confidence and culture around making decisions -
+    product as well as engineering
+  \stopitemize
+\stopdescription
+
+\startdescription{ThoughtWorks Products 2011 - 2015}
+  {\bf Lead Developer on Mingle}
+
+  \startitemize[packed]
+  \item
+    Lead for implementing ElasticSearch based search for the installed
+    version of Mingle
+  \item
+    Lead on the team for moving Mingle from installed to be cloud-based
+    Saas solution
+  \item
+    Promoted and leveraged AWS ElasticBeanstalk for trouble-free
+    continuous delivery
+  \item
+    Developed unique interfaces to Mingle with IOT and AI
+  \stopitemize
+\stopdescription
+
+\subsection[title={Notable
+publications},reference={notable-publications}]
+
+\startitemize[packed]
+\item
+  \useURL[url3][https://devchat.tv/ruby-rogues/mrs-029-sudhindra-rao][][My
+  Ruby Story (Podcast) - on Ruby Rogues]\from[url3]
+\item
+  \useURL[url4][https://devchat.tv/ruby-rogues/194-rr-real-life-jruby-with-sudhindra-r-rao][][Mingle,
+  10000 tests and a CD pipeline on JRuby (Podcast) - on Ruby
+  Rogues]\from[url4]
+\item
+  \useURL[url5][http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk][][EbDeployer
+  - Automate your deployments with ElasticBeanstalk - ThoughtWorks
+  Insights]\from[url5]
+\item
+  \useURL[url6][http://www.thoughtworks.com/mingle/news/scaling/2015/01/06/How-Mingle-Built-ElasticSearch-Cluster.html][][How
+  Mingle built its ElasticSearch cluster on AWS - ThoughtWorks
+  Insights]\from[url6]
+\item
+  \useURL[url7][http://www.thoughtworks.com/insights/blog/how-we-moved-cloud][][How
+  we moved to the cloud - ThoughtWorks Insights]\from[url7]
+\stopitemize
+
+\thinrule
+
+\useURL[url8][mailto:sudhindra.r.rao@gmail.com][][sudhindra.r.rao@gmail.com]\from[url8]
+• +1(312)953-9487
+
+\stoptext
