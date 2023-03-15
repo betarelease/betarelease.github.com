@@ -30,8 +30,5 @@ You can hear his voice on the following podcasts:
 
 In his free time he dabbles in learning by writing small applications or tools - most of which are shared on his github account.
 
-<iframe src="http://githubbadge.appspot.com/betarelease" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
-
-<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="sudhindrarao"><a class="LI-simple-link" href='https://www.linkedin.com/in/sudhindrarao?trk=profile-badge'>Sudhindra Rao</a></div>
 
 Thanks for reading!
