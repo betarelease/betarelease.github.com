@@ -23,6 +23,13 @@ He writes outside of this blog, occasionally. Some of his recent work is documen
 * [Automate your Deployments with EbDeployer](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)
 * [How Mingle built its ElasticSearch cluster on AWS](http://www.thoughtworks.com/mingle/news/scaling/2015/01/06/How-Mingle-Built-ElasticSearch-Cluster.html)
 
+
+Currently, he manages and promotes an open source project which is part of CD Foundation(Linux Foundation) called Pyrsia.
+You can read about the philosophy of Pyrsia on the blog:
+* [Why does Pyrsia use a blockchain(and no CryptoCurrency)](https://pyrsia.io/blog/2022/10/10/why-does-pyrsia-use-a-blockchain/)
+* [Why is Pyrsia being built in Rust?](https://pyrsia.io/blog/2022/09/30/why-pyrsia-is-being-built-in-rust/)
+* [Pyrsia anniversary](https://pyrsia.io/blog/2022/12/30/pyrsia-anniversary-recap/)
+
 You can hear his voice on the following podcasts:
 * [Mingle, 10000 tests and CD pipeline](https://devchat.tv/ruby-rogues/194-rr-real-life-jruby-with-sudhindra-r-rao)
 
