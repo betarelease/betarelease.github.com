@@ -19,6 +19,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-inline-svg
 
 # Site owner
 owner:
@@ -69,4 +70,4 @@ sass:
 
 include: ["_pages", ".htaccess"]
 # Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules, vendor]
