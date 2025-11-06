@@ -5,37 +5,44 @@ image:
   path: /images/reinvent.png
   feature: reinvent.png
 ---
+
 Sudhindra believes in releasing fast and often and hence the name of this blog.
 Sudhindra works as a developer in the trenches building applications that are critical to business. He has worked with various technologies starting with Java and recently worked with Ruby.
 His success stories include building an application for the largest publishing company in Chicago, a large datacenter automation effort, large auctioning system and recently a voting application to help out with national elections. His experiences have taught him about various aspects of application delivery - User Experience, Performance, Maintainability.
 
 Sudhindra has also worked as an agile/ruby evangelist. He developed training/coaching sessions and has delivered them to success. He also likes speaking at conferences and has spoken at
 
-* [aws re:invent 2013](http://www.confreaks.com/videos/4469-awsrei2013-aws-elastic-beanstalk-under-the-hood-dmg301) - EbDeployer - [Slides](http://www.slideshare.net/AmazonWebServices/aws-elastic-beanstalk-under-the-hood-dmg301-aws-reinvent-2013-28428616)
-* [Agile and Beyond 2012](http://agileandbeyond.org) - Build Feedback - [Slides](http://betarelease.github.io/build_feedback/slides.html)
-* [Agile Eastern Europe 2010](http://agileee.org) - Making Feedback Visible - [Slides](http://www.slideshare.net/releasebeta/making-feedback-visible)
-* [RubyKaigi 2010](http://rubykaigi.org) - Rocking the Enterprise with Ruby - [Slides](http://www.slideshare.net/releasebeta/rocking-the-enterprise-with-ruby-rubykaigi-2010)
-* [Agile 2009](http://agileconf.com) - Mock Objects in Action [Slides](http://www.slideshare.net/releasebeta/mock-objectsinaction-paulocaroliandsudhindraraoagile2009final)
+- [aws re:invent 2013](http://www.confreaks.com/videos/4469-awsrei2013-aws-elastic-beanstalk-under-the-hood-dmg301) - EbDeployer - [Slides](http://www.slideshare.net/AmazonWebServices/aws-elastic-beanstalk-under-the-hood-dmg301-aws-reinvent-2013-28428616)
+- [Agile and Beyond 2012](http://agileandbeyond.org) - Build Feedback - [Slides](http://betarelease.github.io/build_feedback/slides.html)
+- [Agile Eastern Europe 2010](http://agileee.org) - Making Feedback Visible - [Slides](http://www.slideshare.net/releasebeta/making-feedback-visible)
+- [RubyKaigi 2010](http://rubykaigi.org) - Rocking the Enterprise with Ruby - [Slides](http://www.slideshare.net/releasebeta/rocking-the-enterprise-with-ruby-rubykaigi-2010)
+- [Agile 2009](http://agileconf.com) - Mock Objects in Action [Slides](http://www.slideshare.net/releasebeta/mock-objectsinaction-paulocaroliandsudhindraraoagile2009final)
 
 He writes outside of this blog, occasionally. Some of his recent work is documented at
 
-* [How we moved to the cloud](http://www.thoughtworks.com/insights/blog/how-we-moved-cloud)
-* [Automate your Deployments with EbDeployer](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)
-* [How Mingle built its ElasticSearch cluster on AWS](http://www.thoughtworks.com/mingle/news/scaling/2015/01/06/How-Mingle-Built-ElasticSearch-Cluster.html)
-
+- [How we moved to the cloud](http://www.thoughtworks.com/insights/blog/how-we-moved-cloud)
+- [Automate your Deployments with EbDeployer](http://www.thoughtworks.com/insights/blog/ebdeployer-automate-your-deployments-aws-elastic-beanstalk)
+- [How Mingle built its ElasticSearch cluster on AWS](http://www.thoughtworks.com/mingle/news/scaling/2015/01/06/How-Mingle-Built-ElasticSearch-Cluster.html)
 
 Currently, he manages and promotes an open source project which is part of CD Foundation(Linux Foundation) called Pyrsia.
 You can read about the philosophy of Pyrsia on the blog:
-* [Why does Pyrsia use a blockchain(and no CryptoCurrency)](https://pyrsia.io/blog/2022/10/10/why-does-pyrsia-use-a-blockchain/)
-* [Why is Pyrsia being built in Rust?](https://pyrsia.io/blog/2022/09/30/why-pyrsia-is-being-built-in-rust/)
-* [Pyrsia anniversary](https://pyrsia.io/blog/2022/12/30/pyrsia-anniversary-recap/)
+
+- [Why does Pyrsia use a blockchain(and no CryptoCurrency)](https://pyrsia.io/blog/2022/10/10/why-does-pyrsia-use-a-blockchain/)
+- [Why is Pyrsia being built in Rust?](https://pyrsia.io/blog/2022/09/30/why-pyrsia-is-being-built-in-rust/)
+- [Pyrsia anniversary](https://pyrsia.io/blog/2022/12/30/pyrsia-anniversary-recap/)
 
 You can hear his voice on the following podcasts:
-* [Mingle, 10000 tests and CD pipeline](https://devchat.tv/ruby-rogues/194-rr-real-life-jruby-with-sudhindra-r-rao)
 
-* [My Ruby Story](https://devchat.tv/ruby-rogues/mrs-029-sudhindra-rao)
+- [Mingle, 10000 tests and CD pipeline](https://devchat.tv/ruby-rogues/194-rr-real-life-jruby-with-sudhindra-r-rao)
+
+- [My Ruby Story](https://devchat.tv/ruby-rogues/mrs-029-sudhindra-rao)
 
 In his free time he dabbles in learning by writing small applications or tools - most of which are shared on his github account.
 
+If you are looking to hire me or would like to know what I have been up to - here is my resume
+
+- [Resume PDF](../resume/resume.pdf)
+- [Resume HTML](../resume/resume.html)
+- [Resume doc](../resume/resume.docx)
 
 Thanks for reading!
